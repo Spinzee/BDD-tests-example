@@ -1,0 +1,71 @@
+﻿@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.BroadbandMoreInformationViewModel
+
+<div class="modal fade in" role="dialog" id="BroadbandBundleMegaModal" tabindex="-1" aria-labelledby="modal-title modal-body">
+    <div class="modal-mega quote-details-fixnfibre-modal-banner" role="document">
+        <div class="modal-content upgrades-modal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Resources.ModalCloseButtonAlt">
+                    @Resources.ModalCloseButtonText
+                </button>
+            </div>
+            <div class="modal-banner-image">
+                <div class="col-xs-12 col-sm-6 col-md-6 upgrades-modal-header">
+                    <h2>@ProductFeatures_Resources.BroadbandProductDisplayText</h2>
+                    <p class="tagline">
+                        @AvailablePackages_Resources.FrustrationFreeHeader
+                    </p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row mega-modal-header-after">
+                    <div class="col-xs-12 col-sm-6 col-md-4 broadband-price-section">
+                        <div class="broadband-price">@Model.ProjectedBroadbandMonthlyCost<span class="broadband-price-duration">@AvailableBundleTariffs_Resources.BroadbandMonthlySavingsSuffixTxt</span></div>
+                        <span class="broadband-orig-monthly-price">@AvailableBundleTariffs_Resources.OriginalPricePrefix @Model.OriginalBroadbandMonthlyCost</span>
+                        <span class="broadband-monthly-saving">@AvailableBundleTariffs_Resources.SaveTxtLowercase @Model.ProjectedBroadbandMonthlySavingsAmount</span>
+                        <p class="subscript">@Model.BundleDisclaimerModalText</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-7">
+                        <p class="tariff-description">@ProductDetails_Resources.FibreHelpText</p>
+                        <p class="tariff-description gap-xl">@AvailableBundleTariffs_Resources.LineRentalText</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-7 gap-xl">
+                        <h3>@AvailableBundleTariffs_Resources.FibreBulletListHeader</h3>
+                        <ul class="bullet-list list--spaced">
+                            <li>@AvailableBundleTariffs_Resources.FibreBullet1</li>
+                            <li>@AvailableBundleTariffs_Resources.FibreBullet2</li>
+                            <li>@AvailableBundleTariffs_Resources.FibreBullet3</li>
+                            <li>@AvailableBundleTariffs_Resources.FibreBullet4</li>
+                            <li>@AvailableBundleTariffs_Resources.FibreBullet5</li>
+                        </ul>
+                        @Html.Partial("_BroadbandPackageSpeed", Model.BroadbandPackageSpeed)
+
+                    </div>
+                    <div class="col-xs-12">
+                        <h4>@AvailableBundleTariffs_Resources.ImportantInformationHeader</h4>
+                        <p class="subscript">
+                            @AvailableBundleTariffs_Resources.FibreDisclaimer1
+                            <a href="@AvailablePackages_Resources.BroadbandTrafficManagementLinkUrl" target="_blank" title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link1Alt">
+                                @Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link1Text
+                            </a>
+                            @AvailableBundleTariffs_Resources.FibreDisclaimer2
+                            <a href="@AvailablePackages_Resources.AcceptableUsePolicyLinkUrl" target="_blank" title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link2Alt">
+                                @Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link2Text
+                            </a>@AvailableBundleTariffs_Resources.FibreDisclaimer3
+                            <a href="@AvailablePackages_Resources.HappinessGuaranteeLinkUrl" target="_blank" title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara7_Link1Alt">
+                                @Accordion_Resources.SSEBroadbandHappinessPara1_Link1Text
+                            </a>
+                        </p>
+                        <div class="modal-close">
+                            <button type="button" class="button button-edge button-secondary" data-dismiss="modal" aria-label="Close" title="@Resources.ModalCloseButtonAlt">@Resources.ModalCloseButtonText</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+﻿@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.BundleUpgradeViewModel
+
+<div class="modal in" role="dialog" id="@Model.MoreInformationModalId" tabindex="-1" aria-labelledby="modal-title modal-body">
+    <div class="modal-mega @Model.ModalBannerImageCssClass" role="document">
+        <div class="modal-content upgrades-modal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Resources.ModalCloseButtonAlt">
+                    @Resources.ModalCloseButtonText
+                </button>
+            </div>
+            <div class="modal-banner-image">
+                <div class="col-xs-12 col-sm-6 col-md-6 upgrades-modal-header">
+                    <h2>@Model.ModalProductName</h2>
+                    <p class="tagline">
+                        @Model.ModalTagLine
+                    </p>
+                </div>
+            </div>
+            <div class="modal-body extras-items-more-info">
+                <div class="row mega-modal-header-after gap-xl">
+                    <div class="col-xs-12 col-sm-4 col-md-4 broadband-price-section extras @Model.AddedCssClass" id="@Model.ModalExtraPriceHeaderId">
+                        <div class="extras-price-box">
+                            <div class="price">@Model.DiscountedPrice</div>
+                            <div class="extra-price-lbl">
+                                <div>@Extras_Resources.Per</div>
+                                <div>@Extras_Resources.Month</div>
+                            </div>
+                        </div>
+                        <div class="bundle-upgrade-price-tagline">
+                            <span class="bundle-upgrade-original-price-txt">@Model.OriginalPriceText</span>
+                            <span class="bundle-upgrade-savings-txt">@Model.SavingsText</span>
+                        </div>
+                        <div class="added-desktop">Added</div>
+                        <div class="add-remove-extras">
+                            <input class="button @Model.ModalAddRemoveButtonCssClass add-remove-extra-button button-extra-@Model.ProductCode"
+                                   type="button"
+                                   value="@Model.ModalAddRemoveButtonText"
+                                   data-extra-container-id="@Model.ExtraContainerId"
+                                   data-extra-modal-priceheader-id="@Model.ModalExtraPriceHeaderId"
+                                   data-product-code="@Model.ProductCode"
+                                   data-button-group="button-extra-@Model.ProductCode"
+                                   data-is-added="@Model.IsAddedToBasketStr"
+                                   data-add-button-text="@Extras_Resources.ModalAddButtonText"
+                                   data-remove-button-text="@Extras_Resources.ModalRemoveButtonText"
+                                   data-remove-alt-text="@Model.RemoveButtonAltText"
+                                   data-add-alt-text="@Model.AddButtonAltText"
+                                   data-more-information-modal-id="@Model.MoreInformationModalId"
+                                   name="button-submit-extra"
+                                   title="@Model.AddRemoveButtonAltText" />
+                        </div>
+                        <div class="modal-savings-text">
+                            @Model.ModalSavingsText
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-7">
+                        <p class="upgrade-tariff-description">@Html.Raw(Upgrades_Resources.FixNFibrePlusDescPara1)</p>
+                        <p class="upgrade-tariff-description">@Upgrades_Resources.FixNFibrePlusDescPara2</p>
+                        <h3>@Upgrades_Resources.FixNFibrePlusSubHeader1</h3>
+                        <ul class="bullet-list list--spaced">
+                            <li>@Upgrades_Resources.FixNFibrePlusSubHeader1Bullet1</li>
+                            <li>@Upgrades_Resources.FixNFibrePlusSubHeader1Bullet2</li>
+                            <li>@Upgrades_Resources.FixNFibrePlusSubHeader1Bullet3</li>
+                            <li>@Upgrades_Resources.FixNFibrePlusSubHeader1Bullet4</li>
+                            <li>@Upgrades_Resources.FixNFibrePlusSubHeader1Bullet5</li>
+                        </ul>
+                        <p class="upgrades-broadband-header">
+                            @BroadbandPackageSpeed_Resources.Prefix @BroadbandPackageSpeed_Resources.DownloadLabel @BroadbandPackageSpeed_Resources.Suffix @Model.Postcode @BroadbandPackageSpeed_Resources.SemiColon
+                            @Html.Partial("_BroadbandPackageSpeed", Model.BroadbandPackageSpeedViewModel)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4>@AvailableBundleTariffs_Resources.ImportantInformationHeader</h4>
+                        <p class="subscript">
+                            @Upgrades_Resources.FixNFibrePlusImportantInformationPara1_1
+                            <a href="@AvailablePackages_Resources.BroadbandTrafficManagementLinkUrl"
+                               target="_blank"
+                               title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link1Alt">
+                                @Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link1Text
+                            </a>
+                            @Upgrades_Resources.FixNFibrePlusImportantInformationPara1_2
+                            <a href="@AvailablePackages_Resources.AcceptableUsePolicyLinkUrl"
+                               target="_blank"
+                               title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link2Alt">
+                                @Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link2Text
+                            </a>
+                            @Upgrades_Resources.FixNFibrePlusImportantInformationPara1_3
+                            <a href="@AvailablePackages_Resources.HappinessGuaranteeLinkUrl"
+                               target="_blank"
+                               title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara7_Link1Alt">
+                                @Upgrades_Resources.FixNFiberPlusImportantInformationPara1_Link1Text
+                            </a>
+                        </p>
+                        <div class="modal-close">
+                            <button type="button" class="button button-edge button-secondary" data-dismiss="modal" aria-label="Close" title="@Resources.ModalCloseButtonAlt">@Resources.ModalCloseButtonText</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

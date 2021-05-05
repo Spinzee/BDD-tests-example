@@ -1,0 +1,88 @@
+﻿@using System.Configuration
+@using Products.WebModel.Resources.TariffChange
+
+@model Products.WebModel.ViewModels.TariffChange.IdentifyCustomerViewModel
+@{
+    ViewBag.Title = IdentifyCustomer_Resources.Title;
+}
+@section Styles
+{
+    @Styles.Render("~/css/recaptcha")
+}
+@section Scripts
+{
+<script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    @{
+        if (!Model.GoogleCaptchaViewModel.SuppressGoogleCaptcha)
+        {
+<script>
+    $(document).ready(function () {
+        $('#btnSubmitAccountDetails').prop("disabled", true);
+    });
+</script>
+        }
+    }
+<script>
+    function recaptchaCallback() {
+        $('#btnSubmitAccountDetails').removeAttr('disabled');
+    };
+</script>
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@IdentifyCustomer_Resources.Header</h1>
+        </div>
+    </div>
+    <div class="row">
+        
+        <div class="col-xs-12 col-md-5">
+            
+            <div class="split-width-box">
+                <h2 class="h3-like">@IdentifyCustomer_Resources.GotAnOnlineAccountHeader</h2>
+                <p>@IdentifyCustomer_Resources.NoOnlineAccountIntro</p>
+                <a href="@Model.LoginRedirectUrl" class="button button-primary">@IdentifyCustomer_Resources.OnlineAccountButtonText</a>
+            </div>
+
+        </div>
+        
+        <div class="hidden-xs col-md-1">
+            <div class="splitter"></div>
+        </div>
+
+        <div class="col-xs-12 col-md-6">
+            
+            <div class="gap-top">
+                <h2 class="h3-like">@IdentifyCustomer_Resources.NoOnlineAccountHeader</h2>
+
+                <p class="gap">@IdentifyCustomer_Resources.Intro</p>
+                @using (Html.BeginForm())
+            {
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(m => m.GoogleCaptchaViewModel.SuppressGoogleCaptcha)
+                    @Html.EditorFor(m => m.AccountNumber)
+                    @Html.EditorFor(m => m.PostCode)
+
+                    if (!Model.GoogleCaptchaViewModel.SuppressGoogleCaptcha)
+                    {
+                        <div class="form-group">
+                            <p class="gap">Please tick the reCAPTCHA checkbox to prove you are a real person.</p>
+                            <div class="g-recaptcha recaptcha-container" data-callback="recaptchaCallback" data-sitekey="@Model.GoogleCaptchaViewModel.GoogleCaptchaPublicKey"></div>
+                        </div>
+                    }
+
+                    <p>
+                        <a href="@IdentifyCustomer_Resources.DataHandlingURL" target="_blank" title="@IdentifyCustomer_Resources.DataHandlingAccessibilityText">@IdentifyCustomer_Resources.DataHandlingText</a>
+                    </p>
+
+                    <div class="form-group">
+                        <input class="button button-primary" type="submit" value="@IdentifyCustomer_Resources.ButtonText" id="btnSubmitAccountDetails" name="btnSubmitAccountDetails" title="@IdentifyCustomer_Resources.ButtonTitle" />
+                    </div>
+                }
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

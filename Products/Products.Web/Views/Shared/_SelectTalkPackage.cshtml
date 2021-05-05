@@ -1,0 +1,28 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.ViewModels.Common
+@model Products.WebModel.ViewModels.Common.SelectTalkPackageViewModel
+
+<h4 class="h2-like">@SelectTalkPackage_Resources.CallOptionsHeader</h4>
+<fieldset class="radio-set">
+    <legend class="sr-only"></legend>
+    @foreach (TalkProductViewModel talkProduct in Model.TalkProducts)
+    {
+        <div class="radio contain">
+            <input data-val="true" @(talkProduct.ProductCode == Model.SelectedTalkProductCode ? "checked=checked" : "") name="TalkCode" id="@talkProduct.ProductCode" type="radio" value="@talkProduct.ProductCode" aria-describedby="@talkProduct.ProductCode-description">
+            <label for="@talkProduct.ProductCode">
+                <div class="label">
+                    <div class="row">
+                        <div class="col-xs-9">
+                            <strong>@talkProduct.TalkProductName</strong><br />
+                            @talkProduct.TalkProductDescription <br />
+                            <a href="" data-toggle="modal" data-target="#@talkProduct.ProductCode-modal" title="@SelectTalkPackage_Resources.DetailsLinkAlt">@SelectTalkPackage_Resources.DetailsLink</a>
+                            @{ Html.RenderPartial("_CallFeatureModal", talkProduct.ModalViewModel);}
+                        </div>
+                        <div class="col-xs-3 radio-col">@talkProduct.FormattedPrice</div>
+                    </div>
+                </div>
+            </label>
+            <p id="@talkProduct.ProductCode-description" class="sr-only">Select this option for the @talkProduct.TalkProductName product</p>
+        </div>
+    }
+</fieldset>

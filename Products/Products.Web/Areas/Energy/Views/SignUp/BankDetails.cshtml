@@ -1,0 +1,162 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.Energy.BankDetailsViewModel
+@{
+    ViewBag.Title = BankDetailsCommon_Resources.EnergyPageTitle;
+}
+
+@section ShoppingBasketToggler {
+    @Html.Partial("_ShoppingBasketToggler", Model.ShoppingBasketViewModel)
+}
+
+<div class="container">
+    @Html.Partial("_BackChevronWithStepCounter", Model.BackChevronViewModel)
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 gap">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9">
+                    <h1>@BankDetailsCommon_Resources.Header</h1>
+                </div>
+                <div class="hidden-xs col-sm-3">
+                    <img class="pull-right dd-logo" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/dd.png")" />
+                </div>
+            </div>
+            <h2 class="h3-like gap-lg">@BankDetailsCommon_Resources.SubHeader</h2>
+            @using (Html.BeginForm("BankDetails", "SignUp", FormMethod.Post, new { id = "BankDetailsForm", autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group checkbox checkbox--multiline contain strong">
+                    @Html.EditorFor(m => m.IsAuthorisedChecked, "AriaCheckBox")
+                    @Html.LabelFor(m => m.IsAuthorisedChecked, new { title = "", id = "checkbox-label" })
+                </div>
+
+                <p>
+                    <strong>
+                        @BankDetailsCommon_Resources.PhonePrefix<a href="@BankDetailsCommon_Resources.CallUsPhoneUrl" title="@BankDetailsCommon_Resources.CallUsPhoneAlt">@BankDetailsCommon_Resources.CallUsPhone</a>.
+                    </strong>
+                </p>
+                @Html.ValidationMessageFor(model => model.IsAuthorisedChecked)
+
+
+                @Html.EditorFor(m => m.AccountHolder)
+                <div class="form-group form-group--text">
+                    @Html.LabelFor(model => model.SortCode, new { @class = "form-label" })
+                    @Html.HiddenFor(m => m.SortCode)
+                    @Html.EditorFor(m => m.SortCodeSegmentOne, new { @class = "form-input number dd", placeholder = "--", title = Form_Resources.SortCodeTitle, maxlength = "2" })
+                    @Html.EditorFor(m => m.SortCodeSegmentTwo, new { @class = "form-input number dd", placeholder = "--", title = Form_Resources.SortCodeTitle, maxlength = "2" })
+                    @Html.EditorFor(m => m.SortCodeSegmentThree, new { @class = "form-input number dd", placeholder = "--", title = Form_Resources.SortCodeTitle, maxlength = "2" })
+                    @Html.ValidationMessageFor(m => m.SortCode)
+                </div>
+
+                @Html.EditorFor(m => m.AccountNumber, new { htmlAttributes = new { @class = "number", maxlength = "8" } })
+
+                <div class="form-group gap-lg">
+                    <h2 class="h5-like gap">@BankDetailsCommon_Resources.EnergySubHeader2</h2>
+                    <span>@BankDetailsCommon_Resources.PaymentDatePrefix &nbsp;</span>
+                    @Html.EditorFor(m => m.DirectDebitDate, new { @class = "form-input number dd", maxlength = "2", title = BankDetailsCommon_Resources.DDPaymentDateAlt })
+                    <span>@BankDetailsCommon_Resources.PaymentDatePostfix</span>
+                    @Html.ValidationMessageFor(m => m.DirectDebitDate)
+                    @if (Model.IsBroadbandBundleSelected)
+                    {
+                        <div>
+                            <a class="modal-link" href="#" data-toggle="modal" data-target="#when-do-i-pay-modal" title="@BankDetailsCommon_Resources.WhenDoIPayLinkAlt">
+                                @BankDetailsCommon_Resources.WhenDoIPayLinkText
+                            </a>
+                        </div>
+                        @Html.Partial("_BroadbandWhenDoIPayModal")
+                    }
+                </div>
+
+                <h2 class="h5-like gap">@BankDetailsCommon_Resources.SubHeader3</h2>
+                <div id="dd-amount-breakdown" class="gap-lg">
+                    @foreach (Tuple<string, string> item in Model.AmountItemList)
+                    {
+                        <div class="gap-right-sm">@item.Item1<strong>@item.Item2</strong></div>
+                    }
+                    @if (Model.IsBroadbandBundleSelected)
+                    {
+                        <div class="gap-right-sm">@Model.BroadbandBundleDescription<strong>@Model.BroadbandBundlePackageAmount</strong></div>
+                    }
+                    @if (Model.IsHesBundle)
+                    {
+                        <div>
+                            <span class="gap-right-sm">@Model.HomeServicesLabel<strong>@Model.HesBundlePackageAmount</strong></span>
+                            @if(!Model.IsUpgrade)
+                            { <a href="#" class="modal-link" data-toggle="modal" data-target="#@Model.HesWhyDoIPay0ModalId" title="@BankDetailsCommon_Resources.WhyIsThere0PaymentLinkAlt">
+                                  @BankDetailsCommon_Resources.WhyIsThere0PaymentLinkText
+                              </a>
+
+                            }
+                        </div>
+                         if (!Model.IsUpgrade)
+                         {
+                             @Html.Partial("_HesWhyIsThere0PaymentModal", Model.HesWhyDoIPay0ModalId)
+                         }
+                    }
+                    @if (Model.BundleHasExtras)
+                    {
+                        foreach (Tuple<string, string> details in Model.ExtraDetailsList)
+                        {
+                            <div>
+                                <span class="gap-right-sm">@details.Item1<strong>@details.Item2</strong></span>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <h2 class="h3-like">@BankDetailsCommon_Resources.SubHeader4</h2>
+                <p>@BankDetailsCommon_Resources.Paragraph</p>
+
+                <ul class="link-list list--spaced">
+                    <li><a href="@BankDetailsCommon_Resources.DD_Guarantee_PDFLink" class="icon-link icon-link-pdf" title="@BankDetailsCommon_Resources.PDFLinkAlt" target="_blank">@BankDetailsCommon_Resources.PDFLinkText</a></li>
+                    @if (Model.IsHesBundle)
+                    {
+                        <li id="hesPdf"><a href="@BankDetailsCommon_Resources.DD_Guarantee_PDFLink_HomeServices" class="icon-link icon-link-pdf" title="@Model.PDFGuaranteeLabelAlt" target="_blank">@Model.PDFGuaranteeLabel</a></li>
+                    }
+                </ul>
+
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Resources.ButtonNextText" id="btnSubmitAccountDetails" name="btnSubmitAccountDetails" title="@BankDetailsCommon_Resources.EnergySubmitButtonAlt" />
+                </div>
+            }
+        </div>
+        @Html.Partial("_Basket")
+
+        <div class="col-xs-12 col-sm-4">
+            <div id="price-box" class="energy-price-box">
+                @{
+                    Html.RenderPartial("_SecureLogo");
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@section Popups{
+    @Html.Partial("_RetryModal")
+}
+@section scripts{
+    @Scripts.Render("~/js/common/bank-details-checked-validation")
+    @Scripts.Render("~/js/products/energy/basket")
+    @Scripts.Render("~/js/products/energy/extras")
+    @Scripts.Render("~/js/products/energy/direct-debit-amount-update")
+
+    <script>
+        $(function () {
+            // ReSharper disable once UnusedLocals
+            var basketConfig = new Digital.Web.Energy.BasketConfig("/energy-signup/update-your-price", "/energy-signup/bank-details", true);
+            // ReSharper disable once UnusedLocals
+            var basket = new Digital.Web.Energy.Basket(basketConfig);
+        });
+    </script>
+
+    @if (Model.IsRetry)
+    {
+        <script>
+            $(function () {
+                $('#retry-modal').modal('show');
+            });
+        </script>
+    }
+}

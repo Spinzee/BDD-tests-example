@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parameters>
+  <!--web.config-->
+  <!--siteconfiguration-->
+
+  <parameter name="Google reCaptcha Public Key" description="Please provide recaptcha public key" defaultValue="#{AppSettings.ReCaptcha.PublicKey}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='PublicKey']/@value" />
+  </parameter>
+  <parameter name="Google reCaptcha Private Key" description="Please provide recaptcha private key" defaultValue="#{AppSettings.ReCaptcha.PrivateKey}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='PrivateKey']/@value" />
+  </parameter>
+  <parameter name="Google reCaptcha Suppression" description="Please provide recaptcha Suppression Value" defaultValue="#{AppSettings.ReCaptcha.SupressGoogleReCaptcha}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='SupressGoogleReCaptcha']/@value" />
+  </parameter>
+  <parameter name="Connection string environment" description="Please provide a connection string environment value" defaultValue="#{ConnectionStrings.ConfigSource}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//connectionStrings/@configSource" />
+  </parameter>
+  <parameter name="Cs environment" description="Please provide a Cs environment value" defaultValue="#{AppSettings.CsEnvironment}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='CSenvironment']/@value" />
+  </parameter>
+  <parameter name="Website Base Url" description="Please provide a Website Base Url value" defaultValue="#{AppSettings.WebsiteBaseUrl}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='WebsiteBaseUrl']/@value" />
+  </parameter>
+  <parameter name="My Sse Base Url" description="Please provide a My Sse Base Url value" defaultValue="#{AppSettings.MySseBaseUrl}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='MySseBaseUrl']/@value" />
+  </parameter>
+  <parameter name="Secure Cookies Enabled" description="Please provide a Secure Cookies Enabled value" defaultValue="#{AppSettings.SecureCookiesEnabled}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='SecureCookiesEnabled']/@value" />
+  </parameter>
+  <parameter name="Email From Address" description="Please provide an Email From Address value" defaultValue="#{AppSettings.EmailFromAddress}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='EmailFromAddress']/@value" />
+  </parameter>
+  <parameter name="Pre Login Domain" description="Please provide the Pre Login Domain url" defaultValue="#{AppSettings.PreLoginDomain}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='PreLoginDomain']/@value" />
+  </parameter>
+  <parameter name="Allow Economy Multi Rate Meters" description="Please provide the Allow Economy Multi Rate Meters flag" defaultValue="#{AppSettings.AllowEconomyMultiRateMeters}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='AllowEconomyMultiRateMeters']/@value" />
+  </parameter>
+  <parameter name="Allow Renewals" description="Please provide the Allow Renewals flag" defaultValue="#{AppSettings.AllowRenewals}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='AllowRenewals']/@value" />
+  </parameter>
+  <parameter name="Allow Only lc31a Annual Consumption" description="Please provide the Allow Only lc31a Annual Consumption flag" defaultValue="#{AppSettings.AllowOnlylc31aAnnualConsumption}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='AllowOnlylc31aAnnualConsumption']/@value" />
+  </parameter>  
+  <parameter name="Customer Alert Name" description="Please provide the Customer Alert Name" defaultValue="#{AppSettings.CustomerAlertName}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='CustomerAlertName']/@value" />
+  </parameter>
+  <parameter name="Broadband Customer Alert Name" description="Please provide the Broadband Customer Alert Name" defaultValue="#{AppSettings.BroadbandCustomerAlertName}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='BroadbandCustomerAlertName']/@value" />
+  </parameter>
+   <parameter name="Redirect to home url" description="Please provide the Redirect url for Back to home buttons" defaultValue="#{AppSettings.LinkBackToHomeURL}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='LinkBackToHomeURL']/@value" />
+  </parameter>
+  <parameter name="Broadband Link Back To Hub URL" description="Please provide the Broadband Link Back To Hub URL" defaultValue="#{AppSettings.BroadbandLinkBackToHubURL}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='BroadbandLinkBackToHubURL']/@value" />  
+  </parameter>
+  <parameter name="Post Login Dashboard url" description="Please provide the Post Login Dashboard Url" defaultValue="#{AppSettings.PostLoginDashboardLinkURL}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='PostLoginDashboardLinkURL']/@value" />
+  </parameter>
+  <parameter name="Atlas Announcement Date Value" description="Please provide the Atlas Announcement Date Value" defaultValue="#{AppSettings.AtlasAnnouncementDate}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='AtlasAnnouncementDate']/@value" />
+  </parameter>
+  <parameter name="Post Login Login Link Url" description="Please provide the Post Login Login Link Url" defaultValue="#{AppSettings.PostLoginLoginLinkUrl}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='PostLoginLoginLinkUrl']/@value" />
+  </parameter>
+  <parameter name="Post Login Login Redirect Url" description="Please provide the Post Login Login Redirect Url" defaultValue="#{AppSettings.PostLoginLoginRedirectUrl}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='PostLoginLoginRedirectUrl']/@value" />
+  </parameter>
+  <parameter name="Energy Customer Alert Name" description="Please provide the Energy Customer Alert Name" defaultValue="#{AppSettings.EnergyCustomerAlertName}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='EnergyCustomerAlertName']/@value" />
+  </parameter>
+  <parameter name="Home Services Customer Alert Name" description="Please provide the Home Services Alert Name" defaultValue="#{AppSettings.HomeServicesCustomerAlertName}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='HomeServicesCustomerAlertName']/@value" />
+  </parameter>
+  <parameter name="Our Prices Customer Alert Name" description="Please provide the Our Prices Alert Name" defaultValue="#{AppSettings.OurPricesCustomerAlertName}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='OurPricesCustomerAlertName']/@value" />
+  </parameter>
+  <parameter name="Post Login Smart Appointment Redirect Url" description="Please provide the Post Login  Smart Appointment Redirect Url" defaultValue="#{AppSettings.PostLoginSmartBooking}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='PostLoginSmartBooking']/@value" />
+  </parameter>
+  <parameter name="Pre Login Smart Appointment Redirect Url" description="Please provide the Pre Login Smart Appointment Redirect Url" defaultValue="#{AppSettings.PreLoginSmartBooking}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='PreLoginSmartBooking']/@value" />
+  </parameter>
+  <parameter name="CTC Telco Redirect Link" description="Please provide the CTCTelco Redirect Url" defaultValue="#{AppSettings.CTCTelcoRedirectLink}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='CTCTelcoRedirectLink']/@value" />
+  </parameter>
+  <!-- Forms Authentication -->
+
+  <parameter name="Forms Authentication Domain" description="Please provide Forms Authentication Domain" defaultValue="#{SSE.Domain}#" tags="">
+      <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.web/authentication/forms[@name='.SSEv2']/@domain" />   
+  </parameter>
+  
+  <parameter name="NewBTLineAvailabilityService ClientId" description="Please provide NewBTLineAvailabilityService ClientId" defaultValue="#{AppSettings.NewBTLineAvailabilityServiceClientId}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='NewBTLineAvailabilityServiceClientId']/@value" />
+  </parameter>
+
+  <parameter name="Energy Projection API Address" description="Please provide the Energy Projection API Address" defaultValue="#{AppSettings.EnergyProjectionApiAddress}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='EnergyProjectionApiAddress']/@value" />
+  </parameter>
+  <parameter name="Energy Projection API Subscription Key" description="Please provide the Energy Projection API Subscription Key" defaultValue="#{AppSettings.EnergyProjectionApiSubscriptionKey}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='EnergyProjectionApiSubscriptionKey']/@value" />
+  </parameter>
+
+  
+
+  <!-- API Settings Values-->
+
+  <parameter name="Home Services Product API Address" description="Please provide the Home Services API Address" defaultValue="#{APISettings.HomeServicesProductAPIAddress}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='HomeServicesAPI']/@url" />
+  </parameter>
+  <parameter name="Home Services API Subscription Key" description="Please provide the Home Services API Subscription Key" defaultValue="#{APISettings.HomeServicesProductAPISubscriptionKey}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='HomeServicesAPI']/@subscriptionKey" />
+  </parameter>
+  <parameter name="Home Services API Version" description="Please provide the Home Services API Version" defaultValue="#{APISettings.HomeServicesProductAPIVersion}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='HomeServicesAPI']/@version" />
+  </parameter>
+
+  <parameter name="Content Proxy API Address" description="Please provide the Content Proxy API Address" defaultValue="#{APISettings.ContentProxyAPIAddress}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='CMSAPI']/@url" />
+  </parameter>
+  <parameter name="Content Proxy API Subscription Key" description="Please provide the Content Proxy API Subscription Key" defaultValue="#{APISettings.ContentProxyAPISubscriptionKey}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='CMSAPI']/@subscriptionKey" />
+  </parameter>
+  <parameter name="Content Proxy API Version" description="Please provide the Content Proxy API Version" defaultValue="#{APISettings.ContentProxyAPIVersion}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='CMSAPI']/@version" />
+  </parameter>
+  
+  <parameter name="Broadband API Address" description="Please provide the Broadband API Address" defaultValue="#{APISettings.BroadbandAPIAddress}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='BroadbandAPI']/@url" />
+  </parameter>
+  <parameter name="Broadband API Subscription Key" description="Please provide the Broadband API Subscription Key" defaultValue="#{APISettings.BroadbandAPISubscriptionKey}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='BroadbandAPI']/@subscriptionKey" />
+  </parameter>
+  <parameter name="Broadband API Version" description="Please provide the Broadband API Version" defaultValue="#{APISettings.BroadbandAPIVersion}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='BroadbandAPI']/@version" />
+  </parameter>
+
+  <parameter name="Energy Products API Address" description="Please provide the Energy Product API Address" defaultValue="#{APISettings.EnergyProductsAPIAddress}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='EnergyProductsAPI']/@url" />
+  </parameter>
+  <parameter name="Energy Products API Subscription Key" description="Please provide the Energy Product API Subscription Key" defaultValue="#{APISettings.EnergyProductsAPISubscriptionKey}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='EnergyProductsAPI']/@subscriptionKey" />
+  </parameter>
+  <parameter name="Energy Products API Version" description="Please provide the Energy Product API Version" defaultValue="#{APISettings.EnergyProductsAPIVersion}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='EnergyProductsAPI']/@version" />
+  </parameter>
+
+  <parameter name="Bundling API Address" description="Please provide the Bundling Api Address" defaultValue="#{APISettings.BundlingAPIAddress}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='BundlingAPI']/@url" />
+  </parameter>
+  <parameter name="Bundling API Subscription Key" description="Please provide the Bundling Api Subscription Key" defaultValue="#{APISettings.BundlingAPISubscriptionKey}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='BundlingAPI']/@subscriptionKey" />
+  </parameter>
+  <parameter name="Bundling API Version" description="Please provide the Energy Product API Version" defaultValue="#{APISettings.BundlingAPIVersion}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//apiConfiguration/apiElements/apiElement[@name='BundlingAPI']/@version" />
+  </parameter>
+
+  <parameter name="CAndC Product API Address" description="Please provide the CAndC API Address" defaultValue="#{AppSettings.CAndCApiAddress}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='CAndCApiAddress']/@value" />
+  </parameter>
+  <parameter name="CAndC API Subscription Key" description="Please provide the CAndC API Subscription Key" defaultValue="#{AppSettings.CAndCApiSubscriptionKey}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='CAndCApiSubscriptionKey']/@value" />
+  </parameter>
+  <parameter name="QASEnabled" description="Please provide QASEnabled" defaultValue="#{AppSettings.QASEnabled}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//appSettings/add[@key='QASEnabled']/@value" />
+  </parameter>
+
+  <parameter name="System Overrides Blocked Emails" description="Please provide System Overrides Blocked Emails" defaultValue="#{SystemOverrides.BlockedEmails}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/systemOverrides/@blockedEmails" />
+  </parameter>
+
+  <!--webClientConfiguration-->
+  <parameter name="Web Client Base Url" description="Please provide Web Client Base Url" defaultValue="#{WebClient.BaseUrl}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/webClientConfiguration/@baseUrl" />
+  </parameter>
+  <parameter name="Web Client Version" description="Please provide Web Client Version" defaultValue="#{WebClient.Version}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/webClientConfiguration/@version" />
+  </parameter>
+
+  <!--service endpoints-->
+  <parameter name="Endpoint Configuration ManageCustomerInformationService address" description="Please provide an address for MCIS" defaultValue="#{ManageCustomerInformationService.Address}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='ManageCustomerInformationService']/@address" />
+  </parameter>
+  <parameter name="Endpoint Configuration ManageCustomerInformationService Binding" description="Please provide a binding" defaultValue="#{ManageCustomerInformationService.Binding}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='ManageCustomerInformationService']/@binding" />
+  </parameter>
+  <parameter name="Endpoint Configuration ManageCustomerInformationService BindingConfiguration" description="Please provide a bindingConfiguration" defaultValue="#{ManageCustomerInformationServiceBindingConfiguration.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='ManageCustomerInformationService']/@bindingConfiguration" />
+  </parameter>
+  <parameter name="Endpoint Configuration ManageCustomerInformationService ServicePrincipalName" description="Please provide ServicePrincipalName for MCIS" defaultValue="#{ManageCustomerInformationServicePrincipleName.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='ManageCustomerInformationService']/identity/servicePrincipalName/@value" />
+  </parameter>
+  <parameter name="Endpoint Configuration ManageCustomerInformationService DNS" description="Please provide DNS for MCIS" defaultValue="#{ManageCustomerInformationServiceDNS.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='ManageCustomerInformationService']/identity/dns/@value" />
+  </parameter>
+  <parameter name="Endpoint Configuration ManageCustomerInformationService Behavior Configuration" description="Please provide Behavior Configuration for MCIS" defaultValue="#{ManageCustomerInformationServiceBehaviorConfiguration.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='ManageCustomerInformationService']/@behaviorConfiguration" />
+  </parameter>
+
+  <parameter name="Endpoint Configuration AnnualEnergyReviewService address" description="Please provide an address for AER" defaultValue="#{AnnualEnergyReviewService.Address}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='AnnualEnergyReviewService']/@address" />
+  </parameter>
+  <parameter name="Endpoint Configuration AnnualEnergyReviewService Binding" description="Please provide a binding" defaultValue="#{AnnualEnergyReviewServiceBinding.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='AnnualEnergyReviewService']/@binding" />
+  </parameter>
+  <parameter name="Endpoint Configuration AnnualEnergyReviewService BindingConfiguration" description="Please provide a bindingConfiguration" defaultValue="#{AnnualEnergyReviewServiceBindingConfiguration.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='AnnualEnergyReviewService']/@bindingConfiguration" />
+  </parameter>
+  <parameter name="Endpoint Configuration AnnualEnergyReviewService ServicePrincipalName" description="Please provide ServicePrincipalName for AER" defaultValue="#{AnnualEnergyReviewServicePrincipleName.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='AnnualEnergyReviewService']/identity/servicePrincipalName/@value" />
+  </parameter>
+  <parameter name="Endpoint Configuration AnnualEnergyReviewService DNS" description="Please provide DNS for AER" defaultValue="#{AnnualEnergyReviewServiceDNS.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='AnnualEnergyReviewService']/identity/dns/@value" />
+  </parameter>
+  <parameter name="Endpoint Configuration AnnualEnergyReviewService Behavior Configuration" description="Please provide Behavior Configuration for AnnualEnergyReviewService" defaultValue="#{AnnualEnergyReviewServiceBehaviorConfiguration.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='AnnualEnergyReviewService']/@behaviorConfiguration" />
+  </parameter>
+
+  <parameter name="Endpoint Configuration PersonalProjectionService address" description="Please provide an address for PPS" defaultValue="#{PersonalProjectionService.Address}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='PersonalProjectionService']/@address" />
+  </parameter>
+  <parameter name="Endpoint Configuration PersonalProjectionService Binding" description="Please provide a binding" defaultValue="#{PersonalProjectionServiceBinding.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='PersonalProjectionService']/@binding" />
+  </parameter>
+  <parameter name="Endpoint Configuration PersonalProjectionService BindingConfiguration" description="Please provide a bindingConfiguration" defaultValue="#{PersonalProjectionServiceBindingConfiguration.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='PersonalProjectionService']/@bindingConfiguration" />
+  </parameter>
+  <parameter name="Endpoint Configuration PersonalProjectionService ServicePrincipalName" description="Please provide ServicePrincipalName for PPS" defaultValue="#{PersonalProjectionServiceServicePrincipleName.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='PersonalProjectionService']/identity/servicePrincipalName/@value" />
+  </parameter>
+  <parameter name="Endpoint Configuration PersonalProjectionService DNS" description="Please provide DNS for PPS" defaultValue="#{PersonalProjectionServiceDNS.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='PersonalProjectionService']/identity/dns/@value" />
+  </parameter>
+  <parameter name="Endpoint Configuration PersonalProjectionService Behavior Configuration" description="Please provide Behavior Configuration for PersonalProjectionService" defaultValue="#{PersonalProjectionServiceBehaviorConfiguration.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='PersonalProjectionService']/@behaviorConfiguration" />
+  </parameter>
+
+  <parameter name="Endpoint Configuration BankDetailsService address" description="Please provide an address for BankDetailsService" defaultValue="#{BankDetailsService.Address}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='BankDetailsService']/@address" />
+  </parameter>
+  <parameter name="Endpoint Configuration BankDetailsService Binding" description="Please provide a binding" defaultValue="#{BankDetailsServiceBinding.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='BankDetailsService']/@binding" />
+  </parameter>
+  <parameter name="Endpoint Configuration BankDetailsService BindingConfiguration" description="Please provide a bindingConfiguration" defaultValue="#{BankDetailsServiceBindingConfiguration.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='BankDetailsService']/@bindingConfiguration" />
+  </parameter>
+  <parameter name="Endpoint Configuration BankDetailsService ServicePrincipalName" description="Please provide ServicePrincipalName for BankDetailsService" defaultValue="#{BankDetailsServicePrincipleName.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='BankDetailsService']/identity/servicePrincipalName/@value" />
+  </parameter>
+  <parameter name="Endpoint Configuration BankDetailsService DNS" description="Please provide DNS for BankDetailsService" defaultValue="#{BankDetailsServiceDNS.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='BankDetailsService']/identity/dns/@value" />
+  </parameter>
+  <parameter name="Endpoint Configuration BankDetailsService Behavior Configuration" description="Please provide Behavior Configuration for BankDetailsService" defaultValue="#{BankDetailsServiceBehaviorConfiguration.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='BankDetailsService']/@behaviorConfiguration" />
+  </parameter>
+
+  <parameter name="Endpoint Configuration NewBTLineAvailabilityService address" description="Please provide an address for NewBTLineAvailabilityService" defaultValue="#{NewBTLineAvailabilityService.Address}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='NewBTLineAvailabilityService']/@address" />
+  </parameter>
+  <parameter name="Endpoint Configuration NewBTLineAvailabilityService Binding" description="Please provide a binding" defaultValue="#{NewBTLineAvailabilityServiceBinding.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='NewBTLineAvailabilityService']/@binding" />
+  </parameter>
+  <parameter name="Endpoint Configuration NewBTLineAvailabilityService BindingConfiguration" description="Please provide a bindingConfiguration" defaultValue="#{NewBTLineAvailabilityServiceBindingConfiguration.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='NewBTLineAvailabilityService']/@bindingConfiguration" />
+  </parameter>
+  <parameter name="Endpoint Configuration NewBTLineAvailabilityService ServicePrincipalName" description="Please provide ServicePrincipalName for NewBTLineAvailabilityService" defaultValue="#{NewBTLineAvailabilityServicePrincipleName.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='NewBTLineAvailabilityService']/identity/servicePrincipalName/@value" />
+  </parameter>
+  <parameter name="Endpoint Configuration NewBTLineAvailabilityService DNS" description="Please provide DNS for NewBTLineAvailabilityService" defaultValue="#{NewBTLineAvailabilityServiceDNS.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='NewBTLineAvailabilityService']/identity/dns/@value" />
+  </parameter>
+  <parameter name="Endpoint Configuration NewBTLineAvailabilityService Behavior Configuration" description="Please provide Behavior Configuration for NewBTLineAvailabilityService" defaultValue="#{NewBTLineAvailabilityServiceBehaviorConfiguration.Value}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='NewBTLineAvailabilityService']/@behaviorConfiguration" />
+  </parameter>
+
+  <parameter name="Endpoint Configuration QAS Address" description="Please provide address for QAS Service" defaultValue="#{QASService.Address}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//system.serviceModel/client/endpoint[@name='QASService']/@address" />
+  </parameter>
+
+  
+  <!-- Binding Security -->
+  <parameter name="Bindings security ManageCustomerInformationServiceBinding mode" description="Please add environment config for binding security mode" defaultValue="#{ManageCustomerInformationServiceBindingSecurity.Mode}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/bindings/wsHttpBinding/binding[@name='ManageCustomerInformationServiceBinding']/security/@mode" />
+  </parameter>
+  <parameter name="Bindings security ManageCustomerInformationServiceBinding message clientCredentialType" description="Please add environment config for binding message client Credential Type" defaultValue="#{ManageCustomerInformationServiceBindingMessage.ClientCredentialType}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/bindings/wsHttpBinding/binding[@name='ManageCustomerInformationServiceBinding']/message/@clientCredentialType" />
+  </parameter>
+  <parameter name="Bindings security AnnualEnergyReviewServiceBinding mode" description="Please add environment config for binding security mode" defaultValue="#{AnnualEnergyReviewServiceBindingSecurity.Mode}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/bindings/wsHttpBinding/binding[@name='AnnualEnergyReviewServiceBinding']/security/@mode" />
+  </parameter>
+  <parameter name="Bindings security AnnualEnergyReviewServiceBinding message clientCredentialType" description="Please add environment config for binding message client Credential Type" defaultValue="#{AnnualEnergyReviewServiceBindingMessage.ClientCredentialType}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/bindings/wsHttpBinding/binding[@name='AnnualEnergyReviewServiceBinding']/message/@clientCredentialType" />
+  </parameter>
+  <parameter name="Bindings security PersonalProjectionServiceBinding mode" description="Please add environment config for binding security mode" defaultValue="#{PersonalProjectionServiceBindingSecurity.Mode}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/bindings/wsHttpBinding/binding[@name='PersonalProjectionServiceBinding']/security/@mode" />
+  </parameter>
+  <parameter name="Bindings security PersonalProjectionServiceBinding message clientCredentialType" description="Please add environment config for binding message client Credential Type" defaultValue="#{PersonalProjectionServiceBindingMessage.ClientCredentialType}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/bindings/wsHttpBinding/binding[@name='PersonalProjectionServiceBinding']/message/@clientCredentialType" />
+  </parameter>
+  <parameter name="Bindings security BankDetailsServiceBinding mode" description="Please add environment config for binding security mode" defaultValue="#{BankDetailsServiceBindingSecurity.Mode}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/bindings/wsHttpBinding/binding[@name='BankDetailsServiceBinding']/security/@mode" />
+  </parameter>
+  <parameter name="Bindings security BankDetailsServiceBinding message clientCredentialType" description="Please add environment config for binding message client Credential Type" defaultValue="#{BankDetailsServiceBindingMessage.ClientCredentialType}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/bindings/wsHttpBinding/binding[@name='BankDetailsServiceBinding']/message/@clientCredentialType" />
+  </parameter>
+  <parameter name="Bindings security NewBTLineAvailabilityServiceBinding mode" description="Please add environment config for binding security mode" defaultValue="#{NewBTLineAvailabilityServiceBindingSecurity.Mode}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/bindings/wsHttpBinding/binding[@name='NewBTLineAvailabilityServiceBinding']/security/@mode" />
+  </parameter>
+  <parameter name="Bindings security NewBTLineAvailabilityServiceBinding message clientCredentialType" description="Please add environment config for binding message client Credential Type" defaultValue="#{NewBTLineAvailabilityServiceBindingMessage.ClientCredentialType}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/bindings/wsHttpBinding/binding[@name='NewBTLineAvailabilityServiceBinding']/message/@clientCredentialType" />
+  </parameter>
+
+  <!-- Behavoir Endpoint Certificate  -->
+
+  <parameter name="Behavoirs EndpointBehavoirs ClientCertificate FindValue" description="Please add findvalue for Client Certificate" defaultValue="#{Behavoirs.EndpointBehavoirs.ClientCertificate.FindValue}#" tags="">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="//configuration/system.serviceModel/behaviors/endpointBehaviors/behavior[@name='ClientBehavior']/clientCredentials/clientCertificate/@findValue" />
+  </parameter>
+
+</parameters>

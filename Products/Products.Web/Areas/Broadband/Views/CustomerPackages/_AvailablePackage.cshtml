@@ -1,0 +1,91 @@
+﻿@using Products.Service.Broadband.Mappers
+@using Products.WebModel.Resources.Broadband
+@model Products.WebModel.ViewModels.Broadband.AvailableProductViewModel
+<div class="tariff-wrapper">
+    <div class="tariff js-tariff-container contain">
+        <div class="tariff__header">
+            <h3 class="h2-like tariff-tagline">@Model.Title</h3>
+            <h4 class="h4-like tariff-display-name">@Model.SubTitle</h4>
+        </div>
+
+        @if (!Model.IsAvailable)
+        {
+            <div class="tariff__details">
+                <div class="tariff__error">
+                    <h4 class="h2-like">@AvailablePackages_Resources.PackageUnavailableInAreaMessage</h4>
+                </div>
+            </div>
+            <div class="tariff__price"></div>
+            <div class="tariff__button"></div>
+        }
+        else
+        {
+            <div class="tariff__details">
+                <p>@AvailablePackages_Resources.DownloadSpeedLabel</p>
+                <h4 class="h3-like">
+                    <strong>
+                        @Model.FormattedLineSpeed @AvailablePackages_Resources.SpeedSuffix
+                    </strong>
+                </h4>
+                <div class="pm-speed-bar">
+                    <div id="broadbandSpeedSlider"
+                         class="pm-speed-bar-slider"
+                         data-maximumSpeedCap="@ViewBag.SpeedCap"
+                         data-maxDownload="@Model.FormattedLineSpeed">
+                    </div>
+                </div>
+                <a class="" href="" data-toggle="modal" data-target="#@Model.BroadbandType-modal" title="@AvailablePackages_Resources.LightboxLinkAlt">@AvailablePackages_Resources.LightboxLink</a>
+
+                <div class="modal fade" role="dialog" id="@Model.BroadbandType-modal" tabindex="-1" aria-labelledby="@Model.BroadbandType-modal-label">
+                    <div class="modal-dialog modal-md" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Common_Resources.CloseButtonTitle">
+                                    @Common_Resources.CloseButtonLabel
+                                </button>
+                            </div>
+                            <div class="modal-body centered">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h5 class="h2-like" id="@Model.BroadbandType-modal-label">@Model.Title</h5>
+                                        <p>@Model.BroadbandTypeDescription</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-ons @(Model.AddOnSelected ? "add-on-selected" : "")">
+                    <div class="pull-left">
+                        @Model.SelectedTalkName
+                    </div>
+                    <div class="pull-right">
+                        <a href="" id="@Model.SelectedTalkName" class="add-calls-link" alt="@AvailablePackages_Resources.AddOnLinkAlt">
+                               @( Model.AddOnSelected ? AvailablePackages_Resources.AddedOnLink : AvailablePackages_Resources.AddOnLink )
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tariff__price">
+                <div class="wrapper">
+                    <div class="wrapper-inner tariff-cost tariff-cost--centered">
+                        <div class="tariff-price">
+                            @Model.FormattedPriceFullValue
+                            <span class="tariff-price-pence">@Model.FormattedPricePenceValue</span>
+                        </div>
+                        <p>@AvailablePackages_Resources.PriceSuffix<span class="font-weight-light">@AvailablePackages_Resources.PriceDisclaimer</span></p>
+                </div>
+            </div>
+        </div>
+            <div class="tariff__button">
+                @using (Html.BeginForm("AvailablePackage", "Packages", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(m => Model.SelectedTalkProductCode)
+                    @Html.HiddenFor(m => Model.TalkCode)
+                    <input type="submit" class="button button-primary" value="@Model.GetButtonText()" />
+                }
+            </div>
+        }
+    </div>
+</div>

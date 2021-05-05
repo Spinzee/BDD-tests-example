@@ -1,0 +1,17 @@
+﻿@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.Common.Modal
+<div id="@Model.ModalId" class="modal" tabindex="-1" role="dialog" aria-labelledby="modal-title modal-body">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content centered">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Resources.ModalCloseButtonAlt">
+                    X
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2>@Model.ModalHeader</h2>
+                <p id="modal-body">@Html.Raw(@Model.ModalMessage)</p>
+            </div>
+        </div>
+    </div>
+</div>

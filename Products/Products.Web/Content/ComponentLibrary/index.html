@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Component library / style guide - SSE</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/Css/customer-tariff-change.css" rel="stylesheet" />
+
+    <link href="component-library.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/Content/Favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/Content/Favicons/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/Content/Favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Content/Favicons/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="/Content/Favicons/favicon.svg">
+    <link rel="mask-icon" href="/Content/Favicons/safari-pinned-tab.svg" color="#01285f">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+
+    <div class="pageWrap">
+        <section role="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-3 style-guide-menu bg-dark">
+
+                        <a href="/Content/ComponentLibrary/" class="link-img">
+                        <svg class="svg-logo" xmlns="http://www.w3.org/2000/svg" width="80%" viewBox="0 0 720 340" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs><symbol id="s"><path fill="currentColor" d="M357 138c0-13.2 11.3-19.6 26-19.6 14.8 0 25.2 5.3 31.7 9 5.2 2.8 10 2 13.5-3.5l2.8-5c3.2-6 2.2-10-3.4-14-7.3-5-21.5-12-43-12-30.3 0-56 15-56 45 0 52 80 42 80 72 0 13.2-11 20.5-26.4 20.5-18 0-31-8-38-12.6-5.3-3.4-10.2-3-14 2l-3.2 5c-3.4 5-3 10 2 14 8.7 6.2 26.5 17 52.2 17 33.4 0 55.8-19.6 55.8-46 0-52.7-80-41.7-80-72.6v.8z" /></symbol></defs>
+                            <path fill="currentColor" d="M136.25 3.78l-1.55.02c15.7 5.32 31.8 13.03 32.05 28.98 0 58.5-161.8 56.4-161.8 173 0 99.3 104.15 125.47 134.75 131.07l1.3-.35-.84-.68c-11.4-3.3-31.3-11.64-31.3-28.34 0-58.4 161.73-56.3 161.8-172.74-.04-99.37-103.8-125.46-134.4-130.96zm45.55 23.5c24.22 11.48 48.55 28.18 48.55 57.5-.1 78.3-185.1 92.3-185.1 170.7 0 8.23 1.64 15.68 4.48 22.44-17.23-16.75-29.28-39.36-29.28-72.14 0-25.57 8.26-42.9 21.38-57.7 13.12-14.8 31.67-26.54 51.26-36.88 19.56-10.34 39.92-19.14 56.8-30.1 16.9-10.97 32.34-26.55 32.34-48.32 0-1.9-.16-3.73-.45-5.5z" />
+                            <use width="100%" height="100%" x="-6.75" y="-4.92" xlink:href="#s" />
+                            <use width="100%" height="100%" x="120.25" y="-4.92" xlink:href="#s" />
+                            <path fill="currentColor" d="M712.85 166.38c0-42.2-22-77.5-65.3-77.5-42.2 0-73.7 32-73.7 81.2 0 46 32 81.2 78.6 81.2 23.8 0 41.3-10 50.2-16.6 5.2-3.8 6-8.3 3-13.5l-2.7-4c-3-5-8.7-7-13.2-3-6.8 5-19.5 12-35.5 12-25.7 0-50.5-16-52.8-49h100.3c6.58 0 11.1-4.67 11.1-8.7zm-26-12.8h-84.6c2.7-26.3 23-41.4 44.6-41.4 27.7 0 40 24.38 40 41.4z" />
+                        </svg>
+                        </a>
+
+                        <h3>UI styling version 1.0</h3>
+
+                        <button type="button" class="button button-small button-conversion" id="toggle-grid">Toggle grid</button>
+
+                        <nav>
+                            <ul id="style-guide-navigation">
+                                <li>
+                                    Typography
+                                    <ul>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_colours.html">Colours</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_typography.html">Headings and paras</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_lists.html">Bullets and lists</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_links.html">Links</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_buttons.html">Buttons</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_tooltips.html">Tooltips modals</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Components
+                                    <ul>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_progress-bar.html">Progress bar</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_accordions.html">Accordions</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_tables.html">Tables</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_forms.html">Form inputs</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_radio-check.html">Radio and Check</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_misc.html">Misc</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Misc
+                                    <ul>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_svgs.html">SVG images</button></li>
+                                        <li><button type="button" class="button button-cancel button-small" data-target="_a11y.html">Accessibility</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <a href="temp-tariffs.html" class="button button-small">tariffs</a>
+                            <a href="temp-confirmation.html" class="button button-small">confirmation</a>
+                        </nav>
+                    </div>
+                    <div class="col-xs-9" id="main-content">
+                        <h1>Digital UI Styling guide</h1>
+                        <h2>Dynamic HTML version</h2>
+                        <p>version 1.0 beta (work in progress)</p>
+
+                        <h2>Instructions</h2>
+                        <ul class="bullet-steps">
+                            <li>Click on the sections on the left</li>
+                            <li>Toggle the vertical grid using button top left</li>
+                            <li>Any queries contact Sam Ellis or Kev Fernandez</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="/Scripts/jquery-3.1.1.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/Utils/Sse.Utils.Accordion.js"></script>
+    <script src="/Scripts/Utils/Sse.Utils.ComboboxStyles.js"></script>
+    <script src="/Scripts/Utils/Sse.Utils.CloseAlert.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/Utils/Sse.Utils.Tooltips.js"></script>
+
+    <script>
+        var contentTarget;
+
+        $(document).ready(function () {
+            contentTarget = $('#main-content');
+
+            var fetchPage = function (target) {
+                console.log("fetching page for ", target);
+                $.ajax({
+                    url: target,
+                    method: "GET",
+                    timeout: 5000,
+                    cache: false,
+                    success: function(result) {
+                        console.log("Successfully fetched ajax");
+                        $("#style-guide-navigation").find("button[data-target='" + target + "']").addClass("button-secondary").removeClass("button-cancel")
+                        contentTarget.html(result);
+                        history.pushState('', target, '/Content/ComponentLibrary/index.html#' + target);
+                    },
+                    error: function(jqXhr, status, error) {
+                        console.log("ajax error ", jqXhr, status, error);
+                        contentTarget.html("<h1>:'(</h1><p>Sorry, there has been an error. Are you online?</p>");
+                    }
+                });
+            };
+
+            // If refreshing, go to the page you were on
+            if (window.location.hash) {
+                console.log("Fetching page", window.location.hash);
+                fetchPage(window.location.hash.replace("#", ""));
+            }
+
+            // direct for iOS
+            $("#style-guide-navigation button").on("click touchstart", function (e) {
+                $("#style-guide-navigation").find(".button-secondary").each(function () { $(this).removeClass("button-secondary").addClass("button-cancel"); })
+                var target = $(this).attr("data-target");
+                fetchPage(target);
+
+                e.stopPropagation();
+                e.preventDefault();
+            })
+
+            $("#toggle-grid").on("click touchstart", function () {
+                $("body").toggleClass("vertical-grid");
+            })
+        });
+    </script>
+</body>
+</html>

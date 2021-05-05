@@ -1,0 +1,192 @@
+﻿<root>
+  <FromEmail></FromEmail>
+  <ToEmail></ToEmail>
+  <Subject>Your phone and broadband order is complete</Subject>
+  <Body bgcolor="#F7F7F7" text="#898989">
+  <!--<style>
+      @media only screen and (max-width:600px){
+      #bodyCont{width:100% !important}
+      }
+    </style>-->
+    <table id="bodyCont"  width="600" style="max-width:100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" ALIGN="center">
+      <tr bgcolor="#ffffff">
+        <td valign="top">
+          <a href="http://[$Domain]" target="_blank" title="SSE">
+            <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/SSElogo.png" border="0" alt="SSE" class="sse-logo" style="display:block; width:400px;" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/sse-header.gif" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+        </td>
+      </tr>
+      <tr>
+        <td style="max-width:600px; padding-top:35px; background-color:white;">
+          <table border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+              <td width="40"></td>
+              <td VALIGN="middle" WIDTH="520">
+                <table style="width:100%">
+              <td valign="middle" style="color:#002961; font-size:40px; padding:0; line-height:44px; font-family:Calibri, Arial, Helvetica, sans-serif">Thanks for choosing a new package</td>
+              <td width="40"></td>
+              <td WIDTH="70">
+                  </td>
+              </table>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                <span style="font-size:20px; line-height:24px; font-weight:bold">Hello [$TITLE] [$SURNAME],</span>
+                <br />
+                <br />This is just a quick email to confirm that we’ve got your application. You’ll be enjoying your new [$BROADBANDPACKAGE] in no time.
+                <br />
+                <br />
+                <span style="font-size:20px; line-height:24px; font-weight:bold">What happens next?</span>
+                <br />
+                <table>
+                  <tr>
+                    <td colspan="2" style="height:20px"></td>
+                  </tr>
+                  <tr>
+                    <td style="width: 40px;" valign="top">
+                      <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/bigbullet.png" alt=""/>
+                    </td>
+                    <td valign="top" style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif"> We’ll usually tell your current provider you’re switching to us. But if you’re with Virgin Media, you’ll need to cancel your service with them.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="height:20px"></td>
+                  </tr>
+                  <tr>
+                    <td style="width: 40px;" valign="top">
+                      <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/bigbullet.png" alt=""/>
+                    </td>
+                    <td valign="top" style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">If you need a new line installed, we’ll contact you about an appointment. We’ll let you know if the engineer needs access to your home, as you’ll need to be there.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="height:20px"></td>
+                  </tr>
+                  <tr>
+                    <td style="width: 40px;" valign="top">
+                      <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/bigbullet.png" alt=""/>
+                    </td>
+                    <td valign="top" style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">We’ll email your Welcome Pack within a couple of days and your service start date about a week after that.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="height:20px"></td>
+                  </tr>
+                  <tr>
+                    <td style="width: 40px;" valign="top">
+                      <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/bigbullet.png" alt=""/>
+                    </td>
+                    <td valign="top" style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">Switching takes around 18 to 20 days for most customers.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="height:20px"></td>
+                  </tr>
+                </table>
+                
+                Make sure you’re aware of any fees your current provider may charge you to switch. You’ll get our wireless router around three working days before your switch. Just plug it in and follow the set up instructions.
+                <br />
+                <br />
+                <span style="font-size:20px; line-height:24px; font-weight:bold">Help with your broadband</span>
+                <br />
+
+                <table>
+                  <tr>
+                    <td colspan="2" style="height:20px"></td>
+                  </tr>
+                  <tr>
+                    <td style="width: 30px;" valign="top">
+                      <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/emaillink.png" alt=""/>
+                    </td>
+                    <td valign="top">
+                      <a style="color:#4da0d7; text-decoration: none; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif" href="https://sse.co.uk/help/phone-and-broadband/internet-speed-testing" title="Link to article about broadband speeds">Broadband speed advice</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="height:10px"></td>
+                  </tr>
+                  <tr>
+                    <td style="width: 30px;" valign="top">
+                      <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/emaillink.png" alt=""/>
+                    </td>
+                    <td valign="top">
+                      <a style="color:#4da0d7; text-decoration: none; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif" href="https://sse.co.uk/help/phone-and-broadband/router/setup-access-connection" title="Link to article about how to set up your router">How to set up your router</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="height:10px"></td>
+                  </tr>
+                  <tr>
+                    <td style="width: 30px;" valign="top">
+                      <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/emaillink.png" alt=""/>
+                    </td>
+                    <td valign="top">
+                      <a style="color:#4da0d7; text-decoration: none; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif" href="https://sse.co.uk/help/phone-and-broadband/internet-security-antivirus-and-firewalls" title="Link to article about internet firewalls and antivirus software">Internet firewalls and antivirus software</a>
+                    </td>
+                  </tr>
+                </table>
+               
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                <br />
+                <br />
+                Kind regards
+                <br />
+                <strong>The customer service team at SSE</strong>
+                <br />
+                <br />
+                Address: SSE Phone &amp; Broadband Team, PO Box 230, Havant, PO9 9DT
+                <br />
+                Website: <a href="https://sse.co.uk" target="_blank">sse.co.uk</a>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td VALIGN="middle">
+                <table>
+                  <td WIDTH="70">
+                    <img style="display:block;" src="[$CDNBaseUrl]/Content/Images/EmailTemplates/speech-mark-icon.png"></img>
+                  </td>
+                  <td colspan="2" STYLE="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                    <strong>Need to get in touch?</strong><br/>
+                    Try our <a href="https://sse.co.uk/help/broadband" target="_blank">help page</a> or <a href="https://sse.co.uk/help/contact-us?utm_campaign=sales_confirmation_bb&amp;utm_medium=email&amp;utm_source=sales_confirmation&amp;utm_content=p&amp;bb&amp;WT.mc_id=email|sales_confirmation|sales_confirmation_bb|p&amp;bb" target="_blank">contact us</a>.
+                  </td>
+                </table>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td  height="124" bgcolor="#ffffff">
+          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/sse-header.gif" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+        </td>
+      </tr>
+      <tr>
+        <td height="35" width="100%"  align="left" valign="middle" style="color:#002961; font-size:14px; padding:0; line-height:18px; font-family:Calibri, Arial, Helvetica, sans-serif">
+          This is an automated response. Please don’t reply to this email.
+        </td>
+      </tr>
+    </table>
+  </Body>
+</root>
+ 

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccordionAlt" xml:space="preserve">
+    <value>Click to expand</value>
+  </data>
+  <data name="AccordionHeader" xml:space="preserve">
+    <value>Important information</value>
+  </data>
+  <data name="AccordionParagraph1" xml:space="preserve">
+    <value>On selecting your new tariff if we feel that, based on your known historical consumption and any debit balances, there’s a reasonable risk that the Direct Debit amounts would not be enough to cover your usage, we retain the right to conduct a review of your Direct Debit payment amounts. If this is the case, you’ll receive a letter confirming these new amounts.</value>
+  </data>
+  <data name="AccordionParagraph2" xml:space="preserve">
+    <value>We may change your payment method if you have any outstanding charges on your gas and/or electricity account(s) and/or do not comply with the terms and conditions relating to that payment method. We’ll write to you letting you know of the change at least seven working days before it begins to apply, in accordance with our Licences. If we change your payment method from Direct Debit to quarterly billing then you’ll no longer benefit from the Direct Debit discount.</value>
+  </data>
+  <data name="AccordionParagraph3" xml:space="preserve">
+    <value>If you select a new tariff on this website, you’ll stay with your current SSE brand.</value>
+  </data>
+  <data name="AccordionParagraph4" xml:space="preserve">
+    <value>Please read the Terms &amp; Conditions for the {0} tariff below. Please read our full Terms &amp; Conditions below.</value>
+  </data>
+  <data name="AccordionParagraph5" xml:space="preserve">
+    <value>SSE and associated brands: Southern Electric, Scottish Hydro, SWALEC and Atlantic are all trading names of OVO Electricity Limited registered in England and Wales number 06858121 (supply of electricity) and OVO (S) Gas Limited registered in England and Wales number 02716495 (supply of gas). The registered office of OVO Electricity Limited and OVO (S) Gas Limited is 1 Rivergate, Temple Quay, Bristol, BS1 6ED.</value>
+  </data>
+  <data name="AccordionSection1" xml:space="preserve">
+    <value>Direct Debit amounts</value>
+  </data>
+  <data name="AccordionSection2" xml:space="preserve">
+    <value>Payment method</value>
+  </data>
+  <data name="AccordionSection3" xml:space="preserve">
+    <value>Staying with SSE Southern Electric, SSE SWALEC or SSE Scottish Hydro?</value>
+  </data>
+  <data name="AccordionSection4" xml:space="preserve">
+    <value>Terms and conditions</value>
+  </data>
+  <data name="AccordionSection5" xml:space="preserve">
+    <value>Who we are</value>
+  </data>
+  <data name="AdditionalInfoHeader" xml:space="preserve">
+    <value>Direct Debit Payment Details</value>
+  </data>
+  <data name="AdditionalInfoIntroMonthly" xml:space="preserve">
+    <value>The amount(s) below are rounded up to the nearest pound and will be taken from your bank account on the date shown.</value>
+  </data>
+  <data name="AdditionalInfoIntroMonthlyDD" xml:space="preserve">
+    <value>The Direct Debit amount(s) below are rounded up to the nearest pound and will be taken from your bank account on the date shown.</value>
+  </data>
+  <data name="AdditionalInfoIntroVariable" xml:space="preserve">
+    <value>Your bill will show the amount(s) to be taken from your bank account and the date this will take effect.</value>
+  </data>
+  <data name="AdditionalInfoIntroVariableDD" xml:space="preserve">
+    <value>Your bill will show the Direct Debit amount(s) to be taken from your bank account and the date this will take effect.</value>
+  </data>
+  <data name="BackLink" xml:space="preserve">
+    <value>Change tariff choice</value>
+  </data>
+  <data name="BackLinkAlt" xml:space="preserve">
+    <value>Change tariff choice</value>
+  </data>
+  <data name="Breakdown1" xml:space="preserve">
+    <value>Incl. VAT at 5% &amp; any applicable discounts</value>
+  </data>
+  <data name="Breakdown2" xml:space="preserve">
+    <value>Projected monthly cost breakdown:</value>
+  </data>
+  <data name="Breakdown3" xml:space="preserve">
+    <value>Projected annual cost breakdown:</value>
+  </data>
+  <data name="ChangeTariffAlt" xml:space="preserve">
+    <value>Change Tariff</value>
+  </data>
+  <data name="CheckboxLabel" xml:space="preserve">
+    <value>Yes, I have read and agreed to the terms and conditions</value>
+  </data>
+  <data name="ConfirmationHeader" xml:space="preserve">
+    <value>Before you confirm your order, please read our terms and conditions:</value>
+  </data>
+  <data name="ConfirmationIntro" xml:space="preserve">
+    <value>You may get your switching details and Welcome Pack via email.</value>
+  </data>
+  <data name="Disclaimer" xml:space="preserve">
+    <value>Your new tariff will start on </value>
+  </data>
+  <data name="Electricity" xml:space="preserve">
+    <value>Electricity</value>
+  </data>
+  <data name="ElectricityPerMonth" xml:space="preserve">
+    <value>Electricity per month</value>
+  </data>
+  <data name="Gas" xml:space="preserve">
+    <value>Gas</value>
+  </data>
+  <data name="GasPerMonth" xml:space="preserve">
+    <value>Gas per month</value>
+  </data>
+  <data name="GeneralPDFLabel" xml:space="preserve">
+    <value>Please read our full Terms &amp; Conditions below:</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>You’re almost done</value>
+  </data>
+  <data name="InformationLinkAlt" xml:space="preserve">
+    <value>Click here for more information</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>Please check the details and confirm you’ve read the terms and conditions to complete your tariff selection.</value>
+  </data>
+  <data name="IsTermsAndConditionsCheckedLabelAlt" xml:space="preserve">
+    <value>Confirm that you understand the information above.</value>
+  </data>
+  <data name="IsTermsAndConditionsCheckedLabelText" xml:space="preserve">
+    <value>Yes, I have read and agreed to the terms and conditions</value>
+  </data>
+  <data name="IsTermsAndConditionsCheckedValidationError" xml:space="preserve">
+    <value>Please read the statements above and select the tick box to confirm you agree.</value>
+  </data>
+  <data name="MonthlyCollectionDayText" xml:space="preserve">
+    <value>Date of payment each month</value>
+  </data>
+  <data name="PostLoginAuthorisationText" xml:space="preserve">
+    <value>By clicking "Confirm order" you are confirming you are the account holder and have authorisation from (any or all) other account holders to make changes to the account(s).</value>
+  </data>
+  <data name="PriceLabel" xml:space="preserve">
+    <value>Projected monthly cost:</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Your new tariff will start on</value>
+  </data>
+  <data name="SummaryHeading1" xml:space="preserve">
+    <value>Your right to change your mind</value>
+  </data>
+  <data name="SummaryHeading2" xml:space="preserve">
+    <value>Direct Debit Calculation</value>
+  </data>
+  <data name="SummaryParagraph1" xml:space="preserve">
+    <value>We may send your confirmation of contract by email after you’ve confirmed your new tariff selection. You can cancel your agreement without charge within 14 days from the day after the date you signed up to this tariff. We’ll include details of how to cancel when we send this to you. Alternatively, you can get in touch using our contact us page.</value>
+  </data>
+  <data name="SummaryParagraph2" xml:space="preserve">
+    <value>If you’re paying by Direct Debit, we’ve calculated the monthly amount by dividing your personal projection by 12 and rounding it up to the nearest pound.</value>
+  </data>
+  <data name="TermsAndConditionsLabel" xml:space="preserve">
+    <value>- Terms and Conditions</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Confirm your order - Choose your new tariff - SSE</value>
+  </data>
+  <data name="VariableFrequencyText" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="VATRateParagraph" xml:space="preserve">
+    <value>All prices are inclusive of VAT at 5%.</value>
+  </data>
+  <data name="FixAndProtectAccordionParagraph5" xml:space="preserve">
+    <value>SSE is a trading name of OVO Electricity Limited registered in England and Wales number 06858121 (supply of electricity), OVO (S) Gas Limited registered in England and Wales number 02716495 (supply of gas) and OVO (S) Home Services Limited (boiler and heating repair, servicing, cover, boiler Installations and electrical wiring cover). The registered office of OVO Electricity Limited and OVO (S)OVO (S) Gas Limited is 1 Rivergate, Temple Quay, Bristol, BS1 6ED.
+
+The registered office of OVO (S) Home Services Limited is Grampian House, 200 Dunkeld Road, Perth, PH1 3GH. Registered in Scotland No. SC292102. OVO (S) Home Services Limited is authorised and regulated by the Financial Conduct Authority (FCA) under reference number 695476. You can check this on the Financial Services Register by visiting the FCA website.</value>
+  </data>
+  <data name="FixAndProtectConfirmationIntro" xml:space="preserve">
+    <value>You may get your switching details and Welcome Pack via email for Energy. You will also receive a confirmation of sale letter for your SSE Heating Breakdown Cover separately confirming your product start date. This will include your policy booklet with terms and conditions.</value>
+  </data>
+  <data name="FixAndProtectSummaryPargraph1" xml:space="preserve">
+    <value>For SSE Home Services products, your Cancellation Period will be 14 calendar days from the day you receive your confirmation of contract. If you expressly request for SSE to carry out any work during your Cancellation Period, you may need to pay for the work SSE has undertaken.</value>
+  </data>
+  <data name="FixAndProtectCheckboxLabelHeader" xml:space="preserve">
+    <value>&lt;p&gt;By ticking this box, you confirm:&lt;/p&gt;
+&lt;div&gt;
+&lt;ol&gt;
+&lt;li&gt;You’re happy to enter into a binding contract with OVO Electricity Limited/OVO (S) Gas Limited for your gas/electricity supply and OVO (S) Home Services Limited for any Home Services products (and, for any insurance products, also AmTrust Europe Limited) for the SSE products I have selected.&lt;/li&gt;
+&lt;li&gt;I have read and accept the 1 Year Fix and Protect v3 Terms and Conditions (which also includes a summary of the tariff) and the General Terms and Conditions for the Supply of Electricity and/or Gas, and the SSE Breakdown Cover Policy Booklet and the SSE Heating Breakdown Cover Insurance Product Information Document.&lt;/li&gt;
+&lt;li&gt;I have provided accurate information (not doing so could invalidate your insurance).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="DDPara1" xml:space="preserve">
+    <value>If you have a fixed price tariff and pay by Direct Debit or standing order, for most fixed tariffs you’ll get a discount of £40 a year for each fuel when compared to other ways of paying. The discount is applied to your standing charge on a pence per day basis, until your tariff ends.</value>
+  </data>
+  <data name="DDPara2" xml:space="preserve">
+    <value>If you have a standard variable tariff, your energy prices are capped and the maximum price you pay (known as a cap) is set by Ofgem, the energy regulator. If you pay by Direct Debit or standing order, your standing charge and unit prices will be discounted. Your discount will vary depending on how much energy you use, where you live and your meter type. If you qualified for Warm Home Discount before 1 August 2019, your prices will be discounted regardless of how you pay.</value>
+  </data>
+  <data name="DDPara3" xml:space="preserve">
+    <value>Certain tariffs do not qualify for Direct Debit and standing order discounts. Please check the tariff terms and conditions for details.</value>
+  </data>
+  <data name="OVODisclaimerText" xml:space="preserve">
+    <value>SSE  is now part of  the OVO family, which means some of your communications may say SSE Home Services and some may mention OVO (S) Home Services. This will not negatively impact the product or service that you will receive.  Please bear with us as we update all of our communications accordingly.</value>
+  </data>
+</root>

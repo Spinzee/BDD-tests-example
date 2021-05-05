@@ -1,0 +1,37 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.SmartMeterFrequencyViewModel
+@{
+    ViewBag.Title = SmartMeter_Resources.SmartMeterConsentTitle;
+}
+
+<div class="container">
+    @Html.Partial("_BackChevronWithStepCounter", Model.BackChevronViewModel)
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <legend class="sr-only"></legend>
+                    @if (Model.SmartMeterFrequencyEnabled)
+                    {
+                        Html.RenderPartial("_SmartMeterFrequency");
+                    }
+                    else
+                    {
+                        Html.RenderPartial("_NonCompatibleSmartMeter");
+                    }
+                    @Html.HiddenFor(m => m.SmartMeterFrequencyEnabled)
+
+                    <input class="button button-primary" type="submit" value="@Resources.ButtonNextText" id="button-submit" name="button-submit" title="@Resources.ButtonNextSignUpEnergyAlt" />
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/js/common/address")    
+}

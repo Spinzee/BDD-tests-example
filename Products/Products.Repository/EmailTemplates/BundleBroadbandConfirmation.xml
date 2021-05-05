@@ -1,0 +1,179 @@
+﻿<root>
+  <FromEmail></FromEmail>
+  <ToEmail></ToEmail>
+  <Subject>Welcome to SSE</Subject>
+  <Body bgcolor="#F7F7F7" text="#898989">
+    <!--<style> 
+      @media only screen and (max-width:600px){
+          #bodyCont{width:100% !important}
+      } 
+    </style>-->
+    <table id="bodyCont"  width="600" style="max-width:100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" ALIGN="center">
+      <tr bgcolor="#ffffff">
+        <td valign="middle" align="middle" width="200" height="85">
+          <a href="http://[$Domain]" target="_blank" title="SSE">
+            <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/sse-email-logo.png" border="0" alt="SSE" class="sse-logo" style="display:block;" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/email-header.png" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+        </td>
+      </tr>
+      <tr>
+        <td style="max-width:600px; padding-top:20px; background-color:white;">
+          <table border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td width="520" style="color:#616161; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                <span style="font-size:20px; line-height:24px; font-weight:bold;color:#004687;">Hi [$FIRSTNAME],</span>
+                <br />
+                <br />Thanks for choosing the [$SELECTEDPRODUCTTITLE] Bundle. It’s great that you’re joining us.
+                <br />
+                <br/>
+                <span style="font-size:18px; line-height:24px; font-weight:bold;color: #004687;">What happens next?</span>
+                <br />
+                <br />
+                You’ll receive a Welcome pack shortly with all you need to know about your Bundle, including terms and conditions, payment details and other useful information.
+                <br />
+                <br />
+                <br />
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td width="520" height="25"></td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td width="520" style="border-radius:1em;" height="25" bgcolor="#F7F7F7">
+                <table border="0" cellpadding="0" cellspacing="0" align="center">
+                  <tbody>
+                    <tr style="background-color: #004687;
+                    background-image: linear-gradient(135deg,#180c39 40%,#5a92d6);">
+                      <td width="20" style="border-top-left-radius:1em;"></td>
+                      <td height="80" width="480">
+                        <span style="font-size: 24px;line-height:24px;font-weight:bold;color: #ffffff;font-family:Calibri, Arial, Helvetica, sans-serif;">Energy</span>
+                      </td>
+                      <td width="20" style="border-top-right-radius:1em;"></td>
+                    </tr>
+                    <tr>
+                      <td width="20"></td>
+                      <td width="480" style="color:#616161; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                        <br />
+                        We’ll switch your energy supply to us within 21 days, so there’s no need to contact your old supplier. We’ll be in touch about your opening meter readings.
+                        <br />
+                        <br />
+                        <span>
+                          <a style="text-decoration:none;font-size:18px; line-height:25px; font-weight:bold;color: #2B7BB9;" href="https://sse.co.uk/help/energy/switching" target="_blank">About your switch to SSE</a>
+                        </span>
+                        <br/>
+                        <span>
+                          <a style="text-decoration:none;font-size:18px; line-height:32px; font-weight:bold;color: #2B7BB9;" href="https://sse.co.uk/help/energy/meters/how-to-read-your-meter" target="_blank">How to read your gas or electricity meter</a>
+                        </span>
+                        <br/>
+                      </td>
+                      <td width="20"></td>
+                    </tr>
+                    <tr>
+                      <td height="15" width="520" colspan="3"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td width="40"></td>
+            </tr>
+
+            <tr>
+              <td width="40"></td>
+              <td width="520" height="25"></td>
+              <td width="40"></td>
+            </tr>
+
+            <tr>
+              <td width="40"></td>
+              <td width="520" style="border-radius:1em;" height="25" bgcolor="#F7F7F7">
+                <table border="0" cellpadding="0" cellspacing="0" align="center">
+                  <tbody>
+                    <tr style="background-color: #004687;
+                    background-image: linear-gradient(135deg,#180c39 40%,#5a92d6);">
+                      <td width="20" style="border-top-left-radius:1em;"></td>
+                      <td height="80" width="480">
+                        <span style="font-size: 24px;line-height:24px;font-weight:bold;color: #ffffff;font-family:Calibri, Arial, Helvetica, sans-serif;">[$FIXNFIBREHEADER]</span>
+                      </td>
+                      <td width="20" style="border-top-right-radius:1em;"></td>
+                    </tr>
+                    <tr>
+                      <td width="20"></td>
+                      <td width="480" style="color:#616161; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                        <br />
+                        We’ll make sure your broadband is up and running in around 18 days. You don’t have to let your current provider know unless you’re with Virgin Media. If you need a new phone line installed, we’ll be in touch to arrange your installation.
+                        <br />
+                        <br />
+                        Your new wireless router will arrive around three working days before your switch. On your start date, just plug it in and follow the instructions.
+
+                        <br />
+                        <br />
+                        <span>
+                          <a style="text-decoration:none;font-size:18px; line-height:25px; font-weight:bold;color: #2B7BB9;" href="https://sse.co.uk/help/phone-and-broadband/switching-phone-and-broadband-provider" target="_blank">About your switch to SSE</a>
+                        </span>
+                        <br/>
+                        <span>
+                          <a style="text-decoration:none;font-size:18px; line-height:32px; font-weight:bold;color: #2B7BB9;" href="https://sse.co.uk/help/phone-and-broadband/broadband-setup" target="_blank">Broadband setup and security information</a>
+                        </span>
+                        <br />
+                      </td>
+                      <td width="20"></td>
+                    </tr>
+                    <tr>
+                      <td height="15" width="520" colspan="3"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td width="40"></td>
+            </tr>
+            [$ExtrasSection]
+            <tr>
+              <td width="40"></td>
+              <td width="520" style="color:#616161; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                <br />
+                <span style="font-size:18px; line-height:24px; font-weight:bold;color: #004687;">Anything else?</span>
+                <br/>
+                <br/>
+                We’ll let you know how your switch is going at every step. Meanwhile, feel free to <a style="text-decoration:none;font-weight:bold;color: #2B7BB9;" href="https://sse.co.uk/help/contact-us" target="_blank" >get in touch</a> if you have any questions. We’ll be happy to help.
+                <br/>
+                <br/>
+                <br/>
+                <span style="font-size:18px; line-height:24px;">Welcome to SSE!</span>
+                <br />
+                <br />
+                <span style="font-size:18px; line-height:24px;">The Team at SSE</span>
+                <br/>
+                <strong style="font-size:18px; line-height:24px;">SSE Customer Services</strong>
+                <br />
+              </td>
+              <td width="40"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td  height="124" bgcolor="#ffffff">
+          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/email-footer.png" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+        </td>
+      </tr>
+      <tr>
+        <td height="35" width="100%"  align="left" valign="middle" style="color:#002961; font-size:14px; padding:0; line-height:18px; font-family:Calibri, Arial, Helvetica, sans-serif">
+          This is an automated response. Please don’t reply to this email.
+        </td>
+      </tr>
+    </table>
+  </Body>
+</root>

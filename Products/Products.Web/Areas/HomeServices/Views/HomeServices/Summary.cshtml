@@ -1,0 +1,321 @@
+﻿@using Products.WebModel.Resources.HomeServices
+@using Products.WebModel.ViewModels.HomeServices
+@model Products.WebModel.ViewModels.HomeServices.SummaryViewModel
+@{
+    ViewBag.Title = Common_Resources.SummaryTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+            @Html.Partial("_StepCounter")
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@Summary_Resources.Header</h1>
+        </div>
+        <div class="hidden-xs col-sm-4">
+            <a class="icon-link icon-link-print pull-right" id="print-summary" href="" title="@Summary_Resources.PrintLinkAlt">@Summary_Resources.PrintLinkText</a>
+        </div>
+    </div>
+    <div class="row gap">
+        <div class="col-xs-12 col-sm-8">
+            <p class="gap-xl">@Summary_Resources.SummaryIntro</p>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <h2 class="h3-like">@Summary_Resources.YourCoverHeader</h2>
+                </div>
+                <div class="col-sm-6">
+                    <a class="icon-link icon-link-edit pull-right" title="@Summary_Resources.ChangeCoverLinkAlt" data-toggle="modal" data-target="#@Model.CoverDetailsModal.ModalId">@Summary_Resources.ChangeCoverLinkText</a>
+                </div>
+            </div>
+            @*Your Cover*@
+            <div class="row gap">
+                <div class="col-xs-12 col-summary">
+                    <table class="table table-summary table-key-value">
+                        <tr>
+                            <th scope="row">@Model.CoverSummaryViewModel.SelectedProductName </th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="indented">@Summary_Resources.ContractStartDateLabel</th>
+                            <td>@Model.CoverSummaryViewModel.ContractStartDate</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="indented">@Summary_Resources.ContractLengthLabel</th>
+                            <td>@Model.CoverSummaryViewModel.ContractLength</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="indented">@Summary_Resources.ExcessLabel</th>
+                            <td>@Model.CoverSummaryViewModel.ExcessAmount</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            @*Projected monthly costs*@
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="h3-like">@Summary_Resources.MonthlyCostsTableHeader</h2>
+                </div>
+            </div>
+            <div class="row gap">
+                <div class="col-xs-12 col-summary">
+                    <table class="table table-summary table-key-value">
+                        <tr>
+                            <th scope="row">@Model.CoverSummaryViewModel.SelectedProductName</th>
+                            <td>@Model.CoverSummaryViewModel.CoverMonthlyPaymentAmount</td>
+                        </tr>
+                        @if (Model.CoverSummaryViewModel != null && Model.CoverSummaryViewModel.Extras.Any())
+                        {
+                            foreach (var extra in Model.CoverSummaryViewModel.Extras)
+                            {
+                                <tr>
+                                    <th scope="row" class="indented"><strong>@Summary_Resources.ExtrasLabel</strong><br />@extra.ExtraName</th>
+                                    <td><br />@extra.ExtraMonthlyCost</td>
+                                </tr>
+                            }
+                        }
+                        <tr>
+                            <th scope="row" class="total-price-label"><strong>@Summary_Resources.MonthlyTotalLabel</strong><br />@Summary_Resources.TaxDisclaimerLabel</th>
+                            <td class="total-price">@Model.CoverSummaryViewModel.TotalMonthlyCost</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            @*Projected yearly costs*@
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="h3-like">@Summary_Resources.YearlyCostsTableHeader</h2>
+                </div>
+            </div>
+            <div class="row gap">
+                <div class="col-xs-12 col-summary">
+                    <table class="table table-summary table-key-value">
+                        <tr>
+                            <th scope="row">@Model.CoverSummaryViewModel.SelectedProductName</th>
+                            <td>@Model.CoverSummaryViewModel.TotalYearlyProductCost</td>
+                        </tr>
+                        @if (Model.CoverSummaryViewModel != null && Model.CoverSummaryViewModel.Extras.Any())
+                        {
+                            foreach (var extra in Model.CoverSummaryViewModel.Extras)
+                            {
+                                <tr>
+                                    <th scope="row" class="indented"><strong>@Summary_Resources.ExtrasLabel</strong><br />@extra.ExtraName</th>
+                                    <td><br />@extra.ExtraYearlyCost</td>
+                                </tr>
+                            }
+                        }
+                        <tr>
+                            <th scope="row" class="total-price-label"><strong>@Summary_Resources.YearlyTotalLabel</strong><br />@Summary_Resources.TaxDisclaimerLabel</th>
+                            <td class="total-price">@Model.CoverSummaryViewModel.YearlyTotalCost</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            @*Savings box*@
+            @if (Model.CoverSummaryViewModel.HasOffers)
+            {
+                <div class="row savings-box-container">
+                    <div class="col-xs-12 col-sm-12 gap-xxxl">
+                        <div class="savings-box offer-box">
+                            <p class="h3-like">@Model.CoverSummaryViewModel.OfferHeader</p>
+                            <p>@Model.CoverSummaryViewModel.OfferParagraph</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @*Summary Details*@
+            <div class="row summary-details">
+                <div class="col-xs-12 col-sm-6 col-summary payment-details">
+                    <div class="row col-summary-with-padding">
+                        <div class="col-xs-9">
+                            <h2 class="h3-like">@Summary_Resources.PaymentHeader</h2>
+                        </div>
+                        <div class="col-xs-3">
+                            <a data-toggle="modal" data-target="#@Model.BankDetailsModal.ModalId" class="icon-link icon-link-edit pull-right" title="@Summary_Resources.PaymentEditLinkAlt">@Summary_Resources.EditLinkText</a>
+                        </div>
+                    </div>
+                    <div class="row col-summary-with-no-padding">
+                        <div class="col-xs-12">
+                            <table class="table table-summary table-key-value">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><strong>@Summary_Resources.PaymentLabel</strong> </th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">@Model.CoverSummaryViewModel.SelectedProductName</th>
+                                        <td>@Model.CoverSummaryViewModel.CoverMonthlyPaymentAmount</td>
+                                    </tr>
+                                    @if (Model.CoverSummaryViewModel != null && Model.CoverSummaryViewModel.Extras.Any())
+                                    {
+                                        foreach (ExtraViewModel extra in Model.CoverSummaryViewModel.Extras)
+                                        {
+                                            <tr>
+                                                <th scope="row">@extra.ExtraName</th>
+                                                <td>@extra.ExtraMonthlyCost</td>
+                                            </tr>
+                                        }
+                                    }
+                                    <tr>
+                                        <th scope="row">@Summary_Resources.PaymentDateLabel</th>
+                                        <td>@Model.DirectDebitPaymentDay</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-summary summary-bank-details">
+                    <div class="row col-summary-with-padding">
+                        <div class="col-xs-9">
+                            <h2 class="h3-like">@Summary_Resources.BankDetailsHeader</h2>
+                        </div>
+                        <div class="col-xs-3">
+                            <a data-toggle="modal" data-target="#@Model.BankDetailsModal.ModalId" class="icon-link icon-link-edit pull-right" title="@Summary_Resources.DDEditLinkAlt">@Summary_Resources.EditLinkText</a>
+                        </div>
+                    </div>
+                    <div class="row col-summary-with-no-padding">
+                        <div class="col-xs-12">
+                            <table class="table table-summary table-key-value">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">@Summary_Resources.MethodLabel</th>
+                                        <td>@Summary_Resources.PaymentMethodMonthlyLabel</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">@Summary_Resources.AccHolderLabel</th>
+                                        <td>@Model.DirectDebitAccountName</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">@Summary_Resources.AccNumberlabel</th>
+                                        <td>@Model.DirectDebitAccountNumber</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">@Summary_Resources.SortCodeLabel</th>
+                                        <td>@Model.DirectDebitSortCode</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" colspan="2">
+                                            <a href="@Url.Action("PrintMandate")" title="@Summary_Resources.DDMandateLinkAlt" target="_blank">@Summary_Resources.DDMandateLink</a>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-summary">
+                    <div class="row col-summary-with-padding">
+                        <div class="col-xs-9">
+                            <h2 class="h3-like">@Summary_Resources.PersonalDetailsHeader</h2>
+                        </div>
+                        <div class="col-xs-3">
+                            <a class="icon-link icon-link-edit pull-right" title="@Summary_Resources.PersonalEditLinkAlt" data-toggle="modal" data-target="#@Model.PersonalDetailsModal.ModalId">
+                                @Summary_Resources.EditLinkText
+                            </a>
+                        </div>
+                        <div class="col-xs-12">
+                            <p>@Model.CustomerFormattedName</p>
+                            <p>@Model.DateOfBirth</p>
+                            <p>@Model.Address</p>
+                            <p>@Model.ContactNumber</p>
+                            <p>@Model.EmailAddress</p>
+                        </div>
+                    </div>
+                </div>
+                @if (@Model.IsLandLord)
+                {
+                    <div class="col-xs-12 col-sm-6 col-summary">
+                        <div class="row col-summary-with-padding">
+                            <div class="col-xs-9">
+                                <h2 class="h3-like">@Summary_Resources.CoverAddressDetailsHeader</h2>
+                            </div>
+                            <div class="col-xs-3">
+                                <a class="icon-link icon-link-edit pull-right" title="@Summary_Resources.SupplyAddressEditLinkAlt" data-toggle="modal" data-target="#@Model.SupplyAddressModal.ModalId">
+                                    @Summary_Resources.EditLinkText
+                                </a>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>@Model.CoverAddress</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            @*Section at the bottom*@
+            <h3>@Summary_Resources.EligibilityHeader</h3>
+            <p>@Summary_Resources.EligibilityParagraph1</p>
+        <p>@Summary_Resources.EligibilityParagraph2</p>
+        <p>@Summary_Resources.EligibilityParagraph3</p>
+        <p>@Summary_Resources.EligibilityParagraph4</p>
+            <h3>@Summary_Resources.CreditCheckHeader</h3>
+            <p>@Summary_Resources.CreditCheckParagraph <a href="@Summary_Resources.CreditCheckLinkUrl" target="_blank" title="@Summary_Resources.CreditCheckLinkAlt">@Summary_Resources.CreditCheckLinkText</a>@Summary_Resources.CreditCheckLinkSuffix</p>
+            <p class="gap"><a href="@Summary_Resources.PrivacyLinkUrl" target="_blank" title="@Summary_Resources.PrivacyLinkAlt">@Summary_Resources.PrivacyLinkText</a>@Summary_Resources.PrivacyLinkSuffix</p>
+            <h3>@Summary_Resources.OurBrandHeader</h3>
+            <p>@Summary_Resources.OurBrandHeaderParagraph1</p>
+            <p>@Summary_Resources.OurBrandHeaderParagraph2</p>
+            @Html.Partial("_ImportantInfoAccordion", Model.AccordionViewModel)
+            <h3 class="h5-like">@Summary_Resources.TermsAndConditionsHeader</h3>
+            @*PDF links*@
+        <ul class="link-list list--spaced gap-xxxl">
+            @foreach (ProductPDFViewModel productUrl in Model.AccordionViewModel.ProductPDFs)
+            {
+                <li><a href="@productUrl.Url" class="icon-link icon-link-pdf" target="_blank" title="@productUrl.Description">@productUrl.Description</a></li>
+            }
+
+            @foreach (ProductPDFViewModel extraProductUrl in Model.AccordionViewModel.ExtraProductPDFs)
+            {
+                <li><a href="@extraProductUrl.Url" class="icon-link icon-link-pdf" target="_blank" title="@extraProductUrl.Description">@extraProductUrl.Description</a></li>
+            }
+        </ul>
+            @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "form-submit" }))
+            {
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <legend class="form-legend">@Summary_Resources.CheckboxLegend</legend>
+                    <div class="form-group checkbox checkbox--multiline contain">
+                        @Html.EditorFor(m => m.IsTermsAndConditionsChecked)
+                    </div>
+                    <div class="form-group">
+                        <input class="button button-conversion" type="submit" value="@Summary_Resources.SubmitButtonText" id="button-submit" name="button-submit" title="@Summary_Resources.SubmitButtonTitle" />
+                    </div>
+                </fieldset>
+            }
+        </div>
+        <div class="col-xs-12 col-sm-4 col-extend-sm">
+            <div class="box-info">
+                <h2 class="h3-like">@Summary_Resources.RightToChangeHeader</h2>
+                <p>@Summary_Resources.RightToChangeParagraph1</p>
+                <p>@Html.Raw(Summary_Resources.RightToChangeParagraph2)</p>
+                <p>@Summary_Resources.RightToChangeParagraph3</p>
+            </div>
+            <div class="box-info">
+                <h2 class="h3-like">@Summary_Resources.ImportantInfoHeader</h2>
+                <p>@Summary_Resources.ImportantInfoParagraph</p>
+            </div>
+        </div>
+    </div>
+</div>
+@{
+    Html.RenderPartial("_ConfirmationModal", Model.BankDetailsModal);
+    Html.RenderPartial("_ConfirmationModal", Model.PersonalDetailsModal);
+    Html.RenderPartial("_ConfirmationModal", Model.CoverDetailsModal);
+    if (@Model.IsLandLord)
+    {
+        Html.RenderPartial("_ConfirmationModal", Model.SupplyAddressModal);
+    }
+}
+@section scripts{
+    @Scripts.Render("~/js/products/summary")
+    @Scripts.Render("~/js/common/print-summary")
+    <script>
+        $(() => {
+            var disableButton = new Digital.Web.Utils.DisableSubmitButton('form-submit');
+        });
+    </script>
+}

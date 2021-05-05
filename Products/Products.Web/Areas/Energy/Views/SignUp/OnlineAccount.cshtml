@@ -1,0 +1,47 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.OnlineAccountViewModel
+@{
+    ViewBag.Title = "OnlineAccount";
+}
+
+<div class="container">
+    @Html.Partial("_BackChevronWithStepCounter", Model.BackChevronViewModel)
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@OnlineAccount_Resources.Header</h1>
+            <p class="gap-xl">@OnlineAccount_Resources.Paragraph</p>
+            @using (Html.BeginForm("OnlineAccount", "SignUp", FormMethod.Post, new { id = "OnlineAccountForm", autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.EditorFor(m => m.Password)
+                @Html.EditorFor(m => m.ConfirmPassword)
+
+                <ul class="bullet-list list--spaced">
+                    <li>@OnlineAccount_Resources.Bullet1</li>
+                    <li>@OnlineAccount_Resources.Bullet2</li>
+                    <li>@OnlineAccount_Resources.Bullet3</li>
+                    <li>@OnlineAccount_Resources.Bullet4</li>
+                </ul>
+
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Resources.ButtonNextText" id="button-submit" name="button-submit" title="@Resources.ButtonNextSignUpEnergyAlt" />
+                </div>
+            }
+        </div>
+        @Html.Partial("_Basket")
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/js/products/energy/basket")
+    @Scripts.Render("~/js/products/energy/extras")
+    <script>
+        $(function () {
+            // ReSharper disable once UnusedLocals
+            var basketConfig = new Digital.Web.Energy.BasketConfig("/energy-signup/update-your-price", "/energy-signup/online-account", true);
+            var basket = new Digital.Web.Energy.Basket(basketConfig);
+        });
+    </script>
+}

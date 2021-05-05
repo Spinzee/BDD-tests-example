@@ -1,0 +1,140 @@
+﻿<root>
+  <FromEmail></FromEmail>
+  <ToEmail></ToEmail>
+  <Subject>You’ve registered for an online account with SSE</Subject>
+  <Body bgcolor="#F7F7F7" text="#898989">
+    <style>
+      @media only screen and (max-width:600px){
+      #bodyCont{width:100% !important}
+      }
+    </style>
+    <table id="bodyCont"  width="600" style="max-width:100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" ALIGN="center">
+      <tr bgcolor="#ffffff">
+        <td valign="top">
+          <a href="http://[$Domain]" target="_blank" title="SSE">
+            <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/SSElogo.png" border="0" alt="SSE" class="sse-logo" style="display:block; width:400px;" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/sse-header.gif" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+        </td>
+      </tr>
+      <tr>
+        <td style="max-width:600px; padding-top:35px; background-color:white;">
+          <table border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+              <td width="40"></td>
+              <td width="520" valign="middle" style="color:#002961; font-size:40px; padding:0; line-height:44px; font-family:Calibri, Arial, Helvetica, sans-serif">Thanks for registering for an online account</td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                <span style="font-size:20px; line-height:24px; font-weight:bold">Hello,</span>
+                <br />
+                <br />We've set up your account with email address [$EmailAddress]. Please use this when you log in. First you’ll need to activate your account using the link below.
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td width="520" height="25" bgcolor="#F7F7F7">
+                <table border="0" cellpadding="0" cellspacing="0" align="center">
+                  <tr>
+                    <td height="15" width="560" colspan="3"></td>
+                  </tr>
+                  <tr>
+                    <td width="20"></td>
+                    <td width="520" style="color:#002961; width:500px; font-size:14px; padding:0; line-height:24px; font-family:Calibri, Arial, Helvetica, sans-serif;">
+                      <a href="[$UpdateLink]" title="Link to activate your account">[$UpdateLink]</a>
+                    </td>
+                    <td width="20"></td>
+                  </tr>
+                  <tr>
+                    <td height="15" width="560" colspan="3"></td>
+                  </tr>
+                </table>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">Don’t forget all these handy services you’ll get with your online account:</td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td style="color:#002961; font-size:16px; padding:0; font-family:Calibri, Arial, Helvetica, sans-serif">
+                <ul style="margin:0;">
+                  <li>View your bill - we'll save up to two years of your bills from the date you register.</li>
+                  <li>Chat live to an adviser with live chat.</li>
+                  <li>Make secure payments on energy accounts.</li>
+                  <li>Give meter readings to get an instant up to date balance.</li>
+                  <li>If you’ve got a Smart meter, you can see what you’re using whenever you want.</li>
+                </ul>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td valign="middle" style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                If you have any questions, or need any help, just <a href="http://[$Domain]/help/contact-us/" title="Link to contact us">get in touch</a>.
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td valign="middle" style="color:#002961; font-size:16px; padding:0; line-height:24px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                <span style="font-size:16px;">
+                  Kind regards<br />The Team at SSE
+                </span>
+                <br />
+                <span>
+                  <strong>SSE Customer Services</strong>
+                  <br />
+                  Phone: 0345 070 0523<br />
+                  Address: SSE, PO Box 7506, Perth PH1 3QR<br />
+                  Website: <a href="http://[$Domain]" target="_blank" style="text-decoration:underline; color:#002961;">[$Domain]</a>
+                </span>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td  height="124" bgcolor="#ffffff">
+          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/sse-header.gif" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+        </td>
+      </tr>
+      <tr>
+        <td height="35" width="100%"  align="left" valign="middle" style="color:#002961; font-size:14px; padding:0; line-height:18px; font-family:Calibri, Arial, Helvetica, sans-serif">
+          This is an automated email so please don’t reply to it.
+        </td>
+      </tr>
+    </table>
+  </Body>
+</root>

@@ -1,0 +1,961 @@
+{
+  "id": "e5de6de4-2a2a-414a-82cb-8fd2e708db7a",
+  "lineSpeeds": [
+    {
+      "maxSpeed": "19500",
+      "minSpeed": "10000",
+      "type": "adsl"
+    },
+    {
+      "maxSpeed": "80000",
+      "minSpeed": "57500",
+      "maxDownload": "80000",
+      "minDownload": "57500",
+      "maxUpload": "20000",
+      "minUpload": "17600",
+      "type": "fibre"
+    }
+  ],
+  "broadbandProducts": {
+    "broadband": {
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xsi:noNamespaceSchemaLocation": "g.xsd",
+        "brand": {
+          "brandId": "SSE",
+          "tariffs": [
+            {
+              "tariffName": "Unlimited Broadband (19) + Line Rental Only (19)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "BB_LRO19",
+              "broadbandCode": "UB19",
+              "talkCode": "LRO",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 20
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 20
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 0
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Broadband (19) + Anytime Plus (19)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "BB_AP19",
+              "broadbandCode": "UB19",
+              "talkCode": "AP19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 32
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 20
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 12
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Broadband (19) + Anytime (19)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "BB_ANY19",
+              "broadbandCode": "UB19",
+              "talkCode": "AL19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 28
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 20
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 8
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Broadband (19) + Evening and Weekend",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "BB_EAW19",
+              "broadbandCode": "UB19",
+              "talkCode": "EAW19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 24
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 20
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 4
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Fibre (19) + Anytime (19)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FIBRE_ANY19",
+              "broadbandCode": "UF19",
+              "talkCode": "AL19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 30
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 22
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 8
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Fibre (19) + Anytime Plus (19)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FIBRE_AP19",
+              "broadbandCode": "UF19",
+              "talkCode": "AP19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 34
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 22
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 12
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Fibre (19) + Line Rental Only (19)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FIBRE_LRO19",
+              "broadbandCode": "UF19",
+              "talkCode": "LRO",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 22
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 22
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 0
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Fibre (19) + Evening and Weekend (19)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FIBRE_EAW19",
+              "broadbandCode": "UF19",
+              "talkCode": "EAW19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 26
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 22
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 4
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Fibre Plus (19) + Anytime (19)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FP_ANY19",
+              "broadbandCode": "UFP19",
+              "talkCode": "AL19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 34
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 26
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 8
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Fibre Plus (19) + Anytime Plus (19)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FP_AP19",
+              "broadbandCode": "UFP19",
+              "talkCode": "AP19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 38
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 26
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 12
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Fibre Plus (19) + Line Rental Only (19)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FP_LRO19",
+              "broadbandCode": "UFP19",
+              "talkCode": "LRO",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 26
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 26
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 0
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Unlimited Fibre Plus (19) + Evening and Weekend",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FP_EAW19",
+              "broadbandCode": "UFP19",
+              "talkCode": "EAW19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 30
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 26
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 4
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 0
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "Fix and ADSL Broadband + Line Rental Only (FF)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "BB18_LR_FF",
+              "broadbandCode": "UB19",
+              "talkCode": "LRO",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 11.5
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 3.5
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 0
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 8
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 12,
+                "talkContractMonths": 0
+              }
+            },
+            {
+              "tariffName": "Fix and ADSL Broadband + Anytime Plus (FF)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "BB_AP18_FF",
+              "broadbandCode": "UB19",
+              "talkCode": "AP19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 23.5
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 3.5
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 12
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 8
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 12,
+                "talkContractMonths": 0
+              }
+            },
+            {
+              "tariffName": "Fix and ADSL Broadband + Anytime (FF)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "BB_ANY18_FF",
+              "broadbandCode": "UB19",
+              "talkCode": "AL19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 19.5
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 3.5
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 8
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 8
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 12,
+                "talkContractMonths": 0
+              }
+            },
+            {
+              "tariffName": "Fix and ADSL Broadband + Evening & Weekend (FF)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "BB_EAW18_FF",
+              "broadbandCode": "UB19",
+              "talkCode": "EAW19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 15.5
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 3.5
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 4
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 8
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 12,
+                "talkContractMonths": 0
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and ADSL + Line Rental Only (FF3)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "ADSLFF3_LR18",
+              "broadbandCode": "UB19",
+              "talkCode": "LRO",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 13
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 7
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 0
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and ADSL + Anytime Plus (FF3)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "ADSLFF3_AP18",
+              "broadbandCode": "UB19",
+              "talkCode": "AP19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 25
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 7
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 12
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and ADSL + Anytime (FF3)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "ADSLFF3_ANY18",
+              "broadbandCode": "UB19",
+              "talkCode": "AL19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 21
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 7
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 8
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and ADSL + Evening & Weekend (FF3)",
+              "tariffTechType": "TalkWithADSL",
+              "productCode": "ADSLFF3_EAW18",
+              "broadbandCode": "UB19",
+              "talkCode": "EAW19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 17
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 7
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 4
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and Fibre + Anytime (FF3)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FF3_ANY18",
+              "broadbandCode": "UF19",
+              "talkCode": "AL19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 21
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 7
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 8
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and Fibre + Anytime Plus (FF3)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FF3_AP18",
+              "broadbandCode": "UF19",
+              "talkCode": "AP19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 25
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 7
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 12
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and Fibre + Line Rental Only (FF3)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FF3_LR18",
+              "broadbandCode": "UF19",
+              "talkCode": "LRO",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 13
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 7
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 0
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and Fibre + Evening & Weekend (FF3)",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FF3_EAW18",
+              "broadbandCode": "UF19",
+              "talkCode": "EAW19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 17
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 7
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 4
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and Fibre Plus + Evening & Weekend",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FFP_EAW18",
+              "broadbandCode": "UFP19",
+              "talkCode": "EAW19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 21
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 11
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 4
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and Fibre Plus + Anytime Plus",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FFP_AP18",
+              "broadbandCode": "UFP19",
+              "talkCode": "AP19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 29
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 11
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 12
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and Fibre Plus + Anytime",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FFP_ANY18",
+              "broadbandCode": "UFP19",
+              "talkCode": "AL19",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 25
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 11
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 8
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            },
+            {
+              "tariffName": "18 Month Fix and Fibre Plus + Line Rental Only",
+              "tariffTechType": "TalkWithFibre",
+              "productCode": "FFP_LR18",
+              "broadbandCode": "UFP19",
+              "talkCode": "LRO",
+              "priceLines": [
+                {
+                  "featureDescription": "HeadlinePrice (Paperless Billing) inclusive of Line Rental and VAT",
+                  "featureCode": "HLPPL-PNDMTH",
+                  "rate": 17
+                },
+                {
+                  "featureDescription": "Monthly Broadband charge inclusive of VAT",
+                  "featureCode": "BC-PNDMTH",
+                  "rate": 11
+                },
+                {
+                  "featureDescription": "Monthly Talk charge inclusive of VAT",
+                  "featureCode": "TC-PNDMTH",
+                  "rate": 0
+                },
+                {
+                  "featureDescription": "Monthly Line Rental inclusive of VAT",
+                  "featureCode": "LR-PNDMTH",
+                  "rate": 6
+                }
+              ],
+              "contractDetails": {
+                "broadbandContractMonths": 18,
+                "talkContractMonths": 12
+              }
+            }
+          ],
+          "options": {
+            "callFeature": {
+              "callLineFeature": "CallerLineIdentification",
+              "callLineFeatureCode": "SSECLI"
+            }
+          }
+        }
+      }
+  },
+  "customerAddress": null
+}

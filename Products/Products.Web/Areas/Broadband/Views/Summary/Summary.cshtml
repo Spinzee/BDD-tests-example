@@ -1,0 +1,229 @@
+﻿@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.ViewModels.Common
+@model Products.WebModel.ViewModels.Broadband.SummaryViewModel
+@{
+    ViewBag.Title = Summary_Resources.Title;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+            <div class="hidden-xs step-count pull-right"><strong>@ViewBag.StepCounter</strong></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1 class="gap">@Summary_Resources.Header</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="row">
+                <div class="col-xs-9 col-sm-10">
+                    <h2 class="h3-like">@Summary_Resources.PackageTableHeader</h2>
+                </div>
+                <div class="col-xs-3 col-sm-2">
+                    <a class="icon-link icon-link-edit pull-right" title="@Summary_Resources.ChangePackageLinkAlt" data-toggle="modal" data-target="#@Model.PackageDetailsModal.ModalId">@Summary_Resources.EditLinkText</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-summary">
+                    <table class="table table-summary table-key-value">
+                        <tr>
+                            <th scope="row">@Model.YourPriceViewModel.BroadbandName</th>
+                            <td>@Model.YourPriceViewModel.BroadbandCostText</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="indented">@Model.YourPriceViewModel.TelName</th>
+                            <td>@Model.YourPriceViewModel.TelcoCostText</td>
+                        </tr>
+                        @if (Model.YourPriceViewModel.ApplyInstallationFee)
+                        {
+                            <tr>
+                                <th scope="row" class="indented">@YourPrice_Resources.InstallationFee</th>
+                                <td>@Model.YourPriceViewModel.InstallationFeeText</td>
+                            </tr>
+                        }
+                        <tr>
+                            <th scope="row" class="total-price-label"><strong>@Summary_Resources.BillTotalLabel</strong><br />@Summary_Resources.BillDisclaimer</th>
+                            <td class="total-price">@Model.YourPriceViewModel.FirstBillTotalText</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-extend-sm">
+            @*If new line installation*@
+            @if (Model.YourPriceViewModel.ApplyInstallationFee)
+            {
+                <div class="box-info">
+                    <h2 class="h3-like">@Summary_Resources.InstallationHeader</h2>
+                    <p>@Model.InstallationParagraph</p>
+                </div>
+            }
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="row gap-xxl">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-9 col-sm-10">
+                            <h2 class="h3-like">@Summary_Resources.PersonalHeader</h2>
+                        </div>
+                        <div class="col-xs-3 col-sm-2">
+                            <a class="icon-link icon-link-edit pull-right" title="@Summary_Resources.PersonalEditLinkAlt" data-toggle="modal" data-target="#@Model.PersonalDetailsModal.ModalId">@Summary_Resources.EditLinkText</a>
+                        </div>
+                    </div>
+                    <p>@Model.Name</p>
+                    <p>@Model.DateOfBirth</p>
+                    <p>@Model.Email</p>
+                    <p>@Model.Address</p>
+                    <p>@Model.PostCode</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-9 col-sm-10">
+                            <h2 class="h3-like">@Summary_Resources.DirectDebitHeader</h2>
+                        </div>
+                        <div class="col-xs-3 col-sm-2">
+                            <a class="icon-link icon-link-edit pull-right" title="@Summary_Resources.DDEditLinkAlt" data-toggle="modal" data-target="#@Model.BankDetailsModal.ModalId">@Summary_Resources.EditLinkText</a>
+                        </div>
+                    </div>
+                    <p>@Model.AccountName</p>
+                    <p>@Model.AccountNumber</p>
+                    <p>@Model.SortCode</p>
+                    <a href="@Url.Action("PrintMandate")" title="@Summary_Resources.DDLinkAlt" target="_blank">@Summary_Resources.DDLinkText</a>
+                </div>
+            </div>
+            <h3>@Summary_Resources.SwitchHeader</h3>
+            <p>@Summary_Resources.SwitchParagraph</p>
+            @if (Model.HasCliNumber)
+            {
+                @*If they have chosen to keep their landline*@
+                <h3>@Summary_Resources.SubHeader</h3>
+                <p>@Summary_Resources.Paragraph</p>
+            }
+            else
+            {
+                @*If they haven't chosen to keep their landline*@
+                <h3>@Summary_Resources.NoLandlineHeader</h3>
+                <p>@Summary_Resources.NoLandlineParagraph</p>
+            }
+            <h3>@Summary_Resources.SubHeader2</h3>
+            <p>@Summary_Resources.Paragraph2</p>
+            <h3>@SummaryCommon_Resources.CreditCheckHeader</h3>
+            <p>@SummaryCommon_Resources.CreditCheckParagraph <a href="@SummaryCommon_Resources.CreditCheckLinkUrl" target="_blank" title="@SummaryCommon_Resources.CreditCheckLinkAlt">@SummaryCommon_Resources.CreditCheckLinkText </a>@SummaryCommon_Resources.CreditCheckLinkSuffix</p>
+            <p class="gap"><a href="@SummaryCommon_Resources.PrivacyLinkUrl" target="_blank" title="@SummaryCommon_Resources.PrivacyLinkAlt">@SummaryCommon_Resources.PrivacyLinkText </a>@SummaryCommon_Resources.PrivacyLinkSuffix</p>
+            <div class="accordion" role="group" id="terms-and-conditions">
+                <div class="accordion-header">
+                    <a href="#" title="@Summary_Resources.AccordionTitle" class="accordion-button" role="button" aria-controls="accordion-content">
+                        <h2>@Summary_Resources.AccordionHeader</h2>
+                    </a>
+                </div>
+                <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <p>@Common_Resources.VatParagraph</p>
+                            <p>@Model.TermsAndConditionsParagraph1</p>
+                            <p>@Model.TermsAndConditionsParagraph2</p>
+                            <p>@Model.TermsAndConditionsParagraph3</p>
+                            <p>@Model.TermsAndConditionsParagraph4</p>
+
+                            <h3>@AvailablePackages_Resources.CancellationHeader</h3>
+                            <p>@AvailablePackages_Resources.CancellationParagraph1</p>
+                            <p>@Model.CancellationChargesParagraph2</p>
+                            <p>@Html.Raw(Model.CancellationParagraph3)</p>
+
+                            @if (Model.ShowCancellationParagraph4)
+                            {
+                                <p>@Html.Raw(AvailablePackages_Resources.CancellationParagraph4)</p>
+                            }
+
+                            <h3>@Summary_Resources.AccordionSubHeader3</h3>
+                            <p>
+                                @Summary_Resources.Accordion3Paragraph1<a href="@Summary_Resources.Accordion3LinkUrl" title="@Summary_Resources.Accordion3LinkAlt" target="_blank">@Summary_Resources.Accordion3LinkText</a>
+                            </p>
+
+                            @if (Model.HasEveningWeekend)
+                            {
+                                @*If they have chosen Anytime*@
+                                <h3>@Summary_Resources.AccordionSubHeader4</h3>
+                                <p>@Summary_Resources.Accordion4EveningWeekendParagraph</p>
+                            }
+
+                            @if (Model.HasAnytime)
+                            {
+                                @*If they have chosen Anytime*@
+                                <h3>@Summary_Resources.AccordionSubHeader4</h3>
+                                <p>@Summary_Resources.Accordion4AnytimeParagraph</p>
+                            }
+
+                            @if (Model.HasAnytimePlus)
+                            {
+                                @*If they have chosen Anytime Plus*@
+                                <h3>@Summary_Resources.AccordionSubHeader4</h3>
+                                <p>@Summary_Resources.Accordion4AnytimePlusParagraph</p>
+                            }
+
+                            <h3>@Summary_Resources.AccordionSubHeader6</h3>
+                            <p>@Summary_Resources.Accordion6Paragraph1</p>
+                            <h3>@Summary_Resources.AccordionSubHeader7</h3>
+                            <p>@Html.Raw(Model.Accordion7Paragraph1)</p>
+                            <p>@Summary_Resources.PremiumNumberExclusion</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="h5-like">@Summary_Resources.PDFHeader</h3>
+            <ul class="link-list list--spaced gap-xxxl">
+                @if (Model.TermsAndConditionsPdfLinks.Any())
+                {
+                    foreach (TermsAndConditionsPdfLink termsAndConditionsPdfLink in Model.TermsAndConditionsPdfLinks)
+                    {
+                        <li>
+                            <a href="@termsAndConditionsPdfLink.Link" class="icon-link icon-link-pdf" title="@termsAndConditionsPdfLink.Title" target="_blank">
+                                @termsAndConditionsPdfLink.DisplayName
+                            </a>
+                        </li>
+                    }
+                }
+            </ul>
+            @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "form-submit" }))
+            {
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <legend class="form-legend">@Summary_Resources.Legend</legend>
+                    <div class="form-group checkbox checkbox--multiline contain">
+                        @Html.EditorFor(m => m.IsTermsAndConditionsChecked, "AriaCheckBox")
+                        @Html.LabelFor(m => m.IsTermsAndConditionsChecked, new { title = "", id = "checkbox-label" })
+                        @Html.ValidationMessageFor(model => model.IsTermsAndConditionsChecked)
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <input class="button button-conversion" type="submit" value="@Common_Resources.ConfirmButtonText" id="button-submit" name="button-submit" title="@Common_Resources.ConfirmButtonAlt" />
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@{
+    Html.RenderPartial("_ConfirmationModal", Model.BankDetailsModal);
+    Html.RenderPartial("_ConfirmationModal", Model.PersonalDetailsModal);
+    Html.RenderPartial("_ConfirmationModal", Model.PackageDetailsModal);
+}
+@section scripts{
+    @Scripts.Render("~/js/products/summary")
+
+    <script>
+        $(() => {
+            // ReSharper disable once UnusedLocals
+            var disableButton = new Digital.Web.Utils.DisableSubmitButton('form-submit');
+        });
+    </script>
+}

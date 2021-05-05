@@ -1,0 +1,17 @@
+﻿@model Products.WebModel.ViewModels.Energy.TariffsViewModel
+@using Products.WebModel.Resources.Energy
+
+<div class="energy-tariff-container gap-top">
+    <div class="container chosen-tariff chosen-tariff-initial">
+        <div class="tariff-list contain gap">
+            <div class="tariff-wrapper">
+                <h2 class="tariff-heading tariff-heading--current">@AvailableTariffs_Resources.ChosenTariffHeader</h2>
+                <div class="tariff tariff--current contain">
+                    @{Html.RenderPartial("_AvailableTariffInner", Model);}
+                </div>
+                @{Html.RenderPartial("_TariffInformationLabelModal", Model);}
+            </div>
+        </div>
+    </div>
+</div>
+

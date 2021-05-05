@@ -1,0 +1,74 @@
+﻿@using Products.Model.Enums
+@using Products.WebModel.Resources.Energy
+@using Products.WebModel.ViewModels.Energy
+@model Products.WebModel.ViewModels.Energy.TariffsViewModel
+
+<div class="tariff__header">
+    <p class="tariff-display-name">@Model.DisplayName</p>
+    <h3 class="h2-like tariff-tagline">@Model.TariffTagLine</h3>
+</div>
+@{
+    string tariffDivContainerId = $"tariff-{Model.TariffId}";
+}
+
+<div id="@tariffDivContainerId">
+    <div class="tariff-tick-list tariff__details">
+        <ul class="bullet-list tick-list list--spaced">
+            @foreach (TariffTickUspViewModel tariffTickUspViewModel in Model.EnergyTickUsps)
+            {
+                <li>
+                    <h4>@tariffTickUspViewModel.Header</h4>
+                    <p>@tariffTickUspViewModel.Description</p>
+                </li>
+            }
+        </ul>
+        <div class="more-info-link-tick-usp">
+            <a class="more-info-link-tick-usp-inner" href="" data-toggle="modal" data-target="#@Model.TariffId" title="@AvailableTariffs_Resources.TILLinkAlt">
+                @AvailableTariffs_Resources.MoreInfoLink
+            </a>
+        </div>
+    </div>
+    <div class="tariff__price">
+        <div class="wrapper">
+            <div class="wrapper-inner tariff-cost tariff-cost--centered">
+                <h4>@AvailableTariffs_Resources.PriceLabel</h4>
+                <div class="tariff-price">
+                    @{
+                        string[] projectedCost = Model.ProjectedMonthlyCost.Split('.');
+                    }
+                    @projectedCost[0]<span class="tariff-price-pence">@(projectedCost.Length > 1 ? $".{projectedCost[1]}" : string.Empty)</span>
+                </div>
+                <div class="monthly-price">
+                    @if (Model.FuelType == FuelType.Dual || Model.FuelType == FuelType.Gas)
+                    {
+                        @AvailableTariffs_Resources.GasLabel
+                        <strong>@Model.ProjectedGasMonthlyCost</strong>
+                        @Html.Raw("&nbsp;")
+                    }
+                    @if (Model.FuelType == FuelType.Dual || Model.FuelType == FuelType.Electricity)
+                    {
+                        @AvailableTariffs_Resources.ElecLabel
+                        <strong>@Model.ProjectedElectricityMonthlyCost</strong>
+                    }
+                </div>
+                <div class="annual-price">@AvailableTariffs_Resources.YearCostPrefix@Model.ProjectedYearlyCost @AvailableTariffs_Resources.YearCostSuffix</div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer col-md-6">
+        <div class="card-footer-box">
+            <a class="more-info-link gap" href="#" data-toggle="modal" data-target="#@Model.TariffId" title="@AvailableTariffs_Resources.TILLinkAlt">
+                @AvailableTariffs_Resources.MoreInfoLink
+            </a>
+            @using (Html.BeginForm())
+            {
+                @Html.Hidden("selectedTariffId", Model.TariffId)
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <legend class="sr-only">@AvailableTariffs_Resources.SignupButtonAlt</legend>
+                    <input type="submit" class="button button-primary large-button sign-up-button" value="@AvailableTariffs_Resources.SignupButtonText" title="@AvailableTariffs_Resources.SignupButtonAlt" />
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>

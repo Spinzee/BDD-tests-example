@@ -1,0 +1,9 @@
+﻿@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.Energy.SelectAddressViewModel
+
+<div class="form-group form-group--dropdown contain">
+    @Html.EditorFor(model => model.SelectedAddressId, new { selectList = new SelectList(Model.Addresses, "Key", "Value", Model.SelectedAddressId), htmlAttributes = new { @class = "text-capitalize" } })
+    <div>
+        @SelectAddressCommon_Resources.MultiAddressNotListedText <a id="address-not-listed" href="#" title="@SelectAddressCommon_Resources.EnterManuallyLinkAlt">@SelectAddressCommon_Resources.EnterManuallyLinkText</a>
+    </div>
+</div>

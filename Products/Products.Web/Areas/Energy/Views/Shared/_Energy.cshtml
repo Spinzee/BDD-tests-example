@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@RenderBody()
+
+@section Theme { energy-journey }
+
+@section ShoppingBasketToggler {
+    @RenderSection("ShoppingBasketToggler", false)
+}
+
+@section mainSectionTheme {
+    @RenderSection("mainSectionTheme", required: false)
+}
+
+@section Popups {
+    @RenderSection("Popups", required: false)
+}
+
+@section scripts {
+    @RenderSection("scripts", required: false)
+}
+
+@section Styles {
+    @RenderSection("Styles", false)
+}
+
+@section DataLayer
+{
+    @{ Html.RenderAction("GetDataLayer", "Common"); }
+}

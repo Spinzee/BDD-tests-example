@@ -1,0 +1,107 @@
+﻿@using Products.WebModel.Resources.TariffChange
+<div class="modal fade" role="dialog" id="fuel-modal" tabindex="-1" aria-labelledby="modal-label">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@FuelInformation_Resources.CloseButtonTitle">
+                    @FuelInformation_Resources.CloseButtonLabel
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-10 col-md-8">
+                        <h2 id="modal-label"><span id="fuel-modal-title"></span> @FuelInformation_Resources.Header</h2>
+                    </div>
+                </div>
+                <div class="gap">
+                    <p>@FuelInformation_Resources.Paragraph1</p>
+                    <p>@FuelInformation_Resources.Paragraph2</p>
+                </div>
+                <div class="til-tcr gap" id="til-tcr">
+                    @* IDs are mapped from the names on the AvailableTariffFuelDetails type *@
+                    <h3>@FuelInformation_Resources.Subheading1Start<span id="fuel-modal-about-title"></span>@FuelInformation_Resources.Subheading1End</h3>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">@FuelInformation_Resources.SupplierLabel</div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--Supplier"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">@FuelInformation_Resources.TariffNameLabel</div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--DisplayName"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">@FuelInformation_Resources.TariffTypeLabel</div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--TariffType"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">@FuelInformation_Resources.PaymentMethodLabel</div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--PaymentMethod"></span>
+                        </div>
+                    </div>
+                    <div class="row" id="UnitRate1Div">
+                        <div class="col-sm-12 col-md-6">
+                            @FuelInformation_Resources.UnitRateLabel
+                            <span id="fuel-modal--DayOrStandardLabel" class="js-unit-label"></span>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--UnitRate1"></span>@FuelInformation_Resources.PerKwh
+                        </div>
+                    </div>
+                    <div class="row" id="UnitRate2Div">
+                        <div class="col-sm-12 col-md-6">
+                            @FuelInformation_Resources.UnitRateLabel
+                            <span id="fuel-modal--NightOrOffPeakLabel" class="js-unit-label"></span>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--UnitRate2"></span>@FuelInformation_Resources.PerKwh
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">@FuelInformation_Resources.StandingChargeLabel</div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--StandingCharge"></span>@FuelInformation_Resources.PerDay
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">@FuelInformation_Resources.TariffEndsOnLabel</div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--TariffEndsOn"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">@FuelInformation_Resources.PriceGuaranteedUntilLabel</div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--PriceGuaranteedUntil"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">@FuelInformation_Resources.ExitFeesLabel<span class="disclaimer">@FuelInformation_Resources.ExitFeesDisclaimer</span></div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--ExitFees"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">@FuelInformation_Resources.DiscountsAndChargesLabel</div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--DiscountsAndAdditionalCharges"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">@FuelInformation_Resources.AdditionalProductsAndServicesLabel</div>
+                        <div class="col-sm-12 col-md-6">
+                            <span id="fuel-modal--AdditionalProductsAndServicesIncluded"></span>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="h3-like">@FuelInformation_Resources.Subheading2</h4>
+                <p>@FuelInformation_Resources.Subheading2Paragraph1</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06D831A3-9DB5-456C-86DD-AD82623F5381}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Products.Model</RootNamespace>
+    <AssemblyName>Products.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Broadband\BroadbandPrice.cs" />
+    <Compile Include="Broadband\BroadbandProduct.cs" />
+    <Compile Include="Broadband\BroadbandProductGroup.cs" />
+    <Compile Include="Broadband\TalkProduct.cs" />
+    <Compile Include="Common\CMSResponse\CMSResponseModel.cs" />
+    <Compile Include="Common\CMSResponse\DocumentUrl.cs" />
+    <Compile Include="Common\CMSResponse\Document.cs" />
+    <Compile Include="Common\CMSResponse\Entry.cs" />
+    <Compile Include="Common\CMSResponse\PublishDetails.cs" />
+    <Compile Include="Common\CMSResponse\TariffDiscount.cs" />
+    <Compile Include="Common\CMSResponse\TickUsp.cs" />
+    <Compile Include="Common\ConfirmationEmailParameters.cs" />
+    <Compile Include="Configuration\WebClientConfigurationSection.cs" />
+    <Compile Include="Constants\SalesData.cs" />
+    <Compile Include="Energy\BundlePackage.cs" />
+    <Compile Include="Energy\Bundle.cs" />
+    <Compile Include="Energy\BundleRequest.cs" />
+    <Compile Include="Energy\CMSEnergyContent.cs" />
+    <Compile Include="Energy\CumulativeEnergyMultiplier.cs" />
+    <Compile Include="Common\CLIChoice.cs" />
+    <Compile Include="Energy\Extra.cs" />
+    <Compile Include="Energy\MeterInformation.cs" />
+    <Compile Include="Energy\MeterDetail.cs" />
+    <Compile Include="Energy\OurPrice.cs" />
+    <Compile Include="Energy\PDFContent.cs" />
+    <Compile Include="Energy\ProductsRequest.cs" />
+    <Compile Include="Energy\EnergyCustomer.cs" />
+    <Compile Include="Common\QasAddress.cs" />
+    <Compile Include="Energy\Product.cs" />
+    <Compile Include="Energy\TariffTickUsp.cs" />
+    <Compile Include="Energy\TariffPdfsConfiguration\TariffCollection.cs" />
+    <Compile Include="Energy\TariffPdfsConfiguration\TariffConfigElement.cs" />
+    <Compile Include="Energy\TariffPdfsConfiguration\TariffPdfsSection.cs" />
+    <Compile Include="Energy\TariffPdfsConfiguration\PdfCollection.cs" />
+    <Compile Include="Energy\TariffPdfsConfiguration\PdfConfigElement.cs" />
+    <Compile Include="Energy\TariffTickUspConfiguration\TariffGroupCollection.cs" />
+    <Compile Include="Energy\TariffTickUspConfiguration\TariffGroupConfigElement.cs" />
+    <Compile Include="Energy\TariffTickUspConfiguration\TariffTickUspSection.cs" />
+    <Compile Include="Energy\TariffTickUspConfiguration\TickUspCollection.cs" />
+    <Compile Include="Energy\TariffTickUspConfiguration\TickUspConfigElement.cs" />
+    <Compile Include="Energy\Tariff.cs" />
+    <Compile Include="Enums\AccountStatus.cs" />
+    <Compile Include="Energy\EnergyMultiplier.cs" />
+    <Compile Include="Energy\Projection.cs" />
+    <Compile Include="Enums\AddressTypes.cs" />
+    <Compile Include="Broadband\Tariff.cs" />
+    <Compile Include="CustomerAlertResult.cs" />
+    <Compile Include="Broadband\BroadbandTariffsForAddress.cs" />
+    <Compile Include="Broadband\LineAvailability.cs" />
+    <Compile Include="Broadband\OpenReachData.cs" />
+    <Compile Include="Broadband\OpenreachAuditData.cs" />
+    <Compile Include="Enums\HomeServicesCustomerType.cs" />
+    <Compile Include="Enums\ProductType.cs" />
+    <Compile Include="Enums\TariffChangeEligibilityCheckType.cs" />
+    <Compile Include="Enums\TariffType.cs" />
+    <Compile Include="Enums\PaymentMethod.cs" />
+    <Compile Include="HomeServices\ApplicationData.cs" />
+    <Compile Include="HomeServices\HomeServicesCustomer.cs" />
+    <Compile Include="HomeServices\OfferSummary.cs" />
+    <Compile Include="HomeServices\Product.cs" />
+    <Compile Include="HomeServices\ProductExtra.cs" />
+    <Compile Include="HomeServices\ProductGroup.cs" />
+    <Compile Include="TariffChange\AvailableTariffResult.cs" />
+    <Compile Include="Common\BTAddress.cs" />
+    <Compile Include="Broadband\ADSLLineSpeeds.cs" />
+    <Compile Include="Broadband\ApplicationAudit.cs" />
+    <Compile Include="Common\ApplicationData.cs" />
+    <Compile Include="Common\BankDetails.cs" />
+    <Compile Include="Common\BankFormattedAddressType.cs" />
+    <Compile Include="Broadband\BroadbandConfirmationEmailParameters.cs" />
+    <Compile Include="Broadband\BroadbandJourneyDetails.cs" />
+    <Compile Include="Broadband\SubProductResult.cs" />
+    <Compile Include="Broadband\TalkCodes.cs" />
+    <Compile Include="Common\ContactDetails.cs" />
+    <Compile Include="Broadband\Customer.cs" />
+    <Compile Include="Common\DirectDebitDetails.cs" />
+    <Compile Include="Broadband\FeatureCodes.cs" />
+    <Compile Include="Broadband\FibreLineSpeeds.cs" />
+    <Compile Include="Broadband\LineSpeed.cs" />
+    <Compile Include="Common\PersonalDetails.cs" />
+    <Compile Include="Constants\ConfigSectionGroups.cs" />
+    <Compile Include="Constants\SessionKeys.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TariffChange\Customers\ConfirmationEmailParameters.cs" />
+    <Compile Include="TariffChange\Customers\Customer.cs" />
+    <Compile Include="TariffChange\Customers\CustomerAccount.cs" />
+    <Compile Include="TariffChange\Customers\FalloutReason.cs" />
+    <Compile Include="TariffChange\Customers\FalloutReasonResult.cs" />
+    <Compile Include="Enums\FuelType.cs" />
+    <Compile Include="TariffChange\Customers\PaymentDetails.cs" />
+    <Compile Include="TariffChange\Customers\PersonalProjectionDetails.cs" />
+    <Compile Include="Enums\AccountType.cs" />
+    <Compile Include="TariffChange\Customers\Profile\CustomerAccountProfile.cs" />
+    <Compile Include="TariffChange\Customers\Profile\MarketingConsent.cs" />
+    <Compile Include="Enums\Site.cs" />
+    <Compile Include="TariffChange\Customers\Profile\StatementDeliveryMethod.cs" />
+    <Compile Include="TariffChange\Customers\ServiceStatusType.cs" />
+    <Compile Include="TariffChange\Customers\SiteDetails.cs" />
+    <Compile Include="TariffChange\Enums\TariffCalculationMethod.cs" />
+    <Compile Include="TariffChange\JourneyDetails.cs" />
+    <Compile Include="TariffChange\Enums\ProgressBarStatus.cs" />
+    <Compile Include="TariffChange\Tariffs\CurrentTariffForFuel.cs" />
+    <Compile Include="TariffChange\Tariffs\SelectedTariff.cs" />
+    <Compile Include="TariffChange\Tariffs\SelectedTariffForFuel.cs" />
+    <Compile Include="TariffChange\Tariffs\Tariff.cs" />
+    <Compile Include="TariffChange\Tariffs\TariffChangeParameters.cs" />
+    <Compile Include="TariffChange\Tariffs\TariffForFuel.cs" />
+    <Compile Include="UserProfile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Products.Core\Products.Core.csproj">
+      <Project>{E40B2488-29F0-4ECA-B4BB-B7488D2C72C7}</Project>
+      <Name>Products.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Infrastructure\Products.Infrastructure.csproj">
+      <Project>{28bdc57f-5070-434c-9e9e-b9b021530a16}</Project>
+      <Name>Products.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

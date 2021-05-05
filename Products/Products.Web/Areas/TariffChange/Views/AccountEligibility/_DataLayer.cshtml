@@ -1,0 +1,18 @@
+﻿@using Products.Model.TariffChange.Customers
+@{
+    @* see https://developers.google.com/tag-manager/devguide *@
+    var falloutReasons = (List<FalloutReasonResult>)ViewBag.DataLayer;
+    if (falloutReasons != null && falloutReasons.Any())
+    {
+        <script>
+            dataLayer = [{
+                'CTC Account Ineligible': [
+                    @foreach (var reason in falloutReasons)
+                        {
+                            @:"@Html.Raw(reason.FalloutDescription)",
+                        }
+                ]
+            }];
+        </script>
+    }
+}

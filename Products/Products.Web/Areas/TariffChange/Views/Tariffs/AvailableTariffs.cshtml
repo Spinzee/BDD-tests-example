@@ -1,0 +1,202 @@
+﻿@using System.Web.Mvc.Html
+@using Products.WebModel.Resources.TariffChange
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.ViewModels.TariffChange
+@using System.Linq
+@using Products.Core
+@model TariffsViewModel
+@{
+    ViewBag.Title = AvailableTariffs_Resources.Title;
+}
+@section ProgressBar {
+    @Html.Partial("_ProgressBar", Model.ProgressBarViewModel)
+}
+<div class="container">
+    @if (Model.IsRenewal)
+    {
+        @Html.Hidden("RenewalDate", Model.RenewalDate)
+        @Html.Hidden("IsImmediateRenewalForToday", Model.IsImmediateRenewal)
+    }
+    @{ Html.RenderPartial((Model.FollowOnTariff != null) ? "_FollowOnTariff" : "_CurrentTariff", Model); }
+</div>
+<div class="can-change-to-columns available-tariffs-container">
+    <div class="container">
+        <h2 class="tariff-heading tariff-heading--available gap">@Model.AvailableTariffs.Count() available tariffs to choose from</h2>
+        <p>@AvailableTariffs_Resources.AvailableTariffsParagraph</p>
+        <div class="tariff-list contain">
+            @* need contain for clearfix when 2 or 3 columns *@
+            @foreach (AvailableTariff tariff in Model.AvailableTariffs)
+            {
+                Html.RenderPartial("_AvailableTariff", tariff);
+            }
+        </div>
+        @if (Model.ShowMultiRateMessage)
+        {
+            <div class="tariff-multirate-message" id="multirate-message">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>@AvailableTariffs_Resources.MultiRateMeterMessageTitle</h3>
+                        <p>@AvailableTariffs_Resources.MultiRateMeterMessageText1</p>
+                        <p>
+                            @AvailableTariffs_Resources.MultiRateMeterMessageText2
+                            <a href="@AvailableTariffs_Resources.MultiRatePhoneNumberUri">@Html.Raw(Html.Encode(AvailableTariffs_Resources.MultiRatePhoneNumber).Replace(" ", "&nbsp;"))</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+        <p class="text-center gap-md"><strong>@Html.Raw(AvailableTariffs_Resources.PartnershipText)</strong></p>
+    </div>
+</div>
+<div class="container important-information">
+    <h2 class="h4-like" id="important-tariff-information">@AvailableTariffs_Resources.AccordionSection</h2>
+    <div class="accordion-group">
+        <div class="accordion" role="group" id="energy-personal-projection">
+            <div class="accordion-header">
+                <a href="#" title="@AvailableTariffs_Resources.AccordionHeaderTitle" class="accordion-button" role="button" aria-controls="accordion-content-0">
+                    <h2>@AvailableTariffs_Resources.AccordionEPPHeader</h2>
+                </a>
+            </div>
+            <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content-0">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <p>@Html.Raw(Model.AccordionEPPContent)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion" role="group" id="terms-and-conditions">
+            <div class="accordion-header">
+                <a href="#" title="@AvailableTariffs_Resources.AccordionHeaderTitle" class="accordion-button" role="button" aria-controls="accordion-content-1">
+                    <h2>@AvailableTariffs_Resources.Accordion1Header</h2>
+                </a>
+            </div>
+            <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content-1">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <h3>@AvailableTariffs_Resources.Accordion1SubHeader1</h3>
+                        <p>@AvailableTariffs_Resources.Accordion1Paragraph1a</p>
+                        <h3>@AvailableTariffs_Resources.Accordion1SmartHeader</h3>
+                        <p>@AvailableTariffs_Resources.Accordion1SmartMeter1</p>
+                        <p>@AvailableTariffs_Resources.Accordion1FixAndDriveSmartMeter1</p>
+                        <p>@AvailableTariffs_Resources.Accordion1SmartMeter2</p>
+                        <p>@AvailableTariffs_Resources.Accordion1SmartMeter3</p>
+                        <h4>@AvailableTariffs_Resources.SmartHomePackageHeader</h4>
+                        <p>
+                            @AvailableTariffs_Resources.SmartHomePackageMessage1
+                            <a href="@AvailableTariffs_Resources.NestLink" target="_blank" title="@AvailableTariffs_Resources.NestLinkUrlTitle">
+                                @AvailableTariffs_Resources.NestLinkUrlText
+                            </a>@AvailableTariffs_Resources.SmartHomePackageMessage2
+                        </p>
+                        <p>@AvailableTariffs_Resources.SmartHomePackageMessage3</p>
+                        <p>@AvailableTariffs_Resources.SmartHomePackageMessage4</p>
+                        <p>
+                            @AvailableTariffs_Resources.SmartHomePackageMessage5
+                            <a href="@AvailableTariffs_Resources.SmartHomePackageMessage5Url" target="_blank" title="@AvailableTariffs_Resources.SmartHomePackageMessage5UrlTitle">
+                                @AvailableTariffs_Resources.SmartHomePackageMessage5UrlText
+                            </a>
+                            @Html.Raw(@AvailableTariffs_Resources.SmartHomePackageMessage7)
+                        </p>
+                        <p>@AvailableTariffs_Resources.SmartHomePackageMessage8</p>
+
+                        <h3>@AvailableTariffs_Resources.FixAndDriveHeader</h3>
+                        <p>@AvailableTariffs_Resources.FixAndDrivePara1</p>
+                        <p>@AvailableTariffs_Resources.FixAndDrivePara2</p>
+                        <p>@AvailableTariffs_Resources.FixAndDrivePara3</p>
+                        <p>
+                            @AvailableTariffs_Resources.FixAndDrivePara4
+                            <a href="@AvailableTariffs_Resources.FixAndDrivePara4CarFuelLink" target="_blank" title="@AvailableTariffs_Resources.FixAndDrivePara4CarFuelLinkText">
+                                @AvailableTariffs_Resources.FixAndDrivePara4CarFuelLinkText
+                            </a>
+                            @AvailableTariffs_Resources.FixAndDrivePara5
+                        </p>
+                        <h3>@AvailableTariffs_Resources.Accordion1SubHeader2</h3>
+                        <p>@AvailableTariffs_Resources.Accordion1Paragraph2</p>
+                        <h3>@AvailableTariffs_Resources.Accordion1SubHeader3</h3>
+                        <p>@AvailableTariffs_Resources.DDPara1</p>
+                        <p>@AvailableTariffs_Resources.DDPara2</p>
+                        <p>@AvailableTariffs_Resources.DDPara3</p>
+                        <h3>@AvailableTariffs_Resources.Accordion1SubHeader4</h3>
+                        <p>@AvailableTariffs_Resources.Accordion1Paragraph4</p>
+                        <ul class="link-list list--spaced">
+                            @foreach (AvailableTariff tariff in Model.AvailableTariffs)
+                            {
+                                if (tariff.TermsAndConditionsPdfLinks.Any())
+                                {
+                                    foreach (var termsAndConditionsPdfLink in tariff.TermsAndConditionsPdfLinks)
+                                    {
+                                        <li>
+                                            <a href="@termsAndConditionsPdfLink" class="icon-link icon-link-pdf" title="Download and View PDF" target="_blank">
+                                                @if (tariff.TariffGroup == TariffGroup.FixAndProtect || tariff.TariffGroup == TariffGroup.FixAndFibre)
+                                                {
+                                                    @Path.GetFileNameWithoutExtension(termsAndConditionsPdfLink)
+                                                }
+                                                else
+                                                {
+                                                    @($"{tariff.DisplayName} {AvailableTariffs_Resources.TermsAndConditionsLabel}")
+                                                }
+
+                                            </a>
+                                        </li>
+                                    }
+                                }
+                            }
+                            @if (Model.FollowOnTariff != null && Model.FollowOnTariff.TermsAndConditionsPdfLinks.Any())
+                            {
+                                foreach (var termsAndConditionsPdfLink in Model.FollowOnTariff.TermsAndConditionsPdfLinks)
+                                {
+                                    <li>
+                                        <a href="@termsAndConditionsPdfLink" class="icon-link icon-link-pdf" title="Download and View PDF" target="_blank">
+                                            @if (Model.FollowOnTariff.TariffGroup == TariffGroup.FixAndProtect || Model.FollowOnTariff.TariffGroup == TariffGroup.FixAndFibre)
+                                            {
+                                                @Path.GetFileNameWithoutExtension(termsAndConditionsPdfLink)
+                                            }
+                                            else
+                                            {
+                                                @($"{Model.FollowOnTariff.DisplayName} {AvailableTariffs_Resources.TermsAndConditionsLabel}")
+                                            }
+                                        </a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                        <p>@AvailableTariffs_Resources.Accordion1Paragraph5</p>
+                        <a href="@Resources.SSE_GeneralTermsAndConditionsForTheSupplyOfElectricityAndOrGas" class="icon-link icon-link-pdf" id="btnGeneralTermsAndConditions" title="Download and View PDF" target="_blank">@AvailableTariffs_Resources.Accordion1LinkText_General</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion" role="group" id="staying-with-sse">
+            <div class="accordion-header">
+                <a href="#" title="@AvailableTariffs_Resources.AccordionHeaderTitle" class="accordion-button" role="button" aria-controls="accordion-content-2">
+                    <h2>@AvailableTariffs_Resources.Accordion2Header</h2>
+                </a>
+            </div>
+            <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content-2">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <p>@AvailableTariffs_Resources.Accordion2Paragraph1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Popups{
+    @if (Model.IsRenewal)
+    {
+        @Html.Partial("_RenewalModal")
+    }
+    @Html.Partial("_FuelInformationModal")
+}
+@section Scripts{
+    @if (Model.IsRenewal)
+    {
+        @Scripts.Render("~/js/products/tariffs/available-renewals")
+    }
+    @Scripts.Render("~/js/products/tariffs/available-tariffs")
+}
+@section DataLayer
+{
+    @Html.Partial("_DataLayer", Model.DataLayer)
+}

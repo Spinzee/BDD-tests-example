@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddButtonText" xml:space="preserve">
+    <value>Add to Bundle</value>
+  </data>
+  <data name="AddButtonTextAlt" xml:space="preserve">
+    <value>Add this Upgrade to your Bundle</value>
+  </data>
+  <data name="BannerHeader" xml:space="preserve">
+    <value>Upgrade your Bundle</value>
+  </data>
+  <data name="FixNFiberPlusImportantInformationPara1_Link1Text" xml:space="preserve">
+    <value>Happiness Guarantee full details</value>
+  </data>
+  <data name="FixNFibrePlusBannerImageFilename" xml:space="preserve">
+    <value>electricalwiringcover</value>
+  </data>
+  <data name="FixNFibrePlusDescPara1" xml:space="preserve">
+    <value>Do lots of people use your home internet at the same time? Then our fastest &lt;strong&gt;Fibre Plus&lt;/strong&gt; broadband might be for you. With unlimited downloads and an average speed of 63Mbps, it's great for streaming HD movies, playing games online and downloading larger files.</value>
+  </data>
+  <data name="FixNFibrePlusDescPara2" xml:space="preserve">
+    <value>Line rental is included and we have a range of call packages to suit you, whether you want to make local, national, mobile or international calls.</value>
+  </data>
+  <data name="FixNFibrePlusHeader" xml:space="preserve">
+    <value>Boost your internet up to {0}Mbps</value>
+  </data>
+  <data name="FixNFibrePlusImportantInformationHeader" xml:space="preserve">
+    <value>Fibre Plus broadband – important information</value>
+  </data>
+  <data name="FixNFibrePlusImportantInformationHeaderAlt" xml:space="preserve">
+    <value>Fibre Plus broadband – important information</value>
+  </data>
+  <data name="FixNFibrePlusImportantInformationPara1_1" xml:space="preserve">
+    <value>If you leave us within 18 months of your start date, we’ll send you a pre-paid envelope to return your router. If you don’t send your router back within 30 working days of getting this envelope, we’ll add a charge of £54 to your account. The broadband speeds quoted above are average speeds at times of peak usage. Broadband speeds and unlimited downloads are subject to our </value>
+  </data>
+  <data name="FixNFibrePlusImportantInformationPara1_2" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="FixNFibrePlusImportantInformationPara1_3" xml:space="preserve">
+    <value>policies. Actual speeds are dependent upon length and quality of the copper line between your home and your exchange or street cabinet as well as environmental factors within you home such as Wi-Fi interference, in-home wiring and congestion on the service you’re accessing. Customers signing up for SSE fixed-term broadband &amp; phone Bundles can leave their contract without early termination charges if, within the first 60 days, they’re not happy with any aspect of the service they’ve received, and we’ve been unable to fix the problem. </value>
+  </data>
+  <data name="FixNFibrePlusModalProductName" xml:space="preserve">
+    <value>Fibre Plus broadband</value>
+  </data>
+  <data name="FixNFibrePlusModalSavingsText" xml:space="preserve">
+    <value>Save £9 a month (£162 over 18 months). £162 saving is based on £9 discount for 18 months for Fibre Plus broadband (18 x £9 = £162), when compared to buying Unlimited Fibre Plus, our equivalent standalone broadband product (£26 per month).</value>
+  </data>
+  <data name="FixNFibrePlusModalTagline" xml:space="preserve">
+    <value>Go faster and save</value>
+  </data>
+  <data name="FixNFibrePlusSavingsCalculatorPara1" xml:space="preserve">
+    <value>£162 saving is based on £9 discount for 18 months for Fibre broadband (18 x £9 = £162), when compared to buying Unlimited Fibre, our equivalent standalone broadband product (£22 per month).</value>
+  </data>
+  <data name="FixNFibrePlusSavingsPara_PlusPackageAdded" xml:space="preserve">
+    <value>£162 saving is based on £9 discount for 18 months for Fibre Plus broadband (18 x £9 = £162), when compared to buying Unlimited Fibre Plus, our equivalent standalone broadband product (£26 per month).</value>
+  </data>
+  <data name="FixNFibrePlusSubHeader1" xml:space="preserve">
+    <value>With Fibre Plus broadband, you’ll get:</value>
+  </data>
+  <data name="FixNFibrePlusSubHeader1Bullet1" xml:space="preserve">
+    <value>Our price promise to you: zero price hikes during your 18-month contract</value>
+  </data>
+  <data name="FixNFibrePlusSubHeader1Bullet2" xml:space="preserve">
+    <value>Unlimited downloads</value>
+  </data>
+  <data name="FixNFibrePlusSubHeader1Bullet3" xml:space="preserve">
+    <value>Wireless router</value>
+  </data>
+  <data name="FixNFibrePlusSubHeader1Bullet4" xml:space="preserve">
+    <value>Line rental included (excludes additional calls and call features)</value>
+  </data>
+  <data name="FixNFibrePlusSubHeader1Bullet5" xml:space="preserve">
+    <value>Our Happiness Guarantee, so if you’re not completely satisfied with our service, you can leave for free within the first 60 days</value>
+  </data>
+  <data name="FixNFibrePlusSubHeader2" xml:space="preserve">
+    <value>Your estimated maximum download speed for</value>
+  </data>
+  <data name="FixNFibrePlusTagline" xml:space="preserve">
+    <value>Upgrade to our &lt;b&gt;Fibre Plus&lt;/b&gt; broadband. With unlimited downloads and an average speed of 63Mbps, it's great for streaming HD movies, playing games online and downloading larger files.</value>
+  </data>
+  <data name="FixNProtectPlusBannerImageFilename" xml:space="preserve">
+    <value>electricalwiringcover</value>
+  </data>
+  <data name="FixNProtectPlusDescPara1" xml:space="preserve">
+    <value>If your heating breaks down, we’ll be there for you – round the clock.</value>
+  </data>
+  <data name="FixNProtectPlusHeader" xml:space="preserve">
+    <value>Get full heating cover 24/7, boiler service included</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationHeader" xml:space="preserve">
+    <value>Heating Cover – important information</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationHeaderAlt" xml:space="preserve">
+    <value>Heating Cover – important information</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara1" xml:space="preserve">
+    <value>The price for Heating Cover includes 20% VAT and Insurance Premium Tax. Heating Cover has a 12-month fixed-term contract which begins on the next working day after your energy supply switches to us.</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara2" xml:space="preserve">
+    <value>After 12 months, you'll pay the standard price for Heating Cover (currently £23.95). We'll remind you before the end of your contract that your package price will change.</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara3" xml:space="preserve">
+    <value>You’ll be contacted to arrange an initial system inspection.</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara4_1" xml:space="preserve">
+    <value>Parts and labour are subject to terms and conditions found in the</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara4_2" xml:space="preserve">
+    <value>and the</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara5" xml:space="preserve">
+    <value>This policy is for owners of domestic properties only. Retail, commercial and other premises used for business are not eligible.</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara5_Link1Alt" xml:space="preserve">
+    <value>Download the SSE Home Services Policy Booklet</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara5_Link1Txt" xml:space="preserve">
+    <value>SSE Home Services Policy Booklet</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara5_Link1Url" xml:space="preserve">
+    <value>/Content/Pdfs/SSE Home Services Policy Booklet.pdf</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara5_Link2Txt" xml:space="preserve">
+    <value>SSE Heating Cover Insurance Product Information Document</value>
+  </data>
+  <data name="FixNProtectPlusImportantInformationPara6" xml:space="preserve">
+    <value>This policy is for owners of domestic properties only. Retail, commercial and other premises used for business are not eligible.</value>
+  </data>
+  <data name="FixNProtectPlusModalImportantInfoPara1" xml:space="preserve">
+    <value>The price for Heating Cover includes 20% VAT and Insurance Premium Tax. Parts and labour are subject to the terms and conditions found in the </value>
+  </data>
+  <data name="FixNProtectPlusModalImportantInfoPara2" xml:space="preserve">
+    <value>. You’ll be contacted to arrange an initial system inspection. The cost of a boiler service (£90) is based on the price of a standalone SSE Boiler Service</value>
+  </data>
+  <data name="FixNProtectPlusModalProductName" xml:space="preserve">
+    <value>Heating Cover</value>
+  </data>
+  <data name="FixNProtectPlusModalSavingsText" xml:space="preserve">
+    <value>Save £60 over 12 months. £60 saving is based on a £5 discount for 12 months for Heating Cover (12 x £5 = £60), when compared to buying Heating Cover separately (£23.95 per month).</value>
+  </data>
+  <data name="FixNProtectPlusModalTagline" xml:space="preserve">
+    <value>Full central heating cover 24/7, boiler service included</value>
+  </data>
+  <data name="FixNProtectPlusSavingsCalculationPara1" xml:space="preserve">
+    <value>£114 saving is based on Heating Breakdown being free for 12 months compared to the standard price when bought separately (£9.50 a month): £9.50 x 12 = £114.</value>
+  </data>
+  <data name="FixNProtectPlusSavingsPara_PlusPackageAdded" xml:space="preserve">
+    <value>£60 saving is based on a £5 discount for 12 months for Heating Cover (12 x £5 = £60), when compared to buying Heating Cover separately (£23.95 per month).</value>
+  </data>
+  <data name="FixNProtectPlusSubHeader1" xml:space="preserve">
+    <value>With Heating Cover, you’ll get:</value>
+  </data>
+  <data name="FixNProtectPlusSubHeader1Bullet1" xml:space="preserve">
+    <value>24-hour emergency repairs to your boiler and central heating system, parts and labour included</value>
+  </data>
+  <data name="FixNProtectPlusSubHeader1Bullet2" xml:space="preserve">
+    <value>Unlimited call-outs</value>
+  </data>
+  <data name="FixNProtectPlusSubHeader1Bullet3" xml:space="preserve">
+    <value>Annual boiler service (worth £90)</value>
+  </data>
+  <data name="FixNProtectPlusSubHeader1Bullet4" xml:space="preserve">
+    <value>12-month contract with cover starting on the next working day after your energy supply switches to us</value>
+  </data>
+  <data name="FixNProtectPlusTagline" xml:space="preserve">
+    <value>Upgrade to our &lt;b&gt;Heating Cover&lt;/b&gt; and you’ll not only get 24/7 central heating cover with unlimited call-outs, all parts and labour included. We’ll also give you an annual boiler service.</value>
+  </data>
+  <data name="PerMonthTxt" xml:space="preserve">
+    <value>per month</value>
+  </data>
+  <data name="RemoveButtonAlt" xml:space="preserve">
+    <value>Remove this Upgrade from your Bundle</value>
+  </data>
+  <data name="RemoveButtonText" xml:space="preserve">
+    <value>Remove from Bundle</value>
+  </data>
+  <data name="SaveTxt" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SavingsCalculationHeader_Alt" xml:space="preserve">
+    <value>Find out more about how we work out your savings</value>
+  </data>
+  <data name="SavingsCalculatorHeader" xml:space="preserve">
+    <value>How your savings are calculated – important information</value>
+  </data>
+  <data name="UpgradesPageTitle" xml:space="preserve">
+    <value>Sign up for a Bundle – Choose an Upgrade – SSE</value>
+  </data>
+  <data name="WasTxt" xml:space="preserve">
+    <value>Was</value>
+  </data>
+</root>

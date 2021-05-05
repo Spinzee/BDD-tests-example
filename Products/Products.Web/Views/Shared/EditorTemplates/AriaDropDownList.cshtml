@@ -1,0 +1,27 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Common
+@model object
+@{
+    var defaultHtmlAttributesObject = new
+    {
+        title = ViewData.ModelMetadata.DisplayName,
+        @class = "form-input form-input--dropdown",
+        autocomplete = "off"
+    };
+    object htmlAttributesObject = ViewData["htmlAttributes"] ?? new { };
+    IDictionary<string, object> htmlAttributes = Html.MergeHtmlAttributes(htmlAttributesObject, defaultHtmlAttributesObject);
+    htmlAttributes.Add("aria-required", ViewContext.ViewData.ModelMetadata.IsRequired);
+    bool hasAriaDescription = false;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey("AriaDescription"))
+    {
+        hasAriaDescription = true;
+        htmlAttributes.Add("aria-describedby", $"{ViewData.ModelMetadata.PropertyName}-description");
+    }
+}
+@Html.LabelFor(m => m, new { @class = "form-label" })
+@Html.DropDownListFor(m => m, (SelectList) ViewData["selectList"], Form_Resources.AddressDropdownDefault, htmlAttributes)
+@if (hasAriaDescription)
+{
+    <p id="@ViewData.ModelMetadata.PropertyName-description" class="sr-only">@ViewData.ModelMetadata.AdditionalValues["AriaDescription"]</p>
+}
+@Html.ValidationMessageFor(m => m)

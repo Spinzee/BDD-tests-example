@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AreaNotCoveredTitle" xml:space="preserve">
+    <value>Sign up for energy – Area not covered – SSE</value>
+  </data>
+  <data name="ContactBody" xml:space="preserve">
+    <value>We’ll help you pick the best tariff for your home.</value>
+  </data>
+  <data name="ContactHeader" xml:space="preserve">
+    <value>Please contact our Welcomeline team on </value>
+  </data>
+  <data name="ContactNumber" xml:space="preserve">
+    <value>0345 071 7972.</value>
+  </data>
+  <data name="ContactNumberUrl" xml:space="preserve">
+    <value>tel:0345 071 7972</value>
+  </data>
+  <data name="Link2Alt" xml:space="preserve">
+    <value>Link to a guide to switching your energy supplier</value>
+  </data>
+  <data name="Link2Text" xml:space="preserve">
+    <value>Switching your gas and electricity</value>
+  </data>
+  <data name="Link2Url" xml:space="preserve">
+    <value>https://sse.co.uk/help/energy/switching</value>
+  </data>
+  <data name="Link3Alt" xml:space="preserve">
+    <value>Link to energy saving tips and advice</value>
+  </data>
+  <data name="Link3Text" xml:space="preserve">
+    <value>Energy efficiency and saving advice</value>
+  </data>
+  <data name="Link3Url" xml:space="preserve">
+    <value>https://sse.co.uk/help/energy/energy-efficiency-and-saving</value>
+  </data>
+  <data name="LinkAlt" xml:space="preserve">
+    <value>Link to our electric heating section</value>
+  </data>
+  <data name="linkHeader" xml:space="preserve">
+    <value>Energy help</value>
+  </data>
+  <data name="LinkText" xml:space="preserve">
+    <value>Electric tariffs and heating help</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>https://sse.co.uk/help/electric-heating</value>
+  </data>
+  <data name="OtherMeterTypeBody" xml:space="preserve">
+    <value>But as a multi-rate electricity customer we can still offer you a choice of tariffs without having to change your meter.</value>
+  </data>
+  <data name="OtherMeterTypeHeader" xml:space="preserve">
+    <value>Sorry, we can’t sign you up online</value>
+  </data>
+  <data name="OtherMeterTypeTitle" xml:space="preserve">
+    <value>Sign up for energy – Other meter type - SSE</value>
+  </data>
+  <data name="Contact2Body" xml:space="preserve">
+    <value>and we will try to get your order complete and get you up and running as soon as possible.</value>
+  </data>
+  <data name="Contact2Header" xml:space="preserve">
+    <value>Please call us on </value>
+  </data>
+  <data name="ContactNumber2" xml:space="preserve">
+    <value>0345 026 7058</value>
+  </data>
+  <data name="ContactNumberUrl2" xml:space="preserve">
+    <value>tel:0345 026 7058</value>
+  </data>
+  <data name="InvalidBankDetailsBody" xml:space="preserve">
+    <value>We can’t confirm your bank details, so you won’t be able to complete your order online.</value>
+  </data>
+  <data name="InvalidBankDetailsHeader" xml:space="preserve">
+    <value>Please call us to complete your order</value>
+  </data>
+  <data name="InvalidBankDetailsLinkSuffix" xml:space="preserve">
+    <value> and we’ll finish your order over the phone.</value>
+  </data>
+  <data name="InvalidBankDetailsTitle" xml:space="preserve">
+    <value>Sign up for energy – Cannot confirm bank details - SSE</value>
+  </data>
+  <data name="Link4Alt" xml:space="preserve">
+    <value>Link to find out more about smart meters</value>
+  </data>
+  <data name="Link4Text" xml:space="preserve">
+    <value>Introducing smart meters</value>
+  </data>
+  <data name="Link4Url" xml:space="preserve">
+    <value>https://sse.co.uk/energy/smart-meters</value>
+  </data>
+  <data name="Link5Alt" xml:space="preserve">
+    <value>Link to find out more about your energy supplier</value>
+  </data>
+  <data name="Link5Text" xml:space="preserve">
+    <value>About your gas and electricity supplier</value>
+  </data>
+  <data name="Link5Url" xml:space="preserve">
+    <value>https://sse.co.uk/help/energy/who-supplies-gas-and-electricity</value>
+  </data>
+  <data name="Link6Alt" xml:space="preserve">
+    <value>Link to a guide to gas and electricity meters</value>
+  </data>
+  <data name="Link6Text" xml:space="preserve">
+    <value>About gas and electricity meters</value>
+  </data>
+  <data name="Link6Url" xml:space="preserve">
+    <value>https://sse.co.uk/help/energy/gas-and-electricity-meters</value>
+  </data>
+  <data name="UnableToCompleteBody" xml:space="preserve">
+    <value>Unfortunately, you can’t complete your order online today.</value>
+  </data>
+  <data name="UnableToCompleteHeader" xml:space="preserve">
+    <value>Sorry, we can’t sign you up online</value>
+  </data>
+  <data name="UnableToCompleteTitle" xml:space="preserve">
+    <value>Sign up for energy – Unable to complete order online – SSE</value>
+  </data>
+  <data name="EnergyUnavailableHeader" xml:space="preserve">
+    <value>We’re sorry, our energy tariffs are temporarily unavailable</value>
+  </data>
+  <data name="EnergyUnavailableParagraph" xml:space="preserve">
+    <value>We’re working to restore the service as soon as possible. Please try again later.</value>
+  </data>
+  <data name="EnergyUnavailableTitle" xml:space="preserve">
+    <value>Energy unavailable</value>
+  </data>
+  <data name="CantFindPricesContactBodyPost" xml:space="preserve">
+    <value>to find out more about the products available to you.</value>
+  </data>
+  <data name="CantFindPricesContactBodyPre" xml:space="preserve">
+    <value>Please call us on</value>
+  </data>
+  <data name="CantFindPricesEnergyTitle" xml:space="preserve">
+    <value>Sign up for energy – Can’t find prices – SSE</value>
+  </data>
+  <data name="CantFindPricesHeader" xml:space="preserve">
+    <value>Sorry we need more information to find the prices for your postcode</value>
+  </data>
+  <data name="CantFindPricesOurPricesTitle" xml:space="preserve">
+    <value>Our energy prices – Can’t find prices - SSE</value>
+  </data>
+  <data name="ContactBody2" xml:space="preserve">
+    <value>to finish signing up over the phone.</value>
+  </data>
+  <data name="ContactNumber3" xml:space="preserve">
+    <value>0345 071 7945</value>
+  </data>
+  <data name="SmartPayGoHeader" xml:space="preserve">
+    <value>Sorry, we can’t sign you up online</value>
+  </data>
+  <data name="SmartPayGoParagraph" xml:space="preserve">
+    <value>You may lose your smart and prepayment functions that you currently have with you smart Pay As You Go (prepayment) meter.</value>
+  </data>
+  <data name="SmartPayGoTitle" xml:space="preserve">
+    <value>Sign up for energy –Smart Pay As You Go meter - SSE</value>
+  </data>
+  <data name="IncorrectMeterBody" xml:space="preserve">
+    <value>Because your meter type is different from what we’ve found for your property, we can’t sign you up for energy at this time. Please contact your current supplier to check your meter details.</value>
+  </data>
+  <data name="IncorrectMeterHeader" xml:space="preserve">
+    <value>Sorry, we can’t sign you up for energy</value>
+  </data>
+  <data name="IncorrectMeterTitle" xml:space="preserve">
+    <value>Sign up for energy – Meter details don’t match – SSE</value>
+  </data>
+</root>

@@ -1,0 +1,64 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.EnergyUsageViewModel
+
+
+<div id="I-dont-know" class="toggle-pane @(Model.ActiveTabIndex == 1 ? "active in" : "" ) fade">
+    @using (Html.BeginForm("EnergyUsage", "Tariffs", FormMethod.Post, new { @id = "unknown-usage-form", @known = "false", @autocomplete = "off" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Hidden("ActiveTabIndex", 1)
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                    <h3 class="gap-top">@EnergyUsage_Resources.Question1</h3>
+                    <div class="btn-group-multi" data-toggle="buttons">
+                        <div class="row">
+                            @Html.EditorFor(m => m.UnknownEnergyUsageViewModel.PropertyType)
+                            @Html.ValidationMessage("SelectedPropertyTypeId")
+                            @*Add additional ValidationMessage for client side validation to work*@
+                            @Html.ValidationMessage("UnknownEnergyUsageViewModel.SelectedPropertyTypeId")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="full-width-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8">
+                        <h3>@EnergyUsage_Resources.Question2</h3>
+                        <div class="btn-group-multi" data-toggle="buttons">
+                            <div class="row">
+                                @Html.EditorFor(m => m.UnknownEnergyUsageViewModel.NumberOfBedrooms)
+                                @Html.ValidationMessage("SelectedNumberOfBedroomsId")
+                                @*Add additional ValidationMessage for client side validation to work*@
+                                @Html.ValidationMessage("UnknownEnergyUsageViewModel.SelectedNumberOfBedroomsId")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                    <h3>@EnergyUsage_Resources.Question3</h3>
+                    <div class="btn-group-multi" data-toggle="buttons">
+                        <div class="row">
+                            @Html.EditorFor(m => m.UnknownEnergyUsageViewModel.NumberOfAdults)
+                            @Html.ValidationMessage("SelectedNumberOfAdultsId")
+                            @*Add additional ValidationMessage for client side validation to work*@
+                            @Html.ValidationMessage("UnknownEnergyUsageViewModel.SelectedNumberOfAdultsId")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <button type="submit" class="button button-primary" title="@Resources.ButtonNextSignUpEnergyAlt">@Resources.ButtonNextText</button>
+        </div>
+    }
+</div>

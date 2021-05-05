@@ -1,0 +1,38 @@
+﻿[
+  {
+    "outputFile": "Content/Css/customer-tariff-change.css",
+    "inputFile": "Content/Css/customer-tariff-change.less"
+  },
+  {
+    "outputFile": "Content/Css/customer-tariff-change-recaptcha.css",
+    "inputFile": "Content/Css/customer-tariff-change-recaptcha.less"
+  },
+  {
+    "outputFile": "Content/Css/Modules/modals.css",
+    "inputFile": "Content/Css/Modules/modals.less"
+  },
+  {
+    "outputFile": "Content/ComponentLibrary/component-library.css",
+    "inputFile": "Content/ComponentLibrary/component-library.less"
+  },
+  {
+    "outputFile": "Content/Css/Modules/tariffs.css",
+    "inputFile": "Content/Css/Modules/tariffs.less"
+  },
+  {
+    "outputFile": "Content/Css/Base/utilities.css",
+    "inputFile": "Content/Css/Base/utilities.less"
+  },
+  {
+    "outputFile": "Content/Css/Base/lists.css",
+    "inputFile": "Content/Css/Base/lists.less"
+  },
+  {
+    "outputFile": "Content/Css/Modules/boxes.css",
+    "inputFile": "Content/Css/Modules/boxes.less"
+  },
+  {
+    "outputFile": "Content/Css/variables.css",
+    "inputFile": "Content/Css/variables.less"
+  }
+]

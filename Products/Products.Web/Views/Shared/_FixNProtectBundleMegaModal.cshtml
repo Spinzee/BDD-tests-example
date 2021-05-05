@@ -1,0 +1,88 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@using Products.WebModel.Resources.HomeServices
+@using Accordion_Resources = Products.WebModel.Resources.Energy.Accordion_Resources
+@model Products.WebModel.ViewModels.Energy.HesMoreInformationViewModel
+
+<div class="modal fade in" role="dialog" id="FixNProtectBundleMegaModal" tabindex="-1" aria-labelledby="modal-title modal-body">
+    <div class="modal-mega quote-details-fixnprotect-modal-banner" role="document">
+        <div class="modal-content upgrades-modal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Resources.ModalCloseButtonAlt">
+                    @Resources.ModalCloseButtonText
+                </button>
+            </div>
+            <div class="modal-banner-image">
+                <div class="col-xs-12 col-sm-6 col-md-6 upgrades-modal-header">
+                    <h2>@ProductFeatures_Resources.FixNProtectProductDisplayText</h2>
+                    <p class="tagline">
+                        @ProductFeatures_Resources.FnPTagline
+                    </p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row mega-modal-header-after gap-xl">
+                    <div class="col-xs-12 col-sm-6 col-md-4 broadband-price-section">
+                        <div class="broadband-price">@ProductFeatures_Resources.FnPPrice</div>
+                        <span class="broadband-orig-monthly-price">@AvailableBundleTariffs_Resources.OriginalPricePrefix @Model.OriginalFixNProtectMonthlyCost</span>
+                        <span class="broadband-monthly-saving">@AvailableBundleTariffs_Resources.SaveTxtLowercase @Model.ProjectedMonthlySavingsAmount</span>
+                        <p class="subscript">@Model.BundleDisclaimerModalText</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-7">
+                        <p class="tariff-description">@ProductFeatures_Resources.FnPDescription</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-7 gap-top-xl">
+                        <h3>@ProductFeatures_Resources.FixNProtectBulletListHeader</h3>
+                        <ul class="bullet-list list--spaced">
+                            <li>@ProductFeatures_Resources.FixNProtectBullet1</li>
+                            <li>@ProductFeatures_Resources.FixNProtectBullet2</li>
+                            <li>@ProductFeatures_Resources.FixNProtectBullet3</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row gap-xxl">
+                    <div class="col-xs-12 col-md-7">
+                        <h3>@ProductFeatures_Resources.FixNProtectExcessHeader</h3>
+                        <p class="tariff-description">@Model.ExcessText</p>
+                    </div>
+                </div>
+
+                <div class="row equal gap-xl">
+                    <div class="col-xs-12 col-sm-6 additional-info-alt panel left-margin-gap right-gutter">
+                        <h3>@CoverDetails_Resources.IncludedHeader</h3>
+                        <ul class="bullet-list tick-list list--spaced">
+                            @foreach (string item in Model.WhatsIncluded)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 additional-info-alt panel right-margin-gap">
+                        <h3>@CoverDetails_Resources.NotIncludedHeader</h3>
+                        <ul class="bullet-list tick-list list--spaced" id="cross-list">
+                            @foreach (string item in Model.WhatsExcluded)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4>@AvailableBundleTariffs_Resources.ImportantInformationHeader</h4>
+                        <p class="subscript">
+                            @ProductFeatures_Resources.FixNProtectImportantPara1
+                            <a href="@Accordion_Resources.HeatingBreakdownCoverPolicyPdfLinkUrl" target="_blank" title="@Accordion_Resources.BundleHeatingBreakdownCoverPolicyLinkAlt">@Accordion_Resources.BundleHeatingBreakdownCoverPolicyLinkText</a>
+                            @Accordion_Resources.PartsAndLabourPara2 <a href="@Accordion_Resources.HeatingBreakdownCoverInsurancePolicyPdfLinkUrl" target="_blank" title="@Accordion_Resources.BundleHeatingBreakdownInsurancePolicyLinkAlt">@Accordion_Resources.BundleHeatingBreakdownInsurancePolicyLinkText</a>.
+                        </p>
+                        <div class="modal-close">
+                            <button type="button" class="button button-edge button-secondary" data-dismiss="modal" aria-label="Close" title="@Resources.ModalCloseButtonAlt">@Resources.ModalCloseButtonText</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

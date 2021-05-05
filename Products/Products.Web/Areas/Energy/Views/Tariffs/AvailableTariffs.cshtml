@@ -1,0 +1,99 @@
+﻿@using Products.WebModel.Resources.Energy
+@using Products.WebModel.ViewModels.Energy
+@model Products.WebModel.ViewModels.Energy.AvailableTariffsViewModel
+@{
+    ViewBag.Title = AvailableTariffs_Resources.Title;
+}
+
+@Html.Partial("_AvailableTariffsTopSection")
+
+@section Styles
+{
+    @Styles.Render("~/css/tariffs")
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h4 class="h2-like centered">@Model.SubHeaderText</h4>
+            <p class="centered">@Html.Raw(Model.SubHeaderParagraph)</p>
+        </div>
+    </div>
+</div>
+
+@if (Model.IsChosenTariffAvailable)
+{
+    @Html.Partial(Model.ChosenTariffPartialName, Model.ChosenTariff)
+}
+
+<div class="available-packages-container energy-tariff-container">
+    <div class="container">
+        @if (Model.ShowYouMightBeInterestedInText)
+        {
+            <div class="row">
+                <div class="col-xs-12 gap-top-xl">
+                    <h4 class="h2-like centered no-margin">@Model.YouMightBeInterestedInText</h4>
+                </div>
+            </div>
+        }
+
+        @if (Model.ShowTabs)
+        {
+            <div class="row">
+                <div class="col-xs-12 gap-top-xl gap-lg centered">
+                    <ul class="btn-group-toggle tuple granularityType bg-white tabs">
+                        <li role="presentation" class="@Model.FirstTabActiveClass">
+                            <a href="#" class="tab" data-tab-name="@AvailableTariffs_Resources.BundleTabName" data-show-tariffs="@Model.FirstTabShowTariffSelector" data-hide-tariffs="@Model.FirstTabHideTariffSelector" title="@Model.FirstTabLabel">@Model.FirstTabLabel</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" class="tab" data-tab-name="@AvailableTariffs_Resources.EnergyTabName" data-show-tariffs="@Model.MiddleTabShowTariffSelector" data-hide-tariffs="@Model.MiddleTabHideTariffSelector" title="@Model.MiddleTabLabel">@Model.MiddleTabLabel</a>
+                        </li>
+                        <li role="presentation" class="@Model.LastTabActiveClass">
+                            <a href="#" class="tab" data-tab-name="@AvailableTariffs_Resources.ViewAllTabName" data-show-tariffs="@Model.LastTabShowTariffSelector" title="@Model.LastTabLabel">@Model.LastTabLabel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        }
+
+        <div class="tariff-list contain gap">
+            @foreach (TariffsViewModel item in Model.AllTariffs)
+            {
+                @Html.Partial(item.PartialName, item)
+            }
+        </div>
+        @if (Model.HasE7Meter)
+        {
+            <p class="centered gap-xl">
+                @AvailableTariffs_Resources.TariffFooter
+                <a title="@Common_Resources.ElectricHeatingContactNumber" href="@Common_Resources.ElectricHeatingContactNumberUrl">@Common_Resources.ElectricHeatingContactNumber</a>
+                @AvailableTariffs_Resources.TariffFooterLinkSuffix
+            </p>
+        }
+
+        <p class="text-center gap-top-sm"><strong>@Html.Raw(AvailableTariffs_Resources.PartnershipText)</strong></p>
+    </div>
+
+    @Html.Partial("_SwitchStepsEnergy", (Model.SwitchStepPartial.Equals("_SwitchStepsEnergy") ? string.Empty : "hide"))
+    @Html.Partial("_SwitchStepsBundle", (Model.SwitchStepPartial.Equals("_SwitchStepsBundle") ? string.Empty : "hide"))
+</div>
+
+@Html.Partial("_AvailableTariffsBottomSection")
+
+@section Scripts {
+    @Scripts.Render("~/js/products/broadband/available-tariffs")
+    @Scripts.Render("~/js/products/broadband/line-speed")
+    @Scripts.Render("~/js/products/energy/tab")
+    @Scripts.Render("~/js/products/energy/signup")
+
+    <script type="text/javascript">
+        $(function () {
+// ReSharper disable once UnusedLocals
+            var tariffTab = new Digital.Web.Tariffs.Tab('@Model.DisplayType', '@Model.ChosenTariffType', '@Model.InitialHideTariffs', '@Model.InitialShowTariffs');
+        });
+    </script>
+}
+
+@section Popups{
+    @Html.Partial("_ModalLoadingPartial", Model.LoadingModal)
+}

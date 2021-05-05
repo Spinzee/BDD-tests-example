@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalProductsAndServicesLabel" xml:space="preserve">
+    <value>Additional Products or Services Included</value>
+  </data>
+  <data name="CloseButtonLabel" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CloseButtonTitle" xml:space="preserve">
+    <value>Close this</value>
+  </data>
+  <data name="DiscountsAndChargesLabel" xml:space="preserve">
+    <value>Discounts and Additional Charges</value>
+  </data>
+  <data name="ExitFeesDisclaimer" xml:space="preserve">
+    <value>(if you cancel this tariff before the end date)</value>
+  </data>
+  <data name="ExitFeesLabel" xml:space="preserve">
+    <value>Exit Fees </value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Paragraph1" xml:space="preserve">
+    <value>Please read the following information about your new tariff.</value>
+  </data>
+  <data name="Paragraph2" xml:space="preserve">
+    <value>We’ve recently moved to our new online home at sse.co.uk. This means the Tariff Information Label (TIL) for all our tariffs shows SSE as the supplier. But the prices are also correct for our other brands which are SSE Southern Electric, SSE SWALEC and SSE Scottish Hydro.</value>
+  </data>
+  <data name="PaymentMethodLabel" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+  <data name="PerDay" xml:space="preserve">
+    <value> per day</value>
+  </data>
+  <data name="PerKwh" xml:space="preserve">
+    <value> per kWh</value>
+  </data>
+  <data name="PriceGuaranteedUntilLabel" xml:space="preserve">
+    <value>Price Guaranteed Until</value>
+  </data>
+  <data name="StandingChargeLabel" xml:space="preserve">
+    <value>Standing Charge</value>
+  </data>
+  <data name="Subheading1End" xml:space="preserve">
+    <value> tariff</value>
+  </data>
+  <data name="Subheading1Start" xml:space="preserve">
+    <value>About your </value>
+  </data>
+  <data name="Subheading2" xml:space="preserve">
+    <value>What is a kWh (kilowatt hour)?</value>
+  </data>
+  <data name="Subheading2Paragraph1" xml:space="preserve">
+    <value>kWh stands for kilowatt-hour - the unit used to measure the amount of electricity you use. One kilowatt equals 1,000 watts of electricity and will power a 40 watt light bulb for 25 hours.</value>
+  </data>
+  <data name="SupplierLabel" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="TariffEndsOnLabel" xml:space="preserve">
+    <value>Tariff Ends On</value>
+  </data>
+  <data name="TariffNameLabel" xml:space="preserve">
+    <value>Tariff Name</value>
+  </data>
+  <data name="TariffTypeLabel" xml:space="preserve">
+    <value>Tariff Type</value>
+  </data>
+  <data name="UnitRateLabel" xml:space="preserve">
+    <value>Unit Rate</value>
+  </data>
+</root>

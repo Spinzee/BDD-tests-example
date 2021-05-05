@@ -1,0 +1,25 @@
+﻿@using Products.WebModel.Resources.Broadband
+@model Products.WebModel.ViewModels.Broadband.YourPriceViewModel
+
+<div class="modal fade" role="dialog" id="one-off-costs-modal" tabindex="-1" aria-labelledby="one-off-costs-modal-label">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Common_Resources.CloseButtonTitle">
+                    @Common_Resources.CloseButtonLabel
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="h2-like centered gap-lg" id="one-off-costs-modal-label">@YourPrice_Resources.OneOffModalHeader</h4>
+                        <h5 class="h3-like centered gap-sm">@YourPrice_Resources.OneOffModalSubHeader1</h5>
+                        <p class="centered">@Model.OneOffModalContent1</p>
+                        <h5 class="h3-like centered gap-sm">@YourPrice_Resources.OneOffModalSubHeader2</h5>
+                        <p class="centered">@Model.OneOffModalContent2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

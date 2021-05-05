@@ -1,0 +1,57 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.ExtrasItemViewModel
+
+
+<div class="extra-container extra-container-energy @Model.AddedCssClass" id="@Model.ExtraContainerId">
+    <div class="overlay-main">
+        <span class="added-mobile overlay">@Extras_Resources.ExtrasAddedTxt</span>
+    </div>
+    <img class="sales-img" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/electricalwiringcover.png")" alt="" />
+    <div class="col-xs-5 col-sm-8 col-md-8">
+        <span class="added-desktop">Added</span>
+    </div>
+    <div class="row extra-main-body">
+        <div class="col-xs-12">
+            <h3 class="extra-item-name">@Model.Name</h3>
+            <p>
+                @Model.TagLine
+                <span class="learn-more-link">
+                    <a href="#"
+                       data-toggle="modal"
+                       data-target="#@Model.MoreInformationModalId"
+                       title="@Extras_Resources.MoreDetailsLinkAlt">
+                        @Extras_Resources.MoreDetailsLinkTxt
+                    </a>
+                </span>
+            </p>
+        </div>
+        <div class="col-xs-12">
+            <div class="extra">
+                <div class="extra-price">@Model.Price</div>
+                <div class="extra-price-lbl">
+                    <div>@Extras_Resources.Per</div>
+                    <div>@Extras_Resources.Month</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <input class="button button-secondary add-remove-extra-button button-extra-@Model.ProductCode"
+                   type="button"
+                   value="@Model.AddRemoveButtonText"
+                   data-extra-container-id="@Model.ExtraContainerId"
+                   data-extra-modal-priceheader-id="@Model.ModalExtraPriceHeaderId"
+                   data-product-code="@Model.ProductCode"
+                   data-button-group="button-extra-@Model.ProductCode"
+                   data-is-added="@Model.IsAddedToBasketStr"
+                   data-add-button-text="@Extras_Resources.AddButtonText"
+                   data-remove-button-text="@Extras_Resources.RemoveButtonText"
+                   data-remove-alt-text="@Model.RemoveButtonAltText"
+                   data-add-alt-text="@Model.AddButtonAltText"
+                   name="button-submit-extra"
+                   title="@Model.AddRemoveButtonAltText" />
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_ExtraMoreInformationModal", Model)

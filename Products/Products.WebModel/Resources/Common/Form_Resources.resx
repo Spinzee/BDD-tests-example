@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountHolderRegExError" xml:space="preserve">
+    <value>The account holder name can only include letters, hyphens, and apostrophes, and must be less than 18 characters long.</value>
+  </data>
+  <data name="AccountHolderRequiredError" xml:space="preserve">
+    <value>Please enter your account holder name.</value>
+  </data>
+  <data name="AccountHolderTitle" xml:space="preserve">
+    <value>Account holder name</value>
+  </data>
+  <data name="AccountNumberRegExError" xml:space="preserve">
+    <value>The account number must contain eight digits. For seven digit account numbers, add a zero before the first number. For account numbers over eight digits, ask your bank which digits to use.</value>
+  </data>
+  <data name="AccountNumberRequiredError" xml:space="preserve">
+    <value>Please enter your account number.</value>
+  </data>
+  <data name="AccountNumberTitle" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+  <data name="AddressDropdownDefault" xml:space="preserve">
+    <value>Please select</value>
+  </data>
+  <data name="AddressDropdownRequiredError" xml:space="preserve">
+    <value>Please select your address.</value>
+  </data>
+  <data name="AddressDropdownTitle" xml:space="preserve">
+    <value>Choose your address</value>
+  </data>
+  <data name="AddressLine1RegExError" xml:space="preserve">
+    <value>The first line of the address can be up to 50 characters without symbols.</value>
+  </data>
+  <data name="AddressLine1RequiredError" xml:space="preserve">
+    <value>Please enter the first line of your address.</value>
+  </data>
+  <data name="AddressLine1Title" xml:space="preserve">
+    <value>Address line 1</value>
+  </data>
+  <data name="AddressLine2RegExError" xml:space="preserve">
+    <value>The second line of the address can be up to 50 characters without symbols.</value>
+  </data>
+  <data name="AddressLine2Title" xml:space="preserve">
+    <value>Address line 2 (optional)</value>
+  </data>
+  <data name="AuthorisedRequiredError" xml:space="preserve">
+    <value>Please select this box to confirm this statement is correct or contact us to complete your order.</value>
+  </data>
+  <data name="AuthorisedTitle" xml:space="preserve">
+    <value>I am the account holder and the only person needed to set up a Direct Debit for this account.</value>
+  </data>
+  <data name="ConfirmEmailAddressAriaDescription" xml:space="preserve">
+    <value>This is to confirm the email address we may use to contact you.</value>
+  </data>
+  <data name="ConfirmEmailRequiredError" xml:space="preserve">
+    <value>Please confirm your email address.</value>
+  </data>
+  <data name="ConfirmEmailTitle" xml:space="preserve">
+    <value>Confirm your email</value>
+  </data>
+  <data name="ContactNumberRegexErrorMessage" xml:space="preserve">
+    <value>Type in your contact number starting with a number, a ‘+’ or ‘(‘ sign. Please make sure it’s between 11-15 digits.</value>
+  </data>
+  <data name="ContactNumberRequiredError" xml:space="preserve">
+    <value>Please enter your preferred contact number.</value>
+  </data>
+  <data name="ContactNumberTitle" xml:space="preserve">
+    <value>Preferred contact number</value>
+  </data>
+  <data name="CountyRegExError" xml:space="preserve">
+    <value>The county can be up to 30 characters without numbers or symbols.</value>
+  </data>
+  <data name="CountyTitle" xml:space="preserve">
+    <value>County (optional)</value>
+  </data>
+  <data name="DateOfBirthRegExError" xml:space="preserve">
+    <value>Please enter a valid date of birth. If you’re under 16 in Scotland, or under 18 in England and Wales, please contact us for advice.</value>
+  </data>
+  <data name="DateOfBirthRequiredError" xml:space="preserve">
+    <value>Please enter your date of birth.</value>
+  </data>
+  <data name="DateOfBirthTitle" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="DirectDebitPaymentDateAriaDescription" xml:space="preserve">
+    <value>This is the date that we will take your Direct Debit payment each month.</value>
+  </data>
+  <data name="DirectDebitPaymentDateRegexError" xml:space="preserve">
+    <value>Please enter a payment date of up to two digits, from 1 to 28.</value>
+  </data>
+  <data name="DirectDebitPaymentDateRequiredError" xml:space="preserve">
+    <value>Please enter a payment date.</value>
+  </data>
+  <data name="Economy7ElecricityDayUsageRegexError" xml:space="preserve">
+    <value>Please enter your day electricity usage up to six digits.</value>
+  </data>
+  <data name="Economy7ElecricityDayUsageRequiredError" xml:space="preserve">
+    <value>Please enter your day electricity usage.</value>
+  </data>
+  <data name="Economy7ElecricityDayUsageTitle" xml:space="preserve">
+    <value>Day electricity in kWh</value>
+  </data>
+  <data name="Economy7ElectricityNightUsageRegexError" xml:space="preserve">
+    <value>Please enter your night electricity usage up to six digits.</value>
+  </data>
+  <data name="Economy7ElectricityNightUsageRequiredError" xml:space="preserve">
+    <value>Please enter your night electricity usage.</value>
+  </data>
+  <data name="Economy7ElectricityNightUsageTitle" xml:space="preserve">
+    <value>Night electricity in kWh</value>
+  </data>
+  <data name="ElectricityMeterRequiredError" xml:space="preserve">
+    <value>Please choose your electricity meter type</value>
+  </data>
+  <data name="ElectricityUsageRegexError" xml:space="preserve">
+    <value>Please enter your electricity usage up to six digits.</value>
+  </data>
+  <data name="ElectricityUsageRequiredError" xml:space="preserve">
+    <value>Please enter your electricity usage.</value>
+  </data>
+  <data name="ElectricityUsageTitle" xml:space="preserve">
+    <value>Electricity in kWh</value>
+  </data>
+  <data name="EmailAddressAriaDescription" xml:space="preserve">
+    <value>This is the email address we may use to contact you.</value>
+  </data>
+  <data name="EmailComparisonError" xml:space="preserve">
+    <value>Please confirm your email address. Addresses must match.</value>
+  </data>
+  <data name="EmailInvalidEmailErrorMessage" xml:space="preserve">
+    <value>Please enter a valid email address.</value>
+  </data>
+  <data name="EmailRequiredError" xml:space="preserve">
+    <value>Please enter your email address.</value>
+  </data>
+  <data name="EmailTitle" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="FirstNameRegExError" xml:space="preserve">
+    <value>Your first name can only include letters, hyphens and apostrophes, and must be less than 20 characters long.</value>
+  </data>
+  <data name="FirstNameRequiredError" xml:space="preserve">
+    <value>Please enter your first name.</value>
+  </data>
+  <data name="FirstNameTitle" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="FixAndProtectTermsAndConditionsCheckboxEnergyLabelText" xml:space="preserve">
+    <value>&lt;p&gt;
+  By ticking this box, you confirm:
+&lt;/p&gt;
+&lt;ol&gt;
+   &lt;li&gt;You’re happy to enter into a binding contract with OVO (S) Gas Limited/OVO Electricity Limited for your gas/electricity supply and OVO (S) Home Services Limited for any Home Services products (and, for any insurance products, also AmTrust Europe Limited) for the SSE products you've selected.&lt;/li&gt;
+    &lt;li&gt;You’ve read and accept the {0} Terms and Conditions (which also includes a summary of the tariff) and the General Terms and Conditions for the Supply of Electricity and/or Gas, and the {2} and the {1} Insurance Product Information Document.&lt;/li&gt;
+    &lt;li&gt;You’ve provided accurate information (not doing so could invalidate your insurance).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+You’ll get your switching details and Welcome pack via email. You can’t opt out of these emails. You’ll also receive a confirmation of sale letter for your {1} separately confirming your product start date. This will include your policy booklet with terms and conditions.
+&lt;/p&gt;</value>
+  </data>
+  <data name="GasUsageRegexError" xml:space="preserve">
+    <value>Please enter your gas usage up to six digits.</value>
+  </data>
+  <data name="GasUsageRequiredError" xml:space="preserve">
+    <value>Please enter your gas usage.</value>
+  </data>
+  <data name="GasUsageTitle" xml:space="preserve">
+    <value>Gas in kWh</value>
+  </data>
+  <data name="GiftCardRequiredError" xml:space="preserve">
+    <value>Please select gift card</value>
+  </data>
+  <data name="LandlineRegexErrorMessage" xml:space="preserve">
+    <value>That's not quite right. Your landline number should be 10 or 11 numbers long and begin with 01 or 02.</value>
+  </data>
+  <data name="LandlineRequiredError" xml:space="preserve">
+    <value>Please enter your landline number.</value>
+  </data>
+  <data name="LandlineRequiredTitle" xml:space="preserve">
+    <value>Landline</value>
+  </data>
+  <data name="LandlineTitle" xml:space="preserve">
+    <value>Landline (recommended)</value>
+  </data>
+  <data name="LastNameRegExError" xml:space="preserve">
+    <value>Your last name can only include letters, hyphens, spaces and apostrophes, and must be less than 30 characters long.</value>
+  </data>
+  <data name="LastNameRequiredError" xml:space="preserve">
+    <value>Please enter your last name.</value>
+  </data>
+  <data name="LastNameTitle" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="MarketingConsentTitle" xml:space="preserve">
+    <value>We’d like to send you information about product offers, services and rewards from OVO Electricity Limited, OVO (S) Gas Limited, OVO (S) Home Services Limited, OVO (S) Metering Limited and OVO (S) Retail Telecoms Limited by email. We’ll always treat your data with respect, keep it safe and secure and never sell it to third parties. You can stop receiving these emails at any time by clicking ‘unsubscribe’ in your email.. If you want to receive these emails, please tick the box.</value>
+  </data>
+  <data name="NumberOfAdultsRequiredError" xml:space="preserve">
+    <value>Please choose the number of adults.</value>
+  </data>
+  <data name="NumberOfBedroomsRequiredError" xml:space="preserve">
+    <value>Please choose the number of bedrooms.</value>
+  </data>
+  <data name="PasswordRegExError" xml:space="preserve">
+    <value>Please enter a password, using the format given.</value>
+  </data>
+  <data name="PasswordRequiredError" xml:space="preserve">
+    <value>Please enter your password.</value>
+  </data>
+  <data name="PasswordTitle" xml:space="preserve">
+    <value>Enter a password</value>
+  </data>
+  <data name="PaymentMethodRequiredError" xml:space="preserve">
+    <value>Please choose your payment method</value>
+  </data>
+  <data name="PostCodeRegexErrorMessage" xml:space="preserve">
+    <value>Sorry, we don’t recognise that postcode. Please try entering it again.</value>
+  </data>
+  <data name="PostcodeRequiredError" xml:space="preserve">
+    <value>Please enter your postcode.</value>
+  </data>
+  <data name="PostcodeTitle" xml:space="preserve">
+    <value>Postcode</value>
+  </data>
+  <data name="PreferredPhoneNumberRegexErrorMessage" xml:space="preserve">
+    <value>Type in your phone number starting with a number, a ‘+’ or ‘(‘ sign. Please make sure it’s between 11-15 digits.</value>
+  </data>
+  <data name="PreferredPhoneNumberRequiredError" xml:space="preserve">
+    <value>Please enter your preferred phone number.</value>
+  </data>
+  <data name="PreferredPhoneNumberTitle" xml:space="preserve">
+    <value>Preferred phone number</value>
+  </data>
+  <data name="PropertyNumberRegExError" xml:space="preserve">
+    <value>The house number or name can be up to 30 characters without symbols.</value>
+  </data>
+  <data name="PropertyNumberRequiredError" xml:space="preserve">
+    <value>Please enter the number or name of your property.</value>
+  </data>
+  <data name="PropertyNumberTitle" xml:space="preserve">
+    <value>Property number/name</value>
+  </data>
+  <data name="PropertyTypeRequiredError" xml:space="preserve">
+    <value>Please choose your property type.</value>
+  </data>
+  <data name="SmartMeterRequiredError" xml:space="preserve">
+    <value>Please choose whether you have a smart meter or not</value>
+  </data>
+  <data name="SortCodeRegExError" xml:space="preserve">
+    <value>The sort code must only contain numbers, in three sets of two digits.</value>
+  </data>
+  <data name="SortCodeRequiredError" xml:space="preserve">
+    <value>Please enter your sort code.</value>
+  </data>
+  <data name="SortCodeTitle" xml:space="preserve">
+    <value>Sort code</value>
+  </data>
+  <data name="TermsAndConditionsCheckboxBroadbandBundleLabelText" xml:space="preserve">
+    <value>By ticking this box, you confirm you’re happy to enter into a binding contract with OVO (S) Gas Limited/OVO Electricity Limited for your gas/electricity supply and OVO (S) Retail Telecoms Limited for your broadband and phone. You’ll get your switching details and Welcome pack via email. You can’t opt out of these emails.</value>
+  </data>
+  <data name="TermsAndConditionsCheckboxEnergyLabelText" xml:space="preserve">
+    <value>By ticking this box, you confirm you’re happy to enter into a binding contract with OVO (S) Gas Limited/OVO Electricity Limited for your gas/electricity supply. You’ll get your switching details and Welcome pack via email. You can’t opt out of these emails.</value>
+  </data>
+  <data name="TermsAndConditionsCheckboxLabelText" xml:space="preserve">
+    <value>We’re required to keep a record of your consent for a new contract for a fixed line service for 12 months. By ticking the box, you confirm you’re authorised to enter this contract. You also consent to us transferring your fixed line services, described by the details above, from your current supplier to SSE. You’ll get your switching details and Welcome pack via email. You can’t opt out of these emails.</value>
+  </data>
+  <data name="TermsAndConditionsCheckboxRequiredError" xml:space="preserve">
+    <value>Please select the tick box to show you agree with the terms and conditions above.</value>
+  </data>
+  <data name="TitlesError" xml:space="preserve">
+    <value>Please choose a title.</value>
+  </data>
+  <data name="TitlesTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="TownRegExError" xml:space="preserve">
+    <value>The town can be up to 30 characters without numbers or symbols.</value>
+  </data>
+  <data name="TownRequiredError" xml:space="preserve">
+    <value>Please enter the town of the address.</value>
+  </data>
+  <data name="TownTitle" xml:space="preserve">
+    <value>Town/City</value>
+  </data>
+</root>

@@ -1,0 +1,32 @@
+﻿@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.EnergyUsageViewModel
+@{
+    ViewBag.Title = EnergyUsage_Resources.Title;
+}
+<div class="container">
+    @Html.Partial("_BackChevronWithStepCounter", Model.BackChevronViewModel)
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@EnergyUsage_Resources.Header</h1>
+            <p>@EnergyUsage_Resources.Paragraph1</p>
+            <p>@EnergyUsage_Resources.Paragraph2</p>
+            <ul class="btn-group-toggle" id="energy-usage">
+                <li role="presentation" class="@(Model.ActiveTabIndex != 1 ? "active" : "" )"><a data-toggle="tab" href="#I-know">@EnergyUsage_Resources.Toggle1Prefix<br />@EnergyUsage_Resources.Toggle1Suffix</a></li>
+                <li role="presentation" class="@(Model.ActiveTabIndex == 1 ? "active" : "" )"><a data-toggle="tab" href="#I-dont-know">@EnergyUsage_Resources.Toggle2Text</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+@Html.Partial("~/Areas/Energy/Views/Tariffs/_IKnowUsage.cshtml", Model)
+
+@Html.Partial("~/Areas/Energy/Views/Tariffs/_IDontKnowUsage.cshtml", Model)
+
+@section Scripts {
+    @Scripts.Render("~/js/products/energy/usage")
+    <script>
+        $(function () {
+            window.attachNumberOnly($('.number'));
+        });
+    </script>
+}

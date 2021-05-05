@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account" xml:space="preserve">
+    <value>Log out of your account</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>https://{0}/home</value>
+  </data>
+  <data name="HomepageAlt" xml:space="preserve">
+    <value>Link to our homepage</value>
+  </data>
+  <data name="HomePageUrl" xml:space="preserve">
+    <value>https://www.sse.co.uk/home</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login - Your account</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Logout - Your account</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="SSE" xml:space="preserve">
+    <value>SSE</value>
+  </data>
+  <data name="Facebook" xml:space="preserve">
+    <value>facebook</value>
+  </data>
+  <data name="FacebookLink" xml:space="preserve">
+    <value>https://www.facebook.com/yourSSE</value>
+  </data>
+  <data name="FacebookLinkAlt" xml:space="preserve">
+    <value>Link to our Facebook page</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy policy</value>
+  </data>
+  <data name="PrivacyPolicyAlt" xml:space="preserve">
+    <value>Link to our privacy policy</value>
+  </data>
+  <data name="PrivacyPolicyLink" xml:space="preserve">
+    <value>https://www.sse.co.uk/about-us/legal/privacy-policy</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Terms of use</value>
+  </data>
+  <data name="TermsOfUseAlt" xml:space="preserve">
+    <value>Link to our legal terms of use</value>
+  </data>
+  <data name="TermsOfUseLink" xml:space="preserve">
+    <value>https://www.sse.co.uk/about-us/legal/terms-of-use</value>
+  </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>twitter</value>
+  </data>
+  <data name="TwitterLink" xml:space="preserve">
+    <value>https://twitter.com/YourSSE</value>
+  </data>
+  <data name="TwitterLinkAlt" xml:space="preserve">
+    <value>Link to our Twitter page</value>
+  </data>
+  <data name="WhoWeAre" xml:space="preserve">
+    <value>Who we are</value>
+  </data>
+  <data name="WhoWeAreAlt" xml:space="preserve">
+    <value>Link to our corporate descriptor</value>
+  </data>
+  <data name="WhoWeAreLink" xml:space="preserve">
+    <value>https://www.sse.co.uk/about-us/legal/trading-as-statement</value>
+  </data>
+  <data name="YouTube" xml:space="preserve">
+    <value>youtube</value>
+  </data>
+  <data name="YouTubeLink" xml:space="preserve">
+    <value>https://www.youtube.com/user/yourSSEtv</value>
+  </data>
+  <data name="YouTubeLinkAlt" xml:space="preserve">
+    <value>Link to our YouTube channel</value>
+  </data>
+  <data name="CookieClose" xml:space="preserve">
+    <value>Accept &amp; Close</value>
+  </data>
+  <data name="CookieCloseAlt" xml:space="preserve">
+    <value>Closes this message</value>
+  </data>
+  <data name="CookiesDisclaimerText" xml:space="preserve">
+    <value>We use cookies to provide a better website experience. By using our site, you’re agreeing to our use of cookies. For more information,</value>
+  </data>
+  <data name="CookiesLink" xml:space="preserve">
+    <value>read our cookies policy.</value>
+  </data>
+  <data name="CookiesLinkAlt" xml:space="preserve">
+    <value>Link to our cookies policy (opens in a new tab)</value>
+  </data>
+  <data name="CookiesLinkURL" xml:space="preserve">
+    <value>http://www.sse.co.uk/about-us/legal/cookie-policy</value>
+  </data>
+  <data name="CurrentTariffText" xml:space="preserve">
+    <value>This is the day your current tariff ends</value>
+  </data>
+  <data name="RenewalHelpText" xml:space="preserve">
+    <value>Use the radio buttons below to select which date you’d like your tariff to start</value>
+  </data>
+  <data name="RenewalModalTitle" xml:space="preserve">
+    <value>When would you like your new tariff to start?</value>
+  </data>
+  <data name="TodaysDate" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="PageNotFoundHeader" xml:space="preserve">
+    <value>Can’t find page</value>
+  </data>
+  <data name="PageNotFoundParagraph" xml:space="preserve">
+    <value>Sorry but we can’t find the page you’re looking for.</value>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>Can’t find page</value>
+  </data>
+  <data name="TechFaultHeader" xml:space="preserve">
+    <value>Oops! Something’s gone wrong</value>
+  </data>
+  <data name="TechFaultParagraph" xml:space="preserve">
+    <value>Don’t worry, we’ll get things back up and running as soon as possible.</value>
+  </data>
+  <data name="TechFaultParagraph2" xml:space="preserve">
+    <value>Please try again shortly.</value>
+  </data>
+  <data name="TechFaultTitle" xml:space="preserve">
+    <value>Technical fault</value>
+  </data>
+  <data name="LinkBackToHome" xml:space="preserve">
+    <value>Go to homepage</value>
+  </data>
+  <data name="LinkBackToHomeAlt" xml:space="preserve">
+    <value>Go to homepage</value>
+  </data>
+  <data name="RadioNoAlt" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="RadioYesAlt" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="RadioYesNoName" xml:space="preserve">
+    <value>YesNo</value>
+  </data>
+  <data name="BackButtonAlt" xml:space="preserve">
+    <value>Back to previous page</value>
+  </data>
+  <data name="ButtonNextText" xml:space="preserve">
+    <value>Ok, next</value>
+  </data>
+  <data name="SSEElectricitySupplier" xml:space="preserve">
+    <value>SSE (OVO Electricity Limited)</value>
+  </data>
+  <data name="SSEGasSupplier" xml:space="preserve">
+    <value>SSE (OVO (S) Gas Limited)</value>
+  </data>
+  <data name="SSE_GeneralTermsAndConditionsForTheSupplyOfElectricityAndOrGas" xml:space="preserve">
+    <value>/Content/Pdfs/SSE GEN T&amp;CS JANUARY 2020.pdf</value>
+  </data>
+  <data name="FullTermsAndConditionsHeader" xml:space="preserve">
+    <value>Full terms and conditions</value>
+  </data>
+  <data name="FullTermsAndConditionsPara" xml:space="preserve">
+    <value>For further information about our tariffs, please read our terms and conditions below.</value>
+  </data>
+  <data name="ButtonNextSignUpAlt" xml:space="preserve">
+    <value>Link to next step in the sign-up</value>
+  </data>
+  <data name="ButtonNextSignUpEnergyAlt" xml:space="preserve">
+    <value>Link to next step in the energy sign-up</value>
+  </data>
+  <data name="BundleButtonNextSignUpAlt" xml:space="preserve">
+    <value>Next step in your Bundle sign-up</value>
+  </data>
+  <data name="ModalAlt" xml:space="preserve">
+    <value>Link to open dialogue box</value>
+  </data>
+  <data name="ModalCloseButtonAlt" xml:space="preserve">
+    <value>Close dialogue box</value>
+  </data>
+  <data name="ModalCloseButtonText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="LineRentalTalkPriceText" xml:space="preserve">
+    <value>Included</value>
+  </data>
+  <data name="PhoneText" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="PhonePackageHeader" xml:space="preserve">
+    <value>Phone package</value>
+  </data>
+  <data name="ExtrasHeader" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+</root>

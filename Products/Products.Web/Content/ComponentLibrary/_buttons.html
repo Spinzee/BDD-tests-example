@@ -1,0 +1,272 @@
+﻿<form onsubmit="return false;">
+    <h1>Buttons</h1>
+
+    <p>View buttons, resize screen to show how they behave at small screen widths, try tabbing between them and clicking/tapping them.</p>
+
+    <p id="button-style-switcher">
+        Style:
+        <button type="button" class="button button-small" data-class="">.button</button>
+        <button type="button" class="button button-small button-primary" data-class="button-primary">-primary</button>
+        <button type="button" class="button button-small button-secondary" data-class="button-secondary">-secondary</button>
+        <button type="button" class="button button-small button-conversion" data-class="button-conversion">-conversion</button>
+        <button type="button" class="button button-small button-danger" data-class="button-danger">-danger</button>
+        <button type="button" class="button button-small button-cancel" data-class="button-cancel">-cancel</button>
+        <button type="button" class="button button-small" data-class="button-small">-small</button>
+        <label for="disabled"><input type="checkbox" id="disabled" />Disabled?</label>
+        <label for="loading"><input type="checkbox" id="loading" />Loading</label>
+    </p>
+
+    <div id="button-grid">
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="box">
+                    <button type="button" class="button button-primary">Button</button>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <button type="button" class="button button-primary">Button</button>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="box">
+                    <button type="button" class="button button-primary button-big">multi line<br />button</button>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <button type="button" class="button button-primary button-big">multi line<br />button</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="box">
+                    <button type="submit" class="button button-primary">Submit button</button>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <button type="submit" class="button button-primary">Submit button</button>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="box">
+                    <button type="submit" class="button button-primary button-big">multi line<br />button</button>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <button type="submit" class="button button-primary button-big">multi line<br />button</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="box">
+                    <!-- span is hook for in progress animation -->
+                    <span><input type="submit" class="button button-primary" value="Input"></span>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <span><input type="submit" class="button button-primary" value="Input"></span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="box">
+                    <span><input type="submit" class="button button-primary button-big" value="a long button text on a submit button"></span>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <span><input type="submit" class="button button-primary button-big" value="a long button text on a submit button"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="box">
+                    <a href="#" onclick="return false;" class="button button-primary" role="button">Link</a>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <a href="#" onclick="return false;" class="button button-primary" role="button">Link</a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="box">
+                    <a href="#" onclick="return false;" class="button button-primary button-big" role="button">multi line<br />button</a>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <a href="#" onclick="return false;" class="button button-primary button-big" role="button">multi line<br />button</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="button-grid">
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="box">
+                    <button type="button" class="button button-roundel">Yes</button>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <button type="button" class="button button-roundel">Yes</button>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="box">
+                    <button type="button" class="button button-roundel">No</button>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <button type="button" class="button button-roundel">No</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="box">
+                    <!-- does not work for inputs as ::before does not work.
+                         if you need to make it work, wrap the input in a span
+                        and use a similar technique as the progress buttons above
+                        ie. put the ::before on the span-->
+                    <span><input type="submit" class="button button-roundel" value="Yes"></span>
+            </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <input type="submit" class="button button-roundel" value="Yes">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="box">
+                    <input type="submit" class="button button-roundel" value="No">
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <input type="submit" class="button button-roundel" value="No">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="box">
+                    <a href="#" onclick="return false;" class="button button-roundel" role="button">Yes</a>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <a href="#" onclick="return false;" class="button button-roundel" role="button">Yes</a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="box">
+                    <a href="#" onclick="return false;" class="button button-roundel" role="button">No</a>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-dark">
+                <div class="box ">
+                    <a href="#" onclick="return false;" class="button button-roundel" role="button">No</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+
+
+
+
+<script>
+
+    var buttonType;
+    var buttonScrollPosition;
+
+    $(document).ready(function () {
+
+
+
+
+
+        $("#button-style-switcher")
+            .on("touchstart", "button", function () { buttonScrollPosition = $(window).scrollTop(); })
+            .on("click touchend", "button", function (e) {
+
+                // Avoid accidental swipe clicks when scrolling on touch device
+                if (e.type == 'touchend' && (Math.abs(buttonScrollPosition - $(window).scrollTop()) > 10)) {
+                    return;
+                };
+
+                buttonType = $(this).attr("data-class");
+
+                $("#button-grid").find(".button").each(function () {
+                    var that = $(this);
+                    that.removeClass(function (index, className) {
+                        // only match our classes, not button-big
+                        return (className.match(/(^|\s)button-[pscd]\S+/g) || []).join(' ');
+                    });
+
+                    that.addClass(buttonType);
+                });
+            });
+
+        $("#disabled").on("change", function () {
+            var isDisabled = $("#disabled").is(":checked");
+            console.log("Setting button disabled to: ", isDisabled);
+
+            $("#button-grid").find(".button").each(function () {
+                $(this).prop('disabled', isDisabled);
+            });
+        });
+
+        $("#loading").on("change", function () {
+            var isLoading = $("#loading").is(":checked");
+            console.log("Setting button loading to: ", isLoading);
+
+            $("#button-grid").find(".button").each(function () {
+                $(this).toggleClass('button-loading');
+            });
+
+            $("#button-grid").find("input.button").each(function () {
+                // submit input buttons cannot have before and after
+                $(this).parent().toggleClass('button-loading');
+            });
+        });
+    });
+</script>

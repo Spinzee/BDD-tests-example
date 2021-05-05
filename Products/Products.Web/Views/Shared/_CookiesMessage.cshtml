@@ -1,0 +1,13 @@
+﻿@using Products.WebModel.Resources.Common
+<section class="js-cookie-alert cookieContainer alertBoxCookies" aria-role="alert">
+    <div class="container contentArea">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                @Resources.CookiesDisclaimerText <a href="@Resources.CookiesLinkURL" target="_blank" class="" title="@Resources.CookiesLinkAlt">@Resources.CookiesLink</a>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <button type="button" class="closeAlertCookies pull-right button button-primary no-margin" id="hideCookie" title="@Resources.CookieCloseAlt">@Resources.CookieClose</button>
+            </div>
+        </div>
+    </div>
+</section>

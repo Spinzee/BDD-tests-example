@@ -1,0 +1,90 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.PhonePackageViewModel
+@{
+    ViewBag.Title = PhonePackage_Resources.Title;
+}
+
+@section ShoppingBasketToggler {
+    @Html.Partial("_ShoppingBasketToggler", Model.ShoppingBasketViewModel)
+}
+
+<div class="full-width-box stars no-main-margin gap-xl mobile-only-gap-top-xxxl bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+                <h1>@PhonePackage_Resources.BannerHeader</h1>
+                <p>@PhonePackage_Resources.BannerPara</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container phone-package">
+    <div class="row">
+        @using (Html.BeginForm("PhonePackage", "SignUp", FormMethod.Post, new { id = "PhonePackageForm", autocomplete = "off" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="col-xs-12 col-sm-8">
+                <h2>@ProductFeatures_Resources.BroadbandProductDisplayText</h2>
+
+                @Html.Partial("_BroadbandPackageSpeed", Model.BroadbandPackageSpeedViewModel)
+                <div id="select-talk-package">
+                    @Html.Partial("_SelectTalkPackage", Model.SelectTalkPackageViewModel)
+                </div>
+
+                @if (Model.ApplyInstallationFee)
+                {
+                    @Html.Partial("_NewLineInstallation", Model.NewInstallationViewModel)
+                }
+
+                <p>@PhonePackage_Resources.CallFeatureDisclaimer</p>
+                @{ Html.RenderPartial("_KeepYourNumber", Model.KeepYourNumberViewModel, new ViewDataDictionary
+                    {
+                        TemplateInfo = new TemplateInfo
+                        {
+                            HtmlFieldPrefix = "KeepYourNumberViewModel"
+                        }
+                    }); }
+
+                <div class="form-group signup">
+                    <input class="button button-primary" type="submit" value="@Resources.ButtonNextText" id="button-submit" name="button-submit" title="@Resources.BundleButtonNextSignUpAlt" />
+                </div>
+
+                <h4 class="h3-like">@Accordion_Resources.AccordionHeader</h4>
+                <div class="accordion" role="group" id="important-information">
+                    <div class="accordion-header">
+                        <a href="#" title="@Accordion_Resources.BroadbandBundleSavingsSubHeaderAlt" class="accordion-button" role="button" aria-controls="accordion-content">
+                            <h2>@Accordion_Resources.BroadbandBundleSavingsSubHeader</h2>
+                        </a>
+                    </div>
+                    <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <p>@Model.HowSavingsCalculatedText</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @Html.Partial("_Basket")
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/js/products/broadband/transfer-number")
+    @Scripts.Render("~/js/products/broadband/line-speed")
+    @Scripts.Render("~/js/products/energy/basket")
+    @Scripts.Render("~/js/products/energy/extras")
+
+    <script>
+        $(function () {
+            // ReSharper disable once UnusedLocals
+            var basketConfig = new Digital.Web.Energy.BasketConfig("/energy-signup/update-your-price", "/energy-signup/phone-package", false);
+            var talkPackageUpdate = new Digital.Web.Common.TalkPackageUpdate("/energy-signup/update-talk-package", "/energy-signup/phone-package", basketConfig);
+        });
+    </script>
+}

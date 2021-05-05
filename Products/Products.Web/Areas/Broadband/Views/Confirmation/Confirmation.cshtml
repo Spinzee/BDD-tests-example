@@ -1,0 +1,100 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Broadband
+@model Products.WebModel.ViewModels.Broadband.ConfirmationViewModel
+@{
+    ViewBag.Title = Confirmation_Resources.Title;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="svg-icon-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+                    <defs>
+                        <linearGradient id="a" y2="100%" gradientUnits="userSpaceOnUse">
+                            <stop offset=".1" stop-color="#004687" />
+                            <stop offset=".5" stop-color="#4099D4" />
+                            <stop offset=".8" stop-color="#7DC242" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="40" cy="40" r="40" fill="url(#a)" />
+                    <circle cx="40" cy="40" r="36" fill="#FFF" />
+                    <path fill="none" stroke="url(#a)" stroke-width="5" d="M24 42l9 10 24-23" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1 class="gap">@Confirmation_Resources.Header</h1>
+            <p>@string.Format(Confirmation_Resources.Paragraph1, Model.ProductName)</p>
+            <p>@Confirmation_Resources.Paragraph2</p>
+            <h2>@Confirmation_Resources.StepsHeader</h2>
+            @*If No New Line*@
+            <ul class="bullet-steps">
+                <li>@Confirmation_Resources.StepsPara1</li>
+                <li>@Confirmation_Resources.StepsPara2</li>
+                <li>@Confirmation_Resources.StepsPara3</li>
+                <li>@Confirmation_Resources.StepsPara4</li>
+            </ul>
+            <p>@Confirmation_Resources.SubSectionParagraph</p>
+            <p>@Confirmation_Resources.DirectDebitParagraph</p>
+            <p>@Confirmation_Resources.ContactUs <a href="@Confirmation_Resources.ContactUsUrl" title="@Confirmation_Resources.ContactUsAlt">@Confirmation_Resources.ContactUsText</a>@Confirmation_Resources.ContactUsPart2 <a href="@Confirmation_Resources.ContactEmailLink" title="@Confirmation_Resources.ContactEmailAlt">@Confirmation_Resources.ContactEmail</a>.</p>
+            <h2>@Confirmation_Resources.LinksHeader</h2>
+            <ul class="link-list gap">
+                <li><a href="@Confirmation_Resources.LinkUrl" class="icon-link" title="@Confirmation_Resources.LinkAlt">@Confirmation_Resources.LinkText</a></li>
+                <li><a href="@Confirmation_Resources.Link2Url" class="icon-link" title="@Confirmation_Resources.Link2Alt">@Confirmation_Resources.Link2Text</a></li>
+                <li><a href="@Confirmation_Resources.Link3Url" class="icon-link" title="@Confirmation_Resources.Link3Alt">@Confirmation_Resources.Link3Text</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            @*If non-SSE customer, Save £5 p/m on your broadband*@
+            @*@if (!Model.IsSSECustomer)
+            {
+                <div class="additional-info rounded-corner">
+                    <h2 class="h3-like">@Confirmation_Resources.CrossSell2Header</h2>
+                    <p>@Confirmation_Resources.CrossSell2Text</p>
+                    <a role="button" href="@Confirmation_Resources.CrossSell2LinkUrl" class="button button-primary"
+                       title="@Confirmation_Resources.CrossSell2LinkAlt">@Confirmation_Resources.CrossSell2LinkText</a>
+                </div>
+            }*@
+            @*Boiler Cover*@
+            <div class="additional-info rounded-corner">
+                <h2 class="h3-like">@Confirmation_Resources.CrossSellHeader</h2>
+                <p>@Confirmation_Resources.CrossSellText</p>
+                <a role="button" href="@Confirmation_Resources.CrossSellLinkUrl" class="button button-primary"
+                   title="@Confirmation_Resources.CrossSellLinkAlt">@Confirmation_Resources.CrossSellLinkText</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rewards-container bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="reward-logo " src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/promotional/sse-reward-logo.svg")" />
+                    </div>
+                    <div class="col-xs-12 hidden-sm hidden-md hidden-lg no-padding gap">
+                        <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/SSEHydroMobile.png")" />
+                    </div>
+                    <div class="col-xs-12">
+                        <p>@Confirmation_Resources.ModuleText</p>
+                        <a role="button" href="@Confirmation_Resources.ModuleLinkUrl" target="_blank" class="button button-secondary" title="@Confirmation_Resources.ModuleLinkAlt">
+                            @Confirmation_Resources.ModuleLinkText
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 hidden-xs rewards-col" style="padding-left: 0;">
+                <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/SSEHydro.png")" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section DataLayer
+{
+    @Html.Partial("_DataLayer", Model.DataLayerDictionary)
+}
+

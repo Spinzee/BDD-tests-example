@@ -1,0 +1,60 @@
+﻿@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.TariffsViewModel
+
+@{
+    bool isDual = Model.GasTariffInformationLabel != null && Model.ElectricityTariffInformationLabel != null;
+}
+
+<div id="@Model.TariffId" class="modal fade no-padding" tabindex="-1" role="dialog" aria-labelledby="modal-title modal-body">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Model.CloseButtonAlt"></button>
+            </div>
+            <div class="modal-body">
+                <div class="centered">
+                    @if (isDual)
+                    {
+                        <ul class="btn-group-toggle ttl-tabs" id="ttl_tabs_@Model.TariffId">
+                            <li role="presentation" class="active">
+                                @* ReSharper disable once Html.IdNotResolved *@
+                                <a data-toggle="tab" href="#gas_ttl_tab_@Model.TariffId"> @Html.Raw(AvailableTariffs_Resources.TILLinkTextGas) </a>
+                            </li>
+                            <li role="presentation">
+                                @* ReSharper disable once Html.IdNotResolved *@
+                                <a data-toggle="tab" href="#electricity_ttl_tab_@Model.TariffId">@Html.Raw(AvailableTariffs_Resources.TILLinkTextElec)</a>
+                            </li>
+                        </ul>
+                    }
+                </div>
+                <div id="ttl_content_@Model.TariffId" class="gap-top-lg">
+                    @if (Model.GasTariffInformationLabel != null)
+                    {
+                        <div id="gas_ttl_tab_@Model.TariffId" class="@(isDual ? "active toggle-pane fade" : "")">
+                            <h2>@AvailableTariffs_Resources.TILLinkTextGas</h2>
+                            <p>@AvailableTariffs_Resources.TILParagraphAboveInformation</p>
+                            <div>
+                                @Html.Partial("_TariffInformationLabelContent", Model.GasTariffInformationLabel)
+                            </div>
+                        </div>
+                    }
+                    @if (Model.ElectricityTariffInformationLabel != null)
+                    {
+                        <div id="electricity_ttl_tab_@Model.TariffId" class="@(isDual ? "toggle-pane fade" : "")">
+                            <h2>@AvailableTariffs_Resources.TILLinkTextElec</h2>
+                            <p>@AvailableTariffs_Resources.TILParagraphAboveInformation</p>
+                            <div>
+                                @Html.Partial("_TariffInformationLabelContent", Model.ElectricityTariffInformationLabel)
+                            </div>
+                        </div>
+                    }
+                    <div class="gap-top-lg">
+                        <p>@AvailableTariffs_Resources.TILParagraphUnderInformation</p>
+                        <h4>@AvailableTariffs_Resources.TilSubHeader</h4>
+                        <p>@AvailableTariffs_Resources.TilSubHeaderParagraph</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

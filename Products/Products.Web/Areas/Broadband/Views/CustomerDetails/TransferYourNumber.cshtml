@@ -1,0 +1,76 @@
+﻿@using Products.WebModel.Resources.Broadband
+@model Products.WebModel.ViewModels.Broadband.TransferYourNumberViewModel
+@{
+    ViewBag.Title = TransferYourNumber_Resources.Title;
+}
+
+@section Scripts {
+    @Scripts.Render("~/js/products/broadband/transfer-number")
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+            <div class="hidden-xs step-count pull-right"><strong>@ViewBag.StepCounter</strong></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@TransferYourNumber_Resources.Header</h1>
+            <p>@TransferYourNumber_Resources.Paragraph</p>
+            @using (Html.BeginForm(null, null, FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <fieldset class="radio-set">
+                    <legend class="sr-only"></legend>
+                    @if (Model.IsSSECustomerCLI)
+                    {
+                        <div class="radio contain">
+                            <input data-val="true" checked="@Model.KeepExistingNumber" data-val-required="Please check me out" id="radio1" name="KeepExistingNumber" type="radio" value="true" aria-describedby="radio1-description">
+                            <label for="radio1">
+                                <div class="label">
+                                    <strong>@TransferYourNumber_Resources.Option1</strong><br />
+                                    @TransferYourNumber_Resources.Option1Paragraph
+                                </div>
+                            </label>
+                            <p class="sr-only" id="radio1-description">@TransferYourNumber_Resources.KeepExistingNumberAriaDescription</p>
+                        </div>
+
+                    }
+                    else
+                    {
+                        <div class="radio contain">
+                            <input data-val="true" checked="@Model.KeepExistingNumber" data-val-required="Please check me out" id="radio1" name="KeepExistingNumber" type="radio" value="true" aria-describedby="radio1-description">
+                            <label for="radio1">
+                                <div class="label">
+                                    <strong>@TransferYourNumber_Resources.Option1</strong><br />
+                                    <div>
+                                        @Html.EditorFor(m => m.PhoneNumber, Model.IsReadOnly ? (object)new { htmlAttributes = new { @readonly = "readonly" } } : "")
+                                        @Html.Partial("~/Views/Shared/_WhereIsMyNumberModal.cshtml")
+                                    </div>
+                                </div>
+                            </label>
+                            <p class="sr-only" id="radio1-description">@TransferYourNumber_Resources.KeepExistingNumberAriaDescription</p>
+                        </div>
+                    }
+
+                    <div class="radio contain">
+                        <input data-val="false" checked="@(!Model.KeepExistingNumber)" data-val-required="Please check me out" id="radio2" name="KeepExistingNumber" type="radio" value="false" aria-describedby="radio2-description">
+                        <label for="radio2">
+                            <div class="label">
+                                <strong>@TransferYourNumber_Resources.Option2</strong><br />
+                                @TransferYourNumber_Resources.Option2Paragraph
+                            </div>
+                        </label>
+                        <p class="sr-only" id="radio2-description">@TransferYourNumber_Resources.RequestNewNumberAriaDescription</p>
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Common_Resources.ButtonNextText" id="button-submit" name="button-submit" title="@TransferYourNumber_Resources.ButtonAlt" />
+                </div>
+            }
+        </div>
+        @Html.Partial("~/Areas/Broadband/Views/Shared/_YourPrice.cshtml", Model.YourPriceViewModel)
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿@using Products.WebModel.Resources.Energy
+@{
+    ViewBag.Title = Fallout_Resources.EnergyUnavailableTitle;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@Fallout_Resources.EnergyUnavailableHeader</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-11 col-md-8 gap">
+            <p>@Fallout_Resources.EnergyUnavailableParagraph</p>
+            <ul class="link-list">
+                <h3 class="h4-like">@Fallout_Resources.linkHeader</h3>
+                <li><a class="icon-link" href="@Fallout_Resources.Link3Url" title="@Fallout_Resources.Link3Alt" target="_blank">@Fallout_Resources.Link3Text</a></li>
+                <li><a class="icon-link" href="@Fallout_Resources.Link4Url" title="@Fallout_Resources.Link4Alt" target="_blank">@Fallout_Resources.Link4Text</a></li>
+                <li><a class="icon-link" href="@Fallout_Resources.Link5Url" title="@Fallout_Resources.Link5Alt" target="_blank">@Fallout_Resources.Link5Text</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

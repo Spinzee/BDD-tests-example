@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Got a question? Call us on</value>
+  </data>
+  <data name="ContactUsAlt" xml:space="preserve">
+    <value>Call 0345 071 9710</value>
+  </data>
+  <data name="ContactUsPart2" xml:space="preserve">
+    <value>. We’re open 8am-8pm Mon-Fri, and 8am to 2pm Sat. Or you can email us at </value>
+  </data>
+  <data name="ContactUsText" xml:space="preserve">
+    <value>0345 071 9710</value>
+  </data>
+  <data name="ContactUsUrl" xml:space="preserve">
+    <value>tel:0345 026 7058</value>
+  </data>
+  <data name="CrossSell2Header" xml:space="preserve">
+    <value>Frustration-Free Broadband from SSE</value>
+  </data>
+  <data name="CrossSell2LinkAlt" xml:space="preserve">
+    <value>Link to our broadband deals</value>
+  </data>
+  <data name="CrossSell2LinkText" xml:space="preserve">
+    <value>View broadband deals</value>
+  </data>
+  <data name="CrossSell2LinkUrl" xml:space="preserve">
+    <value>https://www.sse.co.uk/phone-and-broadband</value>
+  </data>
+  <data name="CrossSell2Text" xml:space="preserve">
+    <value>See our great value broadband packages.</value>
+  </data>
+  <data name="CrossSellHeader" xml:space="preserve">
+    <value>Gas and Electricity from SSE</value>
+  </data>
+  <data name="CrossSellLinkAlt" xml:space="preserve">
+    <value>Link to our energy products</value>
+  </data>
+  <data name="CrossSellLinkText" xml:space="preserve">
+    <value>View energy tariffs</value>
+  </data>
+  <data name="CrossSellLinkUrl" xml:space="preserve">
+    <value>https://sse.co.uk/energy</value>
+  </data>
+  <data name="CrossSellText" xml:space="preserve">
+    <value>It’s simple to find a better energy deal and millions of customers trust us with their energy.</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Your order is complete</value>
+  </data>
+  <data name="ModuleLinkAlt" xml:space="preserve">
+    <value>Link to our SSE Rewards website</value>
+  </data>
+  <data name="ModuleLinkText" xml:space="preserve">
+    <value>Find out about SSE Reward</value>
+  </data>
+  <data name="ModuleLinkUrl" xml:space="preserve">
+    <value>https://ssereward.com/</value>
+  </data>
+  <data name="ModuleText" xml:space="preserve">
+    <value>Get access to tickets for The SSE Arena, Wembley, The SSE Hydro and The SSE Arena, Belfast up to 48 hours before they go on general sale!</value>
+  </data>
+  <data name="Paragraph1" xml:space="preserve">
+    <value>Thank you, we’ve received your application for {0}. Read ‘What happens next’ below to find out what to expect.</value>
+  </data>
+  <data name="Paragraph2" xml:space="preserve">
+    <value>Your Welcome Pack will include your confirmation of contract, terms &amp; conditions and cancellation form. Your right to change your mind within 14 days is from the day you get your confirmation of contract. It will tell you how to cancel.</value>
+  </data>
+  <data name="Paragraph3" xml:space="preserve">
+    <value>Your {0} cover will start at the same time as your heating or boiler cover package.</value>
+  </data>
+  <data name="StepsPara1" xml:space="preserve">
+    <value>We’ll send your confirmation email shortly</value>
+  </data>
+  <data name="StepsPara2" xml:space="preserve">
+    <value>Within the next 10 days you’ll receive your welcome pack in the post</value>
+  </data>
+  <data name="StepsPara3" xml:space="preserve">
+    <value>You can change your mind about your cover within 14 calendar days</value>
+  </data>
+  <data name="SubHeader" xml:space="preserve">
+    <value>What happens next?</value>
+  </data>
+  <data name="ContactUsEmailAlt" xml:space="preserve">
+    <value>Link to email our customer service team</value>
+  </data>
+  <data name="ContactUsEmailText" xml:space="preserve">
+    <value>customerservice@sse.co.uk</value>
+  </data>
+  <data name="ContactUsEmailUrl" xml:space="preserve">
+    <value>mailto:customerservice@sse.co.uk</value>
+  </data>
+  <data name="Paragraph4" xml:space="preserve">
+    <value>Confirmation of your Direct Debit will be sent within 3 working days or 10 days prior to collection.</value>
+  </data>
+  <data name="LinksHeader" xml:space="preserve">
+    <value>Help with your boiler and heating cover</value>
+  </data>
+  <data name="LandlordGasSafetyText" xml:space="preserve">
+    <value>You’ll receive your Gas Safety Certificate within seven days of inspection</value>
+  </data>
+  <data name="StepsPara4" xml:space="preserve">
+    <value>You’ll be contacted to arrange your initial boiler and heating system inspection</value>
+  </data>
+</root>

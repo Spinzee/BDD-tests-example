@@ -1,0 +1,67 @@
+﻿@using Products.Core
+@using Products.Model.Enums
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.EnergyUsageViewModel
+
+<div id="I-know" class="toggle-pane fade @(Model.ActiveTabIndex != 1 ? "active in" : "" ) gap-top-xxl">
+    <div class="container">
+        <div class="row">
+            @using (Html.BeginForm("EnergyUsage", "Tariffs", FormMethod.Post, new { id = "usage-form", autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="col-xs-12 col-sm-8">
+                    <div class="row gap-xl">
+                        <div class="col-sm-4 col-xs-6">
+                            <div class="radio contain">
+                                <input data-val="true" @(Model.KnownEnergyUsageViewModel.Frequency == UsageFrequency.Annual ? "checked=checked" : "") id="radio1" name="KnownEnergyUsageViewModel.Frequency" type="radio" value="@UsageFrequency.Annual" aria-describedby="radio1-description">
+                                <label for="radio1">
+                                    <span class="label">
+                                        <strong>@EnergyUsage_Resources.Radio1Text</strong><br />
+                                    </span>
+                                </label>
+                                <p class="sr-only" id="radio1-description">@EnergyUsage_Resources.Radio1AreaDescription</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-xs-6">
+                            <div class="radio contain">
+                                <input data-val="true" @(Model.KnownEnergyUsageViewModel.Frequency == UsageFrequency.Monthly ? "checked=checked" : "") id="radio2" name="KnownEnergyUsageViewModel.Frequency" type="radio" value="@UsageFrequency.Monthly" aria-describedby="radio2-description">
+                                <label for="radio2">
+                                    <span class="label">
+                                        <strong>@EnergyUsage_Resources.Radio2Text</strong><br />
+                                    </span>
+                                </label>
+                                <p class="sr-only" id="radio2-description">@EnergyUsage_Resources.Radio2AreaDescription</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (Model.KnownEnergyUsageViewModel.SelectedFuelType == FuelType.Gas || Model.KnownEnergyUsageViewModel.SelectedFuelType == FuelType.Dual)
+                    {
+                        @Html.EditorFor(m => m.KnownEnergyUsageViewModel.StandardGasUsage)
+                    }
+                    @if (Model.KnownEnergyUsageViewModel.SelectedFuelType == FuelType.Electricity || Model.KnownEnergyUsageViewModel.SelectedFuelType == FuelType.Dual)
+                    {
+                        if (Model.KnownEnergyUsageViewModel.SelectedElectricityMeterType == ElectricityMeterType.Economy7)
+                        {
+                            @Html.EditorFor(m => m.KnownEnergyUsageViewModel.Economy7ElectricityDayUsage)
+                            @Html.EditorFor(m => m.KnownEnergyUsageViewModel.Economy7ElectricityNightUsage)
+                        }
+                        else
+                        {
+                            @Html.EditorFor(m => m.KnownEnergyUsageViewModel.StandardElectricityUsage)
+                        }
+                    }
+                    
+                    @Html.Hidden("ShowStandardElectricityUsage", Model.KnownEnergyUsageViewModel.ShowStandardElectricityUsage.ToString().ToLower())
+                    @Html.Hidden("ShowStandardGasUsage", Model.KnownEnergyUsageViewModel.ShowStandardGasUsage.ToString().ToLower())
+                    @Html.Hidden("ShowEconomy7Usage", Model.KnownEnergyUsageViewModel.ShowEconomy7Usage.ToString().ToLower())
+                    @Html.HiddenFor(m => m.KnownEnergyUsageViewModel.SelectedFuelType)
+                    @Html.HiddenFor(m => m.KnownEnergyUsageViewModel.SelectedElectricityMeterType)
+
+                    <button type="submit" class="button button-primary" title="@Resources.ButtonNextSignUpEnergyAlt">@Resources.ButtonNextText</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

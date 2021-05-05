@@ -1,0 +1,23 @@
+﻿@using Products.Web.Helpers
+@model bool
+@{
+    var defaultHtmlAttributesObject = new
+    {
+        title = ViewData.ModelMetadata.DisplayName,
+        autocomplete = "off"
+    };
+    object htmlAttributesObject = ViewData["htmlAttributes"] ?? new { };
+    IDictionary<string, object> htmlAttributes = Html.MergeHtmlAttributes(htmlAttributesObject, defaultHtmlAttributesObject);
+    htmlAttributes.Add("aria-required", ViewContext.ViewData.ModelMetadata.IsRequired);
+    bool hasAriaDescription = false;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey("AriaDescription"))
+    {
+        hasAriaDescription = true;
+        htmlAttributes.Add("aria-describedby", $"{ViewData.ModelMetadata.PropertyName}-description");
+    }
+}
+@Html.CheckBoxFor(m => m, htmlAttributes)
+@if (hasAriaDescription)
+{
+    <p id="@ViewData.ModelMetadata.PropertyName-description" class="sr-only">@ViewData.ModelMetadata.AdditionalValues["AriaDescription"]</p>
+}

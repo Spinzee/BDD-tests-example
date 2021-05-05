@@ -1,0 +1,16 @@
+﻿@using Products.WebModel.Resources.Common;
+
+@{
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+    ViewBag.Title = JavascriptDisabled_Resources.Title;
+}
+
+<section class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="gap-top">@JavascriptDisabled_Resources.Header</h1>
+            <p>@JavascriptDisabled_Resources.Paragraph1
+            <a href="@Request.UrlReferrer" title="@JavascriptDisabled_Resources.ButtonAlt" class="button button-primary">@JavascriptDisabled_Resources.ButtonText</a>
+        </div>
+    </div>
+</section>

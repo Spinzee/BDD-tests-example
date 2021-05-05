@@ -1,0 +1,32 @@
+﻿@using Products.WebModel.Resources.Broadband
+@model Products.WebModel.ViewModels.Broadband.CannotCompleteOnlineViewModel
+
+@{
+    ViewBag.Title = Fallout_Resources.CannotCompleteOnlineTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+
+            @if (Model.IsFixAndFibreV3)
+            {
+                <h1>@Fallout_Resources.CannotCompleteOnlineHeaderFixAndFibreV3</h1>
+                <p> @Fallout_Resources.CannotCompleteOnlineParagraphFixAndFibre</p>
+                <p>@Fallout_Resources.CallUsPrefix<a id="telephone-link" href="@Fallout_Resources.CallUsPhoneUrlFixAndFibre" title="@Fallout_Resources.CallUsPhoneAltFixAndFibre">@Fallout_Resources.CallUsPhoneFixAndFibre</a>@Fallout_Resources.CallUsSuffix2FixAndFibre</p>
+            }
+            else
+            {
+                <h1>@Fallout_Resources.CannotCompleteOnlineHeader</h1>
+                <p>@Fallout_Resources.CannotCompleteOnlineParagraph</p>
+                <p>@Fallout_Resources.CallUsPrefix<a id="telephone-link" href="@Common_Resources.CallUsPhoneUrl" title="@Common_Resources.CallUsPhoneAlt">@Common_Resources.CallUsPhone</a>@Fallout_Resources.CallUsSuffix2</p>
+            }
+
+            <h2 class="h4-like">@Fallout_Resources.linkHeader</h2>
+            <ul class="link-list">
+                <li><a class="icon-link" href="@Fallout_Resources.LinkUrl" title="@Fallout_Resources.LinkAlt" target="_blank">@Fallout_Resources.LinkText</a></li>
+                <li><a class="icon-link" href="@Fallout_Resources.Link2Url" title="@Fallout_Resources.Link2Alt" target="_blank">@Fallout_Resources.Link2Text</a></li>
+                <li><a class="icon-link" href="@Fallout_Resources.Link3Url" title="@Fallout_Resources.Link3Alt" target="_blank">@Fallout_Resources.Link3Text</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

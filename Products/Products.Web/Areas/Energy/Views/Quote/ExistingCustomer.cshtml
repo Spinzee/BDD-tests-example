@@ -1,0 +1,41 @@
+﻿@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.ExistingCustomerViewModel
+@{
+    ViewBag.Title = ExistingCustomer_Resources.Title;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 mobile-only-gap-top-xxxl">
+            <h1>@ExistingCustomer_Resources.Header</h1>
+            <p>@ExistingCustomer_Resources.Paragraph</p>
+            @using (Html.BeginForm("ExistingCustomer", "Quote", FormMethod.Post, new { @id = "existing-customer-form", @autocomplete = "off" }))
+            {
+                <fieldset>
+                    <legend class="access">@ExistingCustomer_Resources.legend</legend>
+                    @Html.AntiForgeryToken()
+                    
+                    @Html.HiddenFor(m => m.IsBundlingJourney)
+                    @Html.HiddenFor(m => m.ShowCli)
+                    @Html.HiddenFor(m => m.ProductCode)
+
+                    <button type="submit" class="button button-roundel" value="true" id="isSSECustomer" name="isSSECustomer" title="@ExistingCustomer_Resources.ButtonTitle">@ExistingCustomer_Resources.ButtonText</button>
+                    <button type="submit" class="button button-roundel" value="false" id="btnIsNotSSECustomer" name="isSSECustomer" title="@ExistingCustomer_Resources.Button2Title">@ExistingCustomer_Resources.Button2Text</button>
+                </fieldset>
+            }
+        </div> 
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            @* To show the "active / clicked" state on mobile we need to add a class.
+                Works with css on desktop.
+                iPads etc would normally show hover state on click *@
+            $("#existing-customer-form").on("click touchstart", ".button-roundel", function () {
+                $(this).addClass("active");
+            });
+        });
+    </script>
+}

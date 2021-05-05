@@ -1,0 +1,37 @@
+﻿@using Products.WebModel.Resources.Broadband
+@model Products.WebModel.ViewModels.Broadband.ContactDetailsViewModel
+@{
+    ViewBag.Title = ContactDetails_Resources.Title;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+            <div class="hidden-xs step-count pull-right"><strong>@ViewBag.StepCounter</strong></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1 class="gap">@ContactDetails_Resources.Header</h1>
+            @using (Html.BeginForm("SubmitContactDetails", "CustomerDetails", FormMethod.Post, new { id = "contact-details", autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.EditorFor(m => m.ContactNumber, new { htmlAttributes = new { @type = "tel" } })
+                @Html.EditorFor(m => m.EmailAddress,  new { htmlAttributes = new {@type = "email" } })
+                @Html.EditorFor(m => m.ConfirmEmailAddress, new { htmlAttributes = new { @type = "email" } })
+                <fieldset>
+                    <legend class="form-legend">@ContactDetails_Resources.Legend</legend>
+                    <div class="form-group checkbox checkbox--multiline contain">
+                        @Html.EditorFor(m => m.IsMarketingConsentChecked, "AriaCheckBox")
+                        @Html.LabelFor(m => m.IsMarketingConsentChecked, new { title = "", id = "checkbox-label" })
+                        @Html.ValidationMessageFor(model => model.IsMarketingConsentChecked)
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Common_Resources.ButtonNextText" id="button-submit" name="button-submit" title="@ContactDetails_Resources.ButtonAlt" />
+                </div>
+            }
+        </div>
+        @Html.Partial("~/Areas/Broadband/Views/Shared/_YourPrice.cshtml", Model.YourPriceViewModel)
+    </div>
+</div>

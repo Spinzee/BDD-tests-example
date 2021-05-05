@@ -1,0 +1,86 @@
+﻿@using Products.WebModel.Resources.Energy
+@using Products.WebModel.ViewModels.Common
+@using Summary_Resources = Products.WebModel.Resources.Energy.Summary_Resources
+@model Products.WebModel.ViewModels.Energy.SummaryViewModel
+
+<div class="accordion accordion-content-indented" role="group" id="home-services">
+    <div class="accordion-header">
+        <a href="#" title="@Model.FixNProtectAccordionHeaderText" class="accordion-button" role="button" aria-controls="accordion-content" aria-expanded="true">
+            <h2 class="h4-like">@Model.FixNProtectAccordionHeaderText</h2>
+        </a>
+    </div>
+    <div class="accordion-content accordion-content-indented" aria-hidden="false" style="" id="accordion-content">
+        <div id="hesDetails">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>@Summary_Resources.AboutYourBundleHeader</h4>
+                    <p>
+                        @if (Model.IsUpgrade)
+                        {
+                            @Accordion_Resources.AboutYourHomeServicesBundlePara1_FixNProtectPlus
+                        }
+                        else
+                        {
+                            @Accordion_Resources.AboutYourHomeServicesBundlePara1
+                        }
+                    </p>
+                    <p>
+                        @if (Model.IsUpgrade)
+                        {
+                            @Accordion_Resources.AboutYourHomeServicesBundlePara2_FixNProtectPlus
+                        }
+                        else
+                        {
+                            @Accordion_Resources.AboutYourHomeServicesBundlePara2
+                        }
+                    <p>@Accordion_Resources.AboutYourHomeServicesBundlePara3</p>
+                    @if (Model.IsUpgrade)
+                    {
+                        <p>@Accordion_Resources.AboutYourHomeServicesBundlePara4_FixNProtectPlus</p>
+                    }
+
+                    <p>@Accordion_Resources.AboutYourHomeServicesBundlePara4</p>
+                    <p>@Accordion_Resources.AboutYourHomeServicesBundlePara5</p>
+                    <ul class="link-list list--spaced">
+                        @foreach (TermsAndConditionsPdfLink termsAndConditionsPdfLink in Model.HomeServicesBundleTermsAndConditionsPdfLinks)
+                        {
+                            <li>
+                                <a href="@termsAndConditionsPdfLink.Link" class="icon-link icon-link-pdf" title="@termsAndConditionsPdfLink.Title" target="_blank">
+                                    @termsAndConditionsPdfLink.DisplayName
+                                </a>
+                            </li>
+                        }
+                        @if (Model.IsElectricalWiringSelected)
+                        {
+                            <li>
+                                <a href="@Accordion_Resources.ElecWiringProductInfoDocumentLinkUrl" class="icon-link icon-link-pdf" title="@Accordion_Resources.ElecWiringProductInfoDocumentLinkAlt" target="_blank">
+                                    @Accordion_Resources.ElecWiringProductInfoDocumentLinkText
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                    <p><strong>@Accordion_Resources.OVODisclaimerText</strong></p>
+                    <h4>@Summary_Resources.AreYouEligibleForHomeServicesHeader</h4>
+                    <p>@Accordion_Resources.AreYouEligibleForHomeServicesPara1</p>
+                    <p>@Accordion_Resources.AreYouEligibleForHomeServicesPara2</p>
+                    <p>@Accordion_Resources.AreYouEligibleForHomeServicesPara3</p>
+                    <p>@Accordion_Resources.AreYouEligibleForHomeServicesPara4</p>
+                    <h4>@Accordion_Resources.IfYouChangeYourMindHeader</h4>
+                    <p>@Accordion_Resources.IfYouChangeYourMindPara1</p>
+                    <p>@Accordion_Resources.IfYouChangeYourMindPara2</p>
+                    <p>@Html.Raw(Accordion_Resources.IfYouChangeYourMindPara3)</p>
+                    <h4>@Summary_Resources.PartsAndLabourHeader</h4>
+                    <p>
+                        @Accordion_Resources.PartsAndLabourPara1 <a href="@Model.HomeServicesBundleTermsAndConditionsPdfLinks[0].Link" target="_blank" title="@Model.HomeServicesBundleTermsAndConditionsPdfLinks[0].Title">@Model.HomeServicesBundleTermsAndConditionsPdfLinks[0].DisplayName</a>
+                        @Accordion_Resources.PartsAndLabourPara2 <a href="@Model.HomeServicesBundleTermsAndConditionsPdfLinks[1].Link" target="_blank" title="@Model.HomeServicesBundleTermsAndConditionsPdfLinks[1].Title">@Model.HomeServicesBundleTermsAndConditionsPdfLinks[1].DisplayName</a>
+                    </p>
+                    @if (Model.IsElectricalWiringSelected)
+                    {
+                        <h4>@Accordion_Resources.ImportantInformationElecWiringInspHeader</h4>
+                        <p>@Accordion_Resources.ImportantInformationElecWiringInspPara1</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

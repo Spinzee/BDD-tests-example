@@ -1,0 +1,318 @@
+﻿@using System.Web.Mvc.Html
+@using Products.Core
+@using Products.Infrastructure.Extensions
+@using Products.Model.Enums
+@using Products.Web.Helpers
+@using Products.WebModel.Resources.TariffChange
+@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.TariffChange.TariffSummaryViewModel
+@{
+    ViewBag.Title = TariffSummary_Resources.Title;
+}
+
+
+@section ProgressBar {
+    @Html.Partial("_ProgressBar", Model.ProgressBarViewModel)
+}
+<div class="container">
+    <div class="row gap">
+        <div class="col-md-12">
+            <h1>@TariffSummary_Resources.Header</h1>
+            <p>@TariffSummary_Resources.Intro</p>
+        </div>
+    </div>
+    <div class="row summary-container js-tariff-container">
+        <div class="col-sm-9 no-padding">
+            <h2 class="tariff-title">@Model.SelectedTariff.DisplayName</h2>
+            <div class="hidden-xs change-tariff-link">
+                @Html.ActionLink("Change tariff choice", "AvailableTariffs", "Tariffs", null, new { Title = TariffSummary_Resources.ChangeTariffAlt, @class = "icon-link icon-link-edit" })
+            </div>
+            <div class="tariff-cost">
+                <div id="qa-tariff-cost-label">@TariffSummary_Resources.PriceLabel</div>
+                <div class="tariff-price" id="qa-tariff-cost">
+                    @HtmlHelpers.HandlePenceSuperscript(Model.SelectedTariff.ProjectedMonthlyCost, "tariff-price-pence")
+                </div>
+                <div class="annual-price" id="qa-tariff-cost-annual">That's @Model.SelectedTariff.ProjectedAnnualCost a year</div>
+            </div>
+            <div class="h3-like" id="qa-tariff-start-date">@TariffSummary_Resources.Disclaimer @Model.NewTariffStartDate.ToSseString()</div>
+            <div class="tariff-breakdown">
+                <div>@TariffSummary_Resources.Breakdown1</div>
+                @if (Model.SelectedTariff.IsDualFuel)
+                {
+                    <div>
+                        @TariffSummary_Resources.Breakdown2
+                        <span>Gas = @Model.SelectedTariff.GasDetails.MonthlyCost</span>
+                        <span>Electricity = @Model.SelectedTariff.ElectricityDetails.MonthlyCost</span>
+                    </div>
+                    <div>
+                        @TariffSummary_Resources.Breakdown3
+                        <span>Gas = @Model.SelectedTariff.GasDetails.AnnualCost</span>
+                        <span>Electricity = @Model.SelectedTariff.ElectricityDetails.AnnualCost</span>
+                    </div>
+                }
+            </div>
+            @Html.Hidden("encodedSelectedTariff", Json.Encode(Model.SelectedTariff), new { id = "tariff-" + Model.SelectedTariff.HtmlSafeName, @class = "js-tariff-data" })
+            @if (Model.SelectedTariff.GasDetails != null)
+            {
+                @Html.ActionLink(AvailableTariffs_Resources.GasInformationLinkText, "", "", null, new { Data_fuel = "Gas", Class = "icon-link btnViewFuelDetails", Data_toggle = "modal", Data_target = "#fuel-modal", Title = TariffSummary_Resources.InformationLinkAlt })
+            }
+            @if (Model.SelectedTariff.ElectricityDetails != null)
+            {
+                @Html.ActionLink(AvailableTariffs_Resources.ElectricityInformationLinkText, "", "", null, new { Data_fuel = "Electricity", Class = "icon-link btnViewFuelDetails", Data_toggle = "modal", Data_target = "#fuel-modal", Title = TariffSummary_Resources.InformationLinkAlt })
+            }
+            <div class="hidden-md hidden-sm hidden-lg">
+                @Html.ActionLink("Change tariff choice", "AvailableTariffs", "Tariffs", null, new { Title = TariffSummary_Resources.ChangeTariffAlt, @class = "icon-link icon-link-edit" })
+            </div>
+        </div>
+        <div class="hidden-xs col-sm-3 no-padding col-fuel-type-icon">
+            <div class="tariff-fuel-type @Model.FuelType"></div>
+            @*@Html.Raw(Model.FuelTypeIconSvg)*@
+        </div>
+    </div>
+    <div class="row">
+        <div class="@Model.SummaryDetailsClass gap">
+            <h3 class="h4-like">@TariffSummary_Resources.SummaryHeading1</h3>
+            <p>
+                @TariffSummary_Resources.SummaryParagraph1
+                @if (Model.SelectedTariff.TariffGroup == TariffGroup.FixAndProtect)
+                {
+                    @TariffSummary_Resources.FixAndProtectSummaryPargraph1
+                }
+            </p>
+            <h3 class="h4-like">@TariffSummary_Resources.SummaryHeading2</h3>
+            <p>@TariffSummary_Resources.SummaryParagraph2</p>
+        </div>
+        @if (Model.HasAnyDirectDebitAccount)
+        {
+            <div class="col-md-6 gap">
+                <div class="additional-info">
+                    <h3 class="h4-like">@Model.Title</h3>
+                    <p>@Model.Header1</p>
+                    @if (Model.Header2 == null)
+                    {
+                        <table class="table table-key-value additional-info-table">
+                            @if (Model.FuelType != FuelType.Electricity)
+                            {
+                                if (Model.GasFrequency != null)
+                                {
+                                    <tr>
+                                        <th scope="row">@Model.GasAmountLabel</th>
+                                        <td>@Model.GasAmount</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Frequency</th>
+                                        <td>@Model.GasFrequency</td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <th scope="row">@Model.GasAmountLabel</th>
+                                        <td>@Model.GasAmount</td>
+                                    </tr>
+                                }
+                            }
+                            @if (Model.FuelType != FuelType.Gas)
+                            {
+                                if (Model.ElectricityFrequency != null)
+                                {
+                                    <tr>
+                                        <th scope="row">@Model.ElectricityAmountLabel</th>
+                                        <td>@Model.ElectricityAmount</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Frequency</th>
+                                        <td>@Model.ElectricityFrequency</td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <th scope="row">@Model.ElectricityAmountLabel</th>
+                                        <td>@Model.ElectricityAmount</td>
+                                    </tr>
+                                }
+                            }
+                            @if (Model.GasAndElectricityFrequency != null)
+                            {
+                                <tr>
+                                    <th scope="row">@Model.GasAndElectricityFrequencyLabel</th>
+                                    <td>@Model.GasAndElectricityFrequency</td>
+                                </tr>
+                            }
+                        </table>
+                    }
+                    else
+                    {
+                        <table class="table table-key-value additional-info-table">
+                            <tr>
+                                <th scope="row">@Model.GasAmountLabel</th>
+                                <td>@Model.GasAmount</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Frequency</th>
+                                <td>@Model.GasFrequency</td>
+                            </tr>
+                        </table>
+                        <p>@Model.Header2</p>
+                        <table class="table table-key-value additional-info-table">
+                            <tr>
+                                <th scope="row">@Model.ElectricityAmountLabel</th>
+                                <td>@Model.ElectricityAmount</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Frequency</th>
+                                <td>@Model.ElectricityFrequency</td>
+                            </tr>
+                        </table>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+    <div>
+        @* hacked wrapper div to trigger bottom border on accordion *@
+        <div class="accordion" role="group">
+            <div class="accordion-header">
+                <a href="#" title="@TariffSummary_Resources.AccordionAlt" class="accordion-button" role="button" aria-controls="accordion-content-0">
+                    <h3>@TariffSummary_Resources.AccordionHeader</h3>
+                </a>
+            </div>
+            <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content-0">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <h3>@AvailableTariffs_Resources.Accordion1SubHeader1</h3>
+                        <p>@AvailableTariffs_Resources.Accordion1Paragraph1a</p>
+                        <h3>@AvailableTariffs_Resources.Accordion1SmartHeader</h3>
+                        <p>@AvailableTariffs_Resources.Accordion1SmartMeter1</p>
+                        <p>@AvailableTariffs_Resources.Accordion1FixAndDriveSmartMeter1</p>
+                        <p>@AvailableTariffs_Resources.Accordion1SmartMeter2</p>
+                        <p>@AvailableTariffs_Resources.Accordion1SmartMeter3</p>
+
+                        @if (Model.SelectedTariff.TariffGroup == TariffGroup.FixAndControl)
+                        {
+                            <h4>@AvailableTariffs_Resources.SmartHomePackageHeader</h4>
+                            <p>
+                                @AvailableTariffs_Resources.SmartHomePackageMessage1
+                                <a href="@AvailableTariffs_Resources.NestLink" target="_blank" title="@AvailableTariffs_Resources.NestLinkUrlTitle">
+                                    @AvailableTariffs_Resources.NestLinkUrlText
+                                </a>@AvailableTariffs_Resources.SmartHomePackageMessage2
+                            </p>
+
+                            <p>@AvailableTariffs_Resources.SmartHomePackageMessage3</p>
+                            <p>@AvailableTariffs_Resources.SmartHomePackageMessage4</p>
+
+                            <p>
+                                @AvailableTariffs_Resources.SmartHomePackageMessage5
+                                <a href="@AvailableTariffs_Resources.SmartHomePackageMessage5Url" target="_blank" title="@AvailableTariffs_Resources.SmartHomePackageMessage5UrlTitle">
+                                    @AvailableTariffs_Resources.SmartHomePackageMessage5UrlText
+                                </a>
+                                @Html.Raw(AvailableTariffs_Resources.SmartHomePackageMessage7)
+                            </p>
+
+                            <p>@AvailableTariffs_Resources.SmartHomePackageMessage8</p>
+                        }
+
+                        @if (Model.SelectedTariff.TariffGroup == TariffGroup.FixAndDrive)
+                        {
+                            <h3>@AvailableTariffs_Resources.FixAndDriveSummaryHeader</h3>
+                            <p>@AvailableTariffs_Resources.FixAndDrivePara1</p>
+                            <p>@AvailableTariffs_Resources.FixAndDrivePara2</p>
+                            <p>@AvailableTariffs_Resources.FixAndDrivePara3</p>
+                            <p>
+                                @AvailableTariffs_Resources.FixAndDrivePara4
+                                <a href="@AvailableTariffs_Resources.FixAndDrivePara4CarFuelLink" target="_blank" title="@AvailableTariffs_Resources.FixAndDrivePara4CarFuelLinkText">
+                                    @AvailableTariffs_Resources.FixAndDrivePara4CarFuelLinkText
+                                </a>
+                                @AvailableTariffs_Resources.FixAndDrivePara5
+                            </p>
+                        }
+
+                        <h4>@TariffSummary_Resources.AccordionSection1</h4>
+                        <p>@TariffSummary_Resources.AccordionParagraph1</p>
+                        <h4>@TariffSummary_Resources.AccordionSection2</h4>
+                        <p>@TariffSummary_Resources.AccordionParagraph2</p>
+                        <p>@TariffSummary_Resources.DDPara1</p>
+                        <p>@TariffSummary_Resources.DDPara2</p>
+                        <p>@TariffSummary_Resources.DDPara3</p>
+                        <h4>@TariffSummary_Resources.AccordionSection3</h4>
+                        <p>@TariffSummary_Resources.AccordionParagraph3</p>
+                        <h4>@TariffSummary_Resources.AccordionSection4</h4>
+                        <p>@string.Format(TariffSummary_Resources.AccordionParagraph4, Model.SelectedTariff.Name)</p>
+                        <h4>@TariffSummary_Resources.AccordionSection5</h4>
+                        <p>
+                            @(Model.SelectedTariff.TariffGroup == TariffGroup.FixAndProtect ? TariffSummary_Resources.FixAndProtectAccordionParagraph5 : TariffSummary_Resources.AccordionParagraph5)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>@(Model.SelectedTariff.TariffGroup == TariffGroup.FixAndProtect ? TariffSummary_Resources.FixAndProtectConfirmationIntro : TariffSummary_Resources.ConfirmationIntro)</p>
+    <h4>@TariffSummary_Resources.ConfirmationHeader</h4>
+    <ul class="link-list list--spaced gap-xxxl">
+        @if (Model.SelectedTariff.TermsAndConditionsPdfLinks.Any())
+        {
+            foreach (string termsAndConditionsPdfLink in Model.SelectedTariff.TermsAndConditionsPdfLinks)
+            {
+                <li>
+                    <a href="@termsAndConditionsPdfLink" class="icon-link icon-link-pdf" id="btnSelectedTariffTermsAndConditions" title="Download and View PDF" target="_blank">
+                        @if (Model.SelectedTariff.TariffGroup == TariffGroup.FixAndProtect || Model.SelectedTariff.TariffGroup == TariffGroup.FixAndFibre || Model.SelectedTariff.TariffGroup == TariffGroup.FixAndControl)
+                        {
+                            @Path.GetFileNameWithoutExtension(termsAndConditionsPdfLink)
+                        }
+                        else
+                        {
+                            @($"{Model.SelectedTariff.DisplayName} {AvailableTariffs_Resources.TermsAndConditionsLabel}")
+                        }
+                    </a>
+                </li>
+            }
+        }
+        <li><a href="@Resources.SSE_GeneralTermsAndConditionsForTheSupplyOfElectricityAndOrGas" class="icon-link icon-link-pdf" id="btnGeneralTermsAndConditions" title="Download and View PDF" target="_blank">General Terms and Conditions for the Supply of Electricity and/or Gas</a></li>
+    </ul>
+    @if (Model.SelectedTariff.TariffGroup == TariffGroup.FixAndProtect)
+    {
+        <p><strong>@TariffSummary_Resources.OVODisclaimerText</strong></p>
+    }
+
+    @if (Model.CTCJourneyType != CTCJourneyType.PreLogIn)
+    {
+        <p class="gap-xxxl">@TariffSummary_Resources.PostLoginAuthorisationText</p>
+    }
+    @using (Html.BeginForm("TariffSummary", "Summary", FormMethod.Post, new { id = "form-submit" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group checkbox contain">
+            @Html.EditorFor(model => model.IsTermsAndConditionsChecked, new
+               {
+                   TermsAndConditionsText = Model.SelectedTariff.TariffGroup == TariffGroup.FixAndProtect ? TariffSummary_Resources.FixAndProtectCheckboxLabelHeader : TariffSummary_Resources.IsTermsAndConditionsCheckedLabelText
+               })
+        </div>
+        <input class="button button-conversion" type="submit" value="Confirm order" id="button-submit" name="button-submit" title="Confirm and Continue" />
+    }
+</div>
+@section Popups{
+    @Html.Partial("_FuelInformationModal")
+}
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+
+            var errorMessage = $(".field-validation-error").filter(":visible");
+            if (errorMessage.length > 0) {
+                errorMessage.focus();
+                $('html, body').animate({ scrollTop: errorMessage.offset().top }, 300);
+            }
+
+            // ReSharper disable once UnusedLocals
+            var disableButton = new Digital.Web.Utils.DisableSubmitButton('form-submit');
+        });
+    </script>
+    @Scripts.Render("~/js/products/tariffs/summary")
+    @Scripts.Render("~/js/products/summary")
+}
+@section DataLayer
+{
+    @Html.Partial("_DataLayer", Model.DataLayer)
+}

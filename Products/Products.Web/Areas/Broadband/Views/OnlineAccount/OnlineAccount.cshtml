@@ -1,0 +1,41 @@
+﻿@using Products.WebModel.Resources.Broadband
+@model Products.WebModel.ViewModels.Broadband.OnlineAccountViewModel
+@{
+    ViewBag.Title = OnlineAccount_Resources.Title;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+            <div class="hidden-xs step-count pull-right"><strong>@ViewBag.StepCounter</strong></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@OnlineAccount_Resources.Header</h1>
+            <p class="gap-xl">@OnlineAccount_Resources.Content</p>
+            @using (Html.BeginForm("OnlineAccount", "OnlineAccount", FormMethod.Post, new { id = "OnlineAccountForm", autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.EditorFor(m => m.Password)
+                @Html.EditorFor(m => m.ConfirmPassword)
+
+                <ul class="bullet-list list--spaced">
+                    <li>@OnlineAccount_Resources.Bullet1</li>
+                    <li>@OnlineAccount_Resources.Bullet2</li>
+                    <li>@OnlineAccount_Resources.Bullet3</li>
+                    <li>@OnlineAccount_Resources.Bullet4</li>
+                </ul>
+
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Common_Resources.ButtonNextText" id="button-submit" name="button-submit" title="@OnlineAccount_Resources.ButtonAltText" />
+                </div>
+            }
+        </div>
+        @Html.Partial("~/Areas/Broadband/Views/Shared/_YourPrice.cshtml", Model.YourPriceViewModel)
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/Polyfills/jquery.bootstrap-affix.js"></script>
+}

@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccordionAnnualServiceCostHeader" xml:space="preserve">
+    <value>Annual service cost</value>
+  </data>
+  <data name="AccordionAnnualServiceCostParagraph" xml:space="preserve">
+    <value>The cost of a boiler service (£90) is based on the price of a standalone SSE Boiler Service.</value>
+  </data>
+  <data name="AccordionAnnualServiceCostParagraph2" xml:space="preserve">
+    <value>OVO (S) Home Services Limited is authorised and regulated by the Financial Conduct Authority (FCA), reference number 695476. Registered in Scotland No. SC292102 at Grampian House, 200 Dunkeld Road, Perth, PH1 3AQ. Our insurance policies are sold and administered by us and underwritten by AmTrust Europe Limited.</value>
+  </data>
+  <data name="AccordionHeader" xml:space="preserve">
+    <value>What you need to know</value>
+  </data>
+  <data name="AccordionPartsAndLabourAnd" xml:space="preserve">
+    <value> and </value>
+  </data>
+  <data name="AccordionPartsAndLabourBookletAlt" xml:space="preserve">
+    <value>A PDF of our home services policy booklet</value>
+  </data>
+  <data name="AccordionPartsAndLabourBookletText" xml:space="preserve">
+    <value>SSE Home Services policy booklet</value>
+  </data>
+  <data name="AccordionPartsAndLabourBookletUrl" xml:space="preserve">
+    <value>/Areas/Common/Content/PDFs/SSE0846 SSE Home Services 2 Months Free T&amp;Cs 1 Pager_03.10.19.pdf</value>
+  </data>
+  <data name="AccordionPartsAndLabourHeader" xml:space="preserve">
+    <value>Parts and labour</value>
+  </data>
+  <data name="AccordionInsuranceDocAlt" xml:space="preserve">
+    <value>A PDF showing the terms and conditions for your chosen cover</value>
+  </data>
+  <data name="AccordionInsuranceDocText" xml:space="preserve">
+    <value>Insurance product information document</value>
+  </data>
+  <data name="AccordionPartsAndLabourParagraph" xml:space="preserve">
+    <value>Subject to the following terms and conditions</value>
+  </data>
+  <data name="AccordionSubHeader" xml:space="preserve">
+    <value>Important information</value>
+  </data>
+  <data name="AccordionSubHeaderAlt" xml:space="preserve">
+    <value>View our products important information</value>
+  </data>
+  <data name="AccordionExtrasHeader" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="AccordionExtrasParagraph" xml:space="preserve">
+    <value>Subject to the following terms and conditions</value>
+  </data>
+  <data name="WiringInspectionHeader" xml:space="preserve">
+    <value>Electrical Wiring Inspection</value>
+  </data>
+  <data name="WiringInspectionParagraph" xml:space="preserve">
+    <value>An initial inspection is a visual inspection of your home electrical wiring and fuse box and an earth loop impedance test, and may be deemed necessary if your house is over 15 years old, hasn’t been rewired in the last 15 years or has an old style fuse box. "Fixed electrical wiring system" covers electrical wiring, fuse box, light fittings and switches, wall sockets and shower isolation switches.</value>
+  </data>
+  <data name="AccordionLandlordOfferBodyText" xml:space="preserve">
+    <value>£0 per month for the first 2 months, then £26.35 per month for
+the remainder of the 12 month contract. Customers paying annually will have the
+equivalent saving discounted from the annual one-off payment. Offer ends 31
+March 2020.</value>
+  </data>
+  <data name="AccordionOfferBodyText" xml:space="preserve">
+    <value>£0 per month for the first 2 months, then £23.95 per month for SSE Heating Cover (£0 excess product) and £16.95 per month for SSE Heating cover 50, for the remainder of the 12 month contract. Customers paying annually will have the equivalent saving discounted from the annual one-off payment. Offer ends 31 March 2020.</value>
+  </data>
+  <data name="AccordionOfferHeaderText" xml:space="preserve">
+    <value>2 months free offer</value>
+  </data>
+  <data name="AccordionOfferPdfAltText" xml:space="preserve">
+    <value>The PDF for the offers terms and conditions</value>
+  </data>
+  <data name="AccordionOfferPdfText" xml:space="preserve">
+    <value>Read our full offer and product terms and conditions</value>
+  </data>
+  <data name="AccordionOfferPdfUrl" xml:space="preserve">
+    <value>/Areas/Common/Content/PDFs/SSE0846 SSE Home Services 2 Months Free T&amp;Cs 1 Pager_03.10.19.pdf</value>
+  </data>
+  <data name="AccordionOfferLandlordHeaderText" xml:space="preserve">
+    <value>2 months free on SSE Landlord Heating Cover</value>
+  </data>
+  <data name="OVODisclaimerText" xml:space="preserve">
+    <value>SSE  is now part of  the OVO family, which means some of your communications may say SSE Home Services and some may mention OVO (S) Home Services. This will not negatively impact the product or service that you will receive.  Please bear with us as we update all of our communications accordingly.</value>
+  </data>
+</root>

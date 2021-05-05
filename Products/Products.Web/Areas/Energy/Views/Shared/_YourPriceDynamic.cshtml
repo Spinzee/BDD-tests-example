@@ -1,0 +1,177 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@using Products.WebModel.ViewModels.Energy
+@model Products.WebModel.ViewModels.Energy.YourPriceViewModel
+
+<input type="hidden" id="totalItemsInBasket" name="totalItemsInBasket" value="@Model.TotalItemsInBasket" />
+
+<div id="price-info-box" class="bg-dark box-summary">
+    <h4 class="your-price @Model.BasketCssClass">
+        @YourPrice_Resources.Header
+        <button id="basketClose">
+            <img src="@Model.CloseButtonImgPath" alt="Close" />
+        </button>
+    </h4>
+    <hr class="semi-transparent" />
+    <h4>@Model.TariffName</h4>
+    <hr class="semi-transparent" />
+    <table class="table table-simple">
+        @if (Model.IsBundle)
+        {
+            <tr>
+                <th scope="row">
+                    @YourPrice_Resources.EnergyText
+                </th>
+                <td class="basket-price">@Model.EnergyPerMonth</td>
+            </tr>
+            if (Model.ShowDiscountText)
+            {
+                <tr>
+                    <td colspan="2">
+                        <div class="bullet-text">
+                            <ul>
+                                <li>@Model.Discount</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            }
+            <tr>
+                <th scope="row">
+                    @Model.BundlePackageHeaderText
+                    @if (Model.IsBroadbandBundle)
+                    {
+                        <span class="desc">@Model.BundlePackageSubHeaderText</span>
+                    }
+                </th>
+                <td>
+                    <div class="basket-price">
+                        <del>@Model.BundlePackageOriginalPrice</del>
+                        @Model.BundlePackagePrice
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="bullet-text">
+                        @Html.Partial("_BundlePackageFeatures", Model.BundlePackageFeatures)
+                    </div>
+                </td>
+            </tr>
+            if (Model.IsBroadbandBundle && Model.BroadbandApplyInstallationFee)
+            {
+                <tr>
+                    <th>
+                        @YourPrice_Resources.OneOffCostsHeader
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="desc">
+                            @YourPrice_Resources.NewInstallationFee
+                        </div>
+                    </th>
+                    <td>
+                        <div class="basket-price">
+                            @Model.NewInstallationFee
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            if (!string.IsNullOrEmpty(Model.GasPerMonth))
+            {
+                <tr>
+                    <th scope="row">
+                        <div>@ProductFeatures_Resources.GasLabel </div>
+                    </th>
+                    <td class="basket-price">@Model.GasPerMonth</td>
+                </tr>
+            }
+            if (!string.IsNullOrEmpty(Model.ElectricityPerMonth))
+            {
+                <tr>
+                    <th scope="row">
+                        <div>@ProductFeatures_Resources.ElectricityLabel </div>
+                    </th>
+                    <td class="basket-price">@Model.ElectricityPerMonth</td>
+                </tr>
+            }
+        }
+    </table>
+
+    @if (!Model.IsBundle && !string.IsNullOrEmpty(Model.Extra))
+    {
+        <h4>@YourPrice_Resources.ExtrasHeader</h4>
+        <hr class="semi-transparent" />
+        <div class="extras-text">@Html.Raw(Model.Extra)</div>
+    }
+
+    @if (Model.ShowDiscountText && !Model.IsBundle)
+    {
+        <h4>@YourPrice_Resources.AnnualDiscountHeader</h4>
+        <hr class="semi-transparent" />
+        <span class="basket-discount">@Model.Discount</span>
+    }
+
+    @if (Model.ShowPhonePackage)
+    {
+        <h4>@Resources.PhonePackageHeader</h4>
+        <hr class="semi-transparent" />
+        <ul class="upgrade-list">
+            <li>
+                <button id="remove-upgrade-button" title="@Model.PhonePackageUpgradeViewModel.RemovePhonePackageAltText">
+                    <img src="@Model.PhonePackageUpgradeViewModel.RemoveUpgradeButtonIconUrl"
+                         alt="@Model.PhonePackageUpgradeViewModel.RemovePhonePackageAltText" />
+                </button>
+                @Resources.PhoneText
+                <span class="desc">@Model.PhonePackageUpgradeViewModel.Name</span>
+                <span class="basket-price">@Model.PhonePackageUpgradeViewModel.Price</span>
+            </li>
+        </ul>
+    }
+
+    @if (Model.ShowExtras)
+    {
+        <h4>@Resources.ExtrasHeader</h4>
+        <hr class="semi-transparent" />
+        <ul class="extras-list">
+            @foreach (ExtrasItemViewModel extrasItemViewModel in Model.SelectedExtras)
+            {
+                <li>
+                    <button class="remove-extra-button"
+                            title="@extrasItemViewModel.RemoveButtonAltText"
+                            data-product-code="@extrasItemViewModel.ProductCode"
+                            data-button-group="@extrasItemViewModel.ButtonGroup">
+                        <!-- Note: add data-product-code and data-button-group on img so that it will work on both chromes and IE11. -->
+                        <img src="@extrasItemViewModel.RemoveButtonIconUrl"
+                             alt="@extrasItemViewModel.RemoveButtonAltText"
+                             data-product-code="@extrasItemViewModel.ProductCode"
+                             data-button-group="@extrasItemViewModel.ButtonGroup"/>
+                    </button>
+                    <span class="extras-name">@extrasItemViewModel.Name</span>
+                    <span class="basket-price">@extrasItemViewModel.Price</span>
+                </li>
+            }
+        </ul>
+    }
+
+    <hr />
+    <table class="basket-table table table-simple">
+        <tr>
+            <th scope="row" class="basket-total-label">@YourPrice_Resources.TotalText</th>
+            <td class="basket-total-value">
+                <span class="basket-total">@Model.ProjectedMonthlyTotalFullValue</span>
+                <span class="basket-total-decimal">@Model.ProjectedMonthlyTotalPenceValue</span>
+            </td>
+        </tr>
+    </table>
+    <hr />
+
+    @if (Model.IsBundle && Model.HasAnnualBundleSavings)
+    {
+        <div class="annual-savings-text">@Model.AnnualSavingsText</div>
+    }
+</div>

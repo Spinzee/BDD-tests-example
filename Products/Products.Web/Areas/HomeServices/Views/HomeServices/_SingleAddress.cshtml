@@ -1,0 +1,18 @@
+﻿@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.HomeServices.SelectAddressViewModel
+@{ 
+    var address = Model.Addresses.First();
+}
+
+<h2 class="h3-like text-capitalize">
+    @{
+        var addressParts = address.Value.Split(',');
+        foreach (var item in addressParts)
+        {
+            <span>@item</span><br/>
+        }
+    }
+    <span>@Model.Postcode</span>
+</h2>
+@Html.Hidden("SelectedAddressId", address.Key)
+@SelectAddressCommon_Resources.SingleAddressNotListedText <a id="address-not-listed" href="#" title="@SelectAddressCommon_Resources.EnterManuallyLinkAlt">@SelectAddressCommon_Resources.EnterManuallyLinkText</a>

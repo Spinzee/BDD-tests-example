@@ -1,0 +1,9 @@
+﻿@using Products.Web.Helpers
+@model Products.WebModel.ViewModels.Energy.YourPriceViewModel
+
+<div class="shopping-basket-trigger">
+    <input type="hidden" id="basketIconImgSrcBase" value="@Model.BasketToggleIconBaseUrl" />
+    <button id="toggleBasket">
+        <img src="@Model.BasketTogglerIconFilepath" alt="" id="basketTogglerImg" />
+    </button>
+</div>

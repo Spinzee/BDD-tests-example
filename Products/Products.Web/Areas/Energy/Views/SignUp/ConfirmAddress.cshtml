@@ -1,0 +1,39 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.ConfirmAddressViewModel
+@{
+    ViewBag.Title = SelectBTAddress_Resources.Title;
+}
+
+<div class="bg-dark full-width-box stars no-main-margin gap-xl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 mobile-only-gap-top-xxxl">
+                @{Html.RenderPartial("_BackChevron", Model.BackChevronViewModel);}
+                <h1>@SelectBTAddress_Resources.BannerHeader</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h2>@SelectBTAddress_Resources.Header</h2>
+            <p class="gap">@SelectBTAddress_Resources.HeaderPara</p>
+
+            @using (Html.BeginForm("ConfirmAddress",null, FormMethod.Post, new { id = "SelectAddressForm", @class="gap-top-xxxl" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group form-group--dropdown contain">
+                    @Html.EditorFor(model => model.SelectedAddressId, new { selectList = new SelectList(Model.Addresses, "Id", "FormattedAddressLine1", Model.SelectedAddressId) })
+                </div>
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Resources.ButtonNextText" id="button-submit" name="button-submit" title="@Resources.ButtonNextSignUpEnergyAlt" />
+                    @Html.ActionLink(SelectBTAddress_Resources.Button2Text, Model.NotListedAction, Model.NotListedController, null, new { @Class = "button button-secondary-bundle", Id = "no-address", Title = SelectBTAddress_Resources.Button2Alt })
+                </div>
+            }
+        </div>
+    </div>
+</div>

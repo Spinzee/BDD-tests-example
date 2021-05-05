@@ -1,0 +1,14 @@
+﻿@model Products.WebModel.ViewModels.Energy.TariffsViewModel
+
+<div class="energy-tariff-container">
+    <div class="container chosen-bundle chosen-bundle-initial">
+        <div class="tariff-list contain gap">
+            <div class="bundle-card-wrapper">
+                <div class="tariff-bundle-card">
+                    @{Html.RenderPartial("_AvailableBundleInner", Model);}
+                    @{Html.RenderPartial("_TariffInformationLabelModal", Model);}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

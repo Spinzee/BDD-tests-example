@@ -1,0 +1,53 @@
+﻿@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.ViewModels.Common
+@model Products.WebModel.ViewModels.Broadband.AvailableTalkPackagesViewModel
+
+<div class="modal fade addcalls-modal" role="dialog" id="add-calls-modal" tabindex="-1" aria-labelledby="modal-label">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Common_Resources.CloseButtonTitle">
+                    @Common_Resources.CloseButtonLabel
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        @if (Model.IsTalkProductAvailable)
+                        {
+                            using (Html.BeginForm("AvailablePackage", "Packages"))
+                            {
+                                @Html.AntiForgeryToken()
+                                <fieldset class="radio-set">
+                                    <legend class="sr-only"></legend>
+                                    @foreach (TalkProductViewModel talkProduct in Model.TalkProducts)
+                                    {
+                                        <div class="radio contain">
+                                            <input data-val="true" @(talkProduct.Selected ? "checked=checked" : string.Empty) name="TalkCode" id="@talkProduct.TalkCode" type="radio" value="@talkProduct.TalkCode">
+                                            <label for="@talkProduct.TalkCode">
+                                                <div class="label">
+                                                    <div class="row">
+                                                        <div class="col-xs-7">
+                                                            <strong>@talkProduct.TalkProductName</strong><br />
+                                                            @talkProduct.TalkProductDescription
+                                                        </div>
+                                                        <div class="col-xs-5 radio-col">@talkProduct.FormattedPrice</div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    }
+                                </fieldset>
+                                <input class="button button-primary" type="submit" value="@AvailablePackages_Resources.AddCallsButtonText" id="button-submit" name="button-submit" title="@AvailablePackages_Resources.AddCallsButtonAlt" />
+                            }
+                        }
+                        else
+                        {
+                                <h4 class="h2-like centered">@AvailablePackages_Resources.NoCallPackages</h4>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.BundleUpgradeViewModel
+
+@{
+    ViewBag.Title = Upgrades_Resources.UpgradesPageTitle;
+}
+
+@section ShoppingBasketToggler {
+    @Html.Partial("_ShoppingBasketToggler", Model.ShoppingBasketViewModel)
+}
+
+@section mainSectionTheme { grey-bg }
+
+<div class="full-width-box stars no-main-margin gap-xl mobile-only-gap-top-xxxl bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+                <h1>@Upgrades_Resources.BannerHeader</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container main-content">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <div class="extras-items">
+                <div class="extra-container extra-container-energy @Model.AddedCssClass" id="@Model.ExtraContainerId">
+                    <div class="overlay-main">
+                        <span class="added-mobile overlay">@Extras_Resources.ExtrasAddedTxt</span>
+                    </div>
+                    <p class="bundle-upgrade-banner @Model.BannerImageCssClass" />
+                    <div class="col-xs-5 col-sm-8 col-md-8">
+                        <span class="added-desktop">Added</span>
+                    </div>
+                    <div class="row extra-main-body">
+                        <div class="col-xs-12">
+                            <h3 class="extra-item-name">@Model.Header</h3>
+                            <p>
+                                @Html.Raw(Model.UpgradeDescription)
+                                <span class="learn-more-link">
+                                    <a href="#"
+                                       data-toggle="modal"
+                                       data-target="#@Model.MoreInformationModalId"
+                                       title="@Extras_Resources.MoreDetailsLinkAlt">
+                                        @Extras_Resources.MoreDetailsLinkTxt
+                                    </a>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="extra">
+                                <div class="extra-price">@Model.DiscountedPrice</div>
+                                <div class="extra-price-lbl">
+                                    <div>@Extras_Resources.Per</div>
+                                    <div>@Extras_Resources.Month</div>
+                                </div>
+                            </div>
+                            <div class="bundle-upgrade-price-tagline">
+                                <span class="bundle-upgrade-original-price-txt">@Model.OriginalPriceText</span>
+                                <span class="bundle-upgrade-savings-txt">@Model.SavingsText</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <input class="button button-secondary add-remove-extra-button button-extra-@Model.ProductCode"
+                                   type="button"
+                                   value="@Model.AddRemoveButtonText"
+                                   data-extra-container-id="@Model.ExtraContainerId"
+                                   data-extra-modal-priceheader-id="@Model.ModalExtraPriceHeaderId"
+                                   data-product-code="@Model.ProductCode"
+                                   data-button-group="button-extra-@Model.ProductCode"
+                                   data-is-added="@Model.IsAddedToBasketStr"
+                                   data-add-button-text="@Extras_Resources.AddButtonText"
+                                   data-remove-button-text="@Extras_Resources.RemoveButtonText"
+                                   data-remove-alt-text="@Model.RemoveButtonAltText"
+                                   data-add-alt-text="@Model.AddButtonAltText"
+                                   name="button-submit-extra"
+                                   title="@Model.AddRemoveButtonAltText" />
+                        </div>
+                    </div>
+                </div>
+
+                @Html.Partial(Model.LearnMoreModalPartial, Model)
+            </div>
+            <div class="form-group signup">
+                @Html.ActionLink(Resources.ButtonNextText, Model.NextButtonAction, null, new { @class = "button button-primary", title=Resources.BundleButtonNextSignUpAlt})
+            </div>
+        </div>
+
+        @Html.Partial("_Basket")
+    </div>
+</div>
+
+@Html.Partial(Model.WhatYouNeedToKnowPartial, Model)
+
+@section Scripts {
+    @Scripts.Render("~/js/products/energy/basket")
+    @Scripts.Render("~/js/products/energy/upgrades")
+    @Scripts.Render("~/js/products/broadband/line-speed")
+    <script>
+        $(function () {
+            var basketConfig =
+                new Digital.Web.Energy.BasketConfig("/energy-signup/update-your-price", "/energy-signup/extras", true);
+            // ReSharper disable once UnusedLocals
+            var basket = new Digital.Web.Energy.Basket(basketConfig);
+        });
+    </script>
+}

@@ -1,0 +1,59 @@
+﻿@using System.Configuration
+@using Products.Web.Helpers
+@using Products.WebModel.Resources.Common
+@{
+    string gtmContainerId = ConfigurationManager.AppSettings["GoogleTagManagerContainerId"];
+}
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/css/core")
+    @Html.Partial("_Favicons")
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="//service.maxymiser.net/api/eu/www.sse.co.uk/93e848/mmapi.js"></script>
+    @RenderSection("DataLayer", false)
+    @* Google Tag Manager *@
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', '@gtmContainerId');
+    </script>
+</head>
+
+<body>
+    @* Optimisation Tag for A/B Testing*@
+    <script>
+    if (window.WTOptimize && window.wtObj) WTOptimize.setup(wtObj);
+    </script>
+    @* Google Tag Manager (noscript) *@
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=@gtmContainerId" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+
+    <div class="pageWrap @RenderSection("Theme", false)">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="@Resources.HomePageUrl" title="@Resources.HomepageAlt">@Resources.SSE</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="main" role="main">
+            @RenderBody()
+        </section>
+    </div>
+
+    <script src="@Scripts.Url($"{WebClientHelper.Instance.BaseUrl}/licenses?v={WebClientHelper.Instance.Version}")"></script>
+</body>
+
+</html>

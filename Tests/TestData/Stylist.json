@@ -1,0 +1,16 @@
+{
+  "Stylists": [
+    {
+      "Id":  1, 
+      "Name": "Shona"
+    },
+    {
+      "Id": 2,
+      "Name": "Marcus"
+    },
+    {
+      "Id": 3,
+      "Name": "Tina"
+    }
+  ]
+}

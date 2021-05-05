@@ -1,0 +1,40 @@
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.TariffChange
+<div class="modal fade" role="dialog" id="renewal-modal" tabindex="-1" aria-labelledby="modal-label">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@FuelInformation_Resources.CloseButtonTitle">
+                    @FuelInformation_Resources.CloseButtonLabel
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 id="modal-label">@Resources.RenewalModalTitle</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        <fieldset>
+                            <legend class="sr-only">@Resources.RenewalHelpText</legend>
+                            <div class="radio contain">
+                                <input data-val="true" data-val-required="Please check me out" id="radio1" name="effectiveDate" type="radio" value="" checked="checked">
+                                <label for="radio1"><strong><span id="RenewalsDateSpan"></span></strong><br />@Resources.CurrentTariffText</label>
+                            </div>
+                            <div class="radio contain">
+                                <input data-val="true" data-val-required="Please check me out" id="radio2" name="effectiveDate" type="radio" value="">
+                                <label for="radio2"><strong>@Resources.TodaysDate</strong><br />@DateTime.Today.ToLongDateString()</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input class="button button-primary" type="submit" value="Ok, next" id="btnRenewalDate" name="btnRenewalDate" title="Ok, next" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

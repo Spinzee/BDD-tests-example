@@ -1,0 +1,17 @@
+﻿@model Products.WebModel.ViewModels.Common.ModalTitleAndBody
+@Html.Partial("_SvgDefs")
+<div id="loading-modal" class="modal error-modal" tabindex="-1" role="dialog" aria-labelledby="loading-modal-title loading-modal-body">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content centered gap">
+            <div class="modal-body loading-modal gap">
+                <svg viewBox="0 0 104 104" width="104" height="104" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                    <circle fill="#FFF" r="52" cy="52" cx="52" />
+                    <path stroke-dasharray="145 200" stroke-linecap="square" stroke-width="5" stroke="#10295A" fill="none" d="m52,6a46,46 0 0 1 0,92m0,-92a46,46 0 0 0 0,92" id="svg-loader-blue" />
+                    <path stroke-dasharray="145 200" stroke-linecap="square" stroke-width="5" stroke="url(#svg-dna-loader)" fill="none" d="m52,94a42,42 0 0 1 0,-84m0,84a42,42 0 0 0 0,-84" id="svg-loader-dna" />
+                </svg>
+                <h3 id="loading-modal-title">@Model.Title</h3>
+                <p id="loading-modal-body">@Model.Message</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.PostcodeViewModel
+@{
+    ViewBag.Title = OurPrices_Resources.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    @{ Html.RenderPartial("_Postcode", Model); }
+</div>

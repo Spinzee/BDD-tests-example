@@ -1,0 +1,53 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.SelectSmartMeterViewModel
+
+@{
+    ViewBag.Title = SmartMeter_Resources.Title;
+}
+
+<div class="container">
+    @Html.Partial("_BackChevronWithStepCounter", Model.BackChevronViewModel)
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@SmartMeter_Resources.Header</h1>
+            <a class="gap link-inline-block" href="" data-toggle="modal" data-target="#smart-modal" title="@SmartMeter_Resources.SmartMeterLinkAlt">@SmartMeter_Resources.SmartMeterLink</a>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <legend class="sr-only"></legend>
+                    @Html.EditorFor(m => m.SmartMeter)
+                    @Html.ValidationMessageFor(m => m.HasSmartMeter)
+
+                    <button type="submit" class="button button-primary" alt="@Resources.ButtonNextSignUpEnergyAlt" title="@Resources.ButtonNextSignUpEnergyAlt">@Resources.ButtonNextText</button>
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="smart-modal" tabindex="-1" role="dialog" aria-labelledby="smart-modal-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close dialogue box" title="@Resources.BackButtonAlt" alt ="@Resources.BackButtonAlt">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <img class="img-svg" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/smart-meter-icon.svg")" />
+                <h2 class="gap-top-sm">@SmartMeter_Resources.SmartPopupHeader</h2>
+                <ul class="bullet-list gap text-left">
+                    <li class="gap-sm">@SmartMeter_Resources.SmartPopupBullet1</li>
+                    <li class="gap-sm">@SmartMeter_Resources.SmartPopupBullet2</li>
+                    <li class="gap-sm">@SmartMeter_Resources.SmartPopupBullet3</li>
+                </ul>
+                <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/smart-usage-devices.png")" alt="Smart usage devices" />
+            </div>
+        </div>
+    </div>
+</div>

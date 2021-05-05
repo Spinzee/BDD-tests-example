@@ -1,0 +1,52 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.HomeServices
+@model Products.WebModel.ViewModels.HomeServices.SelectAddressViewModel
+@{
+    ViewBag.Title = Common_Resources.SelectAddressTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @{Html.RenderPartial("_BackChevron", Model.BackChevronViewModel);}
+            @{Html.RenderPartial("_StepCounter");}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@Model.HeaderText</h1>
+            <p class="gap @(Model.IsManual ? "hidden" : "")" id="dropdown-paragraph">@Model.ParaText</p>
+
+            <h3>@Model.SubHeaderText</h3>
+
+            @if (Model.HasValidAddress)
+            {
+                using (Html.BeginForm("SelectAddress", "HomeServices", FormMethod.Post, new { id = "SelectAddressForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(a => a.AddressType)
+                    
+                    <div id="address-view" @(Model.IsManual ? "hidden" : "")>
+                        @{ Html.RenderPartial((Model.Addresses.Count == 1) ? "_SingleAddress" : "_MultiAddress"); }
+
+                        <div class="form-group">
+                            <input class="button button-primary" type="submit" value="@Resources.ButtonNextText" id="button-submit" name="button-submit" title="@Resources.ButtonNextSignUpAlt" />
+                        </div>
+                    </div>
+                }
+            }
+
+            <div id="enter-manually" @(!Model.IsManual ? "hidden" : "")>
+                @{Html.RenderPartial("_EnterAddressManually");}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div id="price-box">
+                @{Html.RenderAction("YourCoverBasket");}
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/js/common/address")
+}

@@ -1,0 +1,48 @@
+﻿@using Products.WebModel.Resources.Broadband
+@model Products.WebModel.ViewModels.Broadband.YourPriceViewModel
+<div id="price-info-box">
+    <div class="bg-dark box-summary">
+        <h2 id="your-price">@YourPrice_Resources.Header</h2>
+        <h3 class="h4-like">@YourPrice_Resources.SubHeader</h3>
+        <table class="table table-simple">
+            <tr>
+                <th scope="row">@Model.BroadbandName</th>
+                <td>@Model.BroadbandCostText</td>
+            </tr>
+            <tr>
+                <th scope="row">@Model.TelName</th>
+                <td>@Model.TelcoCostText</td>
+            </tr>
+            <tr>
+                <th scope="row"><strong>@YourPrice_Resources.SectionTotalHeader</strong></th>
+                <td><strong>@Model.MonthlyCostText</strong></td>
+            </tr>
+        </table>
+        <a href="" data-toggle="modal" data-target="#one-off-costs-modal" class="h4-like">@YourPrice_Resources.SubHeader2</a>
+        <table class="table table-simple">
+            <tr>
+                <th scope="row">@YourPrice_Resources.ConnectionCharge</th>
+                <td>@Model.ConnectionChargeText</td>
+            </tr>
+            @if (Model.ApplyInstallationFee)
+            {
+                <tr>
+                    <th scope="row">@YourPrice_Resources.InstallationFee</th>
+                    <td>@Model.InstallationFeeText</td>
+                </tr>
+            }
+            <tr>
+                <th scope="row"><strong>@YourPrice_Resources.OneOffHeader</strong></th>
+                <td><strong>@Model.OneOffCostText</strong></td>
+            </tr>
+        </table>
+        <hr />
+        <table class="table table-simple">
+            <tr>
+                <th scope="row"><strong>@YourPrice_Resources.Total</strong></th>
+                <td class="total-price no-padding">@Model.FirstBillTotalText</td>
+            </tr>
+            <tr><td colspan="2" class="text-left">@YourPrice_Resources.TotalDisclaimer</td></tr>
+        </table>
+    </div>
+</div>

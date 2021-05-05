@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Disclaimer" xml:space="preserve">
+    <value>Energy prices may go up or down</value>
+  </data>
+  <data name="ElecLabel" xml:space="preserve">
+    <value>Electricity: </value>
+  </data>
+  <data name="ExitFee" xml:space="preserve">
+    <value> per fuel early exit fee</value>
+  </data>
+  <data name="GasLabel" xml:space="preserve">
+    <value>Gas: </value>
+  </data>
+  <data name="Header_Energy" xml:space="preserve">
+    <value>Choose a new energy tariff for </value>
+  </data>
+  <data name="NoExitFee" xml:space="preserve">
+    <value>No early exit fee</value>
+  </data>
+  <data name="One" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="KnownUsageParagraph1" xml:space="preserve">
+    <value>The costs below are based on the usage you just gave us.</value>
+  </data>
+  <data name="PriceLabel" xml:space="preserve">
+    <value>Projected monthly cost:</value>
+  </data>
+  <data name="RewardsBullet1" xml:space="preserve">
+    <value>Exclusive presale events tickets access up to 48 hours before general release</value>
+  </data>
+  <data name="RewardsBullet2" xml:space="preserve">
+    <value>One-off prizes and competitions exclusively available to our customers</value>
+  </data>
+  <data name="RewardsBullet3" xml:space="preserve">
+    <value>Upgrades to SSE lounges</value>
+  </data>
+  <data name="RewardsText" xml:space="preserve">
+    <value>SSE customers can get these great benefits at The SSE Arena, Belfast, The SSE Arena, Wembley, and The SSE Hydro in Glasgow:</value>
+  </data>
+  <data name="SignupButtonAlt" xml:space="preserve">
+    <value>Start sign-up for this tariff</value>
+  </data>
+  <data name="BundleSignupButtonAlt" xml:space="preserve">
+    <value>Start sign-up for this Bundle</value>
+  </data>
+  <data name="SignupButtonText" xml:space="preserve">
+    <value>Sign up now</value>
+  </data>
+  <data name="Switch1" xml:space="preserve">
+    <value>Choose your tariff and sign up online</value>
+  </data>
+  <data name="Switch2" xml:space="preserve">
+    <value>We’ll tell your supplier you’re switching</value>
+  </data>
+  <data name="Switch3" xml:space="preserve">
+    <value>We’ll ask you for meter readings and keep in touch until you’ve switched</value>
+  </data>
+  <data name="SwitchHeader" xml:space="preserve">
+    <value>Switching your energy to SSE is easy</value>
+  </data>
+  <data name="TariffFooter" xml:space="preserve">
+    <value>As a multi-rate electricity customer, we can now offer you a choice of tariffs without having to change your meter. Please contact our Welcomeline team on </value>
+  </data>
+  <data name="TariffFooterLinkSuffix" xml:space="preserve">
+    <value> who’ll be able to help pick the best tariff for your home.</value>
+  </data>
+  <data name="TariffSubHeader" xml:space="preserve">
+    <value>Choose your product</value>
+  </data>
+  <data name="Three" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TILLinkAlt" xml:space="preserve">
+    <value>View Tariff Information Label</value>
+  </data>
+  <data name="TILLinkTextDual" xml:space="preserve">
+    <value>Gas &amp; electricity information</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Sign up to energy – Choose your tariff - SSE</value>
+  </data>
+  <data name="Two" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="USP1" xml:space="preserve">
+    <value>UK-based call centres</value>
+  </data>
+  <data name="USP2" xml:space="preserve">
+    <value>Spread the cost of your energy and save money when you pay by Direct Debit*</value>
+  </data>
+  <data name="USP3" xml:space="preserve">
+    <value>Get access to presale tickets and access to big events with SSE Reward</value>
+  </data>
+  <data name="USP4" xml:space="preserve">
+    <value>Millions of customers trust us with their energy supply</value>
+  </data>
+  <data name="USPHeader" xml:space="preserve">
+    <value>Why choose SSE for your gas and electricity?</value>
+  </data>
+  <data name="YearCostPrefix" xml:space="preserve">
+    <value>That’s </value>
+  </data>
+  <data name="YearCostSuffix" xml:space="preserve">
+    <value> a year</value>
+  </data>
+  <data name="ElectricityUsageParaghraph1SubText" xml:space="preserve">
+    <value>Electricity = {0} kWh per year</value>
+  </data>
+  <data name="GasUsageParaghraph1SubText" xml:space="preserve">
+    <value>Gas = {0} kWh per year</value>
+  </data>
+  <data name="UnknownUsageE7Paragraph1" xml:space="preserve">
+    <value>The costs below are based on the estimated usage we worked out from the answers you gave us about your property. We estimate you’ll use: &lt;strong&gt; {0} Electricity day = {1} kWh per year  &amp;nbsp; Electricity night = {2} kWh per year&lt;/strong&gt;.&lt;br/&gt;These figures are based on 58% usage during the day and 42% usage at night.</value>
+  </data>
+  <data name="UnknownUsageParagraph1" xml:space="preserve">
+    <value>The costs below are based on the estimated usage we worked out from the answers you gave us about your property. We estimate you’ll use:  &lt;strong&gt; {0} &lt;/strong&gt;.</value>
+  </data>
+  <data name="TILLinkTextElec" xml:space="preserve">
+    <value>Electricity information</value>
+  </data>
+  <data name="TILLinkTextGas" xml:space="preserve">
+    <value>Gas information</value>
+  </data>
+  <data name="TILParagraphAboveInformation" xml:space="preserve">
+    <value>Our online home is at sse.co.uk. So, the Tariff Information Label (TIL) for all our tariffs show SSE as the supplier. But the prices are also correct for our other brands SSE Southern Electric, SSE SWALEC and SSE Scottish Hydro.</value>
+  </data>
+  <data name="TILParagraphUnderInformation" xml:space="preserve">
+    <value>Estimated costs include any discounts and VAT (currently 5%) and are based on current prices for the tariff shown above. The prices quoted may be different to how these are displayed on your bill. If your tariff type is Evergreen, then please note that prices are not fixed and may rise in the future.</value>
+  </data>
+  <data name="TilSubHeader" xml:space="preserve">
+    <value>What is a kWh (kilowatt hour)?</value>
+  </data>
+  <data name="TilSubHeaderParagraph" xml:space="preserve">
+    <value>kWh stands for kilowatt-hour - the unit used to measure the amount of electricity you use. One kilowatt equals 1,000 watts of electricity and will power a 40-watt light bulb for 25 hours.</value>
+  </data>
+  <data name="TILNotApplicable" xml:space="preserve">
+    <value>Not applicable</value>
+  </data>
+  <data name="TILPriceGuaranteedDate" xml:space="preserve">
+    <value>from supply start date</value>
+  </data>
+  <data name="TILStandingCharge" xml:space="preserve">
+    <value>p per day</value>
+  </data>
+  <data name="TILTariffEndDate" xml:space="preserve">
+    <value>from supply start date</value>
+  </data>
+  <data name="TILTariffNoEndDate" xml:space="preserve">
+    <value>No end date</value>
+  </data>
+  <data name="TILUnitRate" xml:space="preserve">
+    <value>p per kWh</value>
+  </data>
+  <data name="TILLAdditionalProductsOrServicesIncluded" xml:space="preserve">
+    <value>Additional products or services included</value>
+  </data>
+  <data name="TILLDiscountsAndAdditionalChargesLabel" xml:space="preserve">
+    <value>Discounts and additional charges</value>
+  </data>
+  <data name="TILLExitFeeLabel" xml:space="preserve">
+    <value>Exit fee (if you cancel this tariff 
+before the end date)</value>
+  </data>
+  <data name="TILLPaymentMethodLabel" xml:space="preserve">
+    <value>Payment method</value>
+  </data>
+  <data name="TILLPriceGuaranteedUntilLabel" xml:space="preserve">
+    <value>Price guaranteed until</value>
+  </data>
+  <data name="TILLStandingChargeLabel" xml:space="preserve">
+    <value>Standing charge</value>
+  </data>
+  <data name="TILLSupplierLabel" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="TILLTariffEndsOnLabel" xml:space="preserve">
+    <value>Tariff ends on</value>
+  </data>
+  <data name="TILLTariffNameLabel" xml:space="preserve">
+    <value>Tariff name</value>
+  </data>
+  <data name="TILLTariffTypeLabel" xml:space="preserve">
+    <value>Tariff type</value>
+  </data>
+  <data name="TILLUnitRateOffPeakLabel" xml:space="preserve">
+    <value>Unit rate off-peak</value>
+  </data>
+  <data name="TILLUnitRatePeakLabel" xml:space="preserve">
+    <value>Unit rate peak</value>
+  </data>
+  <data name="TILUnitRateLabel" xml:space="preserve">
+    <value>Unit rate</value>
+  </data>
+  <data name="ModalCloseButtonAlt" xml:space="preserve">
+    <value>Close dialogue box</value>
+  </data>
+  <data name="GeneralTermsAndConditionsPDFAlt" xml:space="preserve">
+    <value>Download General Terms and Conditions for the Supply of Electricity and/or Gas</value>
+  </data>
+  <data name="GeneralTermsAndConditionsPDFText" xml:space="preserve">
+    <value>General Terms and Conditions for the Supply of Electricity and/or Gas</value>
+  </data>
+  <data name="TariffDisclaimer" xml:space="preserve">
+    <value>All prices on this page include VAT and any applicable discounts.</value>
+  </data>
+  <data name="SmartTariffTILText" xml:space="preserve">
+    <value>£50 electricity credit at the end of the tariff subject to your terms and conditions</value>
+  </data>
+  <data name="ChosenTariffHeader" xml:space="preserve">
+    <value>Your chosen tariff</value>
+  </data>
+  <data name="ChosenTariffNotAvailableMessage" xml:space="preserve">
+    <value>Sorry, but based on the information provided you won’t be able to get the tariff you selected.</value>
+  </data>
+  <data name="ChosenTariffOtherTariffsHeader" xml:space="preserve">
+    <value>You might also be interested in</value>
+  </data>
+  <data name="ChosenTariffSubHeader" xml:space="preserve">
+    <value>Or choose one of our other tariffs</value>
+  </data>
+  <data name="TILFAQHeader" xml:space="preserve">
+    <value>Frequently Asked Questions</value>
+  </data>
+  <data name="TILSwitchLinkAlt" xml:space="preserve">
+    <value>More about Debt Assignment Protocol</value>
+  </data>
+  <data name="TILSwitchLinkText" xml:space="preserve">
+    <value>Debt Assignment Protocol article.</value>
+  </data>
+  <data name="TILSwitchLinkUrl" xml:space="preserve">
+    <value>https://sse.co.uk/help/energy/meters/pay-as-you-go/switching-with-debt</value>
+  </data>
+  <data name="TILSwitchParagraph" xml:space="preserve">
+    <value>If you’re a Pay As You Go customer with a debt of less than £500, it’s now even easier to switch. The Debt Assignment Protocol allows you to change supplier and take your debt with you. If your current energy supplier successfully objects to you moving supply because of your debt balance the Debt Assignment Protocol is activated, allowing the switch to continue. It isn’t guaranteed, but it could be an option if you want to switch. To switch your supply, we’ll need to exchange your account details and debt information with your current energy supplier. By agreeing to continue the switch after the Debt Assignment Protocol has been activated, you agree that we can share this information. Find out more in our</value>
+  </data>
+  <data name="TILSwitchSubHeader" xml:space="preserve">
+    <value>Can I switch supplier with a debt on my Pay As You Go meter?</value>
+  </data>
+  <data name="FixedTariffDualFuelDiscountText" xml:space="preserve">
+    <value>Includes £{0} discount per year (£{1} for gas and £{1} for electricity)</value>
+  </data>
+  <data name="FixedTariffSingleFuelDiscountText" xml:space="preserve">
+    <value>Includes £{0} discount per year</value>
+  </data>
+  <data name="StandardTariffDiscountText" xml:space="preserve">
+    <value>As you’ve chosen to pay by Direct Debit, you’ll receive an annual discount for each fuel.</value>
+  </data>
+  <data name="StandardTariffDualFuelDiscountText" xml:space="preserve">
+    <value>Includes {0} discount per year ({1} for gas and {2} for electricity)</value>
+  </data>
+  <data name="StandardTariffSingleFuelDiscountText" xml:space="preserve">
+    <value>Includes {0} discount per year</value>
+  </data>
+  <data name="ShowTariffDetailsHeader" xml:space="preserve">
+    <value>Show energy tariff details</value>
+  </data>
+  <data name="TariffDetailsHeaderAlt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MoreInfoLink" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="ShowBundleDetailsHeader" xml:space="preserve">
+    <value>Show more</value>
+  </data>
+  <data name="AllBundlesUnavailableHeader" xml:space="preserve">
+    <value>Sorry, our Bundles aren’t currently available in your area</value>
+  </data>
+  <data name="AllBundlesUnavailablePara" xml:space="preserve">
+    <value>But you might be interested in some of our energy tariffs below. All prices on this page include VAT and any applicable discounts.</value>
+  </data>
+  <data name="ChosenBundleUnavailableHeader" xml:space="preserve">
+    <value>Sorry, your chosen Bundle isn’t currently available in your area</value>
+  </data>
+  <data name="ChosenBundleUnavailablePara" xml:space="preserve">
+    <value>But you might be interested in some of our other products below. All prices on this page include VAT and any applicable discounts.</value>
+  </data>
+  <data name="ChosenTariffNotAvailableHeader" xml:space="preserve">
+    <value>Sorry, your chosen tariff isn’t currently available in your area</value>
+  </data>
+  <data name="BundleDisclaimer" xml:space="preserve">
+    <value>All prices on this page include VAT and any applicable discounts.</value>
+  </data>
+  <data name="ChosenBundleSubHeader" xml:space="preserve">
+    <value>Your chosen Bundle</value>
+  </data>
+  <data name="Header_Bundling" xml:space="preserve">
+    <value>Your quote &lt;/br&gt; for </value>
+  </data>
+  <data name="HideBundleDetailsHeader" xml:space="preserve">
+    <value>Show less</value>
+  </data>
+  <data name="HideTariffDetailsHeader" xml:space="preserve">
+    <value>Hide energy tariff details</value>
+  </data>
+  <data name="Four" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SwitchBundle1" xml:space="preserve">
+    <value>Sign up – choose a Bundle with energy, plus broadband and phone, or a boiler and heating product</value>
+  </data>
+  <data name="SwitchBundle2" xml:space="preserve">
+    <value>Sit back – no need to contact your current energy or broadband provider (unless you’re with Virgin Media)</value>
+  </data>
+  <data name="SwitchBundle3" xml:space="preserve">
+    <value>Relax – we’ll sort out your switch and keep you posted at every step</value>
+  </data>
+  <data name="SwitchBundle4" xml:space="preserve">
+    <value>Save – pay less compared to buying our equivalent standalone products!</value>
+  </data>
+  <data name="SwitchHeaderBundle" xml:space="preserve">
+    <value>It’s easy to switch and save with our Bundles</value>
+  </data>
+  <data name="SwitchGuaranteeTextBundle" xml:space="preserve">
+    <value>We promise to switch your gas and electricity within 21 days. Switching your broadband and phone usually takes around 18 to 20 days. Boiler and heating products start on the next working day after your energy supply switches to us.</value>
+  </data>
+  <data name="SwitchGuaranteeTextEnergy" xml:space="preserve">
+    <value>We promise to complete your switch in no more than 21 days.</value>
+  </data>
+  <data name="BroadbandBundlePopupText" xml:space="preserve">
+    <value>We’re just checking bundle information.</value>
+  </data>
+  <data name="BundleTabName" xml:space="preserve">
+    <value>Bundles</value>
+  </data>
+  <data name="EnergyTabName" xml:space="preserve">
+    <value>Energy</value>
+  </data>
+  <data name="ViewAllTabName" xml:space="preserve">
+    <value>View all</value>
+  </data>
+  <data name="PartnershipText" xml:space="preserve">
+    <value>As we’re now part of the OVO family, we may have cheaper tariff options for you, although some may have eligibility criteria. To find out more, visit &lt;a target="_blank" title="OVO Energy" href="http://ovoenergy.com"&gt;ovoenergy.com&lt;/a&gt; or call 0330 303 5063, &lt;a target="_blank" title="Boost" href ="http://boostpower.co.uk"&gt;boostpower.co.uk&lt;/a&gt; or call 0330 102 7517, or &lt;a href = "http://sparkenergy.co.uk" target="_blank" title="Spark"&gt;sparkenergy.co.uk&lt;/a&gt; or call 0345 034 7474.</value>
+  </data>
+</root>

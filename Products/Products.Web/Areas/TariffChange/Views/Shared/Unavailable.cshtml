@@ -1,0 +1,25 @@
+﻿@using Products.WebModel.Resources.TariffChange
+
+@{
+    ViewBag.Title = Fallout_Resources.CTCUnavailableTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@Fallout_Resources.CTCUnavailableHeader</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-11 col-md-8 gap">
+            <p>@Fallout_Resources.CTCUnavailableText1</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-11 col-md-8 gap">
+            <p>@Fallout_Resources.CTCUnavailableText2</p>
+        </div>
+    </div>
+    
+    @Html.Partial("_PostLoginDashboardLink", (ViewBag.IsPostLogin == null)? false : (bool)ViewBag.IsPostLogin)
+</div>

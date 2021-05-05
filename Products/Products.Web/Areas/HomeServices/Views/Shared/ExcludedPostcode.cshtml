@@ -1,0 +1,19 @@
+﻿@using Products.WebModel.Resources.HomeServices
+@{
+    ViewBag.Title = Fallout_Resources.ExcludedPostcodeTitle;
+}
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>@Fallout_Resources.ExcludedPostcodeHeader</h1>
+            </div>
+            <div class="col-md-12 gap">
+                <p class="gap">@Fallout_Resources.ExcludedPostcodeBody</p>
+                <a id="back-to-home-link" class="button button-primary" href="@System.Configuration.ConfigurationManager.AppSettings["LinkBackToHomeURL"]" title="@Fallout_Resources.ExcludedPostcodeAltText">
+                    @Fallout_Resources.ExcludedPostcodeLinkText
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

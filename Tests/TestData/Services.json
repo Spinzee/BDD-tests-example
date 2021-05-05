@@ -1,0 +1,14 @@
+{
+  "Services": [
+    {
+      "Id": 1,
+      "Name": "Cutting",
+      "Products": [ 1, 2, 3, 4 ]
+    },
+    {
+      "Id": 2,
+      "Name": "Colouring",
+      "Products": [ 5 ]
+    }
+  ]
+}

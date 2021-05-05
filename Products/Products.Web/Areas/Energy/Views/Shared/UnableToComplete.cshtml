@@ -1,0 +1,32 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.UnableToCompleteViewModel
+@{
+    ViewBag.Title = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@Model.Header</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-11 col-md-8 gap">
+            <p>@Model.Body</p>
+            <div class="row box-info box-contact">
+                <div class="col-xs-12 col-sm-2 hidden-xs"><img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/contact-us-icon.png")" class="" /></div>
+                <div class="col-xs-12 col-sm-10">
+                    <h2 class="h3-like">@Model.ContactHeaderPre <a href="@Model.ContactNumberUrl" title="@Model.ContactNumberAlt"><strong>@Model.ContactNumber</strong></a> @Model.ContactHeaderPost</h2>
+                    <p>@Model.ContactBody</p>
+                </div>
+            </div>
+            <ul class="link-list">
+                <h3 class="h4-like">@Fallout_Resources.linkHeader</h3>
+                <li><a class="icon-link" href="@Fallout_Resources.Link3Url" title="@Fallout_Resources.Link3Alt" target="_blank">@Fallout_Resources.Link3Text</a></li>
+                <li><a class="icon-link" href="@Fallout_Resources.Link4Url" title="@Fallout_Resources.Link4Alt" target="_blank">@Fallout_Resources.Link4Text</a></li>
+                <li><a class="icon-link" href="@Fallout_Resources.Link5Url" title="@Fallout_Resources.Link5Alt" target="_blank">@Fallout_Resources.Link5Text</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

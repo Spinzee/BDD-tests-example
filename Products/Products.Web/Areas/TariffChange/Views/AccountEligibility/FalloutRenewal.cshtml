@@ -1,0 +1,29 @@
+﻿@using Products.WebModel.Resources.TariffChange
+@{
+    ViewBag.Title = Fallout_Resources.RenewalTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@Fallout_Resources.LapsedFixedRateTariffTitle</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-11 col-md-8 gap">
+            <p class="gap">
+                @Fallout_Resources.LapsedFixedRateTariffText1
+            </p>
+            <p class="gap">
+                @Fallout_Resources.LapsedFixedRateTariffText2
+            </p>
+            <p class="gap">
+                @Fallout_Resources.LapsedFixedRateTariffText3 <a id="telephone-link" href="@Fallout_Resources.LinkPhoneURL" title="@Fallout_Resources.LinkPhoneAlt">@Fallout_Resources.LinkPhoneText</a>@Fallout_Resources.PhoneSuffix
+            </p>
+            <a id="renew-tariff-link" class="button button-primary" href="@Fallout_Resources.LinkChooseTariffURL" target="_blank" title="@Fallout_Resources.LinkChooseTariffAlt">@Fallout_Resources.LinkChooseTariff</a>
+        </div>
+    </div>
+</div>
+
+@section DataLayer {
+    @Html.Partial("_DataLayer")
+}

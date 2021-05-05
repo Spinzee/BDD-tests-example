@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{483089ED-412C-4945-AF78-BB2435F66A8A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Products.Web</RootNamespace>
+    <AssemblyName>Products.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
+    <MvcBuildViews>true</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind />
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+    <MvcBuildViews>true</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MvcBuildViews>true</MvcBuildViews>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.web.3.1.0.133\lib\net40\StructureMap.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\adrum\adrum-ext.f1b9622831c5f758b69f8c4fafbe9659.js" />
+    <Content Include="Scripts\adrum\adrum-xd.f1b9622831c5f758b69f8c4fafbe9659.html" />
+    <Content Include="Scripts\adrum\adrum.js" />
+    <Content Include="Areas\Broadband\Views\web.config" />
+    <Content Include="Areas\Broadband\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Broadband\Views\BankDetails\BankDetails.cshtml" />
+    <Content Include="Areas\Broadband\Views\BankDetails\InvalidBankDetails.cshtml" />
+    <Content Include="Areas\Broadband\Views\Confirmation\Confirmation.cshtml" />
+    <Content Include="Areas\Broadband\Views\CustomerDetails\ContactDetails.cshtml" />
+    <Content Include="Areas\Broadband\Views\CustomerDetails\PersonalDetails.cshtml" />
+    <Content Include="Areas\Broadband\Views\CustomerPackages\SelectedPackage.cshtml" />
+    <Content Include="Areas\Broadband\Views\ExistingCustomer\ExistingCustomer.cshtml" />
+    <Content Include="Areas\Broadband\Views\LineChecker\LineChecker.cshtml" />
+    <Content Include="Areas\Broadband\Views\LineChecker\SelectAddress.cshtml" />
+    <Content Include="Areas\Broadband\Views\OnlineAccount\OnlineAccount.cshtml" />
+    <Content Include="Areas\Broadband\Views\Summary\Summary.cshtml" />
+    <Content Include="Areas\Broadband\Views\Shared\_YourPrice.cshtml" />
+    <Content Include="Areas\Broadband\Views\LineChecker\CannotCompleteOnline.cshtml" />
+    <Content Include="Areas\Broadband\Views\LineChecker\AddressNotListed.cshtml" />
+    <Content Include="Areas\Broadband\Views\CustomerPackages\AvailablePackages.cshtml" />
+    <Content Include="Areas\Broadband\Views\CustomerDetails\TransferYourNumber.cshtml" />
+    <Content Include="Views\Shared\_RetryModal.cshtml" />
+    <Content Include="Areas\Broadband\Views\CustomerPackages\_AvailablePackage.cshtml" />
+    <Content Include="Views\Shared\PrintMandate.cshtml" />
+    <Content Include="Areas\Broadband\Views\CustomerPackages\_AddCalls.cshtml" />
+    <Content Include="Views\Shared\_CallFeatureModal.cshtml" />
+    <Content Include="Views\Shared\_WhereIsMyNumberModal.cshtml" />
+    <Content Include="Views\Shared\_DataLayer.cshtml" />
+    <Content Include="Areas\Broadband\Views\Shared\_YourPriceDynamic.cshtml" />
+    <Content Include="Areas\TariffChange\Views\web.config" />
+    <Content Include="Areas\TariffChange\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\TariffChange\Views\CustomerIdentification\_MultipleAddressSelection.cshtml" />
+    <Content Include="Areas\TariffChange\Views\Shared\_PostLoginDashboardLink.cshtml" />
+    <Content Include="Areas\TariffChange\Views\CustomerIdentification\_ConfirmAddress.cshtml" />
+    <Content Include="Areas\TariffChange\Views\CustomerIdentification\_SingleAddressRedirect.cshtml" />
+    <Content Include="Areas\Broadband\Views\Shared\Unavailable.cshtml" />
+    <Content Include="Areas\Energy\Views\web.config" />
+    <Content Include="Areas\Energy\Views\Quote\ExistingCustomer.cshtml" />
+    <Content Include="Areas\Energy\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\EnterPostcode.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\PersonalDetails.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\SelectFuel.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\PaymentMethod.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\MeterType.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\SmartMeter.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\AvailableTariffs.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\EnergyUsage.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_AvailableTariff.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\OnlineAccount.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\BankDetails.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\Confirmation.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\SelectAddress.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\ContactDetails.cshtml" />
+    <Content Include="Views\Shared\AreaNotCovered.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\OtherMeterType.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\InvalidBankDetails.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\UnableToComplete.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\_EnterAddressManually.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_IDontKnowUsage.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_IKnowUsage.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\_MultiAddress.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\_SingleAddress.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_StepCounter.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_TariffInformationLabelModal.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_TariffInformationLabelContent.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_PrePayFAQAccordion.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_NonPrePayFAQAccordion.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\Unavailable.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_YourPriceDynamic.cshtml" />
+    <Content Include="Areas\HomeServices\Views\web.config" />
+    <Content Include="Areas\HomeServices\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\HomeServices\Views\Shared\_StepCounter.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\Postcode.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\CoverDetails.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\PersonalDetails.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\SelectAddress.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\_SingleAddress.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\_MultiAddress.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\_EnterAddressManually.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\ContactDetails.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\BankDetails.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\Summary.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\Confirmation.cshtml" />
+    <Content Include="Areas\HomeServices\Views\Shared\_YourCoverBasket.cshtml" />
+    <Content Include="Areas\HomeServices\Views\Shared\InvalidBankDetails.cshtml" />
+    <Content Include="Areas\HomeServices\Views\Shared\UnableToComplete.cshtml" />
+    <Content Include="Areas\HomeServices\Views\Shared\AreaNotCovered.cshtml" />
+    <Content Include="Views\Shared\JavascriptDisabled.cshtml" />
+    <Content Include="Areas\HomeServices\Views\Shared\ExcludedPostcode.cshtml" />
+    <Content Include="Areas\HomeServices\Views\Shared\_ImportantInfoAccordion.cshtml" />
+    <Content Include="Areas\HomeServices\Views\HomeServices\_CoverDetailsHeader.cshtml" />
+    <Content Include="Areas\HomeServices\Views\Shared\_CoverDetailsExtrasModal.cshtml" />
+    <Content Include="Areas\TariffChange\Views\Tariffs\_FollowOnTariff.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_AvailableTariffsTopSection.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_AvailableTariffsBottomSection.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_AvailableTariffInner.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_ChosenTariff.cshtml" />
+    <Content Include="Areas\HomeServices\Views\Shared\Unavailable.cshtml" />
+    <Content Include="Areas\HomeServices\Views\Shared\_HomeServices.cshtml" />
+    <Content Include="Areas\Energy\Views\OurPrices\EnterPostcode.cshtml" />
+    <Content Include="Areas\Energy\Views\OurPrices\OurPrices.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_Postcode.cshtml" />
+    <Content Include="Areas\Energy\Views\OurPrices\CannotFindPrices.cshtml" />
+    <Content Include="Areas\Energy\Views\OurPrices\TILModal.cshtml" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0775_SSE_BB_Traffic_Management_WEB_A4.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0775_SSE_Broadband_Acceptable_Use_Policy_WEB_A4.pdf" />
+    <Content Include="Areas\Energy\Views\Quote\SmartPayGoFallout.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\IncorrectMeterFallout.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\SmartMeterConsent.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\_SmartMeterFrequency.cshtml" />
+    <Content Include="Areas\Energy\Views\Quote\_NonCompatibleSmartMeter.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\Summary.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_MeterInformation.cshtml" />
+    <Content Include="Areas\Common\Content\PDFs\SSE General Terms and Conditions for Phone and Broadband.pdf" />
+    <Content Include="Areas\Broadband\Views\Shared\_OneOfCostModal.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_Energy.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_DataLayer.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_AvailableBundleInner.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_AvailableBundle.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_AvailableTariffsDocumentList.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\PhonePackage.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_SummaryEnergyDetailsAccordion.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_SummaryCheckYourDetailsAccordion.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_SummaryBroadbandAndPhoneDetails.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_NewLineInstallation.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_ChosenBundle.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\ConfirmAddress.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_BundlePackageFeatures.cshtml" />
+    <Content Include="Views\Shared\_BroadbandBundleMegaModal.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_SwitchStepsEnergy.cshtml" />
+    <Content Include="Areas\Energy\Views\Tariffs\_SwitchStepsBundle.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_BroadbandWhenDoIPayModal.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_HesWhyIsThere0PaymentModal.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_SummaryHomeServicesDetails.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_BackChevronWithStepCounter.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_Basket.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_ShoppingBasketToggler.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\Extras.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_ExtraMoreInformationModal.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_SummaryAccordion.cshtml" />
+    <Content Include="Areas\Common\Content\PDFs\SSE Product and Price Guide for 18 Month Fix and Fibre broadband packages.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE Phone Product and Price Guide for the Fix and Fibre range %28FF3%29.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE_Heating_Breakdown_Cover_Insurance_Product_Information_Document.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0721_SSE_Home_Services_IPIDs_Boiler_Cover_Breakdown_Product_information_document.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0721_SSE_Home_Services_IPIDs_Electric_Wiring_Cover_Product_information_document.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0721_SSE_Home_Services_IPIDs_Boiler_Cover_Final_Artwork_04.09.19.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0721_SSE_Home_Services_IPIDs_Boiler_Cover_50.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0721_SSE_Home_Services_IPIDs_Heating_Cover_Product_information_document.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0721_SSE_Home_Services_IPIDs_Heating_Cover_50.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0721_SSE_Home_Services_IPIDs_Boiler_Cover_Landlord_Product_information_document.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0721_SSE_Home_Services_IPIDs_Heating_Cover_Landlord_Product_information_document.pdf" />
+    <Content Include="Areas\Energy\Views\SignUp\Upgrades.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_FixNProtectWhatYouNeedToKnow.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_FixNFiberWhatYouNeedToKnow.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_UpgradeFixNFibrePlusLearnMoreModal.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_UpgradeFixNProtectPlusLearnMoreModal.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_UpgradesHowSavingsCalculated.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_AddBundleUpgrade.cshtml" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0846 SSE Home Services 2 Months Free T&amp;Cs 1 Pager_03.10.19.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE Broadband Product and Price Guide %2819 range%29.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE Phone Product and Price Guide %2819 range%29.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE Broadband Happiness Guarantee  Nov 2019.pdf" />
+    <Content Include="Areas\Common\Content\PDFs\SSE0721_SSE_Home_Services_IPIDs_Boiler_Cover_Product_information_document.pdf" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="browserconfig.xml" />
+    <Content Include="Content\ComponentLibrary\component-library.css">
+      <DependentUpon>component-library.less</DependentUpon>
+    </Content>
+    <Content Include="Content\ComponentLibrary\component-library.min.css">
+      <DependentUpon>component-library.css</DependentUpon>
+    </Content>
+    <Content Include="Content\ComponentLibrary\index.html" />
+    <Content Include="Content\ComponentLibrary\temp-confirmation.html" />
+    <Content Include="Content\ComponentLibrary\temp-tariffs.html" />
+    <Content Include="Content\ComponentLibrary\vertical-grid.svg" />
+    <Content Include="Content\ComponentLibrary\_a11y.html" />
+    <Content Include="Content\ComponentLibrary\_misc.html" />
+    <Content Include="Content\ComponentLibrary\_radio-check.html" />
+    <Content Include="Content\ComponentLibrary\_svgs.html" />
+    <Content Include="Content\ComponentLibrary\_tooltips.html" />
+    <Content Include="Content\ComponentLibrary\_typography.html" />
+    <Content Include="Content\ComponentLibrary\_forms.html" />
+    <Content Include="Content\ComponentLibrary\_links.html" />
+    <Content Include="Content\ComponentLibrary\_accordions.html" />
+    <Content Include="Content\ComponentLibrary\_buttons.html" />
+    <Content Include="Content\ComponentLibrary\_colours.html" />
+    <Content Include="Content\ComponentLibrary\_progress-bar.html" />
+    <Content Include="Content\ComponentLibrary\_tables.html" />
+    <Content Include="Content\ComponentLibrary\_lists.html" />
+    <Content Include="Config\DEV\ConnectionStringSettings.config" />
+    <Content Include="Config\TEST\ConnectionStringSettings.config" />
+    <Content Include="Config\PREPROD\ConnectionStringSettings.config" />
+    <Content Include="Config\PROD\ConnectionStringSettings.config" />
+    <Content Include="Content\ComponentLibrary\component-library.less" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="manifest.json" />
+    <Content Include="Content\Pdfs\SSE_Home_Services_Limited_DD_Guarantee _V1.00.pdf" />
+    <Content Include="Content\Pdfs\DD Guarantee SSE.pdf" />
+    <Content Include="Content\Pdfs\18 Month Fix and Fibre - Terms and Conditions.pdf" />
+    <Content Include="Content\Pdfs\Energy - Terms and Conditions - 2 Year Fix.pdf" />
+    <Content Include="Content\Pdfs\Energy - Terms and Conditions - 1 Year Fix.pdf" />
+    <Content Include="Content\Pdfs\1 Year Fix and Protect v3 - Terms and Conditions.PDF" />
+    <Content Include="Content\Pdfs\SSE Heating Breakdown Cover Insurance Product Information Document.pdf" />
+    <Content Include="Content\Pdfs\SSE Breakdown Cover Policy Booklet.pdf" />
+    <Content Include="Content\Pdfs\Phone and Broadband - General Terms and Conditions for the Supply of 18 Month Fix and Fibre Broadband and Phone Package.pdf" />
+    <Content Include="Content\Pdfs\SSE Home Services Policy Booklet.pdf" />
+    <Content Include="Content\Pdfs\Energy - Terms and Conditions - 2 Year Fix and Control.pdf" />
+    <Content Include="Content\Pdfs\Energy - Terms and Conditions - 1 Year Fix and Drive.pdf" />
+    <Content Include="Content\Pdfs\1 Year Fix &amp; Protect Plus - Terms and Conditions.pdf" />
+    <Content Include="Content\Pdfs\SSE GEN T&amp;CS JANUARY 2020.pdf" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Parameters.xml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CustomRequireHttpsAttribute.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="Areas\Broadband\BroadbandAreaRegistration.cs" />
+    <Compile Include="Areas\Broadband\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Broadband\Controllers\BaseStepCounterController.cs" />
+    <Compile Include="Areas\Broadband\Enums\PageName.cs" />
+    <Compile Include="Areas\Energy\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Energy\Controllers\BaseStepCounterController.cs" />
+    <Compile Include="Areas\Energy\Controllers\CommonController.cs" />
+    <Compile Include="Areas\Energy\Controllers\OurPricesController.cs" />
+    <Compile Include="Areas\Energy\Controllers\QuoteController.cs" />
+    <Compile Include="Areas\Energy\Controllers\SignUpController.cs" />
+    <Compile Include="Areas\Energy\Controllers\TariffsController.cs" />
+    <Compile Include="Areas\Energy\EnergyAreaRegistration.cs" />
+    <Compile Include="Areas\HomeServices\Controllers\HomeServicesController.cs" />
+    <Compile Include="Areas\HomeServices\HomeServicesAreaRegistration.cs" />
+    <Compile Include="Areas\TariffChange\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\TariffChange\TariffChangeAreaRegistration.cs" />
+    <Compile Include="Attributes\AjaxOnlyAttribute.cs" />
+    <Compile Include="Attributes\BroadbandCheckSessionAttribute.cs" />
+    <Compile Include="Attributes\CustomHandleErrorAttribute.cs" />
+    <Compile Include="Attributes\HomeServicesRouteCheckAttribute.cs" />
+    <Compile Include="Attributes\EnergyCheckSessionAttribute.cs" />
+    <Compile Include="Areas\TariffChange\Controllers\AccountEligibilityController.cs" />
+    <Compile Include="Areas\TariffChange\Controllers\AdditionalDetailsController.cs" />
+    <Compile Include="Areas\Broadband\Controllers\BankDetailsController.cs" />
+    <Compile Include="Areas\Broadband\Controllers\ConfirmationController.cs" />
+    <Compile Include="Areas\Broadband\Controllers\CustomerDetailsController.cs" />
+    <Compile Include="Areas\Broadband\Controllers\ExistingCustomerController.cs" />
+    <Compile Include="Areas\Broadband\Controllers\LineCheckerController.cs" />
+    <Compile Include="Areas\Broadband\Controllers\OnlineAccountController.cs" />
+    <Compile Include="Areas\Broadband\Controllers\PackagesController.cs" />
+    <Compile Include="Areas\Broadband\Controllers\SummaryController.cs" />
+    <Compile Include="Areas\TariffChange\Controllers\ConfirmationController.cs" />
+    <Compile Include="Areas\TariffChange\Controllers\CreatePasswordController.cs" />
+    <Compile Include="Areas\TariffChange\Controllers\CustomerIdentificationController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Areas\TariffChange\Controllers\SummaryController.cs" />
+    <Compile Include="Areas\TariffChange\Controllers\TariffsController.cs" />
+    <Compile Include="DependencyResolution\ControllerConvention.cs" />
+    <Compile Include="DependencyResolution\DefaultRegistry.cs" />
+    <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
+    <Compile Include="DependencyResolution\StructureMapScopeModule.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\HtmlHelperExtensions.cs" />
+    <Compile Include="Helpers\HtmlHelpers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\WebClientHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\TariffChange\Views\CustomerIdentification\IdentifyCustomer.cshtml" />
+    <Content Include="Areas\TariffChange\Views\AdditionalDetails\GetCustomerEmail.cshtml" />
+    <Content Include="Areas\TariffChange\Views\Confirmation\ShowConfirmation.cshtml" />
+    <Content Include="Areas\TariffChange\Views\Summary\TariffSummary.cshtml" />
+    <Content Include="Areas\TariffChange\Views\Tariffs\AvailableTariffs.cshtml" />
+    <Content Include="Areas\TariffChange\Views\CustomerIdentification\ConfirmDetails.cshtml" />
+    <Content Include="Areas\TariffChange\Views\AccountEligibility\CustomerAccountIneligible.cshtml" />
+    <Content Include="Areas\TariffChange\Views\CustomerIdentification\AccountDetailsNotMatched.cshtml" />
+    <Content Include="Areas\TariffChange\Views\Shared\_ProgressBar.cshtml" />
+    <Content Include="Views\Shared\_FuelInformationModal.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Areas\TariffChange\Views\AccountEligibility\FalloutRenewal.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\String.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\StringNoCopyPaste.cshtml" />
+    <Content Include="Areas\TariffChange\Views\CreatePassword\CreatePassword.cshtml" />
+    <Content Include="Views\Shared\_Favicons.cshtml" />
+    <Content Include="Views\Shared\_CookiesMessage.cshtml" />
+    <Content Include="Areas\TariffChange\Views\Shared\Unavailable.cshtml" />
+    <Content Include="Areas\TariffChange\Views\AccountEligibility\PaymentMethodIneligible.cshtml" />
+    <Content Include="Views\Shared\PageNotFound.cshtml" />
+    <Content Include="Views\Shared\UnhandledError.cshtml" />
+    <Content Include="Areas\TariffChange\Views\Tariffs\CallUs.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\EmailAddress.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Password.cshtml" />
+    <Content Include="Areas\TariffChange\Views\AccountEligibility\_DataLayer.cshtml" />
+    <Content Include="Areas\TariffChange\Views\Tariffs\_CurrentTariff.cshtml" />
+    <Content Include="Areas\TariffChange\Views\Tariffs\_AvailableTariff.cshtml" />
+    <Content Include="Views\Shared\_RenewalModal.cshtml" />
+    <Content Include="Views\Shared\_BackChevron.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\StringWithHelpText.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DropDownList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\SortCode.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\AriaDropDownList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\AriaEnumDropDownList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\MultipleInputElement.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\AriaCheckBox.cshtml" />
+    <Content Include="Views\Shared\_ModalLoadingPartial.cshtml" />
+    <Content Include="Views\Shared\_PrintLayout.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\RadioButtonList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Numbers.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ButtonList.cshtml" />
+    <Content Include="Views\Shared\_ConfirmationModal.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\PhoneNumber.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TermsAndConditions.cshtml" />
+    <Content Include="Views\Shared\_SecureLogo.cshtml" />
+    <Content Include="Views\Shared\_SimpleLayout.cshtml" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Shared\_RadioButtonModal.cshtml" />
+    <Content Include="Views\Shared\_SvgDefs.cshtml" />
+    <Content Include="Views\Shared\_BroadbandPackageSpeed.cshtml" />
+    <Content Include="Views\Shared\_SelectTalkPackage.cshtml" />
+    <Content Include="Views\Shared\_KeepYourNumber.cshtml" />
+    <Content Include="Views\Shared\_FixNProtectBundleMegaModal.cshtml" />
+    <Content Include="Areas\Energy\Views\SignUp\_ExtrasItem.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\BaseSummaryExtra.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\BaseSummaryExtraWithModal.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\typings\bootstrap\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\common\Digital.Web.TalkPackageUpdate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\cookies\Digital.Web.Cookies.SetCookies.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery-validation-unobtrusive\jquery-validation-unobtrusive.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery.validation\jquery.validation.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\moment\moment.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\products\Digital.Web.Energy.Basket.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\products\Digital.Web.Energy.DirectDebitAmountUpdate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\products\Digital.Web.Energy.SummaryUpdate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\products\Digital.Web.Tariffs.Tab.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\typescript\typescript.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\utils\Digital.Web.Utils.Accordion.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\utils\Digital.Web.Utils.CloseAlert.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\utils\Digital.Web.Utils.ComboboxStyles.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\utils\Digital.Web.Utils.ForceRefreshOnBackNav.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\utils\Digital.Web.Utils.LoaderSvgAnimationPolyfill.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\utils\Digital.Web.Utils.Tooltips.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Broadband\Mappers\" />
+    <Folder Include="Areas\Broadband\Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Products.ControllerHelpers\Products.ControllerHelpers.csproj">
+      <Project>{7fc4445e-99a1-4e84-8d20-2b36c0a15c2d}</Project>
+      <Name>Products.ControllerHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Core\Products.Core.csproj">
+      <Project>{E40B2488-29F0-4ECA-B4BB-B7488D2C72C7}</Project>
+      <Name>Products.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Infrastructure\Products.Infrastructure.csproj">
+      <Project>{28bdc57f-5070-434c-9e9e-b9b021530a16}</Project>
+      <Name>Products.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Model\Products.Model.csproj">
+      <Project>{06d831a3-9db5-456c-86dd-ad82623f5381}</Project>
+      <Name>Products.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Repository\Products.Repository.csproj">
+      <Project>{78cb3d39-40fd-4f6c-a983-3b24a73a3969}</Project>
+      <Name>Products.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.ServiceWrapper\Products.ServiceWrapper.csproj">
+      <Project>{34854e22-3e2b-480c-a0bd-f2cb9f4ff03d}</Project>
+      <Name>Products.ServiceWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Service\Products.Service.csproj">
+      <Project>{45eff53c-e433-4b3a-ada4-60193521d35a}</Project>
+      <Name>Products.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.WebModel\Products.WebModel.csproj">
+      <Project>{a987e558-c360-4c3a-9b44-554e5eb6215b}</Project>
+      <Name>Products.WebModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50851</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50851/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>-->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <ItemGroup>
+      <ExtraWebConfigs Include="$(BaseIntermediateOutputPath)\**\web.config" />
+      <ExtraPackageTmp Include="$([System.IO.Directory]::GetDirectories(&quot;$(BaseIntermediateOutputPath)&quot;, &quot;PackageTmp&quot;, System.IO.SearchOption.AllDirectories))" />
+    </ItemGroup>
+    <Delete Files="@(ExtraWebConfigs)" />
+    <RemoveDir Directories="@(ExtraPackageTmp)" />
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+</Project>

@@ -1,0 +1,254 @@
+﻿@using Products.Core.Enums
+@using Products.Web.Helpers
+@using Products.WebModel.Resources.Energy
+@using Products.WebModel.ViewModels.Energy
+@model Products.WebModel.ViewModels.Energy.TariffsViewModel
+
+@*TARIFF HEADER*@
+<div class="row">
+    <div class="col-xs-12 no-overflow-container">
+        <span class="yearly-savings-highlight">
+            <span class="text">
+                <p class="save-text">@AvailableBundleTariffs_Resources.SaveTxt</p>
+                <span class="yearly-total">@Model.BundleProjectedYearlySavings</span>
+                <p>@AvailableBundleTariffs_Resources.YearlySavingsOverTxt</p>
+                <p>
+                    @if (Model.BundlePackageType == BundlePackageType.FixAndFibre)
+                    {
+                        @AvailableBundleTariffs_Resources.YearlySavings18MonthsTxt
+                    }
+                    else
+                    {
+                        @AvailableBundleTariffs_Resources.YearlySavings12MonthsTxt
+                    }
+                </p>
+            </span>
+        </span>
+        <div class="bundle-header">
+            <span class="text">
+                <span>@Model.DisplayName</span>
+                <h3>@Model.TariffTagLine</h3>
+            </span>
+        </div>
+    </div>
+</div>
+@{
+    string bundleDivContainerId = $"bundle-{Model.TariffId}";
+}
+<div class="bundle-details" id="@bundleDivContainerId">
+    <div class="row">
+        @*ENERGY*@
+        <div class="col-xs-12 col-md-6 half-padding-right">
+            <div class="product-details hide-section toggle no-margin-right">
+                <div class="wrapper">
+                    <div class="row product-title-container">
+                        <div class="col-xs-2 col-sm-1 col-md-12">
+                            <img src="@($"{WebClientHelper.Instance.BaseUrl}{Model.EnergyIconPath}")" />
+                        </div>
+                        <div class="col-xs-10 col-sm-11 col-md-12 bundle-product-title">
+                            <h3 class="type-heading">@AvailableBundleTariffs_Resources.EnergyLbl</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="price-row">
+                                <div class="row">
+                                    <div class="energy-monthly-breakdown">
+                                        @if (Model.HasGas)
+                                        {
+                                            <span>@AvailableTariffs_Resources.GasLabel<strong>@Model.ProjectedGasMonthlyCost</strong></span>
+                                        }
+                                        @if (Model.HasElectric)
+                                        {
+                                            <span class="electricity">@AvailableTariffs_Resources.ElecLabel<strong>@Model.ProjectedElectricityMonthlyCost</strong></span>
+                                        }
+                                    </div>
+                                    <div class="energy-total-monthly-cost">
+                                        @Model.ProjectedMonthlyEnergyCost
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="bullet-list tick-list list--spaced bundle-tariff-card">
+                                @foreach (TariffTickUspViewModel tariffTickUspViewModel in Model.EnergyTickUsps)
+                                {
+                                    <li>
+                                        <h4>@tariffTickUspViewModel.Header</h4>
+                                        <p>@tariffTickUspViewModel.Description</p>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="col-xs-12">
+                            <a class="modal-link" href="" data-toggle="modal" data-target="#@Model.TariffId" title="@AvailableTariffs_Resources.TILLinkAlt">
+                                @AvailableTariffs_Resources.MoreInfoLink
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*BUNDLED PRODUCT*@
+        <div class="col-xs-12 col-md-6 half-padding-left">
+            <div class="product-details hide-section toggle no-margin-left">
+                <div class="product-offer-banner hidden-sm hidden-md hidden-lg">
+                    @Model.BundlePackagePriceLbl
+                </div>
+                <div class="wrapper">
+                    <div class="row offer-banner-container hidden-xs">
+                        <div class="col-xs-12">
+                            <div class="product-offer-banner">
+                                <span>@Model.BundlePackagePriceLbl</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row product-title-container">
+                        <div class="col-xs-2 col-sm-1 col-md-12">
+                            <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/{Model.BundlePackageIconFileName}")" />
+                        </div>
+                        <div class="col-xs-10 col-sm-11 col-md-12 bundle-product-title">
+                            <h3 class="type-heading">@Model.BundlePackageDisplayText</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="bundle-price-row">
+                                <div class="row">
+                                    <div class="bundle-monthly-saving">
+                                        @Model.ProjectedBundlePackageMonthlySavings
+                                    </div>
+                                    <div class="bundle-monthly-cost-details">
+                                        <span class="bundle-orig-monthly-price">@Model.OriginalBundlePackageMonthlyCost</span>
+                                        <span class="bundle-monthly-total">@Model.ProjectedBundlePackageMonthlyCost</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="bullet-list tick-list list--spaced bundle-tariff-card">
+                                @foreach (TariffTickUspViewModel tariffTickUspViewModel in Model.BundlePackageTickUsps)
+                                {
+                                    <li>
+                                        <h4>@tariffTickUspViewModel.Header</h4>
+                                        <p>@tariffTickUspViewModel.Description</p>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="col-xs-12">
+                            <a class="modal-link" href="" data-toggle="modal" data-target="@Model.MoreInformationModalId" title="@AvailableBundleTariffs_Resources.TILLinkAlt">
+                                @AvailableTariffs_Resources.MoreInfoLink
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @*PRICE*@
+        <div class="col-xs-12 price-section-wrapper">
+            <div class="col-sm-6">
+                <div class="tariff-disclaimer hidden-xs no-padding-left">
+                    <span>
+                        <span class="disclaimer-2">@Model.BundleDisclaimer1Text</span>
+                        <span class="disclaimer-1">
+                            @Model.BundleDisclaimer2Text
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-6 price-section">
+                <div class="header-savings-text">
+                    <h4>@AvailableTariffs_Resources.PriceLabel</h4>
+                    <div class="monthly-savings">
+                        @Model.ProjectedBundlePackageMonthlySavings
+                    </div>
+                </div>
+                <div class="tariff-price">
+                    @{
+                        string[] projectedCost = Model.ProjectedMonthlyCost.Split('.');
+                    }
+                    @projectedCost[0]<span class="tariff-price-pence">@(projectedCost.Length > 1 ? $".{projectedCost[1]}" : string.Empty)</span>
+                </div>
+                <div class="annual-price">@AvailableTariffs_Resources.YearCostPrefix@Model.ProjectedYearlyCost @AvailableTariffs_Resources.YearCostSuffix</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @*EXPAND LINK*@
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { id = Model.SubmitFormId }))
+        {
+            @Html.Hidden("selectedTariffId", Model.TariffId)
+            @Html.AntiForgeryToken()
+            <div class="col-xs-12">
+                <div class="tariff-disclaimer">
+                    <div class="tariff-details">
+                        <fieldset class="hidden-sm hidden-md hidden-lg signup-mobile">
+                            <legend class="sr-only">@AvailableBundleTariffs_Resources.BundleSignupButtonAlt</legend>
+                            <input type="submit" data-formId="@Model.SubmitFormId" class="button button-primary @Model.SubmitButtonCssClass" value="@AvailableTariffs_Resources.SignupButtonText" />
+                        </fieldset>
+
+                        <a class="@Model.DetailsHeaderIconClass showHideTariffDetails button button-secondary"
+                           data-toggle-div-id="@bundleDivContainerId"
+                           data-is-shown="@Model.IsDataShown"
+                           href="#">
+                            @Model.DetailsHeader
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 hide-section toggle">
+                <div class="card-footer hidden-xs">
+                    <div class="col-sm-6 upgrade-section">
+                        <div class="text">
+                            <h4>@Model.UpgradeSectionHeaderText</h4>
+                            <p class="want-more-cover-text">@Model.UpgradeSectionBodyText</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 no-padding-right">
+                        <fieldset>
+                            <legend class="sr-only">@AvailableBundleTariffs_Resources.BundleSignupButtonAlt</legend>
+                            <input type="submit" data-formId="@Model.SubmitFormId" class="button button-primary large-button @Model.SubmitButtonCssClass" value="@AvailableTariffs_Resources.SignupButtonText" title="@AvailableTariffs_Resources.BundleSignupButtonAlt" />
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row">
+        @*DISCLAIMER SPLIT FOR MOBILE Only*@
+        <div class="col-xs-12 col-sm-6">
+            <div class="tariff-disclaimer">
+                <span>
+                    <span class="disclaimer-2 hidden-sm hidden-md hidden-lg">@Model.BundleDisclaimer1Text</span>
+                    <span class="disclaimer-1 hidden-sm hidden-md hidden-lg toggle">
+                        @Model.BundleDisclaimer2Text
+                    </span>
+                </span>
+            </div>
+            <div class="upgrade-section-wrapper hidden-sm hidden-md hidden-lg toggle">
+                <div class="upgrade-section">
+                    <div class="text">
+                        <h4>@Model.UpgradeSectionHeaderText</h4>
+                        <p class="want-more-cover-text">@Model.UpgradeSectionBodyText</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (Model.BundlePackageType == BundlePackageType.FixAndFibre)
+{
+    @Html.Partial("_BroadbandBundleMegaModal", Model.BroadbandMoreInformation)
+}
+else
+{
+    @Html.Partial("_FixNProtectBundleMegaModal", Model.HesMoreInformation)
+}

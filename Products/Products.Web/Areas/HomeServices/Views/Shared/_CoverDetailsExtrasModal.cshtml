@@ -1,0 +1,38 @@
+﻿@using Products.WebModel.Resources.HomeServices
+@model Products.WebModel.ViewModels.HomeServices.ProductExtrasViewModel
+<div id="@Model.ProductCode" class="modal fade no-padding" tabindex="-1" role="dialog" aria-labelledby="modal-title modal-body">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Common_Resources.ModalCloseButtonAlt">
+                    @Common_Resources.ModalCloseButtonText
+                </button>
+            </div>
+            <div class="modal-body centered">
+                <h2>Electrical Wiring Cover</h2>
+                <p class="gap-xl">@Model.ProductTagLine</p>
+                <div class="til-tcr include-list gap-xl">
+                    <h3>@CoverDetails_Resources.IncludedHeader:</h3>
+                    @foreach (var item in Model.WhatsIncluded)
+                    {
+                        <div class="row tick">
+                            <div>@item</div>
+                        </div>
+                    }
+                    
+                </div>
+                <div class="til-tcr include-list gap-xl">
+                    <h3>@CoverDetails_Resources.NotIncludedHeader:</h3>
+                    @foreach (var item in Model.WhatsExcluded)
+                    {
+                        <div class="row tick cross">
+                            <div>@item</div>
+                        </div>
+                    }
+
+                </div>
+                <button class="button button-primary" id="modal-button-text" data-dismiss="modal" title="@CoverDetails_Resources.BackToCoverButtonAlt">@CoverDetails_Resources.BackToCoverButtonText</button>
+            </div>
+        </div>
+    </div>
+</div>

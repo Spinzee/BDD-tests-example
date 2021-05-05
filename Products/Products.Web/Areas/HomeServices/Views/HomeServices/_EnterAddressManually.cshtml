@@ -1,0 +1,26 @@
+﻿@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.HomeServices.SelectAddressViewModel
+
+@using (Html.BeginForm("SelectAddress", "HomeServices"))
+{
+    <div class="form-group contain">
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.IsManual)
+        @Html.EditorFor(m => m.PropertyNumber)
+        @Html.EditorFor(m => m.AddressLine1)
+        @Html.EditorFor(m => m.AddressLine2)
+        @Html.EditorFor(m => m.Town)
+        @Html.EditorFor(m => m.County)
+        @Html.HiddenFor(a => a.AddressType)
+
+        @if (Model.HasValidAddress)
+        {
+            <div>@SelectAddressCommon_Resources.BackTo <a id="choose-address" href="#" title="@SelectAddressCommon_Resources.ChooseYourAddressLinkAlt">@SelectAddressCommon_Resources.ChooseYourAddressLinkText</a> </div>
+        }
+
+        <div class="form-group">
+            <input class="button button-primary" type="submit" value="@Resources.ButtonNextText" title="@Resources.ButtonNextSignUpAlt" />
+        </div>
+    </div>
+
+}

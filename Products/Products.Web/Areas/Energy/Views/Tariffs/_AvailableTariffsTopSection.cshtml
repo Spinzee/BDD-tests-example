@@ -1,0 +1,12 @@
+﻿@model Products.WebModel.ViewModels.Energy.AvailableTariffsViewModel
+
+<div class="full-width-box @Model.BannerClass no-main-margin gap-xl mobile-only-gap-top-xxxl bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>@Html.Raw(Model.HeaderText)<strong>@Model.Postcode</strong></h1>
+                <p>@Html.Raw(Model.HeaderParagraph)</p>
+            </div>
+        </div>
+    </div>
+</div>

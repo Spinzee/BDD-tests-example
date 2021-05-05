@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccordionHeader" xml:space="preserve">
+    <value>Full package details</value>
+  </data>
+  <data name="Bullet1" xml:space="preserve">
+    <value>Zero price hikes during your 18-month contract</value>
+  </data>
+  <data name="Bullet2" xml:space="preserve">
+    <value>Leave for free with our 60-Day Happiness Guarantee</value>
+  </data>
+  <data name="Bullet3" xml:space="preserve">
+    <value>Unlimited downloads</value>
+  </data>
+  <data name="Bullet4" xml:space="preserve">
+    <value>Wireless router</value>
+  </data>
+  <data name="Bullet5" xml:space="preserve">
+    <value>48-hour presale access to event tickets with SSE Reward</value>
+  </data>
+  <data name="BulletListHeader" xml:space="preserve">
+    <value>Your package includes:</value>
+  </data>
+  <data name="ButtonAlt" xml:space="preserve">
+    <value>Link to start signing up to this broadband and phone package</value>
+  </data>
+  <data name="ButtonText" xml:space="preserve">
+    <value>Sign up now</value>
+  </data>
+  <data name="CallOptionsHeader" xml:space="preserve">
+    <value>Your phone</value>
+  </data>
+  <data name="InstallationHeader" xml:space="preserve">
+    <value>About your £60 phone line installation fee</value>
+  </data>
+  <data name="InstallationText" xml:space="preserve">
+    <value>It doesn’t look like you have an active Openreach/BT phone line, so we'll contact you to arrange a date for an engineer to install one. We'll let you know if they need access to your home as you'll need to be there. There's a one-off charge of £60 which we'll add to a future bill.</value>
+  </data>
+  <data name="DetailsLink" xml:space="preserve">
+    <value>Product summary</value>
+  </data>
+  <data name="DetailsLinkAlt" xml:space="preserve">
+    <value>Link to see full details of this call package</value>
+  </data>
+  <data name="DownloadLabel" xml:space="preserve">
+    <value>maximum download speed</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Your package details</value>
+  </data>
+  <data name="InfoLink" xml:space="preserve">
+    <value>What does this speed mean?</value>
+  </data>
+  <data name="InfoLinkAlt" xml:space="preserve">
+    <value>Link to more information about what this speed means</value>
+  </data>
+  <data name="LineFeatureDisclaimer" xml:space="preserve">
+    <value>Any call features you have with your current provider may be transferred to us. These features are listed in the &lt;a target="_blank" href="/Areas/Common/Content/PDFs/SSE Phone Product and Price Guide (19 range).pdf" title="Link to open SSE Phone Product and Price Guide PDF"&gt;SSE Phone Product and Price Guide&lt;/a&gt;, and some will involve an ongoing monthly charge. If you’d like to add or change any of these call features, please get in touch after your phone service starts.</value>
+  </data>
+  <data name="MinimumLabel" xml:space="preserve">
+    <value> minimum download speed</value>
+  </data>
+  <data name="Option1" xml:space="preserve">
+    <value>Line Rental only</value>
+  </data>
+  <data name="Option1Info" xml:space="preserve">
+    <value>Pay for phone calls as you make them</value>
+  </data>
+  <data name="Option2" xml:space="preserve">
+    <value>Anytime</value>
+  </data>
+  <data name="Option2Info" xml:space="preserve">
+    <value>Includes local, national and UK mobile calls made at any time</value>
+  </data>
+  <data name="Option3" xml:space="preserve">
+    <value>Anytime Plus</value>
+  </data>
+  <data name="Option3Info" xml:space="preserve">
+    <value>Includes local, national and UK mobile calls made at any time, plus international calls to landlines in 35 countries</value>
+  </data>
+  <data name="OtherPackageLinkText" xml:space="preserve">
+    <value>See other package speeds</value>
+  </data>
+  <data name="OtherPackageLinkTitle" xml:space="preserve">
+    <value>Link to see the other broadband and phone packages available.</value>
+  </data>
+  <data name="OtherPackagesLink" xml:space="preserve">
+    <value>See other package speeds</value>
+  </data>
+  <data name="OtherPackagesLinkAlt" xml:space="preserve">
+    <value>Link to see the other broadband and phone packages available.</value>
+  </data>
+  <data name="Prefix" xml:space="preserve">
+    <value>Your estimated </value>
+  </data>
+  <data name="PremiumNumberExclusion" xml:space="preserve">
+    <value>Please be aware that our call packages do not allow calls to be made to premium rate numbers beginning 09.</value>
+  </data>
+  <data name="SemiColon" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="SpeedUnits" xml:space="preserve">
+    <value>Mbps</value>
+  </data>
+  <data name="SubHeader" xml:space="preserve">
+    <value>Your broadband</value>
+  </data>
+  <data name="Suffix" xml:space="preserve">
+    <value> for</value>
+  </data>
+  <data name="Suffix2" xml:space="preserve">
+    <value> is</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Sign-up for broadband and phone – Package details - SSE</value>
+  </data>
+  <data name="UploadLabel" xml:space="preserve">
+    <value>upload speed range</value>
+  </data>
+  <data name="DataHandlingAccessibilityText" xml:space="preserve">
+    <value>Link to SSE’s Privacy Policy (opens in new Window)</value>
+  </data>
+  <data name="DataHandlingText" xml:space="preserve">
+    <value>Find out how we use the information you give us.</value>
+  </data>
+  <data name="DataHandlingURL" xml:space="preserve">
+    <value>https://sse.co.uk/about-us/legal/privacy-policy</value>
+  </data>
+  <data name="Option4" xml:space="preserve">
+    <value>Evening &amp; Weekend</value>
+  </data>
+  <data name="Option4Info" xml:space="preserve">
+    <value>Includes local, national and UK mobile calls during evenings and weekends</value>
+  </data>
+  <data name="AccordionParagraph1" xml:space="preserve">
+    <value>Our 17 range Phone and Broadband packages have no connection charges for SSE Energy customers. You must be joining us or live at the same supply address with an SSE gas and/or electricity account to pay no connection charge. After 12 months, non-SSE Energy customers will pay a £{1} per month surcharge on their Phone and Broadband package. A one off initial £{0} connection charge is also applicable and will be applied to their first monthly bill.</value>
+  </data>
+  <data name="AccordionParagraph2" xml:space="preserve">
+    <value>The fixed monthly package price for your Phone is your monthly line rental price and monthly call package price (should you have one). The fixed monthly package price for your Broadband is your monthly broadband charge. For non-SSE Energy customers, the monthly package price will be fixed for 12 months from your Phone and Broadband start date. After this time, your monthly package price will increase by £{0} per month. For SSE Energy customers, the monthly package price will be fixed for three years from your Phone and Broadband start date. The only exception will be any increases to VAT or any other relevant tax/levy.</value>
+  </data>
+  <data name="TermsAndConditionsPDFAlt" xml:space="preserve">
+    <value>Link to open {0} terms and conditions PDF</value>
+  </data>
+</root>

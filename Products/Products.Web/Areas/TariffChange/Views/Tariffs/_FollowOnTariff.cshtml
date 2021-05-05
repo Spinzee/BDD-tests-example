@@ -1,0 +1,113 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.TariffChange
+@model Products.WebModel.ViewModels.TariffChange.TariffsViewModel
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>@Model.FuelTypeHeader</h1>
+        <h3 class="tariff-subheader">@Html.Raw(Model.NewTariffSubHeader)</h3>
+        <p>@Html.Raw(Model.NewTariffParagraph1)</p>
+        <p>@AvailableTariffs_Resources.NewTariffParagraph2</p>
+        <ul class="bullet-list gap-lg">
+            <li>
+                @AvailableTariffs_Resources.NewTariffBulletLine1
+                @if (Model.CurrentTariffViewModel.GasDetails != null)
+                {
+                    <span id="usage-gas-annual">Gas = <strong>@Model.CurrentTariffViewModel.GasAnnualUsage</strong> kWh</span>
+                }
+                @if (Model.CurrentTariffViewModel.ElectricityDetails != null)
+                {
+                    if (Model.HasMultiRateMeter)
+                    {
+                        <span id="usage-elec--total">Electricity total = <strong>@Model.CurrentTariffViewModel.ElectricityAnnualUsage</strong> kWh</span>
+                        <span id="usage-elec--day-peak-std">@Model.CurrentTariffViewModel.DayOrStandardLabel  = <strong>@Math.Round(Model.CurrentTariffViewModel.ElectricityAnnualUsageDayOrStandard, 2)</strong> kWh</span>
+                        <span id="usage-elec--night-offpeak">@Model.CurrentTariffViewModel.NightOrOffPeakLabel = <strong>@Math.Round(Model.CurrentTariffViewModel.ElectricityAnnualUsageNightOrOffPeak, 2)</strong> kWh</span>
+                    }
+                    else
+                    {
+                        <span id="usage-elec-annual">Electricity = <strong>@Model.CurrentTariffViewModel.ElectricityAnnualUsage</strong> kWh</span>
+                    }
+                }<br />
+                @AvailableTariffs_Resources.NewTariffBulletLine2
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="current-tariff no-margin-top">
+    <h2 class="tariff-heading tariff-heading--current">@AvailableTariffs_Resources.NewTariffHeader</h2>
+    <div class="current-tariff-info js-tariff-container">
+        <div class="current-tariff-info__name">
+            <h3 class="h2-like tariff-display-name">@HtmlHelpers.HandleVersionSuperscript(Model.FollowOnTariff.DisplayName, "version")</h3>
+        </div>
+        <div class="current-tariff-info__price">
+            <div class="wrapper">
+                <div class="wrapper-inner tariff-cost tariff-cost--centered">
+                    <div>@AvailableTariffs_Resources.NewTariffMonthlyCostHeader</div>
+                    <div class="tariff-price">
+                        @HtmlHelpers.HandlePenceSuperscript(Model.FollowOnTariff.ProjectedMonthlyCost, "tariff-price-pence")
+                    </div>
+                    <div>@AvailableTariffs_Resources.NewTariffYearlyCostHeader @Model.FollowOnTariff.ProjectedAnnualCost</div>
+                </div>
+            </div>
+        </div>
+        <div class="current-tariff-info__details">
+            <div class="h3-like no-margin">@Model.NewTariffStartMessage</div>
+            <ul class="bullet-list gap-lg">
+                <li>@Html.Raw(Model.BulletText)</li>
+            </ul>
+            @if (Model.FollowOnTariff.ElectricityDetails?.AnnualCostValue > 0 || Model.FollowOnTariff.GasDetails?.AnnualCostValue > 0)
+            {
+                <div class="tariff-breakdown">
+                    <div class="qa-projected-monthly">
+                        Average monthly cost breakdown:
+                        @if (Model.FollowOnTariff.GasDetails?.AnnualCostValue > 0)
+                        {
+                            <span id="usage-gas-month">Gas = @(Model.FollowOnTariff.GasDetails?.MonthlyCost)</span>
+                        }
+                        @if (Model.FollowOnTariff.ElectricityDetails?.AnnualCostValue > 0)
+                        {
+                            <span id="usage-elec-month">Electricity = @(Model.FollowOnTariff.ElectricityDetails?.MonthlyCost)</span>
+                        }
+                    </div>
+                    <div class="qa-projected-annual">
+                        Projected annual cost breakdown:
+                        @if (Model.FollowOnTariff.GasDetails?.AnnualCostValue > 0)
+                        {
+                            <span id="usage-gas-annual">Gas = @(Model.FollowOnTariff.GasDetails?.AnnualCost)</span>
+                        }
+                        @if (Model.FollowOnTariff.ElectricityDetails?.AnnualCostValue > 0)
+                        {
+                            <span id="usage-elec-annual">Electricity = @(Model.FollowOnTariff.ElectricityDetails?.AnnualCost)</span>
+                        }
+                    </div>
+
+                    @if (Model.FollowOnTariff.GasDetails != null)
+                    {
+                        @Html.ActionLink(AvailableTariffs_Resources.GasInformationLinkText, "", "", null, new { @Data_tariff = Model.FollowOnTariff.HtmlSafeName, @Data_fuel = "Gas", @Class = "icon-link btnViewFuelDetails", @Data_toggle = "modal", @Data_target = "#fuel-modal", @Title = "Open gas information for this tariff" })
+                    }
+                    @if (Model.FollowOnTariff.ElectricityDetails != null)
+                    {
+                        @Html.ActionLink(AvailableTariffs_Resources.ElectricityInformationLinkText, "", "", null, new { @Data_tariff = Model.FollowOnTariff.HtmlSafeName, @Data_fuel = "Electricity", @Class = "icon-link btnViewFuelDetails", @Data_toggle = "modal", @Data_target = "#fuel-modal", @Title = "Open electricity information for this tariff" })
+                    }
+                </div>
+            }
+
+            @* json encoded tariff data used by TIL TCR modal only, not sent to server in form *@
+            @Html.Hidden("encodedSelectedTariff", Json.Encode(Model.FollowOnTariff), new { @class = "js-tariff-data" })
+        </div>
+        <div class="tariff__button">
+            @using (Html.BeginForm("SelectFollowOnTariff", "Tariffs", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <input class="button button-primary" type="submit" value="Select tariff" title="Select tariff" />
+            }
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <p>@AvailableTariffs_Resources.DefaultTariffDisclaimer</p>
+    </div>
+</div>

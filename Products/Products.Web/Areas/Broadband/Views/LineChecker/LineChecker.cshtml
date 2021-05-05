@@ -1,0 +1,29 @@
+﻿@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.Broadband.LineCheckerViewModel
+@{
+    ViewBag.Title = LineChecker_Resources.Title;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1 class="gap">@Landline_Resources.Header</h1>
+            @using (Html.BeginForm("Submit", "LineChecker", FormMethod.Post))
+            {
+                @Html.HiddenFor(x => x.ProductCode)
+                @Html.AntiForgeryToken()
+                @Html.EditorFor(m => m.PostCode)
+                @Html.EditorFor(m => m.PhoneNumber)
+                <p>@Landline_Resources.ListHeading</p>
+                <ul class="bullet-list">
+                    <li>@Landline_Resources.Bullet1</li>
+                    <li>@Landline_Resources.Bullet2</li>
+                </ul>
+                @Html.Partial("~/Views/Shared/_WhereIsMyNumberModal.cshtml")
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Common_Resources.ButtonNextText" id="button-submit" name="button-submit" title="@Landline_Resources.ButtonAlt" />
+                </div>
+            }
+        </div>
+    </div>
+</div>

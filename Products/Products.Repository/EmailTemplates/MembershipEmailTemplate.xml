@@ -1,0 +1,59 @@
+﻿<root>
+  <FromEmail></FromEmail>
+  <ToEmail></ToEmail>
+  <Subject>Membership sign up details</Subject>
+  <Body bgcolor="#FFFFFF" text="#000000">
+
+    <table>
+      <tr>
+        <td>
+          Campaign ID
+        </td>
+        <td>
+          [$CAMPAIGNID]
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Name
+        </td>
+        <td>
+          [$NAME]
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Address
+        </td>
+        <td>
+          [$ADDRESS]
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Email address
+        </td>
+        <td>
+          [$EMAIL]
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Phone number
+        </td>
+        <td>
+          [$PHONE]
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Membership number
+        </td>
+        <td>
+          [$MEMBERSHIPID]
+        </td>
+      </tr>
+    </table>
+  </Body>
+</root>
+ 

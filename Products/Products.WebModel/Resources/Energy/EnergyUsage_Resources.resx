@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Header" xml:space="preserve">
+    <value>Do you know how much energy you use?</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Sign up for energy – Energy usage - SSE</value>
+  </data>
+  <data name="Radio1Text" xml:space="preserve">
+    <value>Per year</value>
+  </data>
+  <data name="Radio1AreaDescription" xml:space="preserve">
+    <value>This is the option to select to enter your energy usage per year.</value>
+  </data>
+  <data name="Radio2Text" xml:space="preserve">
+    <value>Per month</value>
+  </data>
+  <data name="Radio2AreaDescription" xml:space="preserve">
+    <value>This is the option to select to enter your energy usage per month.</value>
+  </data>
+  <data name="Paragraph1" xml:space="preserve">
+    <value>Your yearly usage lets us give you the most accurate quote. Find your yearly kWh on your annual statement from your current supplier, or possibly your online account.</value>
+  </data>
+  <data name="ElectricityUsageAriaDescription" xml:space="preserve">
+    <value>We’ll use the electricity usage you enter to work out your quote.</value>
+  </data>
+  <data name="GasUsageAriaDescription" xml:space="preserve">
+    <value>We’ll use the gas usage you enter to work out your quote.</value>
+  </data>
+  <data name="Paragraph2" xml:space="preserve">
+    <value>Don’t know your usage? Just answer three questions and we’ll quote you based on how much energy we think you use.</value>
+  </data>
+  <data name="MultiQuestion1Answer1" xml:space="preserve">
+    <value>Mid terrace</value>
+  </data>
+  <data name="MultiQuestion1Answer2" xml:space="preserve">
+    <value>End terrace</value>
+  </data>
+  <data name="MultiQuestion1Answer3" xml:space="preserve">
+    <value>Semi-detached House</value>
+  </data>
+  <data name="MultiQuestion1Answer4" xml:space="preserve">
+    <value>Detached House</value>
+  </data>
+  <data name="MultiQuestion1Answer5" xml:space="preserve">
+    <value>Bungalow</value>
+  </data>
+  <data name="MultiQuestion1Answer6" xml:space="preserve">
+    <value>Flat</value>
+  </data>
+  <data name="MultiQuestion1Answer7" xml:space="preserve">
+    <value>Converted Flat</value>
+  </data>
+  <data name="MultiQuestion2Answer1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MultiQuestion2Answer2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="MultiQuestion2Answer3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="MultiQuestion2Answer4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="MultiQuestion2Answer5" xml:space="preserve">
+    <value>5+</value>
+  </data>
+  <data name="Question1" xml:space="preserve">
+    <value>1. What kind of property do you have?</value>
+  </data>
+  <data name="Question2" xml:space="preserve">
+    <value>2. How many bedrooms are there?</value>
+  </data>
+  <data name="Question3" xml:space="preserve">
+    <value>3. How many adults over the age of 16 live in your property?</value>
+  </data>
+  <data name="Toggle1Prefix" xml:space="preserve">
+    <value>I know </value>
+  </data>
+  <data name="Toggle1Suffix" xml:space="preserve">
+    <value>my usage</value>
+  </data>
+  <data name="Toggle2Text" xml:space="preserve">
+    <value>I don’t know my usage</value>
+  </data>
+  <data name="RadioAriaDescriptionAdults1" xml:space="preserve">
+    <value>Choose this if one adult lives in your property</value>
+  </data>
+  <data name="RadioAriaDescriptionAdults2" xml:space="preserve">
+    <value>Choose this if two adults live in your property</value>
+  </data>
+  <data name="RadioAriaDescriptionAdults3" xml:space="preserve">
+    <value>Choose this if three adults live in your property</value>
+  </data>
+  <data name="RadioAriaDescriptionAdults4" xml:space="preserve">
+    <value>Choose this if four adults live in your property</value>
+  </data>
+  <data name="RadioAriaDescriptionAdults5" xml:space="preserve">
+    <value>Choose this if five or more adults live in your property</value>
+  </data>
+  <data name="RadioAriaDescriptionBedrooms1" xml:space="preserve">
+    <value>Choose this if you have one bedroom in your property</value>
+  </data>
+  <data name="RadioAriaDescriptionBedrooms2" xml:space="preserve">
+    <value>Choose this if there’s two bedrooms in your property</value>
+  </data>
+  <data name="RadioAriaDescriptionBedrooms3" xml:space="preserve">
+    <value>Choose this if there’s three bedrooms in your property</value>
+  </data>
+  <data name="RadioAriaDescriptionBedrooms4" xml:space="preserve">
+    <value>Choose this if there’s four bedrooms in your property</value>
+  </data>
+  <data name="RadioAriaDescriptionBedrooms5" xml:space="preserve">
+    <value>Choose this if there’s five or more bedrooms in your property</value>
+  </data>
+  <data name="RadioAriaDescriptionPropertyType1" xml:space="preserve">
+    <value>Selects mid terrace as your property type</value>
+  </data>
+  <data name="RadioAriaDescriptionPropertyType2" xml:space="preserve">
+    <value>Selects end terrace as your property type</value>
+  </data>
+  <data name="RadioAriaDescriptionPropertyType3" xml:space="preserve">
+    <value>Selects Semi-detached house as your property type</value>
+  </data>
+  <data name="RadioAriaDescriptionPropertyType4" xml:space="preserve">
+    <value>Selects Detached house as your property type</value>
+  </data>
+  <data name="RadioAriaDescriptionPropertyType5" xml:space="preserve">
+    <value>Selects Bungalow as your property type</value>
+  </data>
+  <data name="RadioAriaDescriptionPropertyType6" xml:space="preserve">
+    <value>Selects flat as your property type</value>
+  </data>
+  <data name="RadioAriaDescriptionPropertyType7" xml:space="preserve">
+    <value>Selects converted flat as your property type</value>
+  </data>
+  <data name="RadioHeadingAdults1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadioHeadingAdults2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RadioHeadingAdults3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadioHeadingAdults4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RadioHeadingAdults5" xml:space="preserve">
+    <value>5+</value>
+  </data>
+  <data name="RadioHeadingBedrooms1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadioHeadingBedrooms2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RadioHeadingBedrooms3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadioHeadingBedrooms4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RadioHeadingBedrooms5" xml:space="preserve">
+    <value>5+</value>
+  </data>
+  <data name="RadioHeadingPropertyType1" xml:space="preserve">
+    <value>Mid terrace</value>
+  </data>
+  <data name="RadioHeadingPropertyType2" xml:space="preserve">
+    <value>End terrace</value>
+  </data>
+  <data name="RadioHeadingPropertyType3" xml:space="preserve">
+    <value>Semi-detached house</value>
+  </data>
+  <data name="RadioHeadingPropertyType4" xml:space="preserve">
+    <value>Detached house</value>
+  </data>
+  <data name="RadioHeadingPropertyType5" xml:space="preserve">
+    <value>Bungalow</value>
+  </data>
+  <data name="RadioHeadingPropertyType6" xml:space="preserve">
+    <value>Flat</value>
+  </data>
+  <data name="RadioHeadingPropertyType7" xml:space="preserve">
+    <value>Converted flat</value>
+  </data>
+  <data name="Economy7ElecricityDayUsageAriaDescription" xml:space="preserve">
+    <value>We’ll use the day electricity usage you enter to work out your quote.</value>
+  </data>
+  <data name="Economy7ElectricityNightUsageAriaDescription" xml:space="preserve">
+    <value>We’ll use the night electricity usage you enter to work out your quote.</value>
+  </data>
+</root>

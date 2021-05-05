@@ -1,0 +1,28 @@
+﻿@using Products.WebModel.Resources.Energy
+
+@model string
+
+<div id="tilModal" class="modal fade no-padding" tabindex="-1" role="dialog" aria-labelledby="modal-title modal-body">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="Close dialogue box"></button>
+            </div>
+            <div class="modal-body">
+                <h2>@Model information</h2>
+                <div>
+                    <div class="til-tcr"></div>
+                    <br>
+                    <p>@AvailableTariffs_Resources.TILParagraphUnderInformation</p>
+                    <h2>@AvailableTariffs_Resources.TILFAQHeader</h2>
+
+                    <h4>@AvailableTariffs_Resources.TilSubHeader</h4>
+                    <p>@AvailableTariffs_Resources.TilSubHeaderParagraph</p>
+
+                    <h4>@AvailableTariffs_Resources.TILSwitchSubHeader</h4>
+                    <p>@AvailableTariffs_Resources.TILSwitchParagraph <a href="@AvailableTariffs_Resources.TILSwitchLinkUrl" title="@AvailableTariffs_Resources.TILSwitchLinkAlt">@AvailableTariffs_Resources.TILSwitchLinkText</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

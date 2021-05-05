@@ -1,0 +1,1025 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A987E558-C360-4C3A-9B44-554E5EB6215B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Products.WebModel</RootNamespace>
+    <AssemblyName>Products.WebModel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AriaDescriptionAttribute.cs" />
+    <Compile Include="Attributes\BlockedEmailAttribute.cs" />
+    <Compile Include="Attributes\HelpTextAttribute.cs" />
+    <Compile Include="Attributes\LocalisedDescription.cs" />
+    <Compile Include="Attributes\MustBeTrueAttribute.cs" />
+    <Compile Include="Attributes\ProgressiveCheckboxAttribute.cs" />
+    <Compile Include="Attributes\RequiredIfAttribute.cs" />
+    <Compile Include="Attributes\ValidDateOfBirthAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Broadband\AvailablePackages_Resources.Designer.cs">
+      <DependentUpon>AvailablePackages_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\BankDetails_Resources.Designer.cs">
+      <DependentUpon>BankDetails_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\Common_Resources.Designer.cs">
+      <DependentUpon>Common_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\Confirmation_Resources.Designer.cs">
+      <DependentUpon>Confirmation_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\ContactDetails_Resources.Designer.cs">
+      <DependentUpon>ContactDetails_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\DataLayer_Resources.Designer.cs">
+      <DependentUpon>DataLayer_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\ExistingCustomer_Resources.Designer.cs">
+      <DependentUpon>ExistingCustomer_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\Fallout_Resources.Designer.cs">
+      <DependentUpon>Fallout_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\LineChecker_Resources.Designer.cs">
+      <DependentUpon>LineChecker_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\OnlineAccount_Resources.Designer.cs">
+      <DependentUpon>OnlineAccount_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\PersonalDetails_Resources.Designer.cs">
+      <DependentUpon>PersonalDetails_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\ProductDetails_Resources.Designer.cs">
+      <DependentUpon>ProductDetails_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\SelectAddress_Resources.Designer.cs">
+      <DependentUpon>SelectAddress_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\SelectedPackageModal_Resources.Designer.cs">
+      <DependentUpon>SelectedPackageModal_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\SelectedPackage_Resources.Designer.cs">
+      <DependentUpon>SelectedPackage_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\StepCount_Resources.Designer.cs">
+      <DependentUpon>StepCount_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\Summary_Resources.Designer.cs">
+      <DependentUpon>Summary_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\TransferYourNumber_Resources.Designer.cs">
+      <DependentUpon>TransferYourNumber_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Broadband\YourPrice_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YourPrice_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\AreaNotCovered_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AreaNotCovered_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\BankDetailsCommon_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankDetailsCommon_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\BroadbandPackageSpeed_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BroadbandPackageSpeed_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\ContactDetailsCommon_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContactDetailsCommon_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\DirectDebitMandate_Resources.Designer.cs">
+      <DependentUpon>DirectDebitMandate_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\Extras_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Extras_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\Form_Resources.Designer.cs">
+      <DependentUpon>Form_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Common\JavascriptDisabled_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JavascriptDisabled_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\Landline_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Landline_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\ProductFeatures_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductFeatures_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\Promotional_Resources.Designer.cs">
+      <DependentUpon>Promotional_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Common\SelectAddressCommon_Resources.Designer.cs">
+      <DependentUpon>SelectAddressCommon_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Common\SelectTalkPackage_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectTalkPackage_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\SummaryCommon_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SummaryCommon_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\Tariff_Resources.Designer.cs">
+      <DependentUpon>Tariff_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Common\KeepYourNumber_Resources.Designer.cs">
+      <DependentUpon>KeepYourNumber_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\Accordion_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accordion_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Energy\AvailableBundleTariffs_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvailableBundleTariffs_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Energy\DataLayer_Resources.Designer.cs">
+      <DependentUpon>DataLayer_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\Confirmation_Resources.Designer.cs">
+      <DependentUpon>Confirmation_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\EnergyUsage_Resources.Designer.cs">
+      <DependentUpon>EnergyUsage_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\AvailableTariffs_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvailableTariffs_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Energy\Common_Resources.Designer.cs">
+      <DependentUpon>Common_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\Fallout_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fallout_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Energy\OnlineAccount_Resources.Designer.cs">
+      <DependentUpon>OnlineAccount_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\OurPrices_Resources.Designer.cs">
+      <DependentUpon>OurPrices_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\PhonePackage_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhonePackage_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Energy\SelectAddress_Resources.Designer.cs">
+      <DependentUpon>SelectAddress_Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Resources\Energy\SelectBTAddress_Resources.Designer.cs">
+      <DependentUpon>SelectBTAddress_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Common\PersonalDetailsCommon_Resources.Designer.cs">
+      <DependentUpon>PersonalDetailsCommon_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\SmartMeter_Resources.Designer.cs">
+      <DependentUpon>SmartMeter_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\MeterType_Resources.Designer.cs">
+      <DependentUpon>MeterType_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\PaymentMethod_Resources.Designer.cs">
+      <DependentUpon>PaymentMethod_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\SelectFuel_Resources.Designer.cs">
+      <DependentUpon>SelectFuel_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\Postcode_Resources.Designer.cs">
+      <DependentUpon>Postcode_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\ExistingCustomer_Resources.Designer.cs">
+      <DependentUpon>ExistingCustomer_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Energy\Summary_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Summary_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Energy\Upgrades_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Upgrades_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\HomeServices\Accordion_Resources.Designer.cs">
+      <DependentUpon>Accordion_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\HomeServices\Confirmation_Resources.Designer.cs">
+      <DependentUpon>Confirmation_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\HomeServices\DataLayer_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataLayer_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\HomeServices\Fallout_Resources.Designer.cs">
+      <DependentUpon>Fallout_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\HomeServices\SelectAddress_Resources.Designer.cs">
+      <DependentUpon>SelectAddress_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\HomeServices\Common_Resources.Designer.cs">
+      <DependentUpon>Common_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\HomeServices\EnterPostcode_Resources.Designer.cs">
+      <DependentUpon>EnterPostcode_Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\HomeServices\Summary_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Summary_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\HomeServices\YourCoverBasket_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YourCoverBasket_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Energy\YourPrice_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YourPrice_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\AriaDescriptions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AriaDescriptions.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\AvailableTariffs_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvailableTariffs_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\Confirmation_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Confirmation_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\ConfirmDetails_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfirmDetails_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\CreatePassword_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreatePassword_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\DataLayer_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataLayer_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\Fallout_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fallout_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\FuelInformation_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuelInformation_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\GetCustomerEmail_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetCustomerEmail_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\IdentifyCustomer_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IdentifyCustomer_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\MultipleAddressSelection_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultipleAddressSelection_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\ProgressBar_Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgressBar_Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common\RegularExpressionConstants.cs" />
+    <Compile Include="Resources\Common\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TariffChange\TariffSummary_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TariffSummary_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Broadband\AddressViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\AvailablePackagesViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\AvailableProductViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\AvailableTalkPackagesViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\BankDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\CannotCompleteOnlineViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\Extensions\BroadbandTypeExtensions.cs" />
+    <Compile Include="ViewModels\Broadband\Extensions\TalkCodeExtensions.cs" />
+    <Compile Include="ViewModels\Common\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\ConfirmationViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\ContactDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\DataLayerViewModel.cs" />
+    <Compile Include="ViewModels\Common\BroadbandPackageSpeedViewModel.cs" />
+    <Compile Include="ViewModels\Common\DirectDebitMandateViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\DropDownList.cs" />
+    <Compile Include="ViewModels\Broadband\ExistingCustomerViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\LineCheckerViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\OnlineAccountViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\PersonalDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\SelectAddressViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\SelectedPackageViewModel.cs" />
+    <Compile Include="ViewModels\Broadband\SummaryViewModel.cs" />
+    <Compile Include="ViewModels\Common\TalkProductModalViewModel.cs" />
+    <Compile Include="ViewModels\Common\TalkProductViewModel.cs" />
+    <Compile Include="ViewModels\Common\ButtonList.cs" />
+    <Compile Include="ViewModels\Common\ConfirmationModalViewModel.cs" />
+    <Compile Include="ViewModels\Common\Modal.cs" />
+    <Compile Include="ViewModels\Common\RightHandImage.cs" />
+    <Compile Include="ViewModels\Common\SelectTalkPackageViewModel.cs" />
+    <Compile Include="ViewModels\Common\TermsAndConditionsPdfLink.cs" />
+    <Compile Include="ViewModels\Common\Titles.cs" />
+    <Compile Include="ViewModels\Broadband\TransferYourNumberViewModel.cs" />
+    <Compile Include="ViewModels\Common\KeepYourNumberViewModel.cs" />
+    <Compile Include="ViewModels\Common\YesNoNotSetOptions.cs" />
+    <Compile Include="ViewModels\Broadband\YourPriceViewModel.cs" />
+    <Compile Include="ViewModels\Common\BackChevronViewModel.cs" />
+    <Compile Include="ViewModels\Common\RadioButtonList.cs" />
+    <Compile Include="ViewModels\Common\RadioButton.cs" />
+    <Compile Include="ViewModels\Energy\BaseSummaryExtraWithModal.cs" />
+    <Compile Include="ViewModels\Energy\BroadbandMoreInformationViewModel.cs" />
+    <Compile Include="ViewModels\Energy\BTAddressViewModel.cs" />
+    <Compile Include="ViewModels\Energy\BankDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Energy\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Energy\ConfirmAddressViewModel.cs" />
+    <Compile Include="ViewModels\Energy\ConfirmationCrossSellBannerViewModel.cs" />
+    <Compile Include="ViewModels\Energy\ContactDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Energy\ConfirmationViewModel.cs" />
+    <Compile Include="ViewModels\Energy\DataLayerViewModel.cs" />
+    <Compile Include="ViewModels\Energy\EnergyUsageViewModel.cs" />
+    <Compile Include="ViewModels\Energy\ExtrasItemViewModel.cs" />
+    <Compile Include="ViewModels\Energy\BaseSummaryExtra.cs" />
+    <Compile Include="ViewModels\Energy\BundleUpgradeViewModel.cs" />
+    <Compile Include="ViewModels\Energy\ExtrasViewModel.cs" />
+    <Compile Include="ViewModels\Energy\HesMoreInformationViewModel.cs" />
+    <Compile Include="ViewModels\Energy\KnownEnergyUsageViewModel.cs" />
+    <Compile Include="ViewModels\Energy\NewInstallationViewModel.cs" />
+    <Compile Include="ViewModels\Energy\OnlineAccountViewModel.cs" />
+    <Compile Include="ViewModels\Energy\OurPriceProductViewModel.cs" />
+    <Compile Include="ViewModels\Energy\OurPricesViewModel.cs" />
+    <Compile Include="ViewModels\Energy\PersonalDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Energy\PhonePackageViewModel.cs" />
+    <Compile Include="ViewModels\Energy\SelectAddressViewModel.cs" />
+    <Compile Include="ViewModels\Energy\SmartMeterFrequencyViewModel.cs" />
+    <Compile Include="ViewModels\Energy\SelectedExtraViewModel.cs" />
+    <Compile Include="ViewModels\Energy\SummaryViewModel.cs" />
+    <Compile Include="ViewModels\Energy\TariffInformationLabelViewModel.cs" />
+    <Compile Include="ViewModels\Energy\AvailableTariffsViewModel.cs" />
+    <Compile Include="ViewModels\Energy\ExistingCustomerViewModel.cs" />
+    <Compile Include="ViewModels\Energy\SelectMeterTypeViewModel.cs" />
+    <Compile Include="ViewModels\Energy\SelectPaymentMethodViewModel.cs" />
+    <Compile Include="ViewModels\Energy\PostcodeViewModel.cs" />
+    <Compile Include="ViewModels\Energy\SelectFuelViewModel.cs" />
+    <Compile Include="ViewModels\Energy\SelectSmartMeterViewModel.cs" />
+    <Compile Include="ViewModels\Energy\TariffsViewModel.cs" />
+    <Compile Include="ViewModels\Energy\TariffTickUspViewModel.cs" />
+    <Compile Include="ViewModels\Energy\UnableToCompleteViewModel.cs" />
+    <Compile Include="ViewModels\Energy\UnknownEnergyUsageViewModel.cs" />
+    <Compile Include="ViewModels\Energy\PhonePackageUpgradeViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\AccordionViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\BankDetailsViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\ConfirmationViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\ContactDetailsViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\CoverDetailsHeaderViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\CoverDetailsViewModel.cs" />
+    <Compile Include="Resources\HomeServices\CoverDetails_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoverDetails_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\HomeServices\CoverSummaryViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\EnterPostcodeViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\ProductPDFViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\PersonalDetailsViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\ProductExtrasViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\SelectAddressViewModel.cs" />
+    <Compile Include="ViewModels\Common\SelectedExtra.cs" />
+    <Compile Include="ViewModels\HomeServices\SummaryViewModel.cs" />
+    <Compile Include="ViewModels\HomeServices\YourCoverBasketViewModel.cs" />
+    <Compile Include="ViewModels\Energy\YourPriceViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\AcquisitionJourneyViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\AvailableTariff.cs" />
+    <Compile Include="ViewModels\TariffChange\AvailableTariffFuelDetails.cs" />
+    <Compile Include="ViewModels\TariffChange\BaseViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\ConfirmAddressViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\ConfirmationViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\ConfirmDetailsViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\CreatePasswordViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\CurrentTariffViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\CustomerEligibilityViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\GetCustomerEmailViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\GoogleCaptchaViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\IdentifyCustomerViewModel.cs" />
+    <Compile Include="ViewModels\Common\ModalTitleAndBody.cs" />
+    <Compile Include="ViewModels\TariffChange\MultiSiteAddressesViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\MultiSiteAddressViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\PaymentMethodIneligibleViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\ProgressBarSection.cs" />
+    <Compile Include="ViewModels\TariffChange\ProgressBarViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\SelectedTariffsViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\TariffSummaryViewModel.cs" />
+    <Compile Include="ViewModels\TariffChange\TariffsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Broadband\AvailablePackages_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AvailablePackages_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\BankDetails_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BankDetails_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\Common_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\Confirmation_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Confirmation_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\ContactDetails_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContactDetails_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\DataLayer_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataLayer_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\ExistingCustomer_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExistingCustomer_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\Fallout_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Fallout_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\LineChecker_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LineChecker_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\OnlineAccount_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>OnlineAccount_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\PersonalDetails_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonalDetails_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\ProductDetails_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductDetails_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\SelectAddress_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectAddress_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\SelectedPackageModal_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectedPackageModal_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\SelectedPackage_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectedPackage_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\StepCount_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>StepCount_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\Summary_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Summary_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\TransferYourNumber_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TransferYourNumber_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Broadband\YourPrice_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>YourPrice_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\BankDetailsCommon_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BankDetailsCommon_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\BroadbandPackageSpeed_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BroadbandPackageSpeed_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\ContactDetailsCommon_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContactDetailsCommon_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\AreaNotCovered_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaNotCovered_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\DirectDebitMandate_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DirectDebitMandate_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\Extras_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extras_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\Form_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Form_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\JavascriptDisabled_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>JavascriptDisabled_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\Landline_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Landline_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\ProductFeatures_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductFeatures_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\Promotional_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Promotional_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\SelectAddressCommon_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectAddressCommon_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\SelectTalkPackage_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectTalkPackage_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\SummaryCommon_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SummaryCommon_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\Tariff_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Tariff_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\KeepYourNumber_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KeepYourNumber_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\Accordion_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Accordion_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\AvailableBundleTariffs_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AvailableBundleTariffs_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\DataLayer_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataLayer_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\Confirmation_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Confirmation_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\EnergyUsage_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EnergyUsage_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\AvailableTariffs_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AvailableTariffs_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\Common_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\Fallout_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Fallout_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\OnlineAccount_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>OnlineAccount_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\OurPrices_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>OurPrices_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\PhonePackage_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PhonePackage_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\SelectAddress_Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectAddress_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\SelectBTAddress_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectBTAddress_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\PersonalDetailsCommon_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonalDetailsCommon_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\SmartMeter_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SmartMeter_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\MeterType_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MeterType_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\PaymentMethod_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PaymentMethod_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\SelectFuel_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectFuel_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\Postcode_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Postcode_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\ExistingCustomer_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExistingCustomer_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\Summary_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Summary_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\Upgrades_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Upgrades_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeServices\Accordion_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Accordion_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeServices\Confirmation_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Confirmation_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeServices\DataLayer_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataLayer_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeServices\Fallout_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Fallout_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeServices\SelectAddress_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectAddress_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeServices\Common_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeServices\EnterPostcode_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EnterPostcode_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeServices\Summary_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Summary_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeServices\YourCoverBasket_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>YourCoverBasket_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Energy\YourPrice_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>YourPrice_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\AriaDescriptions.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AriaDescriptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\AvailableTariffs_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AvailableTariffs_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\Confirmation_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Confirmation_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\ConfirmDetails_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfirmDetails_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\CreatePassword_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreatePassword_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\DataLayer_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataLayer_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\Fallout_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Fallout_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\FuelInformation_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FuelInformation_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\GetCustomerEmail_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>GetCustomerEmail_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\IdentifyCustomer_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>IdentifyCustomer_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\MultipleAddressSelection_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MultipleAddressSelection_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\ProgressBar_Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressBar_Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TariffChange\TariffSummary_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TariffSummary_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeServices\CoverDetails_Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CoverDetails_Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Products.Core\Products.Core.csproj">
+      <Project>{e40b2488-29f0-4eca-b4bb-b7488d2c72c7}</Project>
+      <Name>Products.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Infrastructure\Products.Infrastructure.csproj">
+      <Project>{28BDC57F-5070-434C-9E9E-B9B021530A16}</Project>
+      <Name>Products.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Model\Products.Model.csproj">
+      <Project>{06D831A3-9DB5-456C-86DD-AD82623F5381}</Project>
+      <Name>Products.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

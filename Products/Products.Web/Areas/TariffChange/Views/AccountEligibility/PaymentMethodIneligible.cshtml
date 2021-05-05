@@ -1,0 +1,25 @@
+﻿@using Products.WebModel.Resources.TariffChange
+@using Products.WebModel.ViewModels.TariffChange;
+@model PaymentMethodIneligibleViewModel
+    @{
+        ViewBag.Title = Fallout_Resources.PaymentInelegibleTitle;
+    }
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>@Fallout_Resources.PaymentInelegibleHeader</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-11 col-md-8 gap">
+                <p class="gap">@Fallout_Resources.PhonePrefix<a id="telephone-link" href="@Fallout_Resources.LinkPhoneURL" title="@Fallout_Resources.LinkPhoneAlt">@Fallout_Resources.LinkPhoneText</a>@Fallout_Resources.PhoneSuffix</p>
+                <p><a id="hearing-loss-link" href="@Fallout_Resources.LinkGettingInTouchURL" title="@Fallout_Resources.LinkGettingInTouchAlt" target="_blank">@Fallout_Resources.LinkGettingInTouch</a>@Fallout_Resources.GettingInTouchSuffix</p>
+
+                @Html.Partial("_PostLoginDashboardLink", Model.IsCustomerLoggedIn)
+            </div>
+        </div>
+    </div>
+
+    @section DataLayer {
+        @Html.Partial("_DataLayer")
+    }

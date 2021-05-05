@@ -1,0 +1,20 @@
+﻿@model Products.WebModel.ViewModels.Energy.BaseSummaryExtra
+<tr>
+    <th scope="row">
+        <a class="trash-icon" data-toggle="modal" data-target="@Model.TrashModalDataTarget" title="@Model.TrashModalLinkAltText"></a>
+        <strong>@Model.Name</strong>
+        <div class="feature-list">
+            <ul class="trash-icon-list">
+                @foreach (string feature in Model.FeatureList)
+                {
+                    <li>@feature</li>
+                }
+            </ul>
+        </div>
+    </th>
+    <td>
+        <div class="basket-price">
+            @Model.Price
+        </div>
+    </td>
+</tr>

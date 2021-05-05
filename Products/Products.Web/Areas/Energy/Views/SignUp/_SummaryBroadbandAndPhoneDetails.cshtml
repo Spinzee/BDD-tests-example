@@ -1,0 +1,75 @@
+﻿@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.Resources.Energy
+@using Products.WebModel.ViewModels.Common
+@using Summary_Resources = Products.WebModel.Resources.Energy.Summary_Resources
+@model Products.WebModel.ViewModels.Energy.SummaryViewModel
+
+<div class="accordion accordion-content-indented" role="group" id="broadband-and-phone">
+    <div class="accordion-header">
+        <a href="#" title="@Summary_Resources.BroadbandAndPhoneHeaderAlt" class="accordion-button" role="button" aria-controls="accordion-content" aria-expanded="true">
+            <h2 class="h4-like">@Summary_Resources.BroadbandAndPhoneHeader</h2>
+        </a>
+    </div>
+    <div class="accordion-content accordion-content-indented" aria-hidden="false" style="" id="accordion-content">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>@Summary_Resources.AboutYourBundleHeader</h4>
+                <p>@Accordion_Resources.AboutYourBundlePara1</p>
+                <p>@Accordion_Resources.AboutYourBundlePara2</p>
+                <p>@Model.AboutYourBundlePara3</p>
+                <p>@Accordion_Resources.AboutYourBundlePara4</p>
+                <p>@Accordion_Resources.BeforeYouConfirmPara</p>
+                <ul class="link-list list--spaced">
+                    @foreach (TermsAndConditionsPdfLink termsAndConditionsPdfLink in Model.BroadbandBundleTermsAndConditionsPdfLinks)
+                    {
+                        <li>
+                            <a href="@termsAndConditionsPdfLink.Link" class="icon-link icon-link-pdf" title="@termsAndConditionsPdfLink.Title" target="_blank">
+                                @termsAndConditionsPdfLink.DisplayName
+                            </a>
+                        </li>
+                    }
+                </ul>
+                <h4>@Accordion_Resources.IfYouChangeYourMindHeader</h4>
+                <p>
+                    @Accordion_Resources.IfYouChangeYourMindPara1_1
+                    <a href="@Accordion_Resources.ContactUsLinkUrl" title="@Accordion_Resources.ContactUsLinkAlt" target="_blank">
+                        @Accordion_Resources.ContactUsLinkText
+                    </a>
+                    @Accordion_Resources.IfYouChangeYourMindPara1_2
+                </p>
+                <h4>@Accordion_Resources.AboutYourSwitchHeader</h4>
+                <p>@Accordion_Resources.AboutYourSwitchPara1</p>
+                <p>@Accordion_Resources.AboutYourSwitchPara2</p>
+
+                <h4>@Accordion_Resources.YourLandlineNumberHeader</h4>
+                <p>@Accordion_Resources.YourLandlineNumberPara1</p>
+
+                <h4>@Accordion_Resources.CancellationAndEarlyTermChargeHeader</h4>
+                <p>@Accordion_Resources.CancellationAndEarlyTermChargePara1</p>
+                <p>@Accordion_Resources.CancellationAndEarlyTermChargePara2</p>
+                <p>@Accordion_Resources.CancellationAndEarlyTermChargePara3</p>
+
+                <h4>@Accordion_Resources.UnlimitedDownloadsHeader</h4>
+                <p>
+                    @Accordion_Resources.UnlimitedDownloadsPara1_1&nbsp;<a href="@AvailablePackages_Resources.BroadbandTrafficManagementLinkUrl" target="_blank" title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link1Alt">@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link1Text</a>
+                    @Accordion_Resources.BundleBroadbandPhoneDetailsPara8_2 <a href="@AvailablePackages_Resources.AcceptableUsePolicyLinkUrl" target="_blank" title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link2Alt">@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link2Text</a>@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_3
+                </p>
+
+                <h4>@Accordion_Resources.SSEBroadbandHappinessHeader</h4>
+                <p>
+                    @Accordion_Resources.SSEBroadbandHappinessPara1
+                    <a href="@AvailablePackages_Resources.HappinessGuaranteeLinkUrl" target="_blank" title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara7_Link1Alt">@Accordion_Resources.SSEBroadbandHappinessPara1_Link1Text</a>
+                </p>
+
+                <h4>@Accordion_Resources.PaperBillingHeader</h4>
+                <p>@Accordion_Resources.PaperBillingPara1</p>
+
+                <h4>@Accordion_Resources.CallFeaturesHeader</h4>
+                <p>
+                    @Accordion_Resources.CallFeaturesPara1_1&nbsp;<a href="@Accordion_Resources.PhoneGuideLinkUrl" target="_blank" title="@Accordion_Resources.PhoneGuideAlt">@Accordion_Resources.PhoneGuideLinkText</a>@Accordion_Resources.CallFeaturesPara1_2
+                </p>
+                <p>@Accordion_Resources.CallFeaturesPara2</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@using Products.WebModel.Resources.TariffChange
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@Model.Greeting</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 gap">
+            <p>@ConfirmDetails_Resources.Paragraph3</p>
+            <h2 class="address-title">@ConfirmDetails_Resources.Label</h2>
+            <div class="address">
+                @Html.Raw(Html.Encode(Model.FormattedAddress).Replace(Environment.NewLine, "<br>"))
+            </div>
+            <h2 class="h4-like">@ConfirmDetails_Resources.Paragraph4</h2>
+            <p>@ConfirmDetails_Resources.Disclaimer</p>
+            @using (Html.BeginForm("CheckEligibility", "AccountEligibility", FormMethod.Get, new { @id = "ConfirmDetailsForm" }))
+            {
+                <button type="submit" Title="Confirm and Continue" id="btnConfirmDetails" class="button button-primary">Ok, next</button>
+                @Html.ActionLink("Not my address", "IdentifyCustomer", null, null, new { @Class = "button button-secondary", @Id = "btnIncorrectDetails", @Title = "This is not my address" })
+            }
+        </div>
+    </div>
+</div>

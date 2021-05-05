@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccordionHeader" xml:space="preserve">
+    <value>What you need to know</value>
+  </data>
+  <data name="AccordionBundleSubHeader" xml:space="preserve">
+    <value>Bundles - important information</value>
+  </data>
+  <data name="AccordionBundleSubHeaderAlt" xml:space="preserve">
+    <value>Bundles – important information</value>
+  </data>
+  <data name="DDHeader" xml:space="preserve">
+    <value>Direct Debit discount</value>
+  </data>
+  <data name="GreenDealHeader" xml:space="preserve">
+    <value>Green Deal</value>
+  </data>
+  <data name="GreenDealPara" xml:space="preserve">
+    <value>If you have a Green Deal Scheme in place for your home, Green Deal charges will also apply. The estimates included in this application do not include Green Deal charges. We will write to you separately to confirm if a Green Deal charge applies.</value>
+  </data>
+  <data name="NeedToKnowHeader" xml:space="preserve">
+    <value>What you need to know before you apply</value>
+  </data>
+  <data name="NeedToKnowPara2" xml:space="preserve">
+    <value>We’ll send your Welcome pack by email. This includes your confirmation of contract, tariff information, terms and conditions and cancellation form.</value>
+  </data>
+  <data name="NeedToKnowPara3" xml:space="preserve">
+    <value>If we’re taking over the supply of energy from another supplier, you agree to your current supplier transferring the right for us to collect any debt you owe them (in the event we’re obliged to).</value>
+  </data>
+  <data name="SwitchFAQSubHeader1Alt_Energy" xml:space="preserve">
+    <value>Should I let my current supplier know I’m switching?</value>
+  </data>
+  <data name="SwitchFAQAccordionHeader_Energy" xml:space="preserve">
+    <value>Switching FAQs</value>
+  </data>
+  <data name="SwitchFAQSubHeader1_Energy" xml:space="preserve">
+    <value>Should I let my current supplier know I’m switching?</value>
+  </data>
+  <data name="SwitchFAQSubHeader1Para_Energy" xml:space="preserve">
+    <value>Once you sign up, we’ll take care of everything including telling your current energy provider that you want to switch to us.</value>
+  </data>
+  <data name="SwitchFAQSubHeader2_Energy" xml:space="preserve">
+    <value>How long will my switch take?</value>
+  </data>
+  <data name="SwitchFAQSubHeader2Para_Energy" xml:space="preserve">
+    <value>We’re signed up to the Energy Switch Guarantee which means switching your gas and/or electricity will take no longer than 21 days.</value>
+  </data>
+  <data name="SwitchFAQSubHeader3_Energy" xml:space="preserve">
+    <value>What happens when I switch?</value>
+  </data>
+  <data name="SwitchFAQSubHeader3Para_Energy" xml:space="preserve">
+    <value>After you sign up, we’ll send your paperwork by email. Once your 14-day cooling off period has finished, we’ll ask your current energy supplier for your supply and begin your switch. Just before the switch is complete, we’ll ask you for your meter reading(s) and give these to your old supplier so they close your account on the same readings.</value>
+  </data>
+  <data name="SwitchFAQSubHeaderPrePay4_Energy" xml:space="preserve">
+    <value>What is the Pay As You Go price cap?</value>
+  </data>
+  <data name="SwitchFAQSubHeaderPrePay4Para_Energy" xml:space="preserve">
+    <value>Ofgem set a safeguard limit for Pay As You Go meters which reflects the cost of supplying energy. We set your actual energy prices, but must adhere to this price cap.</value>
+  </data>
+  <data name="SwitchFAQSubHeaderPrePay5_Energy" xml:space="preserve">
+    <value>I have a debt on my Pay As You Go meter – can I switch?</value>
+  </data>
+  <data name="SwitchFAQSubHeaderPrePay5Para_Energy" xml:space="preserve">
+    <value>You may be able to switch if your debt is less than £500. The Debt Assignment Protocol allows you to change supplier and take your debt with you. It isn’t guaranteed but it could be an option if you want to switch.</value>
+  </data>
+  <data name="SwitchFAQSubHeaderNonPrePay4_Energy" xml:space="preserve">
+    <value>What is a fixed price tariff?</value>
+  </data>
+  <data name="SwitchFAQSubHeaderNonPrePay4Para_Energy" xml:space="preserve">
+    <value>With a fixed price tariff your unit rate per kWh energy prices will stay the same over the period of your contract.</value>
+  </data>
+  <data name="SwitchFAQSubHeaderNonPrePay5_Energy" xml:space="preserve">
+    <value>What does ‘early exit fee’ mean?</value>
+  </data>
+  <data name="SwitchFAQSubHeaderNonPrePay5Para_Energy" xml:space="preserve">
+    <value>Some of our energy plans have ‘early exit fees’. We’ll charge you a certain amount if you switch to a different energy supplier or tariff before the end of your contract. These fees are ‘per fuel’ which means there’s one for gas and one for electricity. If you have both fuels (dual fuel) with us, we’ll charge for both. All our exit fees are clearly stated.</value>
+  </data>
+  <data name="SwitchFAQSubHeader6_Energy" xml:space="preserve">
+    <value>Who are SSE?</value>
+  </data>
+  <data name="SwitchFAQSubHeader6Para_Energy" xml:space="preserve">
+    <value>We first formed in 1998 when Scottish Hydro Electric merged with Southern Electric to become Scottish and Southern Energy. Later we incorporated SWALEC and Atlantic into our family and we’re now known as SSE. You may be familiar with our local brands – SSE Southern Electric, SSE Scottish Hydro and SSE SWALEC. But no matter what our name is, our primary aim is to give great customer service to our customers.</value>
+  </data>
+  <data name="BroadbandBundleSavingsPara1" xml:space="preserve">
+    <value>£180 saving is based on £10.00 (43%) discount for 18 months for fibre broadband (18 x £10.00 = £180), when compared to buying Unlimited Fibre, our equivalent standalone broadband product (£23).</value>
+  </data>
+  <data name="BroadbandBundleSavingsSubHeader" xml:space="preserve">
+    <value>How your savings are calculated</value>
+  </data>
+  <data name="BroadbandBundleSavingsSubHeaderAlt" xml:space="preserve">
+    <value>How your savings are calculated</value>
+  </data>
+  <data name="AccordionEnergySubHeader" xml:space="preserve">
+    <value>Energy tariffs - important information</value>
+  </data>
+  <data name="AccordionEnergySubHeaderAlt" xml:space="preserve">
+    <value>Energy tariffs – important information</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsHeader" xml:space="preserve">
+    <value>Broadband &amp; Phone details</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara1" xml:space="preserve">
+    <value>Prices for broadband and phone products include 20% VAT. Your Bundle broadband and phone product has an 18-month fixed-term contract which begins on the day your service starts. The price displayed is the monthly cost of the broadband, phone line and optional call package for the duration of your contract (excluding additional calls and features).</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara2" xml:space="preserve">
+    <value>After 18 months, your phone and broadband contract will roll onto a non-fixed-term contract. The current cost of this is £28 per month, but prices are subject to change. We’ll remind you before the end of your contract that your package price will change.</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara3" xml:space="preserve">
+    <value>An early exit fee of 38 pence per remaining day of your contract applies if you cancel your service before the end of that term. For details about cancellation and early termination charges, see our full terms and conditions below.</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara4" xml:space="preserve">
+    <value>Our broadband and phone packages are available to customers with an active BT Openreach phone line. If you don’t have one, we can install one for you. There's a one-off charge of £60 which we'll add to a future bill.</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara5" xml:space="preserve">
+    <value>You can upgrade your broadband package at any time but this may terminate the discount earlier than 18 months. You can change your phone package at any time without affecting the discount you are receiving.</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara6" xml:space="preserve">
+    <value>Our price promise is to keep phone and broadband package prices fixed for the duration of your contract from your package start date. The only exception will be any increases to VAT or any other relevant tax or levy. The monthly package price includes your monthly broadband, line rental and selected call package.</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara7_1" xml:space="preserve">
+    <value>If you’re not happy with any aspect of the service you have received, and we have been unable to fix the problem, you can leave your contract without early termination charges within the first 60 days. For more details, see the </value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara7_Link1Alt" xml:space="preserve">
+    <value>Download the SSE 60-Day Broadband Happiness Guarantee</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara7_Link1Text" xml:space="preserve">
+    <value>SSE 60-Day Broadband Happiness Guarantee</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara8_1" xml:space="preserve">
+    <value>Broadband speed and unlimited downloads are subject to our</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara8_1Link1Alt" xml:space="preserve">
+    <value>Download our Broadband Traffic Management Policy</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara8_1Link1Text" xml:space="preserve">
+    <value>Broadband Traffic Management</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara8_1Link2Alt" xml:space="preserve">
+    <value>Download our Acceptable Use Policy</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara8_1Link2Text" xml:space="preserve">
+    <value>Acceptable Use</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara8_2" xml:space="preserve">
+    <value> and </value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara8_3" xml:space="preserve">
+    <value> policies.</value>
+  </data>
+  <data name="BundleBroadbandPhoneDetailsPara8_4" xml:space="preserve">
+    <value>Actual speeds are dependent upon length and quality of the copper line between your home and your exchange or street cabinet as well as environmental factors within you home such as Wi-Fi interference, in-home wiring and congestion on the service you are accessing.</value>
+  </data>
+  <data name="BundleFullTermsAndConditionsPara" xml:space="preserve">
+    <value>For more details, please read our full terms and conditions below.</value>
+  </data>
+  <data name="BundleEnergyDetailsHeader" xml:space="preserve">
+    <value>Energy details</value>
+  </data>
+  <data name="BundleEnergyDetailsPara1" xml:space="preserve">
+    <value>Prices for energy products include 5% VAT. Bundle energy products have either a 12-month or an 18-month fixed-term contract that begins on the day your supply switches to us.</value>
+  </data>
+  <data name="BundleEnergyDetailsPara2" xml:space="preserve">
+    <value>After your fixed-term contract ends, we’ll move you onto our Standard variable tariff for energy, but we’ll contact you before that to let you know our latest tariffs.</value>
+  </data>
+  <data name="BundleEnergyDetailsPara3" xml:space="preserve">
+    <value>By signing up to this fixed price energy product, you are registering your interest for a smart meter. This means we may contact you in the future to discuss a smart meter installation as and when you become eligible. We rely on a mobile phone or wireless signal to get your smart meter readings. If these fail, you’ll either need to take your own reading and send it to us, or your bills will be estimated.</value>
+  </data>
+  <data name="BundleEnergyDetailsPara4" xml:space="preserve">
+    <value>If we’re taking over the supply of energy from another supplier, you agree to your current supplier transferring the right for us to collect any debt you owe them (in the event we’re obliged to).</value>
+  </data>
+  <data name="BundleEnergyDetailsPara5" xml:space="preserve">
+    <value>By choosing a fixed-term tariff and paying by Direct Debit, you’ll get a discount of £40 a year for each fuel compared to another way of paying. This discount is applied to your standing charge on a pence per day basis until your tariff ends. Discounts do not apply to customers on an Energy Assist tariff or with a Pay As You Go meter.</value>
+  </data>
+  <data name="BundleEnergyDetailsPara6" xml:space="preserve">
+    <value>If you have a Green Deal Scheme in place for your home, Green Deal Charges will also apply. The estimates included in this application do not include Green Deal Charges. We will write to you separately to confirm if a Green Deal Charge applies.</value>
+  </data>
+  <data name="FullTermsAndConditionsPara" xml:space="preserve">
+    <value>For further information about our tariffs, please read our terms and conditions below.</value>
+  </data>
+  <data name="SSEHydroAlt" xml:space="preserve">
+    <value>The SSE Hydro, Glasgow</value>
+  </data>
+  <data name="AboutYourBundlePara1" xml:space="preserve">
+    <value>Prices for broadband and phone products include 20% VAT.</value>
+  </data>
+  <data name="AboutYourBundlePara2" xml:space="preserve">
+    <value>Your Bundle broadband and phone product has an 18-month fixed-term contract which begins on the day your service starts. You may have to pay early termination charges if you cancel your service before the end of that term (see terms and conditions below).</value>
+  </data>
+  <data name="AboutYourBundlePara3" xml:space="preserve">
+    <value>After 18 months, your Phone and Broadband contract will roll onto a non-fixed-term contract. The current cost of this is {0} per month, but prices are subject to change. We’ll remind you before the end of your contract that your package price will change.</value>
+  </data>
+  <data name="BeforeYouConfirmPara" xml:space="preserve">
+    <value>Before you confirm your order, please read the full terms and conditions:</value>
+  </data>
+  <data name="AboutYourSwitchHeader" xml:space="preserve">
+    <value>About your switch</value>
+  </data>
+  <data name="AboutYourSwitchPara1" xml:space="preserve">
+    <value>We’ll contact your current provider to let them know you’re switching to us, unless you’re with Virgin Media. Virgin Media customers need contact the company directly to cancel their service.</value>
+  </data>
+  <data name="AboutYourSwitchPara2" xml:space="preserve">
+    <value>Switching takes around 18 to 20 days for most customers.</value>
+  </data>
+  <data name="CallFeaturesHeader" xml:space="preserve">
+    <value>Call features</value>
+  </data>
+  <data name="CallFeaturesPara1_1" xml:space="preserve">
+    <value>Any call features you have with your current provider may be transferred to us. These features are listed in the</value>
+  </data>
+  <data name="CallFeaturesPara2" xml:space="preserve">
+    <value>Please be aware that our call packages do not allow calls to be made to premium rate numbers beginning 09.</value>
+  </data>
+  <data name="CancellationAndEarlyTermChargeHeader" xml:space="preserve">
+    <value>Cancellation and early termination charges</value>
+  </data>
+  <data name="CancellationAndEarlyTermChargePara1" xml:space="preserve">
+    <value>The following charges may apply following cancellation of the broadband contract:</value>
+  </data>
+  <data name="CancellationAndEarlyTermChargePara2" xml:space="preserve">
+    <value>If you cancel your broadband order before your service start date, there will be no charge unless you have already received your router and you do not return this to us. When you notify us of your cancellation, we will send you a prepaid postage envelope for the return of the router. Should you not return your router within 30 working days an equipment charge of £54 will be added to your account.</value>
+  </data>
+  <data name="CancellationAndEarlyTermChargePara3" xml:space="preserve">
+    <value>For termination at any point between the broadband service start date and the end of month 18 of the contract, there is an early termination charge of 38 pence per remaining day of your fibre broadband contract. The maximum termination charge will be £208.80. This charge is not subject to VAT.</value>
+  </data>
+  <data name="IfYouChangeYourMindHeader" xml:space="preserve">
+    <value>If you change your mind</value>
+  </data>
+  <data name="IfYouChangeYourMindPara1_1" xml:space="preserve">
+    <value>You can cancel your contract without penalty within 14 days from the day after the date you sign up with us. We’ll include details of how to cancel when we send your confirmation of contract. Or you can get in touch using our</value>
+  </data>
+  <data name="ContactUsLinkAlt" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="ContactUsLinkText" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="ContactUsLinkUrl" xml:space="preserve">
+    <value>https://sse.co.uk/help/contact-us</value>
+  </data>
+  <data name="IfYouChangeYourMindPara1_2" xml:space="preserve">
+    <value>page.</value>
+  </data>
+  <data name="PaperBillingHeader" xml:space="preserve">
+    <value>Paper billing</value>
+  </data>
+  <data name="PaperBillingPara1" xml:space="preserve">
+    <value>Your account will have paperless billing as standard. If you’d like paper billing, you can choose this option on your online account. This will add a monthly charge of £2 to your broadband and phone bill.</value>
+  </data>
+  <data name="SSEBroadbandHappinessHeader" xml:space="preserve">
+    <value>SSE Broadband Happiness Guarantee</value>
+  </data>
+  <data name="SSEBroadbandHappinessPara1" xml:space="preserve">
+    <value>Customers signing up for SSE fixed-term broadband and phone package Bundles can leave their contract without early termination charges if, within the first 60 days, they are not happy with any aspect of the service they have received, and we have been unable to fix the problem.</value>
+  </data>
+  <data name="SSEBroadbandHappinessPara1_Link1Text" xml:space="preserve">
+    <value>Happiness Guarantee full details</value>
+  </data>
+  <data name="UnlimitedDownloadsHeader" xml:space="preserve">
+    <value>Unlimited downloads</value>
+  </data>
+  <data name="UnlimitedDownloadsPara1_1" xml:space="preserve">
+    <value>Unlimited downloads are subject to our</value>
+  </data>
+  <data name="YourLandlineNumberHeader" xml:space="preserve">
+    <value>Your landline number</value>
+  </data>
+  <data name="YourLandlineNumberPara1" xml:space="preserve">
+    <value>We’ll look to move your landline number across to us, if you’ve asked us to do so. If we can’t do this, we’ll give you a new phone number. If you haven’t given us a landline number, or don’t have one, we’ll give you a new one. We’ll tell you what your number is once you’re set up.</value>
+  </data>
+  <data name="AboutYourBundleEnergyPara1" xml:space="preserve">
+    <value>Prices for energy products include 5% VAT. Your Bundle energy product has an {0}-month fixed-term contract that begins on the day your supply switches to us.</value>
+  </data>
+  <data name="AboutYourBundleEnergyPara2" xml:space="preserve">
+    <value>After {0} months, we’ll move you onto our Standard variable tariff for energy, but we’ll contact you before that to let you know our latest tariffs.</value>
+  </data>
+  <data name="AboutYourBundleEnergyPara3" xml:space="preserve">
+    <value>We’ll send your Welcome pack by email. This includes your confirmation of contract, tariff information, terms and conditions and cancellation form.</value>
+  </data>
+  <data name="CallFeaturesPara1_2" xml:space="preserve">
+    <value>, and some will involve an ongoing monthly charge. If you’d like to add or change any of these call features, please get in touch after your phone service starts.</value>
+  </data>
+  <data name="PhoneGuideAlt" xml:space="preserve">
+    <value>Download SSE Phone Product and Price Guide for the Fix and Fibre range (FF3)</value>
+  </data>
+  <data name="PhoneGuideLinkText" xml:space="preserve">
+    <value>SSE Phone Product and Price Guide for the Fix and Fibre range (FF3)</value>
+  </data>
+  <data name="PhoneGuideLinkUrl" xml:space="preserve">
+    <value>/Areas/Common/Content/PDFs/SSE Phone Product and Price Guide for the Fix and Fibre range (FF3).pdf</value>
+  </data>
+  <data name="YourRightToChangeYourMindHeader" xml:space="preserve">
+    <value>Your right to change your mind</value>
+  </data>
+  <data name="YourRightToChangeYourMindPara1_1" xml:space="preserve">
+    <value>You can cancel your agreement without penalty within 14 days from the day after the date you sign up with us. We’ll include details of how to cancel when we send your confirmation of contract. Or you can get in touch using our</value>
+  </data>
+  <data name="YourRightToChangeYourMindPara1_2" xml:space="preserve">
+    <value>page.</value>
+  </data>
+  <data name="SwitchFAQAccordionHeader_Bundle" xml:space="preserve">
+    <value>Bundle FAQs</value>
+  </data>
+  <data name="SwitchFAQAccordionSubHeader1Alt_Bundle" xml:space="preserve">
+    <value>I’m already an SSE customer. Can I get a Bundle?</value>
+  </data>
+  <data name="SwitchFAQSubHeader1Para_Bundle" xml:space="preserve">
+    <value>Yes, our Bundles are available to new and existing SSE customers, as long as you pay by Direct Debit.</value>
+  </data>
+  <data name="SwitchFAQSubHeader1_Bundle" xml:space="preserve">
+    <value>I’m already an SSE customer. Can I get a Bundle?</value>
+  </data>
+  <data name="SwitchFAQSubHeader2Alt_Bundle" xml:space="preserve">
+    <value>How long will it take to switch my utilities?</value>
+  </data>
+  <data name="SwitchFAQSubHeader2Para_Bundle_1" xml:space="preserve">
+    <value>We’re signed up to the Energy Switch Guarantee, so we’ll make sure we switch your gas and/or electricity supply within 21 days.</value>
+  </data>
+  <data name="SwitchFAQSubHeader2_Bundle" xml:space="preserve">
+    <value>How long will it take to switch my utilities?</value>
+  </data>
+  <data name="SwitchFAQSubHeader3Alt_Bundle" xml:space="preserve">
+    <value>Should I let my utilities providers know that I’m switching?</value>
+  </data>
+  <data name="SwitchFAQSubHeader3Para_Bundle_1" xml:space="preserve">
+    <value>No need to tell your current energy, broadband or phone providers you’re switching to us – we’ll do that for you, unless you’re with Virgin Media. If you’re a Virgin Media customer, you’ll have to contact them directly to cancel your broadband and phone service.</value>
+  </data>
+  <data name="SwitchFAQSubHeader3_Bundle" xml:space="preserve">
+    <value>Should I let my utilities providers know that I’m switching?</value>
+  </data>
+  <data name="SwitchFAQSubHeader4Alt_Bundle" xml:space="preserve">
+    <value>What happens when I sign up for a Bundle?</value>
+  </data>
+  <data name="SwitchFAQSubHeader4Para_Bundle_1" xml:space="preserve">
+    <value>After you sign up, we’ll send you Welcome packs with full details about your products.</value>
+  </data>
+  <data name="SwitchFAQSubHeader4_Bundle" xml:space="preserve">
+    <value>What happens when I sign up for a Bundle?</value>
+  </data>
+  <data name="SwitchFAQSubHeader5Alt_Bundle" xml:space="preserve">
+    <value>Do Bundles have a minimum term contract?</value>
+  </data>
+  <data name="SwitchFAQSubHeader5Para_Bundle_1" xml:space="preserve">
+    <value>Yes, all the products in our Bundles have 12-month or 18-month fixed-term contracts.</value>
+  </data>
+  <data name="SwitchFAQSubHeader5_Bundle" xml:space="preserve">
+    <value>Do Bundles have a minimum term contract?</value>
+  </data>
+  <data name="SwitchFAQSubHeader6Alt_Bundle" xml:space="preserve">
+    <value>What happens when my Bundle ends?</value>
+  </data>
+  <data name="SwitchFAQSubHeader6Para_Bundle_1" xml:space="preserve">
+    <value>You’ll pay the Bundle price for each product until your fixed-term contracts end.</value>
+  </data>
+  <data name="SwitchFAQSubHeader6_Bundle" xml:space="preserve">
+    <value>What happens when my Bundle ends?</value>
+  </data>
+  <data name="SwitchFAQSubHeader7Alt_Bundle" xml:space="preserve">
+    <value>What is a fixed price tariff?</value>
+  </data>
+  <data name="SwitchFAQSubHeader7Para_Bundle" xml:space="preserve">
+    <value>With a fixed price tariff your unit rate per kWh energy prices will stay the same over the period of your contract.</value>
+  </data>
+  <data name="SwitchFAQSubHeader7_Bundle" xml:space="preserve">
+    <value>What is a fixed price tariff?</value>
+  </data>
+  <data name="SwitchFAQSubHeader2Para_Bundle_2" xml:space="preserve">
+    <value>Switching your broadband and phone takes around 18 to 20 days.</value>
+  </data>
+  <data name="SwitchFAQSubHeader4Para_Bundle_2" xml:space="preserve">
+    <value>Just before we switch your gas and/or electricity supply to us, we’ll ask you for your meter readings and give these to your old supplier so they can close your account.</value>
+  </data>
+  <data name="SwitchFAQSubHeader4Para_Bundle_3" xml:space="preserve">
+    <value>If your Bundle includes broadband and phone, we’ll let you know if you need an engineer to visit. Then we’ll post you a wireless broadband router. Plug it in on the day of the switch – you’re connected and ready to go!</value>
+  </data>
+  <data name="SwitchFAQSubHeader5Para_Bundle_2" xml:space="preserve">
+    <value>You may have to pay termination charges if you cancel a contract before the end of the term. We’ll explain the terms and conditions for each product before you sign up.</value>
+  </data>
+  <data name="SwitchFAQSubHeader6Para_Bundle_2" xml:space="preserve">
+    <value>At the end of your contract, we’ll move you onto our Standard variable tariff for energy. But we’ll contact you before that to let you know our latest tariffs so you can review your options.</value>
+  </data>
+  <data name="SwitchFAQSubHeader6Para_Bundle_3" xml:space="preserve">
+    <value>For broadband and phone and boiler and heating products, you’ll pay the standard monthly price after your fixed-term contract ends. We’ll remind you about this price change before the end of your contract.</value>
+  </data>
+  <data name="SwitchFAQSubHeader2Alt_Energy" xml:space="preserve">
+    <value>How long will my switch take?</value>
+  </data>
+  <data name="SwitchFAQSubHeader3Alt_Energy" xml:space="preserve">
+    <value>What happens when I switch?</value>
+  </data>
+  <data name="SwitchFAQSubHeader6Alt_Energy" xml:space="preserve">
+    <value>Who are SSE?</value>
+  </data>
+  <data name="SwitchFAQSubHeaderNonPrePay4Alt_Energy" xml:space="preserve">
+    <value>What is a fixed price tariff?</value>
+  </data>
+  <data name="SwitchFAQSubHeaderNonPrePay5Alt_Energy" xml:space="preserve">
+    <value>What does ‘early exit fee’ mean?</value>
+  </data>
+  <data name="SwitchFAQSubHeaderPrePay4Alt_Energy" xml:space="preserve">
+    <value>What is the Pay As You Go price cap?</value>
+  </data>
+  <data name="SwitchFAQSubHeaderPrePay5Alt_Energy" xml:space="preserve">
+    <value>I have a debt on my Pay As You Go meter – can I switch?</value>
+  </data>
+  <data name="SwitchFAQSubHeader2Para_Bundle_3" xml:space="preserve">
+    <value>Boiler and heating products and Electrical Wiring Cover start on the next working day after your energy supply switches to us.</value>
+  </data>
+  <data name="SwitchFAQSubHeader3Para_Bundle_2" xml:space="preserve">
+    <value>If your Bundle includes a boiler and heating product or Electrical Wiring Cover and you currently have a similar product with another provider, you’ll need to contact them to cancel it.</value>
+  </data>
+  <data name="SwitchFAQSubHeader4Para_Bundle_4" xml:space="preserve">
+    <value>For boiler and heating products and Electrical Wiring Cover, your 24/7 cover will start on the next working day after your energy supply switches to us.</value>
+  </data>
+  <data name="BundleHeatingBreakdownDetailsHeader" xml:space="preserve">
+    <value>Heating Breakdown details</value>
+  </data>
+  <data name="BundleHeatingBreakdownDetailsPara1" xml:space="preserve">
+    <value>The price for Heating Breakdown includes 20% VAT and Insurance Premium Tax. Heating Breakdown has a 12-month fixed-term contract which begins on the next working day after your energy supply switches to us.</value>
+  </data>
+  <data name="BundleHeatingBreakdownDetailsPara2" xml:space="preserve">
+    <value>We’ll write to you at least 14 days before your 12-month contract ends. We’ll let you know your new price before we renew your cover for a further 12 months. You’ll then be able to change your level of cover or cancel your renewal, as you wish.</value>
+  </data>
+  <data name="BundleHeatingBreakdownDetailsPara3" xml:space="preserve">
+    <value>Your cover has a £90 excess, which means you'd pay £90 each time you need to make a claim.</value>
+  </data>
+  <data name="BundleHeatingBreakdownDetailsPara4_1" xml:space="preserve">
+    <value>Parts and labour are subject to terms and conditions found in the</value>
+  </data>
+  <data name="BundleHeatingBreakdownCoverPolicyLinkAlt" xml:space="preserve">
+    <value>Download the SSE Breakdown Cover Policy Booklet</value>
+  </data>
+  <data name="BundleHeatingBreakdownCoverPolicyLinkText" xml:space="preserve">
+    <value>SSE Breakdown Cover Policy Booklet</value>
+  </data>
+  <data name="PartsAndLabourPara2" xml:space="preserve">
+    <value> and the </value>
+  </data>
+  <data name="BundleHeatingBreakdownInsurancePolicyLinkAlt" xml:space="preserve">
+    <value>Download the SSE Heating Breakdown Cover Insurance Product Information Document</value>
+  </data>
+  <data name="BundleHeatingCoverInsurancePolicyLinkAlt" xml:space="preserve">
+    <value>Download the SSE Heating Cover Insurance Product Information Document</value>
+  </data>
+  <data name="BundleHeatingBreakdownInsurancePolicyLinkText" xml:space="preserve">
+    <value>SSE Heating Breakdown Cover Insurance Product Information Document</value>
+  </data>
+  <data name="BundleHeatingBreakdownDetailsPara5" xml:space="preserve">
+    <value>This policy is for owners of domestic properties only. Retail, commercial and other premises used for business are not eligible.</value>
+  </data>
+  <data name="HeatingBreakdownCoverInsurancePolicyPdfLinkUrl" xml:space="preserve">
+    <value>/Content/Pdfs/SSE Heating Breakdown Cover Insurance Product Information Document.pdf</value>
+  </data>
+  <data name="HeatingCoverInsurancePolicyPdfLinkUrl" xml:space="preserve">
+    <value>/Areas/Common/Content/PDFs/SSE0721_SSE_Home_Services_IPIDs_Heating_Cover_Product_information_document.pdf</value>
+  </data>
+  <data name="HeatingBreakdownCoverPolicyPdfLinkUrl" xml:space="preserve">
+    <value>/Content/Pdfs/SSE Breakdown Cover Policy Booklet.pdf</value>
+  </data>
+  <data name="AboutYourBundlePara4" xml:space="preserve">
+    <value>We’ll send you a Welcome pack by email with full details about your product.</value>
+  </data>
+  <data name="AboutYourHomeServicesBundlePara1" xml:space="preserve">
+    <value>The price for Heating Breakdown includes 20% VAT and Insurance Premium Tax.</value>
+  </data>
+  <data name="AboutYourHomeServicesBundlePara1_FixNProtectPlus" xml:space="preserve">
+    <value>The price for Heating Cover includes 20% VAT and Insurance Premium Tax.</value>
+  </data>
+  <data name="AboutYourHomeServicesBundlePara2" xml:space="preserve">
+    <value>Heating Breakdown has a 12-month fixed-term contract which begins on the next working day after your energy supply switches to us.</value>
+  </data>
+  <data name="AboutYourHomeServicesBundlePara2_FixNProtectPlus" xml:space="preserve">
+    <value>Heating Cover has a 12-month fixed-term contract which begins on the next working day after your energy supply switches to us.</value>
+  </data>
+  <data name="AboutYourHomeServicesBundlePara3" xml:space="preserve">
+    <value>We’ll write to you at least 14 days before your 12-month contract ends. We’ll let you know your new price before we renew your cover for a further 12 months. You’ll then be able to change your level of cover or cancel your renewal, as you wish.</value>
+  </data>
+  <data name="AboutYourHomeServicesBundlePara4" xml:space="preserve">
+    <value>We’ll send you a Welcome pack by post with full details about your product, including your Confirmation of Sale letter.</value>
+  </data>
+  <data name="AboutYourHomeServicesBundlePara4_FixNProtectPlus" xml:space="preserve">
+    <value>You’ll be contacted to arrange an initial system inspection.</value>
+  </data>
+  <data name="AboutYourHomeServicesBundlePara5" xml:space="preserve">
+    <value>Before you confirm your order, please read the full terms and conditions:</value>
+  </data>
+  <data name="AreYouEligibleForHomeServicesPara1" xml:space="preserve">
+    <value>This policy is for owners of domestic properties only. Retail, commercial and other premises used for business are not eligible.</value>
+  </data>
+  <data name="AreYouEligibleForHomeServicesPara2" xml:space="preserve">
+    <value>If you are protecting the boiler at your property it must have a power output of less than 70 kW/hr and be powered by natural gas. Boilers powered by liquified petroleum gas (LPG), oil, renewable heat sources and electric are not covered.</value>
+  </data>
+  <data name="AreYouEligibleForHomeServicesPara3" xml:space="preserve">
+    <value>We do not cover any models for the following brands of boiler: Servowarm, Chaffoteaux or Ferroli. Additionally, we do not cover the Ideal Istor boiler or any thermal store products made by Gledhill.</value>
+  </data>
+  <data name="AreYouEligibleForHomeServicesPara4" xml:space="preserve">
+    <value>Boilers with long-term and obvious pre-existing faults or system deficiencies, as determined by our engineer acting reasonably, are not covered.</value>
+  </data>
+  <data name="IfYouChangeYourMindPara1" xml:space="preserve">
+    <value>You can cancel your contract without penalty within 14 days from the day you receive your Welcome pack. If we have carried out any works or you have made a claim in this 14-day cancellation period, you will be responsible for the cost incurred.</value>
+  </data>
+  <data name="IfYouChangeYourMindPara2" xml:space="preserve">
+    <value>You may also cancel this cover at any time after the cancellation period, but you will be responsible to pay us for any cover provided and any fees incurred.</value>
+  </data>
+  <data name="IfYouChangeYourMindPara3" xml:space="preserve">
+    <value>We’ll include details of how to cancel when we send your confirmation of contract. Or you can get in touch using our &lt;a href="https://sse.co.uk/help/contact-us" target="_blank" title="Contact us"&gt;Contact us&lt;/a&gt; page.</value>
+  </data>
+  <data name="SmartMeter2" xml:space="preserve">
+    <value>If you sign up to one of our other fixed price tariffs, you are registering your interest for a smart meter. This means we may contact you in the future to discuss a smart meter installation as and when you become eligible.</value>
+  </data>
+  <data name="SmartMeter3" xml:space="preserve">
+    <value>We rely on a mobile phone or wireless signal to receive your readings. If these fail, your bills will be estimated.</value>
+  </data>
+  <data name="SmartMeterHeader" xml:space="preserve">
+    <value>Smart meters</value>
+  </data>
+  <data name="BundleSmartMeter1" xml:space="preserve">
+    <value>By signing up to this fixed price energy product, you are registering your interest for a smart meter. This means we may contact you in the future to discuss a smart meter installation as and when you become eligible.</value>
+  </data>
+  <data name="BundleSmartMeter2" xml:space="preserve">
+    <value>We rely on a mobile phone or wireless signal to get your smart meter readings. If these fail, you’ll either need to take your own reading and send it to us, or your bills will be estimated.</value>
+  </data>
+  <data name="PartsAndLabourPara1" xml:space="preserve">
+    <value>This is subject to terms and conditions found in the </value>
+  </data>
+  <data name="AccordionSavingsCalculationHeader" xml:space="preserve">
+    <value>How your savings are calculated</value>
+  </data>
+  <data name="AccordionSavingsCalculationHeaderAlt" xml:space="preserve">
+    <value>How your savings are calculated</value>
+  </data>
+  <data name="AccordionSavingsCalculationPara1" xml:space="preserve">
+    <value>£114 saving is based on Heating Breakdown being free for 12 months compared to the standard price</value>
+  </data>
+  <data name="ImportantInformationElecWiringInspHeader" xml:space="preserve">
+    <value>Electrical Wiring Inspection</value>
+  </data>
+  <data name="ImportantInformationElecWiringInspPara1" xml:space="preserve">
+    <value>Electrical Wiring Cover covers your home's fixed electrical wiring system. "Fixed electrical wiring system" means your electrical wiring, fuse box, light fittings and switches, wall sockets and shower isolation switches. We may need to do an initial visual inspection of your fixed electrical wiring system and an earth loop impedance test. This may be necessary if your house is over 15 years old, hasn't been rewired in the last 15 years or has an old-style fuse box.</value>
+  </data>
+  <data name="ImportantInformationElecWiringInspPara2" xml:space="preserve">
+    <value>For more details, please read the insurance product information document:</value>
+  </data>
+  <data name="ElecWiringProductInfoDocumentLinkAlt" xml:space="preserve">
+    <value>Download SSE Electrical Wiring Cover Insurance Product Information Document</value>
+  </data>
+  <data name="ElecWiringProductInfoDocumentLinkText" xml:space="preserve">
+    <value>SSE Electrical Wiring Cover Insurance Product Information Document</value>
+  </data>
+  <data name="ElecWiringProductInfoDocumentLinkUrl" xml:space="preserve">
+    <value>/Areas/Common/Content/PDFs/SSE0721_SSE_Home_Services_IPIDs_Electric_Wiring_Cover_Product_information_document.pdf</value>
+  </data>
+  <data name="ImportantInformationHeader" xml:space="preserve">
+    <value>Electrical Wiring Cover – important information</value>
+  </data>
+  <data name="ImportantInformationHeaderAlt" xml:space="preserve">
+    <value>Electrical Wiring Cover – important information</value>
+  </data>
+  <data name="ImportantInformationPartsLabourHeader" xml:space="preserve">
+    <value>Parts and labour</value>
+  </data>
+  <data name="ImportantInformationPartsLabourPara1_1" xml:space="preserve">
+    <value>This is subject to terms and conditions found in the</value>
+  </data>
+  <data name="ImportantInformationPartsLabourPara1_2" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="ImportantInformationPartsLabourPara1_Link1Alt" xml:space="preserve">
+    <value>Download SSE Home Services policy booklet</value>
+  </data>
+  <data name="ImportantInformationPartsLabourPara1_Link1Text" xml:space="preserve">
+    <value>SSE Home Services Policy Booklet</value>
+  </data>
+  <data name="ImportantInformationPartsLabourPara1_Link1Url" xml:space="preserve">
+    <value>/Content/Pdfs/SSE Home Services Policy Booklet.pdf</value>
+  </data>
+  <data name="ImportantInformationPartsLabourPara1_Link2Alt" xml:space="preserve">
+    <value>Download Insurance Product Information Document</value>
+  </data>
+  <data name="ImportantInformationPartsLabourPara1_Link2Text" xml:space="preserve">
+    <value>Insurance Product Information Document</value>
+  </data>
+  <data name="ImportantInformationPartsLabourPara1_Link2Url" xml:space="preserve">
+    <value>/Areas/Common/Content/PDFs/SSE0721_SSE_Home_Services_IPIDs_Electric_Wiring_Cover_Product_information_document.pdf</value>
+  </data>
+  <data name="OVODisclaimerText" xml:space="preserve">
+    <value>SSE  is now part of  the OVO family, which means some of your communications may say SSE Home Services and some may mention OVO (S) Home Services. This will not negatively impact the product or service that you will receive.  Please bear with us as we update all of our communications accordingly.</value>
+  </data>
+</root>

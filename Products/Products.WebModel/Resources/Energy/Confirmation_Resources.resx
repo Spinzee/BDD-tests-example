@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EnergyOnlyBoxText" xml:space="preserve">
+    <value>&lt;strong&gt;It takes no more than 21 days to switch&lt;/strong&gt; to us and we’ll keep you informed at every step.</value>
+  </data>
+  <data name="BroadbandBundleBoxText" xml:space="preserve">
+    <value>Your energy supply and phone and broadband will be switched over to us within 21 days. &lt;strong&gt;We’ll keep you informed at every step.&lt;/strong&gt;</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Got a question? Call us on</value>
+  </data>
+  <data name="ContactUsAlt" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="ContactUsPart2" xml:space="preserve">
+    <value>. We’re open 8am-8pm Mon-Fri, and 8am to 2pm Sat. Or you can email us at </value>
+  </data>
+  <data name="ContactUsText" xml:space="preserve">
+    <value>contact us</value>
+  </data>
+  <data name="ContactUsUrl" xml:space="preserve">
+    <value>https://sse.co.uk/help/contact-us</value>
+  </data>
+  <data name="CrossSell2HeaderBroadband" xml:space="preserve">
+    <value>Switch to SSE’s Frustration-Free Broadband</value>
+  </data>
+  <data name="CrossSell2LinkAltBroadband" xml:space="preserve">
+    <value>Find out more about our broadband</value>
+  </data>
+  <data name="CrossSell2LinkTextBroadband" xml:space="preserve">
+    <value>Find out more</value>
+  </data>
+  <data name="CrossSell2LinkUrlBroadband" xml:space="preserve">
+    <value>https://www.sse.co.uk/phone-and-broadband</value>
+  </data>
+  <data name="CrossSell2TextBroadband" xml:space="preserve">
+    <value>We offer broadband with a promise of zero price hikes during your 18-month contract and no upfront broadband charges.</value>
+  </data>
+  <data name="CrossSellHeaderHES" xml:space="preserve">
+    <value>Protect your home with our heating cover</value>
+  </data>
+  <data name="CrossSellLinkAltHES" xml:space="preserve">
+    <value>Find out more about our heating cover</value>
+  </data>
+  <data name="CrossSellLinkTextHES" xml:space="preserve">
+    <value>Find out more</value>
+  </data>
+  <data name="CrossSellLinkUrlHES" xml:space="preserve">
+    <value>https://www.sse.co.uk/home-services</value>
+  </data>
+  <data name="CrossSellTextHES" xml:space="preserve">
+    <value>We offer boiler and heating cover with parts and labour included, a 24/7 emergency helpline, and call-outs for emergency repairs 24 hours a day.</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Your order is complete</value>
+  </data>
+  <data name="Link2Alt" xml:space="preserve">
+    <value>Link to find out more about smart meters</value>
+  </data>
+  <data name="Link2Text" xml:space="preserve">
+    <value>Introducing smart meters</value>
+  </data>
+  <data name="Link2Url" xml:space="preserve">
+    <value>https://sse.co.uk/energy/smart-meters</value>
+  </data>
+  <data name="Link3Alt" xml:space="preserve">
+    <value>Link to energy saving tips and advice</value>
+  </data>
+  <data name="Link3Text" xml:space="preserve">
+    <value>Energy efficiency and saving advice</value>
+  </data>
+  <data name="Link3Url" xml:space="preserve">
+    <value>https://sse.co.uk/help/energy/energy-efficiency-and-saving</value>
+  </data>
+  <data name="LinkAlt" xml:space="preserve">
+    <value>Link to log in to your SSE online account</value>
+  </data>
+  <data name="LinksHeader" xml:space="preserve">
+    <value>Help with your energy</value>
+  </data>
+  <data name="LinkText" xml:space="preserve">
+    <value>Sign in to your SSE online account</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>https://my.sse.co.uk/login</value>
+  </data>
+  <data name="ModuleLinkAlt" xml:space="preserve">
+    <value>Link to our SSE Rewards website</value>
+  </data>
+  <data name="ModuleLinkText" xml:space="preserve">
+    <value>Find out about SSE Reward</value>
+  </data>
+  <data name="ModuleLinkUrl" xml:space="preserve">
+    <value>https://ssereward.com/</value>
+  </data>
+  <data name="ModuleText" xml:space="preserve">
+    <value>Get access to tickets for The SSE Arena, Wembley, The SSE Hydro and The SSE Arena, Belfast up to 48 hours before they go on general sale!</value>
+  </data>
+  <data name="Paragraph1" xml:space="preserve">
+    <value>Thank you – we’ve received your application for the {0} {1} with SSE.</value>
+  </data>
+  <data name="Paragraph2" xml:space="preserve">
+    <value>Your Welcome pack will include your confirmation of contract, tariff information, terms &amp; conditions and cancellation form. Your right to change your mind within 14 days is from the day after the date you sign up with us. Your confirmation of contract will tell you how to cancel.</value>
+  </data>
+  <data name="Paragraph3" xml:space="preserve">
+    <value>Confirmation of your Direct Debit will be sent within 3 working days or 10 days prior to collection.</value>
+  </data>
+  <data name="StepsPara1" xml:space="preserve">
+    <value>We’ll send you a confirmation email shortly.</value>
+  </data>
+  <data name="StepsPara2" xml:space="preserve">
+    <value>Got a question? You’ll find answers to common questions on our</value>
+  </data>
+  <data name="StepsPara2Part2" xml:space="preserve">
+    <value>, or</value>
+  </data>
+  <data name="StepsPara3" xml:space="preserve">
+    <value>Redeem your £11.50 SSE fibre broadband offer with the link we’ll email you within 2 to 5 days.</value>
+  </data>
+  <data name="SubHeader" xml:space="preserve">
+    <value>What happens next?</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Sign up for energy – Your order is complete - SSE</value>
+  </data>
+  <data name="ContactUsEmailAlt" xml:space="preserve">
+    <value>Link to email our customer service team</value>
+  </data>
+  <data name="ContactUsEmailText" xml:space="preserve">
+    <value>customerservice@sse.co.uk</value>
+  </data>
+  <data name="ContactUsEmailUrl" xml:space="preserve">
+    <value>mailto:customerservice@sse.co.uk</value>
+  </data>
+  <data name="ContactUsPageUrl" xml:space="preserve">
+    <value>https://sse.co.uk/help/contact-us</value>
+  </data>
+  <data name="EnergyHelpPageUrlAlt" xml:space="preserve">
+    <value>View our energy help page</value>
+  </data>
+  <data name="EnergyHelpPageUrlText" xml:space="preserve">
+    <value>energy help page</value>
+  </data>
+  <data name="StepsPara2Part3" xml:space="preserve">
+    <value>and we’ll be happy to help.</value>
+  </data>
+  <data name="BundleHelpPageUrlAlt" xml:space="preserve">
+    <value>View our help page</value>
+  </data>
+  <data name="BundleHelpPageUrlText" xml:space="preserve">
+    <value>help page</value>
+  </data>
+  <data name="HelpPageUrl" xml:space="preserve">
+    <value>https://sse.co.uk/help/energy</value>
+  </data>
+  <data name="SmartMessage" xml:space="preserve">
+    <value>Your tariff needs a smart meter. We’ll be in touch shortly to let you book your installation.</value>
+  </data>
+  <data name="HesBundleBoxText" xml:space="preserve">
+    <value>Your energy supply will switch to us within 21 days. We'll keep you informed at every step. &lt;strong&gt;Your heating cover starts on the next working day after your energy switch date.&lt;/strong&gt;</value>
+  </data>
+  <data name="CrossSellHeaderBroadband" xml:space="preserve">
+    <value>Switch to SSE's Frustration-Free Broadband</value>
+  </data>
+  <data name="CrossSellLinkAltBroadband" xml:space="preserve">
+    <value>Find out more about our broadband</value>
+  </data>
+  <data name="CrossSellLinkTextBroadband" xml:space="preserve">
+    <value>Find out more</value>
+  </data>
+  <data name="CrossSellLinkUrlBroadband" xml:space="preserve">
+    <value>https://sse.co.uk/phone-and-broadband</value>
+  </data>
+  <data name="CrossSellTextBroadband" xml:space="preserve">
+    <value>We offer broadband with a promise of zero price hikes during your 18-month contract, unlimited downloads and no upfront broadband charges – and you can even leave for free with our Happiness Guarantee.</value>
+  </data>
+  <data name="WhatHappensNext2Broadband" xml:space="preserve">
+    <value>We’ll then email you Welcome packs with details about your energy and broadband products, including terms and conditions.</value>
+  </data>
+  <data name="WhatHappensNext2Energy" xml:space="preserve">
+    <value>We’ll then email you a Welcome pack with details about your product, including terms and conditions.</value>
+  </data>
+  <data name="WhatHappensNext2Hes" xml:space="preserve">
+    <value>We’ll then email you a Welcome pack with details about your energy product, including terms and conditions.</value>
+  </data>
+  <data name="WhatHappensNext3Hes" xml:space="preserve">
+    <value>You’ll receive your Welcome pack with details about your heating cover by post.</value>
+  </data>
+</root>

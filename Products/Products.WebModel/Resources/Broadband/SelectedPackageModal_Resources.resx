@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessCharge" xml:space="preserve">
+    <value>Access charge for non-geographic calls to numbers starting 084, 087, 118 – 15p/min</value>
+  </data>
+  <data name="AnytimeLandlineParagraph" xml:space="preserve">
+    <value>Our Anytime call package helps keep you in touch, with inclusive local, national and UK mobile calls at any time.</value>
+  </data>
+  <data name="AnytimeLandlineTitle" xml:space="preserve">
+    <value>Anytime</value>
+  </data>
+  <data name="AnytimePlusParagraph" xml:space="preserve">
+    <value>With Anytime Plus, calls to 01/02/03 numbers, UK mobiles, fixed line calls to 35 international destinations are included.</value>
+  </data>
+  <data name="AnytimePlusTitle" xml:space="preserve">
+    <value>Anytime Plus</value>
+  </data>
+  <data name="Call084522p" xml:space="preserve">
+    <value>0845 – 15p/min up to max of 22p/min</value>
+  </data>
+  <data name="Call087028p" xml:space="preserve">
+    <value>0870 – 15p/min up to max of 28p/min</value>
+  </data>
+  <data name="CallCharge23" xml:space="preserve">
+    <value>Call set-up charge – 23p per call</value>
+  </data>
+  <data name="CallCharge23Long" xml:space="preserve">
+    <value>Call set-up fee for non-inclusive calls – 23p per call</value>
+  </data>
+  <data name="EveningAndWeekendParagraph" xml:space="preserve">
+    <value>Our Evening and Weekend call packages includes local, national and UK mobile calls from 7pm to 7am weekdays, and anytime at weekends up to midnight Sunday. Maximum duration for inclusive calls: 70 minutes.</value>
+  </data>
+  <data name="EveningAndWeekendTitle" xml:space="preserve">
+    <value>Evening &amp; Weekend</value>
+  </data>
+  <data name="InternatCalls20p" xml:space="preserve">
+    <value>International calls to 35 selected countries (Band A) – 20p/min</value>
+  </data>
+  <data name="InternatCals20p70mins" xml:space="preserve">
+    <value>International calls to 35 selected countries (Band A) – inclusive up to 70 mins per call, then 20p/min.</value>
+  </data>
+  <data name="LineFeatureLinkAltText" xml:space="preserve">
+    <value>Link to see more about our call features</value>
+  </data>
+  <data name="LineFeatureLinkPrefix" xml:space="preserve">
+    <value>Some </value>
+  </data>
+  <data name="LineFeatureLinkSuffix" xml:space="preserve">
+    <value> have extra charges.</value>
+  </data>
+  <data name="LineFeatureLinkText" xml:space="preserve">
+    <value>call features</value>
+  </data>
+  <data name="LineFeatureLinkUrl" xml:space="preserve">
+    <value>https://sse.co.uk/help/phone-and-broadband/phone-call-features</value>
+  </data>
+  <data name="LineRentalParagraph" xml:space="preserve">
+    <value>No calls included. Any calls you make are on a ‘Pay-as-you-go’ rate, so you only pay for what you use</value>
+  </data>
+  <data name="LineRentalTitle" xml:space="preserve">
+    <value>Line Rental Only</value>
+  </data>
+  <data name="LocalNatCalls15p" xml:space="preserve">
+    <value>Local and national calls – 15p/min</value>
+  </data>
+  <data name="LocalNatCalls15p70mins" xml:space="preserve">
+    <value>Local and national calls – inclusive of up to 70 mins per call. Then 15p/min</value>
+  </data>
+  <data name="LocalNatCalls15pNotInclusive" xml:space="preserve">
+    <value>Local and national calls – 15p/min (when not inclusive)</value>
+  </data>
+  <data name="MoreInformationLinkAltText" xml:space="preserve">
+    <value>Link to see our broadband regulatory information</value>
+  </data>
+  <data name="MoreInformationLinkText" xml:space="preserve">
+    <value>SSE Phone product and price guide (19 range).</value>
+  </data>
+  <data name="MoreInformationLinkUrl" xml:space="preserve">
+    <value>/Areas/Common/Content/PDFs/SSE Phone Product and Price Guide (19 range).pdf</value>
+  </data>
+  <data name="MoreInformationPrefix" xml:space="preserve">
+    <value>For more information, see our </value>
+  </data>
+  <data name="PremiumNumberExclusion" xml:space="preserve">
+    <value>Please be aware that our call packages do not allow calls to be made to premium rate numbers beginning 09</value>
+  </data>
+  <data name="UKMobCalls18p" xml:space="preserve">
+    <value>UK mobile calls – 18p/min</value>
+  </data>
+  <data name="UKMobCalls18p70mins" xml:space="preserve">
+    <value>UK mobile calls – inclusive up to 70 mins per call, then 18p/min. Calls to 070 numbers are not inclusive</value>
+  </data>
+  <data name="UKMobCalls18pNotInclusive" xml:space="preserve">
+    <value>UK mobile calls – 18p/min (when not inclusive). Calls to 070 numbers are not inclusive</value>
+  </data>
+</root>

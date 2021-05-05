@@ -1,0 +1,109 @@
+﻿<root>
+  <FromEmail></FromEmail>
+  <ToEmail></ToEmail>
+  <Subject>Welcome to SSE</Subject>
+  <Body bgcolor="#F7F7F7" text="#898989">
+    <style>
+      #reward a, #reward a:visited, #reward a:hover, #reward a:active{
+      color:#fff;
+      }
+      #reward a:hover {
+      text-decoration:underline;
+      cursor:pointer;
+      }
+
+    </style>
+    <table id="bodyCont"  width="600" style="max-width:100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" ALIGN="center">
+      <tr>
+        <td height="35" width="100%"  align="left" valign="middle" style="color:#002961; font-size:14px; padding:0; line-height:18px; font-family:Calibri, Arial, Helvetica, sans-serif">
+          SSE - [$TYPE] Confirmation Email
+        </td>
+      </tr>
+      <tr bgcolor="#ffffff">
+        <td valign="top">
+          <a href="http://[$Domain]" target="_blank" title="SSE">
+            <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/SSElogo.png" border="0" alt="SSE" class="sse-logo" style="display:block; width:400px;" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/sse-header.gif" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+        </td>
+      </tr>
+      <tr>
+        <td style="max-width:600px; padding-top:35px; background-color:white;">
+          <table border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                <span style="font-size:20px; line-height:24px; font-weight:bold">Dear [$TITLE] [$SURNAME],</span>
+                <br />
+                <br />Thank you for choosing to protect your home with SSE Home Services. You've made a great choice. Our dedicated customer service team are now creating your new account.
+                <br />
+                <br />Within the next 10 working days, you'll receive a welcome pack which includes your Policy Booklet. Please take some time to read through the welcome pack, as it contains our full terms and conditions, details of which parts of your system are covered by our products, and key contact information.
+                <br />
+                <br />You have a 14 calendar day period in which to cancel your Product, with no penalty, from the day you receive your welcome pack. This is known as the Cancellation Period. If we have carried out any works or you have made a claim, you will be responsible for the cost incurred.
+                <br />
+                <br />You may also cancel this cover at any time after the cancellation period, cover will end immediately upon receipt of your instruction. However, you will be responsible to pay us for any cover provided and any fees incurred. To cancel, simply write to us at SSE Home Services Limited, Inveralmond House, 200 Dunkeld Road, Perth PH1 3AQ telling us you want to cancel. If it’s easier, you can phone us on <strong>0345 076 7646*</strong> or email us at <a href="mailto:home.services@sse.com" target="_blank">home.services@sse.com.</a>
+                <br />
+                <br />Cancelling your Direct Debit without contacting us will not mean you have cancelled your cover with us.
+                <br />
+                <br />Depending on the product(s) you've chosen, we'll contact you shortly to arrange the visit for your initial inspection and annual service.
+                <br />
+                <br />In the meantime, if you would like any further information, you can visit our <a href="https://sse.co.uk/help/boilers-and-heating" target="_blank">website</a> or <a href="https://sse.co.uk/help/contact-us?utm_campaign=sales_confirmation_hes&amp;utm_medium=email&amp;utm_source=sales_confirmation&amp;utm_content=hes&amp;WT.mc_id=email|sales_confirmation|sales_confirmation_hes|hes" target="_blank">you can contact us online</a>.
+                <br/>
+                <br/>Thank you again for choosing to protect your home with SSE Home Services.
+                <br />
+                <br />
+                Kind regards
+                <br />
+                <strong>The customer service team at SSE</strong>
+                <br />
+                <br />
+                Address: Grampian House, 200 Dunkeld Road, Perth, PH1 3GH
+                <br />
+                Website: <a href="https://sse.co.uk" target="_blank">sse.co.uk</a>
+                <br />
+                <br />
+                This is an automated response. Please don’t reply to this email.
+                <br />
+                <br />
+              </td>
+              <td width="40"></td>
+            </tr>
+          </table>
+          <table id="reward" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#01002a; color:#fff; ">
+            <tr>
+              <td style="padding:1.6em;" bgcolor="#01002a" width="50%">
+                <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/reward-logo.png" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:157px; display:inline-block" />
+                <br/>
+                <span style="font-size:140%; padding-top: 0.5em; display:block;">Have you signed up for SSE Reward yet? (it's free.)</span>
+                <br/>
+                <a title ="link to our SSE Rewards website" href="https://ssereward.com">Access advance tickets for the world's biggest acts</a>
+              </td>
+              <td width="50%">
+                <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/hydro-image.png" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/sse-header.gif" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+        </td>
+      </tr>
+      <tr>
+        <td height="35" width="100%"  align="left" valign="middle" style="color:#002961; font-size:14px; padding:0; line-height:18px; font-family:Calibri, Arial, Helvetica, sans-serif">
+          *We may monitor your calls to help improve our customer service.
+        </td>
+      </tr>
+    </table>
+  </Body>
+</root>
+ 

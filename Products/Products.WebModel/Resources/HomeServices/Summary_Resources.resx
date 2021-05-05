@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccHolderLabel" xml:space="preserve">
+    <value>Account holder</value>
+  </data>
+  <data name="AccNumberlabel" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+  <data name="BankDetailsHeader" xml:space="preserve">
+    <value>Bank details</value>
+  </data>
+  <data name="ExtrasLabel" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="ChangeCoverLinkAlt" xml:space="preserve">
+    <value>Link to go back to comparison page and change your selection</value>
+  </data>
+  <data name="ChangeCoverLinkText" xml:space="preserve">
+    <value>Change cover choice</value>
+  </data>
+  <data name="CheckboxLegend" xml:space="preserve">
+    <value>Do you agree to these terms and conditions and other important information above?</value>
+  </data>
+  <data name="ContractLengthLabel" xml:space="preserve">
+    <value>Contract length</value>
+  </data>
+  <data name="CreditCheckHeader" xml:space="preserve">
+    <value>Credit check</value>
+  </data>
+  <data name="CreditCheckLinkAlt" xml:space="preserve">
+    <value>Link to view Experian website</value>
+  </data>
+  <data name="CreditCheckLinkSuffix" xml:space="preserve">
+    <value> There may also be a requirement to take a security deposit.</value>
+  </data>
+  <data name="CreditCheckLinkText" xml:space="preserve">
+    <value>explained in more detail here.</value>
+  </data>
+  <data name="CreditCheckLinkUrl" xml:space="preserve">
+    <value>http://www.experian.co.uk/crain/index.html</value>
+  </data>
+  <data name="CreditCheckParagraph" xml:space="preserve">
+    <value>In order to process your application, we may supply your personal information to credit reference agencies (CRAs) and they will give us information about you – such as your financial history. We do this to assess creditworthiness and product suitability, check your identity, manage your account, trace and recover debts and prevent criminal activity. We will also continue to exchange information about you with CRAs on an ongoing basis, including about your settled accounts and any debts not fully repaid on time. CRAs will share your information with other organisations. The identities of the CRAs and the way in which they use and share personal information, are </value>
+  </data>
+  <data name="DDEditLinkAlt" xml:space="preserve">
+    <value>Link to change your bank details</value>
+  </data>
+  <data name="DDMandateLink" xml:space="preserve">
+    <value>View Direct Debit form for your cover</value>
+  </data>
+  <data name="DDMandateLinkAlt" xml:space="preserve">
+    <value>Link to download printable Direct Debit instruction</value>
+  </data>
+  <data name="EditLinkText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EligibilityHeader" xml:space="preserve">
+    <value>Are you eligible?</value>
+  </data>
+  <data name="EligibilityParagraph1" xml:space="preserve">
+    <value>This policy is for owners of domestic properties only. Retail, commercial and other premises used for business are not eligible.</value>
+  </data>
+  <data name="ExcessLabel" xml:space="preserve">
+    <value>Excess</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Order summary</value>
+  </data>
+  <data name="ImportantInfoHeader" xml:space="preserve">
+    <value>Important Information</value>
+  </data>
+  <data name="ImportantInfoParagraph" xml:space="preserve">
+    <value>All the prices we display include any applicable taxes and fees. 12 month contract applies. Your cover will start on the next working day.</value>
+  </data>
+  <data name="MethodLabel" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="MonthlyCostsTableHeader" xml:space="preserve">
+    <value>Monthly cost breakdown</value>
+  </data>
+  <data name="MonthlyTotalLabel" xml:space="preserve">
+    <value>Monthly total:</value>
+  </data>
+  <data name="OfferParagraph" xml:space="preserve">
+    <value>If this applies to you, your gas account will be credited in the next 46 calendar days of the cancellation period being completed.</value>
+  </data>
+  <data name="OfferPrefix" xml:space="preserve">
+    <value>With £0 excess SSE gas customers get </value>
+  </data>
+  <data name="OfferStrong" xml:space="preserve">
+    <value>£55 credit</value>
+  </data>
+  <data name="OfferSuffix" xml:space="preserve">
+    <value> on their account</value>
+  </data>
+  <data name="PaymentDateLabel" xml:space="preserve">
+    <value>Date of payment each month</value>
+  </data>
+  <data name="PaymentEditLinkAlt" xml:space="preserve">
+    <value>Link to change the date of your payment</value>
+  </data>
+  <data name="PaymentHeader" xml:space="preserve">
+    <value>Payment details</value>
+  </data>
+  <data name="PaymentLabel" xml:space="preserve">
+    <value>Price per month</value>
+  </data>
+  <data name="PersonalDetailsHeader" xml:space="preserve">
+    <value>Personal details</value>
+  </data>
+  <data name="PersonalEditLinkAlt" xml:space="preserve">
+    <value>Link to change your personal details</value>
+  </data>
+  <data name="PrintLinkAlt" xml:space="preserve">
+    <value>Link to print your order summary</value>
+  </data>
+  <data name="PrintLinkText" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="PrintLinkText1" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="PrivacyLinkAlt" xml:space="preserve">
+    <value>Link to view our privacy notice</value>
+  </data>
+  <data name="PrivacyLinkSuffix" xml:space="preserve">
+    <value> for details about how we use your information.</value>
+  </data>
+  <data name="PrivacyLinkText" xml:space="preserve">
+    <value>See our Privacy Notice</value>
+  </data>
+  <data name="PrivacyLinkUrl" xml:space="preserve">
+    <value>https://sse.co.uk/about-us/legal/privacy-policy</value>
+  </data>
+  <data name="RightToChangeHeader" xml:space="preserve">
+    <value>Your right to change your mind</value>
+  </data>
+  <data name="RightToChangeParagraph1" xml:space="preserve">
+    <value>You have an 18-calendar day period in which to cancel your product, with no penalty, from your product start date. This is known as your cancellation period.</value>
+  </data>
+  <data name="RightToChangeParagraph2" xml:space="preserve">
+    <value>You may also cancel this cover at any time after the cancellation period. Your cover will end immediately upon receipt of your instruction. However, you will be responsible to pay us for any cover provided and any fees incurred. To cancel, simply write to us at OVO (S) Home Services Limited, Grampian House, 200 Dunkeld Road, Perth, PH1 3AQ telling us you want to cancel. If it’s easier, you can phone us on 033 3006 9806, use the Cancellation Form or email us at &lt;a href="mailto:home.services@sse.com" &gt;home.services@sse.com&lt;/a&gt;</value>
+  </data>
+  <data name="RightToChangeParagraph3" xml:space="preserve">
+    <value>Cancelling your Direct Debit without contacting us will not mean you have cancelled your cover with us.</value>
+  </data>
+  <data name="SortCodeLabel" xml:space="preserve">
+    <value>Sort code</value>
+  </data>
+  <data name="SubmitButtonText" xml:space="preserve">
+    <value>Confirm order</value>
+  </data>
+  <data name="SubmitButtonTitle" xml:space="preserve">
+    <value>Take out your cover</value>
+  </data>
+  <data name="SummaryIntro" xml:space="preserve">
+    <value>Please check the details and confirm you’ve read the terms and conditions to complete your cover selection.</value>
+  </data>
+  <data name="TaxDisclaimerLabel" xml:space="preserve">
+    <value>Price inclusive of VAT and Insurance Premium Tax</value>
+  </data>
+  <data name="TermsAndConditionsAriaDescription" xml:space="preserve">
+    <value>Tick this box to confirm the communication terms and conditions</value>
+  </data>
+  <data name="TermsAndConditionsHeader" xml:space="preserve">
+    <value>Before you confirm your order, please read our terms and conditions:</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Order Summary</value>
+  </data>
+  <data name="YourCoverHeader" xml:space="preserve">
+    <value>Your cover</value>
+  </data>
+  <data name="PaymentMethodMonthlyLabel" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="BankDetailsModalButtonAlt" xml:space="preserve">
+    <value>Link to continue and change your bank details</value>
+  </data>
+  <data name="BankDetailsModalButtonText" xml:space="preserve">
+    <value>Change bank details</value>
+  </data>
+  <data name="BankDetailsModalMessage" xml:space="preserve">
+    <value>Going back to change your bank or payment details will clear all your Direct Debit information so you’ll need to enter it again.</value>
+  </data>
+  <data name="CoverDetailsModalButtonAlt" xml:space="preserve">
+    <value>Change your cover</value>
+  </data>
+  <data name="CoverDetailsModalButtonText" xml:space="preserve">
+    <value>Choose different cover</value>
+  </data>
+  <data name="CoverDetailsModalMessage" xml:space="preserve">
+    <value>By changing your cover choice, you’ll be taken back to select a new cover option and will need to tell us your Direct Debit information again.</value>
+  </data>
+  <data name="ModalCancelButtonAlt" xml:space="preserve">
+    <value>Link to close and return to order summary page</value>
+  </data>
+  <data name="PersonalDetailsModalButtonAlt" xml:space="preserve">
+    <value>Link to continue and change your personal details</value>
+  </data>
+  <data name="PersonalDetailsModalButtonText" xml:space="preserve">
+    <value>Change personal details</value>
+  </data>
+  <data name="PersonalDetailsModalMessage" xml:space="preserve">
+    <value>By changing your personal details, you’ll be taken back through previous steps and will need to tell us your Direct Debit information again.</value>
+  </data>
+  <data name="YearlyCostsTableHeader" xml:space="preserve">
+    <value>Yearly cost breakdown</value>
+  </data>
+  <data name="YearlyTotalLabel" xml:space="preserve">
+    <value>Yearly total:</value>
+  </data>
+  <data name="ContractStartDateLabel" xml:space="preserve">
+    <value>Contract start date</value>
+  </data>
+  <data name="EligibilityParagraph2" xml:space="preserve">
+    <value>If you are protecting the boiler at your property it must have a power output of less than 70kW and be powered by natural gas. Boilers powered by liquefied petroleum gas (LPG), oil, renewable heat sources and electric are not covered.</value>
+  </data>
+  <data name="OurBrandHeader" xml:space="preserve">
+    <value>You’ll join one of our brands</value>
+  </data>
+  <data name="OurBrandHeaderParagraph1" xml:space="preserve">
+    <value>Your brand depends on where you live, but they’re all part of the SSE family. For Scotland it’s SSE Scottish Hydro, for Northern England it’s SSE, for Southern England it’s SSE Southern Electric and for Wales it’s SSE SWALEC. Your brand will be shown on the paperwork we send you and on your bank statement when you make payments to us.</value>
+  </data>
+  <data name="OurBrandHeaderParagraph2" xml:space="preserve">
+    <value>OVO (S) Home Services Limited is authorised and regulated by the Financial Conduct Authority (FCA), reference number 695476. Registered in Scotland No. SC292102 at Grampian House, 200 Dunkeld Road, Perth, PH1 3AQ. Our insurance policies are sold and administer by us and underwritten by AmTrust Europe Limited.</value>
+  </data>
+  <data name="TermsAndConditionsCheckboxHomeSerevicesLabelText" xml:space="preserve">
+    <value>By ticking the box you confirm that:&lt;br/&gt;
+&lt;ol&gt;
+&lt;li&gt;You have read and understood the policy booklet and Insurance product information document and are eligible for cover;&lt;/li&gt;
+&lt;li&gt;You have provided accurate information (not doing so could invalidate your insurance);&lt;/li&gt;
+&lt;li&gt;You are consenting to enter into a binding Service Contract with OVO (S) Home Services Limited for your initial inspection and annual service and a binding Breakdown Contract with AmTrust Europe Limited for repairs to your system; and&lt;/li&gt;
+&lt;li&gt;You provide your express consent for your cover to commence on the next business day (during your cancellation period).&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="ContractLengthSuffix" xml:space="preserve">
+    <value> months</value>
+  </data>
+  <data name="ContractStartDate" xml:space="preserve">
+    <value>Next working day</value>
+  </data>
+  <data name="CoverAddressDetailsHeader" xml:space="preserve">
+    <value>Cover details</value>
+  </data>
+  <data name="SupplyAddressDetailsModalMessage" xml:space="preserve">
+    <value>By changing your cover address, you’ll be taken back through previous steps and will need to tell us your Direct Debit information again.</value>
+  </data>
+  <data name="SupplyAddressEditLinkAlt" xml:space="preserve">
+    <value>Link to change your supply address</value>
+  </data>
+  <data name="SupplyAddressModalButtonAlt" xml:space="preserve">
+    <value>Link to continue and change cover address</value>
+  </data>
+  <data name="SupplyAddressModalButtonText" xml:space="preserve">
+    <value>Change cover address details</value>
+  </data>
+  <data name="ConfirmationEmailLandloardText" xml:space="preserve">
+    <value>Landlord</value>
+  </data>
+  <data name="ConfirmationEmailResidentText" xml:space="preserve">
+    <value>Retail</value>
+  </data>
+  <data name="EligibilityParagraph3" xml:space="preserve">
+    <value>We do not cover any models for the following brands of boiler: Servowarm, Chaffoteaux or Ferroli. Additionally, we do not cover the Ideal Istor boiler or any thermal store products made by Gledhill.</value>
+  </data>
+  <data name="EligibilityParagraph4" xml:space="preserve">
+    <value>Boilers with long-term and obvious pre-existing faults or system deficiencies, as determined by our engineer acting reasonably, are not covered.</value>
+  </data>
+</root>

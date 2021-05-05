@@ -1,0 +1,44 @@
+﻿@using Products.WebModel.Resources.HomeServices
+@model Products.WebModel.ViewModels.HomeServices.CoverDetailsHeaderViewModel
+@{
+    var monthlyCost = Model.MonthlyCost.Split('.');
+}
+<div class="cover-container box-info">
+    <div class="row">
+        <div class="col-xs-7">
+            <h3>@Model.DisplayName</h3>
+        </div>
+        <div class="col-xs-5 hidden-xs">
+            <a href="@Model.BackToHomeUrl" title="@CoverDetails_Resources.ChangeCoverChoiceLinkAlt" class="pull-right">@CoverDetails_Resources.ChangeCoverChoiceLinkText</a>
+        </div>
+    </div>
+    <div class="row tariff-price">
+        <div class="col-xs-12 col-sm-3">
+            <span class="price">@monthlyCost[0]</span><span class="tariff-price-pence">@(monthlyCost.Length > 1 ? $".{monthlyCost[1]}" : string.Empty)</span>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+            <span class="price-label"><strong>@CoverDetails_Resources.PerMonthLabel</strong> @CoverDetails_Resources.ContractLengthLabel</span>
+        </div>
+    </div>
+    <div class="annual-price"><strong>@CoverDetails_Resources.YearCostPrefix@Model.YearlyCost @CoverDetails_Resources.YearCostSuffix</strong></div>
+    <div>@CoverDetails_Resources.TaxDisclaimerLabel</div>
+    <ul class="bullet-list list--spaced">
+        <li>@CoverDetails_Resources.CoverBullet1</li>
+        <li>@CoverDetails_Resources.CoverBullet2</li>
+        @if (@Model.HasCoverbullet)
+        {
+            <li>@Model.CoverbulletText</li>
+        }
+        @if (Model.IsLandLord)
+        {
+            <li>@CoverDetails_Resources.CoverBullet3</li>
+        }
+    </ul>
+    <a href="@Model.BackToHomeUrl" title="@CoverDetails_Resources.ChangeCoverChoiceLinkAlt" class="hidden-sm hidden-md hidden-lg">@CoverDetails_Resources.ChangeCoverChoiceLinkText</a>
+</div>
+@if (Model.HasOffers)
+{
+    <div class="offer-container">
+        <div class="cover-offer-container"><div class="offer-text">@Model.OfferText</div></div>
+    </div>
+}

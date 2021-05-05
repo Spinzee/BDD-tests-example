@@ -1,0 +1,20 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@RenderBody()
+
+@section Popups {
+    @RenderSection("Popups", required: false)
+}
+
+@section scripts {
+    @RenderSection("scripts", required: false)
+}
+
+
+@section DataLayer
+    {
+    @{ Html.RenderAction("GetDataLayer", "HomeServices"); }
+}

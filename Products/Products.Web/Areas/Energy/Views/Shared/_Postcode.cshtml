@@ -1,0 +1,33 @@
+﻿@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.Energy.PostcodeViewModel
+
+<div class="row">
+    <div class="col-xs-12 col-sm-8">
+        <h1>@Model.Header</h1>
+        <p>@Model.ParagraphText</p>
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { @id = "enter-postcode-form", @autocomplete = "off" }))
+        {
+        <fieldset>
+            @Html.AntiForgeryToken()
+            @Html.EditorFor(m => m.PostCode)
+            @Html.HiddenFor(m => m.ProductCode)
+            @Html.HiddenFor(m => m.OurPrices)
+            @Html.HiddenFor(m => m.IsBundle)
+
+            @if (Model.ShowLandline)
+            {
+                @Html.EditorFor(m => m.Landline)
+                <p>@Landline_Resources.ListHeading</p>
+                <ul class="bullet-list">
+                    <li>@Landline_Resources.Bullet1</li>
+                    <li>@Landline_Resources.Bullet2</li>
+                </ul>
+                @Html.Partial("~/Views/Shared/_WhereIsMyNumberModal.cshtml")
+            }
+            <div class="form-group">
+                <button type="submit" class="button button-primary" value="true" id="confirmPostcode" name="confirmPostcode" title="@Model.SubmitButtonTitle">@Model.SubmitButtonText</button>
+            </div>
+        </fieldset>
+        }
+    </div>
+</div>

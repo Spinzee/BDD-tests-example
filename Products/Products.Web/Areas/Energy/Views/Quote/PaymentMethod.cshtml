@@ -1,0 +1,26 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.SelectPaymentMethodViewModel
+@{
+    ViewBag.Title = PaymentMethod_Resources.Title;
+}
+
+<div class="container">
+    @Html.Partial("_BackChevronWithStepCounter", Model.BackChevronViewModel)
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@PaymentMethod_Resources.Header</h1>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <legend class="sr-only"></legend>
+                    @Html.EditorFor(m => m.PaymentMethods)
+                    @Html.ValidationMessageFor(m => m.SelectedPaymentMethodId)
+
+                    <button type="submit" class="button button-primary" title="@Resources.ButtonNextSignUpEnergyAlt">@Resources.ButtonNextText</button>
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>

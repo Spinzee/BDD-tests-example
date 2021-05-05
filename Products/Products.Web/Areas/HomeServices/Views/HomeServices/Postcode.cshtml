@@ -1,0 +1,45 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.HomeServices
+@using Products.Model.Enums
+@model Products.WebModel.ViewModels.HomeServices.PostcodeViewModel
+@{
+    ViewBag.Title = Common_Resources.PostcodeTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @if (Model.AddressTypes == AddressTypes.Billing)
+            {
+                Html.RenderPartial("_BackChevron", Model.BackChevronViewModel);
+            }
+            @Html.Partial("_StepCounter")
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@Model.HeaderText</h1>
+            <p> @Model.ParagraphText</p>
+            @using (Html.BeginForm("Postcode", "HomeServices", FormMethod.Post, new { id = "enter-postcode-form", @autocomplete = "off" }))
+            {
+                <fieldset>
+                    @*<legend class="access"></legend>*@
+                    @Html.AntiForgeryToken()
+                    @Html.EditorFor(m => m.Postcode)
+                    @Html.HiddenFor(m => m.ProductCode)
+                    @Html.HiddenFor(m => m.AddressTypes)
+                    @Html.HiddenFor(m => m.CustomerType)
+                    <button type="submit" class="button button-primary" value="true" id="confirmPostcode" name="confirmPostcode" title="@Resources.ButtonNextSignUpAlt">@EnterPostcode_Resources.btnSubmit</button>
+                </fieldset>
+            }
+        </div>
+
+        @if (Model.AddressTypes == AddressTypes.Billing)
+        {
+            <div class="col-xs-12 col-sm-4">
+                <div id="price-box">
+                    @{Html.RenderAction("YourCoverBasket");}
+                </div>
+            </div>
+        }
+    </div>
+</div>

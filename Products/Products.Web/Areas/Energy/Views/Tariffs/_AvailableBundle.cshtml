@@ -1,0 +1,8 @@
+﻿@model Products.WebModel.ViewModels.Energy.TariffsViewModel
+
+<div class="bundle-card-wrapper">
+    <div class="tariff-bundle-card">
+        @{Html.RenderPartial("_AvailableBundleInner", Model);}
+        @{Html.RenderPartial("_TariffInformationLabelModal", Model);}
+    </div>
+</div>

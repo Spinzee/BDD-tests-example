@@ -1,0 +1,24 @@
+﻿@model Products.WebModel.ViewModels.Energy.SummaryViewModel
+
+<div>
+    <div id="totalMonthlyCostContainer" class="hidden">
+        <span class="col-xs-5 tariff-total-price-all" id="totalMonthlyCost">
+            <span class="price">@Model.TariffCostFullValue</span>
+            <span class="tariff-price-pence">@Model.TariffCostPenceValue</span>
+        </span>
+    </div>
+</div>
+
+<div class="accordion-group">
+    @Html.Partial("_SummaryCheckYourDetailsAccordion", Model)
+    @Html.Partial("_SummaryEnergyDetailsAccordion", Model)
+
+    @if (Model.IsBroadbandBundleSelected)
+    {
+        @Html.Partial("_SummaryBroadbandAndPhoneDetails", Model)
+    }
+    @if (Model.IsHesBundleSelected)
+    {
+        @Html.Partial("_SummaryHomeServicesDetails", Model)
+    }
+</div>

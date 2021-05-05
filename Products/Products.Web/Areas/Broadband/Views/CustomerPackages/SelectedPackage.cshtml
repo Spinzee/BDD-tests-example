@@ -1,0 +1,210 @@
+﻿@using Products.Core
+@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.ViewModels.Common
+@model Products.WebModel.ViewModels.Broadband.SelectedPackageViewModel
+@{
+    ViewBag.Title = SelectedPackage_Resources.Title;
+}
+
+@section Scripts {
+    @Scripts.Render("~/js/products/broadband/line-speed")
+    <script>
+        $(document).ready(function() {
+            $("[name=TalkCode]")
+                .change(function() {
+                    var $form = $(this).closest("form");
+                    $.post($form.attr("action"), $form.serialize())
+                        .done(function(data) {
+                            $('#price-info-box').replaceWith(data);
+                        });
+                });
+        });
+    </script>
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+        </div>
+    </div>
+    <div class="row">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="col-xs-12 col-sm-8">
+                <h1>@SelectedPackage_Resources.Header</h1>
+                <h2>@SelectedPackage_Resources.SubHeader</h2>
+                <div class="row">
+                    <div class="@(Model.AvailablePackageLinkIsHidden ? "col-xs-12" : "col-xs-7")">
+                        <h3>@Model.SelectedProductName</h3>
+                    </div>
+                    @if (!Model.AvailablePackageLinkIsHidden)
+                    {
+                        <div class="col-xs-5 hidden-xs">
+                            @Html.ActionLink(@SelectedPackage_Resources.OtherPackageLinkText, "AvailablePackages", "Packages", new { }, new { id = "packages", @class = "pull-right", title = SelectedPackage_Resources.OtherPackageLinkTitle })
+                        </div>
+                    }
+                </div>
+                <div class="box-info indented">
+                    <p>
+                        @SelectedPackage_Resources.Prefix <strong>@SelectedPackage_Resources.DownloadLabel</strong>@SelectedPackage_Resources.Suffix @Model.PostCode @SelectedPackage_Resources.SemiColon</p>
+                    <h3 class="h2-like">
+                        <strong>@Model.MaxDownload @SelectedPackage_Resources.SpeedUnits</strong>
+                    </h3>
+                    <div class="pm-speed-bar">
+                        <div class="pm-speed-bar-slider" data-maxDownload="@Model.MaxDownload" data-maximumSpeedCap="@ViewBag.SpeedCap"></div>
+                    </div>
+                    <p>
+                        @SelectedPackage_Resources.Prefix <strong>@SelectedPackage_Resources.MinimumLabel</strong>@SelectedPackage_Resources.Suffix2 <strong>@Model.MinDownload @SelectedPackage_Resources.SpeedUnits</strong>
+                    </p>
+                    @if (Model.BroadbandType == BroadbandType.Fibre || Model.BroadbandType == BroadbandType.FibrePlus)
+                    {
+                        <p>
+                            @SelectedPackage_Resources.Prefix <strong>@SelectedPackage_Resources.UploadLabel</strong>@SelectedPackage_Resources.Suffix2 <strong>@Model.MinUpload-@Model.MaxUpload @SelectedPackage_Resources.SpeedUnits</strong>
+                        </p>
+                    }
+                    <a class="" href="" data-toggle="modal" data-target="#product-modal" title="@SelectedPackage_Resources.InfoLinkAlt">@SelectedPackage_Resources.InfoLink</a>
+                    <div class="modal fade" role="dialog" id="product-modal" tabindex="-1" aria-labelledby="product-modal-label">
+                        <div class="modal-dialog modal-md" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Common_Resources.CloseButtonTitle">
+                                        @Common_Resources.CloseButtonLabel
+                                    </button>
+                                </div>
+                                <div class="modal-body centered">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h5 class="h2-like" id="product-modal-label">@Model.SelectedProductName</h5>
+                                            <p>@Model.SelectedProductDescription</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-sm hidden-md hidden-lg">
+                    @Html.ActionLink(SelectedPackage_Resources.OtherPackageLinkText, "AvailablePackages", "Packages", new { }, new { id = "packages-xs", title = SelectedPackage_Resources.OtherPackageLinkTitle })
+                </div>
+
+                <h4>@SelectedPackage_Resources.BulletListHeader</h4>
+                <ul class="bullet-list tick-list list--spaced">
+                    <li>@Model.ZeroPriceBullet1</li>
+                    <li>@SelectedPackage_Resources.Bullet2</li>
+                    <li>@SelectedPackage_Resources.Bullet3</li>
+                    <li>@SelectedPackage_Resources.Bullet4</li>
+                    <li>@SelectedPackage_Resources.Bullet5</li>
+                </ul>
+                @if (Model.YourPriceViewModel.ApplyInstallationFee)
+                {
+                    <div class="box-info">
+                        <h4 class="h3-like">@SelectedPackage_Resources.InstallationHeader</h4>
+                        <p>@Model.InstallationFeeText</p>
+                    </div>
+                }
+                <h4 class="h2-like">@SelectedPackage_Resources.CallOptionsHeader</h4>
+                <fieldset class="radio-set">
+                    <legend class="sr-only"></legend>
+                    @foreach (TalkProductViewModel talkProduct in Model.TalkProducts)
+                    {
+                        <div class="radio contain">
+                            <input data-val="true" @(talkProduct.ProductCode == Model.SelectedTalkProductCode ? "checked=checked" : "") name="TalkCode" id="@talkProduct.ProductCode" type="radio" value="@talkProduct.ProductCode" aria-describedby="@talkProduct.ProductCode-description">
+                            <label for="@talkProduct.ProductCode">
+                                <div class="label">
+                                    <div class="row">
+                                        <div class="col-xs-9">
+                                            <strong>@talkProduct.TalkProductName</strong><br/>
+                                            @talkProduct.TalkProductDescription <br/>
+                                            <a href="" data-toggle="modal" data-target="#@talkProduct.ProductCode-modal" title="@SelectedPackage_Resources.DetailsLinkAlt">@SelectedPackage_Resources.DetailsLink</a>
+                                            @{ Html.RenderPartial("_CallFeatureModal", talkProduct.ModalViewModel); }
+                                        </div>
+                                        <div class="col-xs-3 radio-col">@talkProduct.FormattedPrice</div>
+                                    </div>
+                                </div>
+                            </label>
+                            <p id="@talkProduct.ProductCode-description" class="sr-only">Select this option for the @talkProduct.TalkProductName product</p>
+                        </div>
+                    }
+                </fieldset>
+                <p>@Html.Raw(Model.LineFeatureDisclaimer)</p>
+                <p>@SelectedPackage_Resources.PremiumNumberExclusion</p>
+                <p>
+                    <a href="@SelectedPackage_Resources.DataHandlingURL" target="_blank" title="@SelectedPackage_Resources.DataHandlingAccessibilityText">@SelectedPackage_Resources.DataHandlingText</a>
+                </p>
+                <input class="button button-primary" type="submit" value="@SelectedPackage_Resources.ButtonText" id="button-sign-up" name="button-sign-up" title="@SelectedPackage_Resources.ButtonAlt"/>
+                <div class="accordion" role="group" id="terms-and-conditions">
+                    <div class="accordion-header">
+                        <a href="#" title="@Summary_Resources.AccordionTitle" class="accordion-button" role="button" aria-controls="accordion-content">
+                            <h2>@SelectedPackage_Resources.AccordionHeader</h2>
+                        </a>
+                    </div>
+                    <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <p>@Common_Resources.VatParagraph</p>
+                                <p>@Model.TermsAndConditionsParagraph1</p>
+                                <p>@Model.TermsAndConditionsParagraph2</p>
+                                <p>@Model.TermsAndConditionsParagraph3</p>
+                                <p>@Model.TermsAndConditionsParagraph4</p>
+
+                                <h3>@AvailablePackages_Resources.CancellationHeader</h3>
+                                <p>@AvailablePackages_Resources.CancellationParagraph1</p>
+                                <p>@Model.CancellationChargesParagraph2</p>
+
+                                <p>@Html.Raw(Model.CancellationParagraph3)</p>
+                                @if (Model.ShowCancellationParagraph4)
+                                {
+                                    <p>@Html.Raw(AvailablePackages_Resources.CancellationParagraph4)</p>
+                                }
+
+                                <h3>@AvailablePackages_Resources.HappinessGuaranteeHeader</h3>
+                                <p>@AvailablePackages_Resources.HappinessGuaranteeParagraph <a href="@AvailablePackages_Resources.HappinessGuaranteeLinkUrl" target="_blank" title="@AvailablePackages_Resources.HappinessGuaranteeLinkAlt">@AvailablePackages_Resources.HappinessGuaranteeFullDetailsLinkText</a>.</p>
+
+                                <h3>@AvailablePackages_Resources.BroadbandSpeedsHeader</h3>
+                                <p>
+                                    @AvailablePackages_Resources.BroadbandSpeedsParagraph <a href="@AvailablePackages_Resources.BroadbandTrafficManagementLinkUrl" target="_blank" title="@AvailablePackages_Resources.BroadbandTrafficManagementLinkAlt">@AvailablePackages_Resources.BroadbandTrafficManagementLinkText</a>
+                                    @AvailablePackages_Resources.AccordionUnlimitedDownloadsParagraph2
+                                    <a href="@AvailablePackages_Resources.AcceptableUsePolicyLinkUrl" target="_blank" title="@AvailablePackages_Resources.AcceptableUsePolicyLinkAlt">@AvailablePackages_Resources.AcceptableUsePolicyLinkText</a>
+                                    @AvailablePackages_Resources.AccordionUnlimitedDownloadsParagraph3
+                                </p>
+                                <p>@AvailablePackages_Resources.BroadbandSpeedsParagraph2</p>
+
+                                <h3 class="h5-like">@Summary_Resources.PDFHeader</h3>
+                                <ul class="link-list list--spaced">
+                                    @if (Model.TermsAndConditionsPdfLinks.Any())
+                                    {
+                                        foreach (TermsAndConditionsPdfLink termsAndConditionsPdfLink in Model.TermsAndConditionsPdfLinks)
+                                        {
+                                            <li>
+                                                <a href="@termsAndConditionsPdfLink.Link" class="icon-link icon-link-pdf" title="@termsAndConditionsPdfLink.Title" target="_blank">
+                                                    @termsAndConditionsPdfLink.DisplayName
+                                                </a>
+                                            </li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="col-xs-12 col-sm-4">
+            <div id="price-box">
+                @Html.Partial("~/Areas/Broadband/Views/Shared/_YourPriceDynamic.cshtml", Model.YourPriceViewModel)
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Popups{
+    @Html.Partial("~/Areas/Broadband/Views/Shared/_OneOfCostModal.cshtml", Model.YourPriceViewModel)
+}
+
+@section DataLayer
+{
+    @Html.Partial("_DataLayer", Model.DataLayerDictionary)
+}

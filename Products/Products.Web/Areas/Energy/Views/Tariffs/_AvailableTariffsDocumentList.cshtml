@@ -1,0 +1,33 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@using Products.WebModel.ViewModels.Common
+@using Products.WebModel.ViewModels.Energy
+@model IEnumerable<Products.WebModel.ViewModels.Energy.TariffsViewModel>
+
+<ul class="link-list list--spaced">
+    <li>
+        <a href="@Resources.SSE_GeneralTermsAndConditionsForTheSupplyOfElectricityAndOrGas" class="icon-link icon-link-pdf" title="@AvailableTariffs_Resources.GeneralTermsAndConditionsPDFAlt" target="_blank">
+            @AvailableTariffs_Resources.GeneralTermsAndConditionsPDFText
+        </a>
+    </li>
+    @{
+        foreach (TariffsViewModel tariffViewModel in Model)
+        {
+            if (tariffViewModel.TermsAndConditionsPdfLinks.Any())
+            {
+                <li class="gap-top-lg">
+                    <h4>@tariffViewModel.DisplayName</h4>
+                </li>
+                foreach (TermsAndConditionsPdfLink termsAndConditionsPdfLink in tariffViewModel.TermsAndConditionsPdfLinks)
+                {
+                    <li>
+                        <a href="@termsAndConditionsPdfLink.Link" class="icon-link icon-link-pdf" title="@termsAndConditionsPdfLink.Title" target="_blank">
+                            @termsAndConditionsPdfLink.DisplayName
+                        </a>
+                    </li>
+                }
+            }
+        }
+    }
+</ul>
+

@@ -1,0 +1,94 @@
+﻿
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.TariffInformationLabelViewModel
+
+<div class="til-tcr">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLSupplierLabel</div>
+        <div class="col-sm-12 col-md-6">
+            <span>@Model.Supplier</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLTariffNameLabel</div>
+        <div class="col-sm-12 col-md-6">
+            <span>@Model.TariffName</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLTariffTypeLabel</div>
+        <div class="col-sm-12 col-md-6">
+            <span>@Model.TariffType</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLPaymentMethodLabel</div>
+        <div class="col-sm-12 col-md-6">
+            <span>@Model.PaymentMethod</span>
+        </div>
+    </div>
+
+
+    @if (!string.IsNullOrEmpty(Model.UnitRatePeak) && !string.IsNullOrEmpty(Model.UnitRateOffPeak))
+    {
+        <div class="row">
+            <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLUnitRatePeakLabel</div>
+            <div class="col-sm-12 col-md-6">
+                <span>@Model.UnitRatePeak</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLUnitRateOffPeakLabel</div>
+            <div class="col-sm-12 col-md-6">
+                <span>@Model.UnitRateOffPeak</span>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILUnitRateLabel</div>
+            <div class="col-sm-12 col-md-6">
+                <span>@Model.UnitRate</span>
+            </div>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLStandingChargeLabel</div>
+        <div class="col-sm-12 col-md-6">
+            <span>@Model.StandingCharge</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLTariffEndsOnLabel</div>
+        <div class="col-sm-12 col-md-6">
+            <span>@Model.TariffEndsOn</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLPriceGuaranteedUntilLabel</div>
+        <div class="col-sm-12 col-md-6">
+            <span>@Model.PriceGuaranteedUntil</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLExitFeeLabel</div>
+        <div class="col-sm-12 col-md-6">
+            <span>@Model.ExitFee</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLDiscountsAndAdditionalChargesLabel</div>
+        <div class="col-sm-12 col-md-6">
+            <span>@Model.Discount</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">@AvailableTariffs_Resources.TILLAdditionalProductsOrServicesIncluded</div>
+        <div class="col-sm-12 col-md-6">
+            <span>@Model.AdditionalProducts</span>
+        </div>
+    </div>
+</div>

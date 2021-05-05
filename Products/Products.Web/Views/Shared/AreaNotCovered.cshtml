@@ -1,0 +1,15 @@
+﻿@using Products.WebModel.Resources.Common
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@AreaNotCovered_Resources.AreaNotCoveredHeader</h1>
+        </div>
+        <div class="col-md-12 gap">
+            <p class="gap">@AreaNotCovered_Resources.AreaNotCoveredBody</p>
+            <a id="back-to-home-link" class="button button-primary" href="@System.Configuration.ConfigurationManager.AppSettings["LinkBackToHomeURL"]" title="@AreaNotCovered_Resources.AreaNotCoveredAltText">
+                @AreaNotCovered_Resources.AreaNotCoveredLinkText
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <h2>Tooltips and Modal Dialogs</h2>
+
+
+            <div class="row">
+                <div class="col-xs-4">
+                    Text to left in div
+                </div>
+                <div class="col-xs-4">
+                    <p>Text to left in p</p>
+                </div>
+                <div class="col-xs-4">
+                    <a href="javascript:void(0);" class="help" role="tooltip" aria-expanded="false" title="Open window with more information">
+                        <span class="help__label">Needsd target as coded so opens on enter click</span>
+                        <div class="help__message" aria-hidden="true">
+                            <div class="help__arrow" aria-hidden="true">See below for message</div>
+                            <div class="help__box" id="tooltip-content-1">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p>We’ve estimated your energy usage over the next 12 months by calculating your usage over the last year and then applying the industry average to work out the standard/off-peak rate split.</p>
+                                        <p>
+                                            The average standard/off-peak split
+
+                                            for Economy 10 customers is 50% standard and 50% off-peak.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="help__close" title="Close window">Close</div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" class="help help--inline" role="tooltip" aria-expanded="false" data-label="What’s the benefit?" title="Open window with more information" aria-expanded="false">
+                <span class=help__message aria-hidden="true">
+                    <span class="help__arrow" aria-hidden="true">See below for message</span>
+                    <span class=help__box>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <ul class="bg-dark bullet-list list--spaced">
+                                        <li>View your bills</li>
+                                        <li>Give us a meter reading and get an instant balance</li>
+                                        <li>Make payments</li>
+                                        <li>Monitor your usage with a Smart Meter</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        <span class="help__close" title="Close window">Close</span>
+                    </span>
+                </span>
+            </a>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<p>
+    In a small div < 200px should break out. WARNING you cannot have P tags nested inside other P tags (i.e. in the content of the tooltip)
+
+    <a href="javascript:void(0);" class="help help--inline" role="tooltip" aria-expanded="false" title="Open window with more information">
+        <span class=help__message aria-hidden="true">
+            <span class="help__arrow" aria-hidden="true">See below for message</span>
+            <span class=help__box>
+                <span role="tooltip">
+                    Text inside
+                </span>
+<span class="help__close" title="Close window">Close</span>
+            </span>
+        </span>
+    </a>
+
+
+</p>
+
+<div style="width: 210px; border: 1px dotted purple">
+
+    In a medium div > 200px should stay inside width
+
+    <a href="javascript:void(0);" class="help help--inline" role="tooltip" aria-expanded="false" title="Open window with more information">
+        <span class=help__message  aria-hidden="true">
+            <span class="help__arrow" aria-hidden="true">See below for message</span>
+            <span class=help__box>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>We’ve estimated your energy usage over the next 12 months by calculating your usage over the last year and then applying the industry average to work out the standard/off-peak rate split.</p>
+                            <p>
+                                The average standard/off-peak split
+
+                                for Economy 10 customers is 50% standard and 50% off-peak.
+                            </p>
+                        </div>
+                    </div>
+
+                <span class="help__close" title="Close window">Close</span>
+            </span>
+        </span>
+    </a>
+
+</div>
+
+
+<div>
+<a href="javascript:void(0);" class="help help--inline" role="tooltip" aria-expanded="false" title="Open window with more information">
+    <span class="help__message" aria-hidden="true">
+        <span class="help__arrow" aria-hidden="true" >See below for message</span>
+        <span class="help__box">
+
+            <div class="row" id="tooltip-content">
+                <div class="col-xs-12">
+                    <div>We’ve estimated your energy usage over the next 12 months by calculating your usage over the last year and then applying the industry average to work out the standard/off-peak rate split.</div>
+                    <div>The average standard/off-peak split for Economy 10 customers is 50% standard and 50% off-peak.</div>
+                </div>
+            </div>
+
+            <span class="help__close" title="Close window">Close</span>
+        </span>
+    </span>
+</a>
+</div>
+
+<script>
+
+
+    var toolTipShow = new Sse.Utils.ToolTipShow();
+
+
+</script>

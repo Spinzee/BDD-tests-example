@@ -1,0 +1,6 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="999" height="24" viewBox="0 0 999 24">
+    <g fill="none" stroke-width="1" >
+        <path stroke="#aaa" d="M0 .5 H999" />
+        <path stroke="#eee" d="M0 8.5 H999  M0 16.5 H999" />
+    </g>
+</svg>

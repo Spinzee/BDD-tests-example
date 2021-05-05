@@ -1,0 +1,15 @@
+﻿@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.PostcodeViewModel
+@{
+    ViewBag.Title = Postcode_Resources.Title;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap mobile-only-gap-top-xxxl">
+            @Html.Partial("_StepCounter")
+        </div>
+    </div>
+
+    @Html.Partial("_Postcode", Model)
+</div>

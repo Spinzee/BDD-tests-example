@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Header" xml:space="preserve">
+    <value>Do you have a smart meter?</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Sign up for Energy – Smart meter - SSE</value>
+  </data>
+  <data name="RadioAriaDescription1" xml:space="preserve">
+    <value>This is the option to confirm you do have a smart meter.</value>
+  </data>
+  <data name="RadioDescription1" xml:space="preserve">
+    <value>If you have a non-SSE smart meter, you may lose some or all, of the smart functions on it when you switch. This may be an issue no matter what supplier you switch to. But you can continue to sign up with us online.</value>
+  </data>
+  <data name="RadioHeading1" xml:space="preserve">
+    <value>Yes, I have one</value>
+  </data>
+  <data name="RadioAriaDescription2" xml:space="preserve">
+    <value>This is the option to confirm you don’t have a smart meter.</value>
+  </data>
+  <data name="RadioDescription2" xml:space="preserve">
+    <value>We’re currently rolling out smart meters to our customers. We can register your interest when you sign up with some tariffs. If you’re eligible, we’ll install one at no extra cost.&lt;br/&gt;
+You don’t have to get a smart meter right now though, but we may still send you information about them. If you change your mind, you can register your interest via your online account.</value>
+  </data>
+  <data name="RadioHeading2" xml:space="preserve">
+    <value>No, I don’t have one</value>
+  </data>
+  <data name="HyperlinkText" xml:space="preserve">
+    <value>What is a smart meter?</value>
+  </data>
+  <data name="RadioDescription1PrePay" xml:space="preserve">
+    <value>You may lose your smart and prepayment functions that you currently have with your smart Pay As You Go (prepayment) meter. So please call us on &lt;b&gt;0345 071 7945&lt;/b&gt; to finish signing up.</value>
+  </data>
+  <data name="HyperlinkAlt" xml:space="preserve">
+    <value>Link for more information about smart meters</value>
+  </data>
+  <data name="SmartMeterLink" xml:space="preserve">
+    <value>What is a smart meter?</value>
+  </data>
+  <data name="SmartMeterLinkAlt" xml:space="preserve">
+    <value>Link for more information about smart meters</value>
+  </data>
+  <data name="SmartPopupBullet1" xml:space="preserve">
+    <value>Smart meters send readings to your energy supplier automatically.</value>
+  </data>
+  <data name="SmartPopupBullet2" xml:space="preserve">
+    <value>See your usage in pounds and pence on a handheld device.</value>
+  </data>
+  <data name="SmartPopupBullet3" xml:space="preserve">
+    <value>View a range of energy use graphs on your online account.</value>
+  </data>
+  <data name="SmartPopupHeader" xml:space="preserve">
+    <value>What is a smart meter?</value>
+  </data>
+  <data name="SmartMeterBody" xml:space="preserve">
+    <value>As you have a non-SSE smart meter, you may lose some or all of the smart functions on it when you switch. This may be an issue no matter what supplier you switch to. But you can continue to sign up with us online.</value>
+  </data>
+  <data name="SmartMeterConsentBody" xml:space="preserve">
+    <value>You can always change this after you’ve switched if you need to.</value>
+  </data>
+  <data name="SmartMeterConsentHeading" xml:space="preserve">
+    <value>How often do you want your smart meter to send readings?</value>
+  </data>
+  <data name="SmartMeterConsentTitle" xml:space="preserve">
+    <value>Sign up for energy – Compatible smart meter – SSE</value>
+  </data>
+  <data name="SmartMeterHeader" xml:space="preserve">
+    <value>Your smart meter</value>
+  </data>
+  <data name="SmartMeterRadioAriaDescription1" xml:space="preserve">
+    <value>This is the option is you want us to get readings from your meter every half hour</value>
+  </data>
+  <data name="SmartMeterRadioAriaDescription2" xml:space="preserve">
+    <value>This is the option if you want us to get readings from your meter once a day.</value>
+  </data>
+  <data name="SmartMeterRadioAriaDescription3" xml:space="preserve">
+    <value>This is the option if you want us to get readings from your meter once a month.</value>
+  </data>
+  <data name="SmartMeterRadioDescription" xml:space="preserve">
+    <value>We recommend half-hourly to get the most detailed information on your energy use</value>
+  </data>
+  <data name="SmartMeterRadioHeading" xml:space="preserve">
+    <value>Half hourly</value>
+  </data>
+  <data name="SmartMeterRadioHeadingDaily" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="SmartMeterRadioHeadingMonthly" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="SmartMeterTitle" xml:space="preserve">
+    <value>Sign up for energy – Non-compatible smart meter – SSE</value>
+  </data>
+  <data name="SmartMeterFrequencyRequiredError" xml:space="preserve">
+    <value>Please choose your smart meter frequency</value>
+  </data>
+</root>

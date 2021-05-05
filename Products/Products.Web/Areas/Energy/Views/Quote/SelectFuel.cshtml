@@ -1,0 +1,66 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.SelectFuelViewModel
+@{
+    ViewBag.Title = SelectFuel_Resources.Title;
+}
+<div class="container">
+    @Html.Partial("_BackChevronWithStepCounter", Model.BackChevronViewModel)
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@SelectFuel_Resources.Header</h1>
+            @using (Html.BeginForm("SelectFuel", "Quote", FormMethod.Post, new { @id = "select-fuel-form", @autocomplete = "off" }))
+            {
+                <fieldset>
+                    @*<legend class="access">@SelectFuel_Resources.legend</legend>*@
+                    @Html.AntiForgeryToken()
+
+                    <div class="row roundel-container">
+                        <div class="col-xs-12">
+                            <button type="submit" class="button button-roundel" value="@Products.Model.Enums.FuelType.Dual" id="btnDualFuel" name="FuelType" title="@SelectFuel_Resources.Button1Title">
+                                <img class="img-svg" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/fuel/dualFuelalt.svg")" alt="@SelectFuel_Resources.Button1Title" />
+                            </button>
+                        </div>
+                        <div class="col-xs-12 button-label">
+                            <span>@SelectFuel_Resources.Button1Text</span>
+                        </div>
+                    </div>
+                    <div class="row roundel-container">
+                        <div class="col-xs-12">
+                            <button type="submit" class="button button-roundel" value="@Products.Model.Enums.FuelType.Electricity" id="btnElectricity" name="FuelType" title="@SelectFuel_Resources.Button2Title">
+                                <img class="img-svg" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/fuel/electricityalt.svg")" alt="@SelectFuel_Resources.Button2Title" />
+                            </button>
+                        </div>
+                        <div class="col-xs-12 button-label">
+                            <span>@SelectFuel_Resources.Button2Text</span>
+                        </div>
+                    </div>
+                    <div class="row roundel-container">
+                        <div class="col-xs-12">
+                            <button type="submit" class="button button-roundel" value="@Products.Model.Enums.FuelType.Gas" id="btnGas" name="FuelType" title="@SelectFuel_Resources.Button3Title">
+                                <img class="img-svg" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/fuel/gasalt.svg")" alt="@SelectFuel_Resources.Button3Title" />
+                            </button>
+                        </div>
+                        <div class="col-xs-12 button-label">
+                            <span>@SelectFuel_Resources.Button3Text</span>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(m => m.FuelType)
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            @* To show the "active / clicked" state on mobile we need to add a class.
+                Works with css on desktop.
+                iPads etc would normally show hover state on click *@
+            $("#select-fuel-form").on("click touchstart", ".button-roundel", function () {
+                $(this).addClass("active");
+            });
+        });
+    </script>
+}

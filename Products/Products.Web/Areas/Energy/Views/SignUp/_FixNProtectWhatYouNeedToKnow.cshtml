@@ -1,0 +1,66 @@
+﻿@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.BundleUpgradeViewModel
+
+<div class="extra-content">
+    <div class="container">
+        <h3>@Accordion_Resources.AccordionHeader</h3>
+        <div class="accordion-group">
+            <div class="accordion">
+                <div class="accordion-header">
+                    <a href="#" title="@Upgrades_Resources.FixNProtectPlusImportantInformationHeaderAlt"
+                       class="accordion-button"
+                       role="button"
+                       aria-controls="accordion-content">
+                        <h2>@Upgrades_Resources.FixNProtectPlusImportantInformationHeader</h2>
+                    </a>
+                </div>
+                <div class="accordion-content" aria-hidden="true">
+                    <div class="row">
+                        <p>
+                            @Upgrades_Resources.FixNProtectPlusImportantInformationPara1
+                        </p>
+                        <p>
+                            @Upgrades_Resources.FixNProtectPlusImportantInformationPara2
+                        </p>
+                        <p>
+                            @Upgrades_Resources.FixNProtectPlusImportantInformationPara3
+                        </p>
+                        <p>
+                            @Upgrades_Resources.FixNProtectPlusImportantInformationPara4_1
+                            <a href="@Upgrades_Resources.FixNProtectPlusImportantInformationPara5_Link1Url"
+                               target="_blank"
+                               title="@Upgrades_Resources.FixNProtectPlusImportantInformationPara5_Link1Alt">
+                                @Upgrades_Resources.FixNProtectPlusImportantInformationPara5_Link1Txt
+                            </a>
+                            @Upgrades_Resources.FixNProtectPlusImportantInformationPara4_2
+                            <a href="@Accordion_Resources.HeatingCoverInsurancePolicyPdfLinkUrl"
+                               target="_blank"
+                               title="@Accordion_Resources.BundleHeatingCoverInsurancePolicyLinkAlt">
+                                @Upgrades_Resources.FixNProtectPlusImportantInformationPara5_Link2Txt
+                            </a>
+                        </p>
+                        <p>
+                            @Upgrades_Resources.FixNProtectPlusImportantInformationPara6
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header">
+                    <a href="#" title="@Upgrades_Resources.SavingsCalculationHeader_Alt"
+                       class="accordion-button"
+                       role="button"
+                       aria-controls="accordion-content">
+                        <h2>@Upgrades_Resources.SavingsCalculatorHeader</h2>
+                    </a>
+                </div>
+                <div class="accordion-content" aria-hidden="true">
+                    <div class="row" id="how-savings-calculated">
+                        @Html.Partial("_UpgradesHowSavingsCalculated", Model)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

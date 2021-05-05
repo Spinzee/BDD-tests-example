@@ -1,0 +1,36 @@
+﻿@using System.Web.Mvc.Html
+@using Products.Core
+@using Products.WebModel.Resources.TariffChange
+@model Products.WebModel.ViewModels.TariffChange.ConfirmDetailsViewModel
+@{
+    ViewBag.Title = ConfirmDetails_Resources.Title;
+}
+@section ProgressBar {
+    @Html.Partial("_ProgressBar", Model.ProgressBarViewModel)
+}
+
+@Html.HiddenFor(m => m.CTCJourneyType)
+
+@if (Model.CTCJourneyType == CTCJourneyType.PostLogInWithMultipleSites)
+{
+    @Html.Partial("_MultipleAddressSelection", Model.MultiSiteAddressesViewModel)
+}
+@if (Model.CTCJourneyType == CTCJourneyType.PreLogIn || Model.CTCJourneyType == CTCJourneyType.PostLogInWithNoAccounts)
+{
+    @Html.Partial("_ConfirmAddress", Model.ConfirmAddressViewModel)
+}
+@if (Model.CTCJourneyType == CTCJourneyType.PostLogInWithSingleSite)
+{
+    @Html.Partial("_SingleAddressRedirect")
+}
+
+
+@section Popups{
+    @Html.Partial("_ModalLoadingPartial", Model.GetLoadingModal())
+}
+
+@section Scripts{
+    @Scripts.Render("~/js/utils")
+    @Scripts.Render("~/js/products/tariffs/spinner")
+
+}

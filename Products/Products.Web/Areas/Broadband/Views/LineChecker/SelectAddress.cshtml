@@ -1,0 +1,37 @@
+﻿@using Products.WebModel.Resources.Broadband
+@model Products.WebModel.ViewModels.Broadband.SelectAddressViewModel
+@{
+    ViewBag.Title = SelectAddress_Resources.Title;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1 class="gap">@SelectAddress_Resources.Header</h1>
+           @using (Html.BeginForm(null, null, FormMethod.Post, new { @id = "SelectAddressForm" }))
+           {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group form-group--dropdown contain">
+                    @Html.EditorFor(model => model.SelectedAddressId, new { selectList = new SelectList(Model.Addresses, "Id", "FormattedAddressLine1", Model.SelectedAddressId) })
+                </div>
+                <div class="form-group">
+                    <input class="button button-primary" type="button" value="@SelectAddress_Resources.ButtonText" id="button-submit" name="button-submit" title="@SelectAddress_Resources.ButtonAlt" />
+                    @Html.ActionLink(SelectAddress_Resources.Button2Text, "AddressNotListed", "LineChecker", null, new { @Class = "button button-secondary", @Id = "no-address", @Title = SelectAddress_Resources.Button2Alt })
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@section scripts{
+
+    @Scripts.Render("~/js/products/broadband/select-address") 
+}
+
+@section Popups{
+    @Html.Partial("_ModalLoadingPartial", Model.LoadingModal)
+}

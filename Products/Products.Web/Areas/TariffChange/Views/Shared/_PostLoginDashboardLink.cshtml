@@ -1,0 +1,9 @@
+﻿@using System.Configuration
+@using Products.WebModel.Resources.TariffChange
+
+@model bool
+
+@if (Model)
+{
+    <a class="icon-link" href="@ConfigurationManager.AppSettings["PostLoginDashboardLinkURL"]" title="@Fallout_Resources.MySSEUrlTitleText">@Fallout_Resources.MySSEUrlLinkText</a>
+}

@@ -1,0 +1,80 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.TariffChange
+
+@model Products.WebModel.ViewModels.TariffChange.AvailableTariff
+
+<div class="tariff-wrapper">
+    <div class="tariff js-tariff-container contain">
+        <div class="tariff__header">
+            <h3 class="h2-like tariff-tagline">@Model.Tagline</h3>
+            <h4 class="h3-like tariff-display-name">@HtmlHelpers.HandleVersionSuperscript(Model.DisplayName, "version")</h4>
+        </div>
+
+        <div class="tariff__price">
+            <div class="wrapper">
+                <div class="wrapper-inner tariff-cost tariff-cost--centered">
+                    <div>Projected monthly cost:</div>
+                    <div class="tariff-price">
+                        @HtmlHelpers.HandlePenceSuperscript(Model.ProjectedMonthlyCost, "tariff-price-pence")
+                    </div>
+                    <div>That's @Model.ProjectedAnnualCost a year</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tariff__details">
+
+            @if (Model.ShowAdditionalTariffCardText)
+            {
+                <p>@Html.Raw(Model.AdditionalTariffCardText)</p>
+                <p>@Model.ExitFeePerFuel</p>
+            }
+
+            @if (Model.ShowTickUsps)
+            {
+                foreach (KeyValuePair<string, string> tickUsp in Model.TickUsps)
+                {
+                    <p>@tickUsp.Key@tickUsp.Value</p>
+                }
+            }
+
+            @if (Model.GasDetails != null)
+            {
+                @Html.ActionLink(AvailableTariffs_Resources.GasInformationLinkText, "", "", null, new { @Data_tariff = Model.HtmlSafeName, @Data_fuel = "Gas", @Class = "icon-link btnViewFuelDetails", @Data_toggle = "modal", @Data_target = "#fuel-modal", @Title = "Open gas information for this tariff" })
+            }
+            @if (Model.ElectricityDetails != null)
+            {
+                @Html.ActionLink(AvailableTariffs_Resources.ElectricityInformationLinkText, "", "", null, new { @Data_tariff = Model.HtmlSafeName, @Data_fuel = "Electricity", @Class = "icon-link btnViewFuelDetails", @Data_toggle = "modal", @Data_target = "#fuel-modal", @Title = "Open electricity information for this tariff" })
+            }
+            <div class="tariff-breakdown">
+                @if (Model.IsDualFuel)
+                {
+                    <div class="qa-projected-monthly">
+                        @TariffSummary_Resources.Breakdown2
+                        <span>Gas = @Model.GasDetails.MonthlyCost</span>
+                        <span>Electricity = @Model.ElectricityDetails.MonthlyCost</span>
+                    </div>
+                    <div class="qa-projected-annual">
+                        @TariffSummary_Resources.Breakdown3
+                        <span>Gas = @Model.GasDetails.AnnualCost</span>
+                        <span>Electricity = @Model.ElectricityDetails.AnnualCost</span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="tariff__button">
+            @* json encoded tariff data used by TIL TCR modal only, not sent to server in form *@
+            @Html.Hidden("encodedSelectedTariff", Json.Encode(Model), new { @class = "js-tariff-data" })
+            @using (Html.BeginForm("SelectTariff", "Tariffs", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @* isImmediateRenewal class is needed for JQuery Selector - Do not remove *@
+                <input class="js-is-immediate-renewal" id="isImmediateRenewal-@Html.Id(Model.HtmlSafeName)" name="isImmediateRenewal" type="hidden" value="True" />
+                @Html.Hidden("tariffName", Model.Name)
+                @* js-select-tariff-button class is needed for JQuery Selector - Do not remove *@
+                <input class="button button-primary js-select-tariff-button" type="submit" value="Select tariff" id="btnSelectTariff-@Html.Id(Model.HtmlSafeName)" name="btnSelectTariff" title="Select tariff" />
+            }
+        </div>
+    </div>
+</div>

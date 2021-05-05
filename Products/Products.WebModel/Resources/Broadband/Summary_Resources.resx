@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accordion2Paragraph1" xml:space="preserve">
+    <value>If you don’t have a phone line you’ll need to pay a ‘New line provision’ charge of £60.</value>
+  </data>
+  <data name="Accordion3LinkAlt" xml:space="preserve">
+    <value>Link to see our broadband regulatory information</value>
+  </data>
+  <data name="Accordion3LinkText" xml:space="preserve">
+    <value>Broadband Traffic Management and Acceptable use policy.</value>
+  </data>
+  <data name="Accordion3LinkUrl" xml:space="preserve">
+    <value>https://sse.co.uk/help/phone-and-broadband/regulations-broadband</value>
+  </data>
+  <data name="Accordion3Paragraph1" xml:space="preserve">
+    <value>Unlimited downloads are subject to our </value>
+  </data>
+  <data name="Accordion6Paragraph1" xml:space="preserve">
+    <value>Your account will have paperless billing as standard. If you’d like paper billing, you can choose this option on your online account. This will add a monthly charge of £2 to your bill.</value>
+  </data>
+  <data name="Accordion7Paragraph1" xml:space="preserve">
+    <value>Any call features you have with your current provider may be transferred to us. These features are listed in the &lt;a target="_blank" href="/Areas/Common/Content/PDFs/SSE Phone Product and Price Guide (19 range).pdf" title="Link to open SSE Phone Product and Price Guide PDF"&gt;SSE Phone Product and Price Guide&lt;/a&gt;, and some will involve an ongoing monthly charge. If you’d like to add or change any of these call features, please get in touch after your phone service starts.</value>
+  </data>
+  <data name="AccordionHeader" xml:space="preserve">
+    <value>Important information</value>
+  </data>
+  <data name="AccordionSubHeader" xml:space="preserve">
+    <value>Our packages</value>
+  </data>
+  <data name="AccordionSubHeader2" xml:space="preserve">
+    <value>Upfront costs</value>
+  </data>
+  <data name="AccordionSubHeader3" xml:space="preserve">
+    <value>Unlimited broadband</value>
+  </data>
+  <data name="AccordionSubHeader4" xml:space="preserve">
+    <value>Inclusive calls</value>
+  </data>
+  <data name="AccordionSubHeader6" xml:space="preserve">
+    <value>Paper billing</value>
+  </data>
+  <data name="AccordionSubHeader7" xml:space="preserve">
+    <value>Call features</value>
+  </data>
+  <data name="AccordionTitle" xml:space="preserve">
+    <value>Link to see important information about our broadband and phone packages</value>
+  </data>
+  <data name="BillTotalLabel" xml:space="preserve">
+    <value>Monthly Direct Debit:</value>
+  </data>
+  <data name="DDLinkAlt" xml:space="preserve">
+    <value>Link to download printable Direct Debit instruction</value>
+  </data>
+  <data name="DDLinkText" xml:space="preserve">
+    <value>Print Direct Debit instruction</value>
+  </data>
+  <data name="DirectDebitHeader" xml:space="preserve">
+    <value>Direct Debit details</value>
+  </data>
+  <data name="EditDDLinkAlt" xml:space="preserve">
+    <value>Link to change your Direct Debit details</value>
+  </data>
+  <data name="EditPersonalLinkAlt" xml:space="preserve">
+    <value>Link to change your personal details</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Order summary</value>
+  </data>
+  <data name="Legend" xml:space="preserve">
+    <value>Do you agree to the terms and conditions and other Important information above?</value>
+  </data>
+  <data name="InstallationHeader" xml:space="preserve">
+    <value>About your £60 phone line installation fee</value>
+  </data>
+  <data name="InstallationParagraph" xml:space="preserve">
+    <value>It doesn’t look like you have an active Openreach/BT phone line, so we'll contact you to arrange a date for an engineer to install one. We'll let you know if they need access to your home as you'll need to be there. There's a one-off charge of £60 which we'll add to a future bill.</value>
+  </data>
+  <data name="PackageTableHeader" xml:space="preserve">
+    <value>Package details</value>
+  </data>
+  <data name="Paragraph" xml:space="preserve">
+    <value>We’ll look to move your existing phone number across to us. If we can’t do this, we’ll give you a new phone number.</value>
+  </data>
+  <data name="Paragraph2" xml:space="preserve">
+    <value>You can cancel your order without paying anything up to 5pm on the working day before your start date. If you can, please give us 48-hours’ notice. You can cancel by calling 0345 071 9886, by email to talk.cancellations@sse.com, by writing to us at Customer Service, PO Box 230, Havant, PO9 9DT or by completing and sending us the cancellation form in your welcome pack.</value>
+  </data>
+  <data name="PDFHeader" xml:space="preserve">
+    <value>Legal and regulatory information</value>
+  </data>
+  <data name="PersonalHeader" xml:space="preserve">
+    <value>Personal details</value>
+  </data>
+  <data name="SSECustomerDisclaimer" xml:space="preserve">
+    <value>This price is based on you being an SSE Energy customer. It may change if we confirm otherwise.</value>
+  </data>
+  <data name="SubHeader" xml:space="preserve">
+    <value>Your landline number</value>
+  </data>
+  <data name="SubHeader2" xml:space="preserve">
+    <value>If you change your mind</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Sign up to phone and broadband – Your order summary - SSE</value>
+  </data>
+  <data name="NoLandlineHeader" xml:space="preserve">
+    <value>Your new landline number</value>
+  </data>
+  <data name="NoLandlineParagraph" xml:space="preserve">
+    <value>As you haven’t given us a landline number, or don’t have one, we’ll give you a new one. We’ll tell you what your number is once you’re set up.</value>
+  </data>
+  <data name="SwitchHeader" xml:space="preserve">
+    <value>About your switch</value>
+  </data>
+  <data name="SwitchParagraph" xml:space="preserve">
+    <value>We’ll contact your current provider to let them know you’re switching to us. Switching takes around 18 to 20 days for most customers.</value>
+  </data>
+  <data name="TermsAndConditionsAriaDescription" xml:space="preserve">
+    <value>Tick to confirm you have read and agreed to the terms and conditions</value>
+  </data>
+  <data name="BillDisclaimer" xml:space="preserve">
+    <value>(Excluding phone calls &amp; optional call features)</value>
+  </data>
+  <data name="PremiumNumberExclusion" xml:space="preserve">
+    <value>Please be aware that our call packages do not allow calls to be made to premium rate numbers beginning 09.</value>
+  </data>
+  <data name="Accordion4AnytimeParagraph" xml:space="preserve">
+    <value>Inclusive local, national and UK mobile calls at any time. Maximum duration for inclusive calls – 70 minutes per call, standard charge applies thereafter.</value>
+  </data>
+  <data name="Accordion4AnytimePlusParagraph" xml:space="preserve">
+    <value>Inclusive calls to local, national, UK mobiles and to 35 Band A international destinations at any time. Maximum duration for inclusive calls – 70 minutes per call, standard charge applies thereafter.</value>
+  </data>
+  <data name="Accordion4EveningWeekendParagraph" xml:space="preserve">
+    <value>Inclusive local, national and UK mobile calls from 7pm to 7 am weekdays and anytime at weekends up to midnight Sunday. Maximum duration for inclusive calls – 70 minutes per call. Standard charge applies thereafter.</value>
+  </data>
+  <data name="BankDetailsModalButtonAlt" xml:space="preserve">
+    <value>Link to continue and change your bank details</value>
+  </data>
+  <data name="BankDetailsModalButtonText" xml:space="preserve">
+    <value>Change bank details</value>
+  </data>
+  <data name="BankDetailsModalMessage" xml:space="preserve">
+    <value>Going back to change your bank details will clear all your Direct Debit information so you’ll need to enter it again.</value>
+  </data>
+  <data name="ChangePackageLinkAlt" xml:space="preserve">
+    <value>Link to change package details</value>
+  </data>
+  <data name="ChangePackageLinkText" xml:space="preserve">
+    <value>Change package choice</value>
+  </data>
+  <data name="DDEditLinkAlt" xml:space="preserve">
+    <value>Link to change your bank details</value>
+  </data>
+  <data name="EditLinkText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="PackageDetailsModalButtonAlt" xml:space="preserve">
+    <value>Change your package</value>
+  </data>
+  <data name="PackageDetailsModalButtonText" xml:space="preserve">
+    <value>Choose different package</value>
+  </data>
+  <data name="PackageDetailsModalMessage" xml:space="preserve">
+    <value>By changing your package choice, you’ll be taken back to select a new package option and will need to tell us your Direct Debit information again.</value>
+  </data>
+  <data name="PersonalDetailsModalButtonAlt" xml:space="preserve">
+    <value>Link to continue and change your personal details</value>
+  </data>
+  <data name="PersonalDetailsModalButtonText" xml:space="preserve">
+    <value>Change personal details</value>
+  </data>
+  <data name="PersonalDetailsModalMessage" xml:space="preserve">
+    <value>By changing your personal details, you’ll be taken back through previous steps and will need to tell us your Direct Debit information again.</value>
+  </data>
+  <data name="PersonalEditLinkAlt" xml:space="preserve">
+    <value>Link to change your personal details</value>
+  </data>
+</root>

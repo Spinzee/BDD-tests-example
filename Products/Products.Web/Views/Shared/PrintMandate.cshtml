@@ -1,0 +1,155 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.Common.DirectDebitMandateViewModel
+@{
+    Layout = "~/Views/Shared/_PrintLayout.cshtml";
+}
+@Styles.Render("~/Content/css/products/mandate")
+<div id="div-to-print" class="wrapper">
+    <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/sse.png")" title="SSE Logo" alt="SSE Logo" class="fl sselogo">
+    <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/dd.png")" title="Direct Debit Logo" alt="Direct Debit Logo" class="ddlogo fr">
+    <div class="clear"></div>
+    <div class="form">
+        <div class="col">
+            <div class="gap">
+                <span class="title">@DirectDebitMandate_Resources.MandateInstruction</span>
+                <div class="input">
+                    <address>
+                        <p>
+                            @Model.CompanyName<br/>
+                            @DirectDebitMandate_Resources.SSEAddress2<br/>
+                            @DirectDebitMandate_Resources.SSEAddress3<br/>
+                            @DirectDebitMandate_Resources.SSEAddress4<br/>
+                            @DirectDebitMandate_Resources.SSEAddress5<br/>
+                            @DirectDebitMandate_Resources.SSEAddress6
+                        </p>
+                    </address>
+                </div>
+            </div>
+            <div class="gap">
+                <span class="title">@DirectDebitMandate_Resources.AccountHolderNameLabel</span>
+                <span class="input">@Model.Name </span>
+                <span class="input">&nbsp;</span>
+            </div>
+            <div class="gap">
+                <span class="title">@DirectDebitMandate_Resources.InstitutionAccountNumberLabel</span>
+                @foreach (char num in Model.AccountNumber)
+                {
+                    <span class="input box">@num</span>
+                }
+            </div>
+            <div class="gap">
+                <span class="title">@DirectDebitMandate_Resources.BranchSortCodeLabel</span>
+                @foreach (char num in Model.Sortcode)
+                {
+                    <span class="input box">@num</span>
+                }
+            </div>
+            <div class="gap">
+                <span class="title">@DirectDebitMandate_Resources.InstitutionPostalAddressLabel </span>
+                <span class="input">@DirectDebitMandate_Resources.ToLabel </span>
+                <span class="input">@DirectDebitMandate_Resources.AddressLabel</span> <span class="input">@Model.BankName</span>
+                <span class="input">@Model.AddressLine1</span>
+                <span class="input">@Model.AddressLine2</span>
+                <span class="input">@Model.AddressLine3</span>
+                <span class="input">@Model.Postcode</span>
+            </div>
+            <div class="gap">
+                <span class="title">@DirectDebitMandate_Resources.ReferenceNumberLabel</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+                <span class="input box">&nbsp;</span>
+            </div>
+        </div>
+        <div class="col last">
+            <h1>@DirectDebitMandate_Resources.InstructionHeading</h1>
+            <div class="gap">
+                <span class="title">@DirectDebitMandate_Resources.ServiceUserNumberLabel</span>
+                @foreach (char num in Model.ServiceUserNumber)
+                {
+                    <span class="input box">
+                        <strong>@num</strong>
+                    </span>
+                }
+            </div>
+            <div class="gap">
+                <span class="input">
+                    <p style="text-align: center;">
+                        @string.Format(DirectDebitMandate_Resources.InternalInstructionLine1, Model.CompanyName)<br>
+                        @DirectDebitMandate_Resources.InternalInstructionLine2
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                </span>
+            </div>
+            <div class="gap">
+                <span class="title">@DirectDebitMandate_Resources.InstructionToInstitutionHeading </span>
+                <p>
+                    @string.Format(DirectDebitMandate_Resources.DirectDebitInstruction, Model.CompanyName)
+                </p>
+                <br>
+                <span class="input">@DirectDebitMandate_Resources.SignatureLabel</span>
+                <span class="input">&nbsp;</span>
+                <span class="input">@DirectDebitMandate_Resources.DateLabel</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="guarantee">
+            <div class="centered">@DirectDebitMandate_Resources.DirectDebitWarningMessage</div>
+            <hr>
+            <div class="centered">@DirectDebitMandate_Resources.UserRetainInstruction</div>
+            <div class="borderbox">
+                <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/dd.png")" alt="Direct Debit Logo" class="ddlogo fr">
+                <h1 class="centered">@DirectDebitMandate_Resources.DirectDebitGuaranteeHeading</h1> <br> <br> <br> <br>
+                <ul>
+                    <li>@DirectDebitMandate_Resources.DirectDebitGuarantee1</li>
+                    <li>@string.Format(DirectDebitMandate_Resources.DirectDebitGuarantee2, Model.CompanyName)</li>
+                    <li>
+                        @string.Format(DirectDebitMandate_Resources.DirectDebitGuarantee3, Model.CompanyName)
+                        <ul>
+                            <li>
+                                @string.Format(DirectDebitMandate_Resources.DirectDebitGuarantee3a, Model.CompanyName)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>@DirectDebitMandate_Resources.DirectDebitGuarantee4</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    @Scripts.Render("~/js/dd-mandate")
+}

@@ -1,0 +1,29 @@
+﻿@using Products.Web.Helpers
+@model string
+@{
+    var defaultHtmlAttributesObject = new
+    {
+        title = ViewData.ModelMetadata.DisplayName,
+        @class = "form-input form-input--phone-number",
+        autocomplete = "off"
+    };
+
+    object htmlAttributesObject = ViewData["htmlAttributes"] ?? new { };
+    IDictionary<string, object> htmlAttributes = Html.MergeHtmlAttributes(htmlAttributesObject, defaultHtmlAttributesObject);
+    htmlAttributes.Add("aria-required", ViewContext.ViewData.ModelMetadata.IsRequired);
+    bool hasAriaDescription = false;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey("AriaDescription"))
+    {
+        hasAriaDescription = true;
+        htmlAttributes.Add("aria-describedby", $"{ViewData.ModelMetadata.PropertyName}-description");
+    }
+}
+<div class="form-group form-group--text">
+    @Html.LabelFor(m => m, new { @class = "form-label" })
+    @Html.TextBoxFor(model => model, htmlAttributes)
+    @if (hasAriaDescription)
+    {
+        <p id="@ViewData.ModelMetadata.PropertyName-description" class="sr-only">@ViewData.ModelMetadata.AdditionalValues["AriaDescription"]</p>
+    }
+    @Html.ValidationMessageFor(m => m)
+</div>

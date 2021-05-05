@@ -1,0 +1,29 @@
+﻿@using Products.WebModel.Resources.Energy
+@{
+    ViewBag.Title = Fallout_Resources.SmartPayGoTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@Fallout_Resources.SmartPayGoHeader</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-11 col-md-8 gap">
+            <p>@Fallout_Resources.SmartPayGoParagraph</p>
+            <div class="row box-info box-contact">
+                <div class="col-xs-12 col-sm-2 hidden-xs"><img src="~/Content/Images/contact-us-icon.png"/></div>
+                <div class="col-xs-12 col-sm-10">
+                    <h2 class="h3-like">@Fallout_Resources.Contact2Header <a href="@Fallout_Resources.ContactNumberUrl" title="@Fallout_Resources.ContactNumber3"><strong>@Fallout_Resources.ContactNumber3</strong></a></h2>
+                    <p>@Fallout_Resources.ContactBody2</p>
+                </div>
+            </div>
+            <ul class="link-list">
+                <h3 class="h4-like">@Fallout_Resources.linkHeader</h3>
+                <li><a class="icon-link" href="@Fallout_Resources.LinkUrl" title="@Fallout_Resources.LinkAlt" target="_blank">@Fallout_Resources.LinkText</a></li>
+                <li><a class="icon-link" href="@Fallout_Resources.Link2Url" title="@Fallout_Resources.Link2Alt" target="_blank">@Fallout_Resources.Link2Text</a></li>
+                <li><a class="icon-link" href="@Fallout_Resources.Link3Url" title="@Fallout_Resources.Link3Alt" target="_blank">@Fallout_Resources.Link3Text</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

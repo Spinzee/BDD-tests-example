@@ -1,0 +1,78 @@
+﻿@using Products.Infrastructure.Extensions
+@using Products.Model
+@using Products.Model.Enums
+@using Products.Model.TariffChange
+@using Products.Model.TariffChange.Enums
+@using Products.WebModel.Resources.TariffChange
+@using Products.WebModel.ViewModels.TariffChange
+@model ProgressBarViewModel
+@{
+    ViewBag.CurrentStep = Model.CurrentStep;
+    ViewBag.SectionCount = Model.SectionCount;
+}
+<div id="progress-bar" role="status">
+    <div class="access">@Html.Raw(string.Format(ProgressBar_Resource.ProgressBarAccessibilityTemplate, Model.CurrentSection.Text, ViewBag.CurrentStep, ViewBag.SectionCount))</div>
+    <div title="@string.Format(ProgressBar_Resource.ProgressBarStatusTemplate, ViewBag.CurrentStep, ViewBag.SectionCount, Model.CurrentSection.DisplayCompletedStep)" class="svgs" role="presentation" aria-hidden="true">
+
+        @foreach (ProgressBarSection section in Model.Sections)
+        {
+            @RenderSvgCircle(section)
+            @RenderSvgBar(section)
+        }
+
+    </div>
+    <ol role="presentation" aria-hidden="true">
+
+        @for (int i = 0; i < Model.Sections.Count; i++)
+        {
+            <li class="@EnumExtensions.GetDescription(Model.Sections[i].Status)" data-section="@(i+1)">@Model.Sections[i].Text</li>
+        }
+
+    </ol>
+</div>
+
+
+@* ################# Helper Classes #################### *@
+@* ==== SVG Circle ==== *@
+@helper RenderSvgCircle(ProgressBarSection section)
+{
+    <svg width="38" height="38" viewBox="0 0 38 38" class="pb-step @EnumExtensions.GetDescription(section.Status)">
+        <circle cx="19" cy="19" r="19" fill="currentColor" stroke-width="0" />
+        <circle cx="19" cy="19" r="16" fill="inherit" stroke-width="0" />
+        @if (section.Status == ProgressBarStatus.Done)
+        {
+            <path d="m11 21l5 5l12 -12" class="tick" fill="none" stroke="inherit" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        }
+    </svg>
+}
+
+
+@* ==== SVG Bar ====
+    Design from UX is for step 1 to be tight to LHS so no need to render the bar if on step 1.
+    Using viewBox and pres... to make sure renders in old android, otherwise could use no viewBox and % widths
+*@
+@helper RenderSvgBar(ProgressBarSection section)
+{
+int barSvgWidth = 48; // tuned for Android Stock browser 4.1
+int currentStep = Model.Sections.IndexOf(section);
+if (currentStep < Model.SectionCount - 1)
+{
+    if (section.Status == ProgressBarStatus.Active && section.StepsToComplete > 1)
+    {
+        int oneStepFraction = (int)(barSvgWidth / section.StepsToComplete);
+        int activeBarWidth = oneStepFraction * section.CompletedStep;
+        // width of 100 on svg tag to support older browsers that do not support svg width set by css e.g. old stock android
+        <svg class="bar" width="@barSvgWidth" height="38" viewBox="0 0 @barSvgWidth 38" preserveAspectRatio="none">
+            <rect x="0" y="18" width="@barSvgWidth" height="3" fill="currentColor" stroke-width="0" />
+            <rect x="0" y="18" width="@activeBarWidth" height="3" fill="currentColor" stroke-width="0" class="active" />
+        </svg>
+    }
+    else
+    {
+            <svg class="bar @(section.Status == ProgressBarStatus.Done? "active" : string.Empty)" width="@barSvgWidth" height="38" viewBox="0 0 @barSvgWidth 38" preserveAspectRatio="none">
+                <rect x="0" y="18" width="@barSvgWidth" height="3" fill="currentColor" stroke-width="0" />
+            </svg>
+    }
+}
+
+}

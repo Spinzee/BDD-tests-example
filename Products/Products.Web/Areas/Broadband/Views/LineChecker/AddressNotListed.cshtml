@@ -1,0 +1,19 @@
+﻿@using Products.WebModel.Resources.Broadband
+@{
+    ViewBag.Title = Fallout_Resources.AddressNotListedTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>@Fallout_Resources.AddressNotListedHeader</h1>
+            <p>@Fallout_Resources.AddressNotListedParagraph</p>
+            <p>@Fallout_Resources.CallUsPrefix<a id="telephone-link" href="@Common_Resources.CallUsPhoneUrl" title="@Common_Resources.CallUsPhoneAlt">@Common_Resources.CallUsPhone</a>@Fallout_Resources.CallUsSuffix</p>
+            <ul class="link-list">
+                <h2 class="h4-like">@Fallout_Resources.linkHeader</h2>
+                <li><a class="icon-link" href="@Fallout_Resources.LinkUrl" title="@Fallout_Resources.LinkAlt" target="_blank">@Fallout_Resources.LinkText</a></li>
+                <li><a class="icon-link" href="@Fallout_Resources.Link2Url" title="@Fallout_Resources.Link2Alt" target="_blank">@Fallout_Resources.Link2Text</a></li>
+                <li><a class="icon-link" href="@Fallout_Resources.Link3Url" title="@Fallout_Resources.Link3Alt" target="_blank">@Fallout_Resources.Link3Text</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+﻿@using Products.Core
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.OurPricesViewModel
+@{
+    ViewBag.Title = OurPrices_Resources.TariffsPageTitle;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <div class="row gap-xl">
+        <div class="col-sm-6 col-lg-5">
+            <h1>@OurPrices_Resources.TariffsPageHeader</h1>
+            <div class="gap-xl">
+                @OurPrices_Resources.TariffsPageParagraph
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Html.Hidden("tariffs", Json.Encode(Model.Products))
+                    @using (Html.BeginForm(null, null, FormMethod.Get))
+                    {
+                        @Html.HiddenFor(m => m.Postcode)
+                        <div class="box-rounded">
+                            <h3 class="gap">@OurPrices_Resources.TariffsPageBoxText</h3>
+                            <div class="form-group form-group--horizontal">
+                                @Html.LabelFor(m => m.FuelCategory, OurPrices_Resources.FuelCategoryLabel, new { @class = "form-label h4-like col-sm-4" })
+                                @Html.EnumDropDownListFor(m => m.FuelCategory, new { @class = "form-input form-input--dropdown col-sm-8" })
+                            </div>
+
+                            <div class="form-group form-group--horizontal">
+                                @Html.LabelFor(m => m.TariffStatus, OurPrices_Resources.TariffStatusLabel, new { @class = "form-label h4-like col-sm-4" })
+                                @Html.EnumDropDownListFor(m => m.TariffStatus, new { @class = "form-input form-input--dropdown col-sm-8" })
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="checkbox contain gap-xl">
+                <input data-val="true" id="includeVat" name="includeVat" title="@OurPrices_Resources.IncludeVATCheckboxAlt" type="checkbox" checked value="true">
+                <input name="includeVat" type="hidden" value="false">
+                <label for="includeVat" class="h4-like no-margin-top">@OurPrices_Resources.IncludeVATCheckboxLabel</label>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <label id="count" class="h4-like pull-right">@string.Format(OurPrices_Resources.PagingText, 1, 5, Model.Products.Count)</label>
+        </div>
+    </div>
+    <div id="products"></div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button id="btnShow" class="button button-primary">Show more</button>
+        </div>
+    </div>
+</div>
+
+@{ Html.RenderPartial("TILModal", Model?.Products[0]?.TariffOptions[0]?.FuelType.ToString()); }
+
+@section scripts{
+    @Scripts.Render("~/js/products/energy/our-prices")
+    <script>
+        $(document).ready(function () {
+            var isMultiRate = @(Model.FuelCategory == FuelCategory.MultiRate ? "true" : "false");
+            var isForSale = @(Model.TariffStatus == TariffStatus.ForSale ? "true" : "false");
+// ReSharper disable once UnusedLocals
+            var _ = new Digital.Web.Energy.OurPrices(isMultiRate, isForSale);
+        });
+    </script>
+}

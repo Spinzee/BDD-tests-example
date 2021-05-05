@@ -1,0 +1,107 @@
+﻿@using System.Web.UI.HtmlControls
+@using Products.Web.Helpers
+@using Products.WebModel.Resources.HomeServices
+@model Products.WebModel.ViewModels.HomeServices.ConfirmationViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Common_Resources.ConfirmationTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="svg-icon-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+                    <defs>
+                        <linearGradient id="a" y2="100%" gradientUnits="userSpaceOnUse">
+                            <stop offset=".1" stop-color="#004687" />
+                            <stop offset=".5" stop-color="#4099D4" />
+                            <stop offset=".8" stop-color="#7DC242" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="40" cy="40" r="40" fill="url(#a)" />
+                    <circle cx="40" cy="40" r="36" fill="#FFF" />
+                    <path fill="none" stroke="url(#a)" stroke-width="5" d="M24 42l9 10 24-23" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1 class="header-resize">@Confirmation_Resources.Header</h1>
+            <p class="gap-xl">@string.Format(Confirmation_Resources.Paragraph1, Model.ProductName)</p>
+            <h2>@Confirmation_Resources.SubHeader</h2>
+            <ul class="bullet-steps gap-lg">
+                <li>@Confirmation_Resources.StepsPara1</li>
+                <li>@Confirmation_Resources.StepsPara2</li>
+                <li>@Confirmation_Resources.StepsPara3</li>
+                <li>@Confirmation_Resources.StepsPara4</li>
+                @if (@Model.IsLandLord)
+                {
+                    <li>@Confirmation_Resources.LandlordGasSafetyText</li>
+                }
+
+            </ul>
+            <p>@Confirmation_Resources.Paragraph2</p>
+            @foreach (var extraName in Model.ProductExtras)
+            {
+                <p>@String.Format(@Confirmation_Resources.Paragraph3, extraName)</p>
+            }
+
+            <p>@Confirmation_Resources.Paragraph4</p>
+            <p>
+                @Confirmation_Resources.ContactUs <strong>@Confirmation_Resources.ContactUsText</strong>@Confirmation_Resources.ContactUsPart2
+                <a href="@Confirmation_Resources.ContactUsEmailUrl" title="@Confirmation_Resources.ContactUsEmailAlt">@Confirmation_Resources.ContactUsEmailText</a><span>.</span>
+            </p>
+            <h2>@Confirmation_Resources.LinksHeader</h2>
+            <ul class="link-list gap">
+                <li><a class="icon-link" href="@Common_Resources.BoilerProblemsSolvedLinkUrl" title="@Common_Resources.BoilerProblemsSolvedLinkAlt" target="_blank">@Common_Resources.BoilerProblemsSolvedLinkText</a></li>
+                <li><a class="icon-link" href="@Common_Resources.FixingRadiatorIssuesLinkUrl" title="@Common_Resources.FixingRadiatorIssuesLinkAlt" target="_blank">@Common_Resources.FixingRadiatorIssuesLinkText</a></li>
+                <li><a class="icon-link" href="@Common_Resources.TadoSmartThermostatLinkUrl" title="@Common_Resources.TadoSmartThermostatLinkAlt" target="_blank">@Common_Resources.TadoSmartThermostatLinkText</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="additional-info rounded-corner">
+                <h2 class="h3-like">@Confirmation_Resources.CrossSellHeader</h2>
+                <p>@Confirmation_Resources.CrossSellText</p>
+                <a role="button" href="@Confirmation_Resources.CrossSellLinkUrl" class="button button-primary"
+                   title="@Confirmation_Resources.CrossSellLinkAlt">@Confirmation_Resources.CrossSellLinkText</a>
+            </div>
+            <div class="additional-info rounded-corner">
+                <h2 class="h3-like">@Confirmation_Resources.CrossSell2Header</h2>
+                <p>@Confirmation_Resources.CrossSell2Text</p>
+                <a role="button" href="@Confirmation_Resources.CrossSell2LinkUrl" class="button button-primary"
+                   title="@Confirmation_Resources.CrossSell2LinkAlt">@Confirmation_Resources.CrossSell2LinkText</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rewards-container bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="reward-logo " src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/promotional/sse-reward-logo.svg")" />
+                    </div>
+                    <div class="col-xs-12 hidden-sm hidden-md hidden-lg no-padding gap">
+                        <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/SSEHydroMobile.png")" />
+                    </div>
+                    <div class="col-xs-12">
+                        <p>@Confirmation_Resources.ModuleText</p>
+                        <a role="button" href="@Confirmation_Resources.ModuleLinkUrl" target="_blank" class="button button-secondary" title="@Confirmation_Resources.ModuleLinkAlt">
+                            @Confirmation_Resources.ModuleLinkText
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 hidden-xs rewards-col" style="padding-left: 0;">
+                <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/SSEHydro.png")" />
+            </div>
+        </div>
+    </div>
+</div>
+@section DataLayer
+{
+    @Html.Partial("_DataLayer", Model.DataLayer)
+}

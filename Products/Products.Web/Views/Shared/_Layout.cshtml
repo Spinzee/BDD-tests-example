@@ -1,0 +1,77 @@
+﻿@using System.Configuration
+@using Products.Web.Helpers
+@using Products.WebModel.Resources.Common
+@{
+    string gtmContainerId = ConfigurationManager.AppSettings["GoogleTagManagerContainerId"];
+    HttpCookie cookieMessageCookie = Request.Cookies.Get("cookie-accepted");
+    bool cookieAccepted = cookieMessageCookie != null && cookieMessageCookie.Value == "true";
+}
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/css/core")
+    @RenderSection("Styles", false)
+    @Html.Partial("_Favicons")
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <script type="text/javascript" src="//service.maxymiser.net/api/eu/www.sse.co.uk/93e848/mmapi.js"></script> 
+    @RenderSection("DataLayer", false)
+
+    @* Google Tag Manager *@
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', '@gtmContainerId');
+    </script>
+</head>
+
+<body class="@RenderSection("Theme", false)">
+<noscript>
+    <meta http-equiv="refresh" content="0;URL=/error/javascript-disabled"/>
+</noscript>
+
+@* Google Tag Manager (noscript) *@
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=@gtmContainerId" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+@if (!cookieAccepted)
+{
+    @Html.Partial("_CookiesMessage")
+}
+<div class="pageWrap">
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="@Resources.HomePageUrl" title="@Resources.HomepageAlt">@Resources.SSE</a>
+            </div>
+            @RenderSection("ShoppingBasketToggler", false)
+        </div>
+    </header>
+
+    @RenderSection("ProgressBar", false)
+    <section class="main @RenderSection("mainSectionTheme", false)" role="main">
+        @RenderBody()
+    </section>
+</div>
+<div id="shadow-layer"></div>
+
+    @RenderSection("Popups", required: false)
+
+    @Scripts.Render("~/js/jquery-all")
+    @Scripts.Render("~/js/core")
+    @Scripts.Render("~/js/products")
+    @Scripts.Render("~/js/utils")
+    @RenderSection("Scripts", false)
+    <script src="@Scripts.Url($"{WebClientHelper.Instance.BaseUrl}/licenses?v={WebClientHelper.Instance.Version}")"></script>
+</body>
+
+</html>

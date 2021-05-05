@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DDPara1" xml:space="preserve">
+    <value>If you have a fixed price tariff and pay by Direct Debit or standing order, for most fixed tariffs you’ll get a discount of £{0} a year for each fuel when compared to other ways of paying. The discount is applied to your standing charge on a pence per day basis, until your tariff ends.</value>
+  </data>
+  <data name="DDPara2" xml:space="preserve">
+    <value>&lt;p&gt;If you have a standard variable tariff, your energy prices are capped and the maximum price you pay (known as a cap) is set by Ofgem, the energy regulator. If you pay by Direct Debit or standing order, your standing charge and unit prices will be discounted. Your discount will vary depending on how much energy you use, where you live and your meter type. If you qualified for Warm Home Discount before 1 August 2019, your prices will be discounted regardless of how you pay.&lt;/p&gt;</value>
+  </data>
+  <data name="DDPara3" xml:space="preserve">
+    <value>&lt;p&gt;Certain tariffs do not qualify for Direct Debit and standing order discounts. Please check the tariff terms and conditions for details.&lt;/p&gt;</value>
+  </data>
+  <data name="DualFuelDiscount" xml:space="preserve">
+    <value>80</value>
+  </data>
+  <data name="ElectricHeatingContactNumber" xml:space="preserve">
+    <value>0345 026 7058.</value>
+  </data>
+  <data name="ElectricHeatingContactNumberUrl" xml:space="preserve">
+    <value>tel:0345 026 7058.</value>
+  </data>
+  <data name="FixAndDriveHeading" xml:space="preserve">
+    <value>Drive for free (with 1 Year Fix and Drive)</value>
+  </data>
+  <data name="FixAndDriveMessage" xml:space="preserve">
+    <value>If you sign up to our 1 Year Fix and Drive tariff, you agree to have a compatible (SMETS2) smart meter installed in your property, if you are eligible and don’t already have one. If you have an older smart meter, we’ll need to upgrade your meter so you can benefit from our off-peak rate. We’ll contact you when you’re eligible for your smart meter installation. If we can’t fit a smart meter, we’ll install an Economy 7 meter so you can use our off-peak rate.</value>
+  </data>
+  <data name="FixAndDrivePara1" xml:space="preserve">
+    <value>The 1 Year Fix and Drive tariff is available to dual fuel only customers who pay by monthly Direct Debit or quarterly billing only.</value>
+  </data>
+  <data name="FixAndDrivePara2" xml:space="preserve">
+    <value>You need to own or lease an electric vehicle that you charge at home. We may ask you to prove this. If you’re unable to, we’ll take you off this tariff and put you onto our Standard Variable Tariff.</value>
+  </data>
+  <data name="FixAndDrivePara3" xml:space="preserve">
+    <value>We’ll credit your account for the cost of the electricity you use during the off-peak times of your meter, up to 2,000kWh over the year. We’ll spread this credit over the year and apply it to each quarterly bill. We’ll confirm your meter’s off-peak times in your Welcome pack.</value>
+  </data>
+  <data name="FixAndDrivePara4" xml:space="preserve">
+    <value>To reach up to 8,000 miles, we checked the test data for the TESLA Model 3 Standard Range Plus (E1R) with the</value>
+  </data>
+  <data name="FixAndDrivePara4CarFuelLink" xml:space="preserve">
+    <value>https://carfueldata.vehicle-certification-agency.gov.uk/search-new-or-used-cars.aspx</value>
+  </data>
+  <data name="FixAndDrivePara4CarFuelLinkText" xml:space="preserve">
+    <value>Vehicle Certification Agency</value>
+  </data>
+  <data name="FixAndDrivePara5" xml:space="preserve">
+    <value>. We multiplied its electric consumption of 4.0 miles per kWh by the up to 2,000kWh of electricity we’ll include over the year. Your mileage will depend on your car and driving conditions.</value>
+  </data>
+  <data name="FixAndDriveSummaryHeading" xml:space="preserve">
+    <value>Drive for free</value>
+  </data>
+  <data name="FixNFibreHeader" xml:space="preserve">
+    <value>Fibre broadband</value>
+  </data>
+  <data name="FixNFibrePlusHeader" xml:space="preserve">
+    <value>Fibre Plus broadband</value>
+  </data>
+  <data name="FixNProtectCoverName" xml:space="preserve">
+    <value>Heating Breakdown</value>
+  </data>
+  <data name="FixNProtectPlusCoverName" xml:space="preserve">
+    <value>Heating Cover</value>
+  </data>
+  <data name="FreeText" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="NestLink" xml:space="preserve">
+    <value>https://g.co/nest/ukworks</value>
+  </data>
+  <data name="NestLinkUrlText" xml:space="preserve">
+    <value>Nest compatibility checker</value>
+  </data>
+  <data name="NestLinkUrlTitle" xml:space="preserve">
+    <value>Check your heating system is compatible with the Google Nest Thermostat E</value>
+  </data>
+  <data name="QuoteButtonNextAlt" xml:space="preserve">
+    <value>Next step to get your energy quote</value>
+  </data>
+  <data name="SingleFuelDiscount" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="SmartHomePackageHeader" xml:space="preserve">
+    <value>Smart Home Package (with 2 Year Fix and Control)</value>
+  </data>
+  <data name="SmartHomePackageMessage1" xml:space="preserve">
+    <value>The Smart Home Package, provided by Google, may not be compatible with all heating systems. Please go to the</value>
+  </data>
+  <data name="SmartHomePackageMessage2" xml:space="preserve">
+    <value> to see if your heating system is compatible before you sign up.</value>
+  </data>
+  <data name="SmartHomePackageMessage3" xml:space="preserve">
+    <value>The Smart Home Package comes with the 2 Year Fix and Control tariff only. This tariff is available to dual fuel only customers who pay by monthly Direct Debit or quarterly billing only.</value>
+  </data>
+  <data name="SmartHomePackageMessage4" xml:space="preserve">
+    <value>We’ll send the Smart Home Package to the same address that we supply your energy within 30 working days of your energy application. Someone will need to sign for it.</value>
+  </data>
+  <data name="SmartHomePackageMessage5" xml:space="preserve">
+    <value>You can install the Smart Home Package yourself. Simply follow the step-by-step </value>
+  </data>
+  <data name="SmartHomePackageMessage5Url" xml:space="preserve">
+    <value>https://g.co/nest/setupthermostat-e-uk</value>
+  </data>
+  <data name="SmartHomePackageMessage5UrlText" xml:space="preserve">
+    <value>Nest Thermostat E installation video. </value>
+  </data>
+  <data name="SmartHomePackageMessage5UrlTitle" xml:space="preserve">
+    <value>How to install the Google Nest Thermostat E</value>
+  </data>
+  <data name="SmartHomePackageMessage7" xml:space="preserve">
+    <value>If you prefer, we can install it for you for £75. To request an installation, call us on &lt;b&gt;0345 078 6754&lt;/b&gt; after you sign up.</value>
+  </data>
+  <data name="SmartHomePackageMessage8" xml:space="preserve">
+    <value>You’ll need a working internet connection and Wi-Fi to benefit from the Smart Home Package, and we also recommend that you have access to a computer, tablet or smartphone.</value>
+  </data>
+  <data name="SmartMeter1" xml:space="preserve">
+    <value>If you sign up to our 2 Year Fix and Control tariff, you agree to have a smart meter installed in your property, if you’re eligible and don’t already have one.</value>
+  </data>
+  <data name="StepCounter" xml:space="preserve">
+    <value>Step {0} of {1}</value>
+  </data>
+</root>

@@ -1,0 +1,31 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Energy
+@model string
+
+<div class="switch-steps-container tab-toggle-container @Model" data-applicable-tabs="@AvailableTariffs_Resources.EnergyTabName">
+    <div class="container gap-xl">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4 class="h2-like centered">@AvailableTariffs_Resources.SwitchHeader</h4>
+            </div>
+        </div>
+        <div class="row switch-row gap-top">
+            <div class="col-xs-12 col-sm-4 col-md-4 gap">
+                <div class="col-xs-2 col-sm-12 large-number">@AvailableTariffs_Resources.One</div>
+                <div class="col-xs-10 col-sm-12 switch-text">@AvailableTariffs_Resources.Switch1</div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 gap">
+                <div class="col-xs-2 col-sm-12 large-number">@AvailableTariffs_Resources.Two</div>
+                <div class="col-xs-10 col-sm-12 switch-text">@AvailableTariffs_Resources.Switch2</div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 gap">
+                <div class="col-xs-2 col-sm-12 large-number">@AvailableTariffs_Resources.Three</div>
+                <div class="col-xs-10 col-sm-12 switch-text">@AvailableTariffs_Resources.Switch3</div>
+            </div>
+        </div>
+        <div class="switch-guarantee">
+            <img class="" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/energy-switch-guarantee.png")" />
+            <span>@AvailableTariffs_Resources.SwitchGuaranteeTextEnergy</span>
+        </div>
+    </div>
+</div>

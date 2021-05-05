@@ -1,0 +1,37 @@
+﻿@using Products.WebModel.Resources.TariffChange
+@using Products.WebModel.ViewModels.TariffChange
+
+@model GetCustomerEmailViewModel
+@{
+    ViewBag.Title = GetCustomerEmail_Resources.Title;
+}
+@section ProgressBar {
+    @Html.Partial("_ProgressBar", Model.ProgressBarViewModel)
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@GetCustomerEmail_Resources.Header</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 gap">
+            <p class="gap">@GetCustomerEmail_Resources.Intro</p>
+            <p class="gap">@GetCustomerEmail_Resources.Intro2</p>
+            @using (Html.BeginForm("CheckProfileExists", "AdditionalDetails", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.EditorFor(m => m.EmailAddress, new { @class = "sam"})
+                @Html.EditorFor(m => m.ConfirmEmailAddress)
+                <div class="form-group">
+                    <p>@GetCustomerEmail_Resources.Disclaimer</p>@* inside group to give room for error message between this and input above *@
+                    <input class="button button-primary" type="submit" value="Ok, next" id="btnConfirmEmailAddress" name="btnConfirmEmailAddress" title="Confirm and Continue" />
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@section DataLayer
+{
+    @Html.Partial("_DataLayer", Model.DataLayer)
+}

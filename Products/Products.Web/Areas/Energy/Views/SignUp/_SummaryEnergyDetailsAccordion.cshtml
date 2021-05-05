@@ -1,0 +1,184 @@
+﻿@using Products.Model.Enums
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@using Products.WebModel.ViewModels.Common
+@model Products.WebModel.ViewModels.Energy.SummaryViewModel
+
+<div class="accordion accordion-summary-energy" role="group" id="important-information">
+    <div class="accordion-header">
+        <a href="#" title="@Summary_Resources.EnergyDetailsAccordionHeader" class="accordion-button" role="button" aria-controls="accordion-content">
+            <h2>@Summary_Resources.EnergyDetailsAccordionHeader</h2>
+        </a>
+    </div>
+    <div class="accordion-content accordion-content-indented" aria-hidden="true" style="display: none;" id="accordion-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                @if (Model.IsBundle)
+                {
+                    <h4>@Summary_Resources.AboutYourBundleHeader</h4>
+                    <p>@Model.AboutYourBundleEnergyPara1</p>
+                    <p>@Model.AboutYourBundleEnergyPara2</p>
+                    <p>@Accordion_Resources.AboutYourBundleEnergyPara3</p>
+                }
+
+                <p>@Accordion_Resources.BeforeYouConfirmPara</p>
+
+                @*PDF links*@
+                <ul class="link-list list--spaced gap-xxxl">
+                    @if (Model.EnergyTermsAndConditionsPdfLinks.Any())
+                    {
+                        foreach (TermsAndConditionsPdfLink termsAndConditionsPdfLink in Model.EnergyTermsAndConditionsPdfLinks)
+                        {
+                            <li>
+                                <a href="@termsAndConditionsPdfLink.Link" class="icon-link icon-link-pdf" title="@termsAndConditionsPdfLink.Title" target="_blank">
+                                    @termsAndConditionsPdfLink.DisplayName
+                                </a>
+                            </li>
+                        }
+                    }
+                    <li>
+                        <a href="@Resources.SSE_GeneralTermsAndConditionsForTheSupplyOfElectricityAndOrGas" class="icon-link icon-link-pdf" title="@AvailableTariffs_Resources.GeneralTermsAndConditionsPDFAlt" target="_blank">
+                            @AvailableTariffs_Resources.GeneralTermsAndConditionsPDFText
+                        </a>
+                    </li>
+                </ul>
+                @if (Model.IsBundle)
+                {
+                    <h4>@Accordion_Resources.IfYouChangeYourMindHeader</h4>
+                    <p>
+                        @Accordion_Resources.IfYouChangeYourMindPara1_1
+                        <a href="@Accordion_Resources.ContactUsLinkUrl" title="@Accordion_Resources.ContactUsLinkAlt" target="_blank">
+                            @Accordion_Resources.ContactUsLinkText
+                        </a>
+                        @Accordion_Resources.IfYouChangeYourMindPara1_2
+                    </p>
+
+                    <h4>@Accordion_Resources.SmartMeterHeader</h4>
+                    <p>@Accordion_Resources.BundleSmartMeter1</p>
+                    <p>@Accordion_Resources.BundleSmartMeter2</p>
+                }
+                <h3>@Summary_Resources.PaymentMethodInfoHeader</h3>
+                <p>@(Model.PaymentMethod == PaymentMethod.MonthlyDirectDebit ? Summary_Resources.PaymentMethodParagraphDD : Summary_Resources.PaymentMethodParagraphNonDD)</p>
+
+                @if (Model.IsBundle)
+                {
+                    <h4>@Summary_Resources.PaperlessBillingHeader</h4>
+                    <p>
+                        @Summary_Resources.PaperlessBillingPara1
+                        <a href="@Accordion_Resources.ContactUsLinkUrl" title="@Accordion_Resources.ContactUsLinkAlt" target="_blank">
+                            @Accordion_Resources.ContactUsLinkText
+                        </a>
+                    </p>
+                }
+
+                @if (Model.PaymentMethod == PaymentMethod.MonthlyDirectDebit)
+                {
+                    <h4>@Summary_Resources.DDCalculationHeader</h4>
+                    <p>@Summary_Resources.DDCalculationParagraph</p>
+                    if (Model.IsBundle)
+                    {
+                        <h4>@Summary_Resources.DDHeader_BroadbandBundle</h4>
+                        <p>@string.Format(Common_Resources.DDPara1, Common_Resources.SingleFuelDiscount)</p>
+                        @Html.Raw(Common_Resources.DDPara2)
+                        @Html.Raw(Common_Resources.DDPara3)
+                    }
+                    else
+                    {
+                        <h4>@Summary_Resources.DDHeader_Energy</h4>
+                        <p>@string.Format(Common_Resources.DDPara1, Common_Resources.SingleFuelDiscount)</p>
+                        @Html.Raw(Common_Resources.DDPara2)
+                        @Html.Raw(Common_Resources.DDPara3)
+                    }
+                }
+                @if (Model.PaymentMethod == PaymentMethod.PayAsYouGo)
+                {
+                    <h3>@Summary_Resources.PayAsYouGoHeader</h3>
+                    <p>@Html.Raw(Summary_Resources.PayAsYouGoText)</p>
+                }
+
+                <h3>@SummaryCommon_Resources.CreditCheckHeader</h3>
+                <p>
+                    @SummaryCommon_Resources.CreditCheckParagraph <a href="@SummaryCommon_Resources.CreditCheckLinkUrl" target="_blank" title="@SummaryCommon_Resources.CreditCheckLinkAlt">@SummaryCommon_Resources.CreditCheckLinkText </a>@SummaryCommon_Resources.CreditCheckLinkSuffix
+                </p>
+                <p class="gap">
+                    <a href="@SummaryCommon_Resources.PrivacyLinkUrl" target="_blank" title="@SummaryCommon_Resources.PrivacyLinkAlt">@SummaryCommon_Resources.PrivacyLinkText </a>@SummaryCommon_Resources.PrivacyLinkSuffix
+                </p>
+
+                <h4>@Accordion_Resources.GreenDealHeader</h4>
+                <p>@Accordion_Resources.GreenDealPara</p>
+
+                <h4>@Accordion_Resources.NeedToKnowHeader</h4>
+                @if (!Model.IsBundle)
+                {
+                    <p>@Accordion_Resources.NeedToKnowPara2</p>
+                }
+
+                <p>@Accordion_Resources.NeedToKnowPara3</p>
+                @if (!Model.IsBundle)
+                {
+                    <h4>@Accordion_Resources.SmartMeterHeader</h4>
+                    if (Model.IsSmartTariff)
+                    {
+                        <p>@Common_Resources.SmartMeter1</p>
+                        <p>@Common_Resources.FixAndDriveMessage</p>
+                    }
+                    <p>@Accordion_Resources.SmartMeter2</p>
+                    <p>@Accordion_Resources.SmartMeter3</p>
+
+                    if (Model.IsFixAndControlTariffGroup)
+                    {
+
+                        <h4>@Common_Resources.SmartHomePackageHeader</h4>
+                        <p>
+                            @Common_Resources.SmartHomePackageMessage1
+                            <a href="@Common_Resources.NestLink" target="_blank" title="@Common_Resources.NestLinkUrlTitle">
+                                @Common_Resources.NestLinkUrlText
+                            </a>@Common_Resources.SmartHomePackageMessage2
+                        </p>
+
+                        <p>@Common_Resources.SmartHomePackageMessage3</p>
+                        <p>@Common_Resources.SmartHomePackageMessage4</p>
+
+                        <p>
+                            @Common_Resources.SmartHomePackageMessage5
+                            <a href="@Common_Resources.SmartHomePackageMessage5Url" target="_blank" title="@Common_Resources.SmartHomePackageMessage5UrlTitle">
+                                @Common_Resources.SmartHomePackageMessage5UrlText
+                            </a>
+                            @Html.Raw(@Common_Resources.SmartHomePackageMessage7)
+                        </p> 
+
+                        <p>@Common_Resources.SmartHomePackageMessage8</p>
+                    }
+
+                    if (Model.IsFixAndDriveTariffGroup)
+                    {
+                        <h4>@Common_Resources.FixAndDriveSummaryHeading</h4>
+                        <p>@Common_Resources.FixAndDrivePara1</p>
+                        <p>@Common_Resources.FixAndDrivePara2</p>
+                        <p>@Common_Resources.FixAndDrivePara3</p>
+                        <p>
+                            @Common_Resources.FixAndDrivePara4
+                            <a href="@Common_Resources.FixAndDrivePara4CarFuelLink" target="_blank" title="@Common_Resources.FixAndDrivePara4CarFuelLinkText">
+                                @Common_Resources.FixAndDrivePara4CarFuelLinkText
+                            </a>
+                            @Common_Resources.FixAndDrivePara5
+                        </p>
+                    }
+                }
+
+                @if (!Model.IsBundle)
+                {
+                    <h4>@Accordion_Resources.YourRightToChangeYourMindHeader</h4>
+                    <p>
+                        @Accordion_Resources.YourRightToChangeYourMindPara1_1
+                        <a href="@Accordion_Resources.ContactUsLinkUrl" title="@Accordion_Resources.ContactUsLinkAlt" target="_blank">
+                            @Accordion_Resources.ContactUsLinkText
+                        </a>
+                        @Accordion_Resources.YourRightToChangeYourMindPara1_2
+                    </p>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.Broadband.BankDetailsViewModel
+@{
+    // TODO: Model.IsRetry is set to true if retry count is less than 3, this flag can be used to show the popup.
+    ViewBag.Title = BankDetails_Resources.Title;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+            <div class="hidden-xs step-count pull-right"><strong>@ViewBag.StepCounter</strong></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9">
+                    <h1>@BankDetails_Resources.Header</h1>
+                </div>
+                <div class="hidden-xs col-sm-3">
+                    <img class="pull-right dd-logo" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/dd.png")" />
+                </div>
+            </div>
+            <h2 class="h3-like gap-lg">@BankDetails_Resources.SubHeader</h2>
+            @using (Html.BeginForm("Submit", "BankDetails", FormMethod.Post, new { @id = "BankDetailsForm", @autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group checkbox checkbox--multiline contain strong">
+                    @Html.EditorFor(m => m.IsAuthorisedChecked, "AriaCheckBox")
+                    @Html.LabelFor(m => m.IsAuthorisedChecked, new { title = "", id = "checkbox-label" })
+                </div>
+
+                <p>
+                    <strong>
+                        @BankDetailsCommon_Resources.PhonePrefix<a href="@BankDetailsCommon_Resources.CallUsPhoneUrl" title="@BankDetailsCommon_Resources.CallUsPhoneAlt">@Common_Resources.CallUsPhone</a>.
+                    </strong>
+                </p>
+                @Html.ValidationMessageFor(model => model.IsAuthorisedChecked)
+
+
+                @Html.EditorFor(m => m.AccountHolder)
+                <div class="form-group form-group--text">
+                    @Html.LabelFor(model => model.SortCode, new { @class = "form-label" })
+                    @Html.HiddenFor(m => m.SortCode)
+                    @Html.EditorFor(m => m.SortCodeSegmentOne, "MultipleInputElement", new { @class = "form-input number dd", placeholder = "--", title = Form_Resources.SortCodeTitle })
+                    @Html.EditorFor(m => m.SortCodeSegmentTwo, "MultipleInputElement", new { @class = "form-input number dd", placeholder = "--", title = Form_Resources.SortCodeTitle })
+                    @Html.EditorFor(m => m.SortCodeSegmentThree, "MultipleInputElement", new { @class = "form-input number dd", placeholder = "--", title = Form_Resources.SortCodeTitle })
+                    @Html.ValidationMessageFor(m => m.SortCode)
+                </div>
+
+                @Html.EditorFor(m => m.AccountNumber, new { htmlAttributes = new { @class = "number", maxlength = "8" } })
+                <h2 class="h3-like">@BankDetails_Resources.SubHeader2</h2>
+                <p class="h5-like">@BankDetails_Resources.Label</p>
+                <p class="gap-lg"><strong>@Model.YourPriceViewModel.MonthlyCost.ToString("C")</strong></p>
+                <h2 class="h3-like">@BankDetails_Resources.SubHeader3</h2>
+                <p>@BankDetails_Resources.Paragraph</p>
+                <a href="@BankDetailsCommon_Resources.DD_Guarantee_PDFLink" class="icon-link icon-link-pdf" title="@BankDetailsCommon_Resources.PDFLinkAlt" target="_blank">@BankDetailsCommon_Resources.PDFLinkText</a>
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Common_Resources.ContinueToSummaryButtonText" id="btnSubmitAccountDetails" name="btnSubmitAccountDetails" title="@BankDetails_Resources.ContinueButtonAlt" />
+                </div>
+            }
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div id="price-box">
+                @Html.Partial("~/Areas/Broadband/Views/Shared/_YourPriceDynamic.cshtml", Model.YourPriceViewModel)
+                @{Html.RenderPartial("_SecureLogo"); }
+            </div>
+        </div>
+    </div>
+</div>
+@section Popups{
+    @Html.Partial("_RetryModal")
+
+    @Html.Partial("~/Areas/Broadband/Views/Shared/_OneOfCostModal.cshtml", Model.YourPriceViewModel)
+}
+@section scripts{
+    @if (Model.IsRetry ?? false)
+    {
+        <script>
+            $(function () {
+                $('#retry-modal').modal('show');
+            });
+        </script>
+    }
+    @Scripts.Render("~/js/common/bank-details-checked-validation")
+}

@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47F9B375-A9ED-495E-88A9-0FC991C8642B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Products.Tests</RootNamespace>
+    <AssemblyName>Products.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Should, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Should.1.1.20\lib\Should.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionExtensions.cs" />
+    <Compile Include="Common\AntiForgeryTokenOnControllersTests.cs" />
+    <Compile Include="Broadband\BankDetailsTests.cs" />
+    <Compile Include="Broadband\ConfirmationTests.cs" />
+    <Compile Include="Broadband\ContactDetailsTests.cs" />
+    <Compile Include="Broadband\CustomerDetailsTests.cs" />
+    <Compile Include="Broadband\EmailTests.cs" />
+    <Compile Include="Broadband\BroadbandCheckSessionAttributeOnControllerTests.cs" />
+    <Compile Include="Broadband\ExistingCustomerTests.cs" />
+    <Compile Include="Energy\ControllerHelperTests\QuoteControllerHelperTests.cs" />
+    <Compile Include="Energy\ControllerHelperTests\SignUpControllerHelperTests.cs" />
+    <Compile Include="Energy\ControllerHelperTests\TariffsControllerHelperTests.cs" />
+    <Compile Include="Infrastructure\Extensions\DateTimeExtensionsTests.cs" />
+    <Compile Include="Infrastructure\Extensions\DoubleExtensionsTests.cs" />
+    <Compile Include="Infrastructure\Extensions\EnumExtensionsTests.cs" />
+    <Compile Include="Infrastructure\Extensions\GenericExtensionsTests.cs" />
+    <Compile Include="Infrastructure\Extensions\StringExtensionsTests.cs" />
+    <Compile Include="Common\Fakes\FakeActionDescriptor.cs" />
+    <Compile Include="Common\Fakes\FakeConfigurationSettings.cs" />
+    <Compile Include="Common\Fakes\FakeContentManagementAPIClient.cs" />
+    <Compile Include="Common\Fakes\FakeHttpResponse.cs" />
+    <Compile Include="Common\Fakes\FakeQASServiceWrapper.cs" />
+    <Compile Include="Energy\ControllerTests\CommonControllerTests.cs" />
+    <Compile Include="Common\Helpers\FakeContentManagementStub.cs" />
+    <Compile Include="Energy\Fakes\Services\FakeBundleTariffServiceWrapper.cs" />
+    <Compile Include="Energy\Helpers\ControllerHelperFactory.cs" />
+    <Compile Include="Energy\ControllerTests\SignUpControllerTests.cs" />
+    <Compile Include="Energy\EnergyCheckSessionAttributeOnControllerTests.cs" />
+    <Compile Include="Energy\Fakes\Repositories\FakeEnergySalesRepository.cs" />
+    <Compile Include="Energy\Fakes\Services\FakeCAndCServiceWrapper.cs" />
+    <Compile Include="Energy\Fakes\Services\FakeProductServiceWrapper.cs" />
+    <Compile Include="Energy\Fakes\Services\FakeEnergyProjectionServiceWrapper.cs" />
+    <Compile Include="Broadband\Fakes\Services\FakeNewBTLineAvailabilityServiceWrapper.cs" />
+    <Compile Include="Broadband\Helpers\ControllerFactory.cs" />
+    <Compile Include="Broadband\InsertBroadbandJourneyDetailsTests.cs" />
+    <Compile Include="Broadband\LineCheckerControllerTests.cs" />
+    <Compile Include="Broadband\HubPageJourneyTests.cs" />
+    <Compile Include="Broadband\PackagesTests.cs" />
+    <Compile Include="Broadband\ProfileTests.cs" />
+    <Compile Include="Broadband\SummaryTests.cs" />
+    <Compile Include="Common\Fakes\FakeCustomerAlertRepository.cs" />
+    <Compile Include="Common\Fakes\FakeProfileRepository.cs" />
+    <Compile Include="Broadband\Fakes\Repository\FakeBroadbandSalesRepository.cs" />
+    <Compile Include="Broadband\Fakes\Services\FakeDatabaseHelper.cs" />
+    <Compile Include="Common\Fakes\FakeConfigManager.cs" />
+    <Compile Include="Common\Fakes\FakeEmailManager.cs" />
+    <Compile Include="Common\Fakes\FakeLogger.cs" />
+    <Compile Include="Common\Fakes\FakeBankDetailsService.cs" />
+    <Compile Include="Broadband\Fakes\Services\FakeBroadbandProductsServiceWrapper.cs" />
+    <Compile Include="Broadband\Fakes\Services\FakeSessionService.cs" />
+    <Compile Include="Common\Fakes\FakeSessionManager.cs" />
+    <Compile Include="Common\Helpers\TestHelper.cs" />
+    <Compile Include="Broadband\Model\FakeBroadbandProductsData.cs" />
+    <Compile Include="Broadband\Model\ProductCatalogue.cs" />
+    <Compile Include="Common\Fakes\FakeContextManager.cs" />
+    <Compile Include="Common\Fakes\FakeHttpContext.cs" />
+    <Compile Include="Common\Fakes\FakeHttpRequest.cs" />
+    <Compile Include="Common\Fakes\FakeHttpSession.cs" />
+    <Compile Include="Common\Helpers\FakeConfigManagerFactory.cs" />
+    <Compile Include="Common\Helpers\FakeContextManagerFactory.cs" />
+    <Compile Include="Energy\Helpers\CustomerFactory.cs" />
+    <Compile Include="Energy\Helpers\FakeCAndCData.cs" />
+    <Compile Include="Energy\Helpers\FakeProductsStub.cs" />
+    <Compile Include="Energy\Fakes\Repositories\FakeSalesRepository.cs" />
+    <Compile Include="Energy\InsertEnergySalesTests.cs" />
+    <Compile Include="Energy\Model\FakeProjectionData.cs" />
+    <Compile Include="Energy\ControllerTests\OurPricesControllerTests.cs" />
+    <Compile Include="Energy\ControllerTests\QuoteControllerTests.cs" />
+    <Compile Include="Energy\SignUp\Extras\ExtrasTests.cs" />
+    <Compile Include="Energy\SignUp\Upgrades\UpgradesTests.cs" />
+    <Compile Include="Energy\ControllerTests\StepCounterControllerTests.cs" />
+    <Compile Include="Energy\ControllerTests\TariffsControllerTests.cs" />
+    <Compile Include="Energy\Helpers\ControllerFactory.cs" />
+    <Compile Include="HomeServices\AddressTests.cs" />
+    <Compile Include="HomeServices\BankDetailsTests.cs" />
+    <Compile Include="HomeServices\ConfirmationTests.cs" />
+    <Compile Include="HomeServices\CustomerDetailsTests.cs" />
+    <Compile Include="HomeServices\Fakes\FakeHomeServicesProductServiceWrapper.cs" />
+    <Compile Include="HomeServices\Fakes\FakeHomeServicesSalesRepository.cs" />
+    <Compile Include="HomeServices\Helpers\FakeCustomerFactory.cs" />
+    <Compile Include="HomeServices\Helpers\FakeHomeServicesProductStub.cs" />
+    <Compile Include="HomeServices\InsertHomeServicesSalesTests.cs" />
+    <Compile Include="HomeServices\PersonalDetailsTests.cs" />
+    <Compile Include="HomeServices\CoverDetailsTests.cs" />
+    <Compile Include="HomeServices\PostcodeTests.cs" />
+    <Compile Include="HomeServices\Helpers\ControllerFactory.cs" />
+    <Compile Include="HomeServices\StepCounterTests.cs" />
+    <Compile Include="HomeServices\RouteCheckAttributeOnControllerTests.cs" />
+    <Compile Include="HomeServices\SummaryTests.cs" />
+    <Compile Include="Infrastructure\NumberFormatterTests.cs" />
+    <Compile Include="Infrastructure\PasswordServiceTests.cs" />
+    <Compile Include="Infrastructure\StringHelperTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Common\Managers\TariffManagerTests.cs" />
+    <Compile Include="Services\Common\Mappers\ContentManagementServiceMapperTests.cs" />
+    <Compile Include="Services\Energy\Mappers\ProductsMapperTests.cs" />
+    <Compile Include="Services\Helpers\RateCodeHelperTests.cs" />
+    <Compile Include="Services\QASBTMatchServiceTests.cs" />
+    <Compile Include="Services\TariffChange\Mappers\TariffMapperTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\AccountValidationTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\AllowCollectionDayValidatorTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\BillingValidationTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\CheckAerServiceExceptionTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\MAndSTariffNameValidationTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\PredictAndFixValidationTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\TariffCalculationMethodTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\CheckEligibilityTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\CostCalculationTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\LC31AAnnualConsumptionTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\MeterValidationTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\ProcessValidationTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\RenewalTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\ServicePlanValidationTests.cs" />
+    <Compile Include="TariffChange\AccountEligibility\SiteValidationTests.cs" />
+    <Compile Include="TariffChange\AdditionalDetails\CheckProfileTests.cs" />
+    <Compile Include="TariffChange\Confirmation\ConfirmationControllerTests.cs" />
+    <Compile Include="TariffChange\CreatePassword\ActivationEmailTests.cs" />
+    <Compile Include="TariffChange\CreatePassword\CreatePasswordControllerTests.cs" />
+    <Compile Include="TariffChange\CustomerIdentification\CustomerIdentificationControllerTests.cs" />
+    <Compile Include="Common\Fakes\FakeHttpServerUtility.cs" />
+    <Compile Include="TariffChange\CustomerIdentification\CustomerIdentificationInputValidationTests.cs" />
+    <Compile Include="TariffChange\Fakes\Managers\FakeTariffManager.cs" />
+    <Compile Include="TariffChange\Fakes\Models\FakeAERData.cs" />
+    <Compile Include="TariffChange\Fakes\Models\FakeGoogleReCaptchaData.cs" />
+    <Compile Include="TariffChange\Fakes\Models\FakeMCISData.cs" />
+    <Compile Include="TariffChange\Fakes\Models\FakeTariffData.cs" />
+    <Compile Include="TariffChange\Fakes\Services\FakeAnnualEnergyReviewServiceWrapper.cs" />
+    <Compile Include="TariffChange\Fakes\Services\FakeAvailableTariffService.cs" />
+    <Compile Include="TariffChange\Fakes\Services\FakeGoogleReCaptchaService.cs" />
+    <Compile Include="TariffChange\Fakes\Services\FakeInMemoryTariffChangeSessionService.cs" />
+    <Compile Include="TariffChange\Fakes\Services\FakeManageCustomerInformationService.cs" />
+    <Compile Include="TariffChange\Fakes\Services\FakePersonalProjectionService.cs" />
+    <Compile Include="TariffChange\Fakes\Services\FakeTariffRepository.cs" />
+    <Compile Include="TariffChange\Helpers\ControllerFactory.cs" />
+    <Compile Include="TariffChange\Helpers\DefaultDomainModel.cs" />
+    <Compile Include="TariffChange\Helpers\FakeTariffStub.cs" />
+    <Compile Include="TariffChange\Services\CustomerAccountServiceTests.cs" />
+    <Compile Include="TariffChange\Summary\ActionAERServiceExceptionTests.cs" />
+    <Compile Include="TariffChange\Summary\ConfirmationEmailTests.cs" />
+    <Compile Include="TariffChange\Summary\ConfirmTariffChangeTests.cs" />
+    <Compile Include="TariffChange\Summary\PersonalProjectionServiceExceptionTests.cs" />
+    <Compile Include="TariffChange\Tariffs\TariffControllerTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Products.ControllerHelpers\Products.ControllerHelpers.csproj">
+      <Project>{7fc4445e-99a1-4e84-8d20-2b36c0a15c2d}</Project>
+      <Name>Products.ControllerHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Core\Products.Core.csproj">
+      <Project>{E40B2488-29F0-4ECA-B4BB-B7488D2C72C7}</Project>
+      <Name>Products.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Infrastructure\Products.Infrastructure.csproj">
+      <Project>{28bdc57f-5070-434c-9e9e-b9b021530a16}</Project>
+      <Name>Products.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Model\Products.Model.csproj">
+      <Project>{06d831a3-9db5-456c-86dd-ad82623f5381}</Project>
+      <Name>Products.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Repository\Products.Repository.csproj">
+      <Project>{78cb3d39-40fd-4f6c-a983-3b24a73a3969}</Project>
+      <Name>Products.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.ServiceWrapper\Products.ServiceWrapper.csproj">
+      <Project>{34854e22-3e2b-480c-a0bd-f2cb9f4ff03d}</Project>
+      <Name>Products.ServiceWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Service\Products.Service.csproj">
+      <Project>{45eff53c-e433-4b3a-ada4-60193521d35a}</Project>
+      <Name>Products.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.WebModel\Products.WebModel.csproj">
+      <Project>{a987e558-c360-4c3a-9b44-554e5eb6215b}</Project>
+      <Name>Products.WebModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Web\Products.Web.csproj">
+      <Project>{483089ed-412c-4945-af78-bb2435f66a8a}</Project>
+      <Name>Products.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="broadbandprices_26092017.json" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

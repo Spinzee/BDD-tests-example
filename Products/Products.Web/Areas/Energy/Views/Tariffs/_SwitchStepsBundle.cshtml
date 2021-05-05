@@ -1,0 +1,35 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Energy
+@model string
+
+<div class="switch-steps-container tab-toggle-container @Model" data-applicable-tabs="@AvailableTariffs_Resources.BundleTabName, @AvailableTariffs_Resources.ViewAllTabName">
+    <div class="container gap-xl">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4 class="h2-like centered switch-header">@AvailableTariffs_Resources.SwitchHeaderBundle</h4>
+            </div>
+        </div>
+        <div class="row switch-row gap-top">
+            <div class="col-xs-12 col-sm-3 col-md-3 gap">
+                <div class="col-xs-2 col-sm-12 large-number">@AvailableTariffs_Resources.One</div>
+                <div class="col-xs-10 col-sm-12 switch-text">@AvailableTariffs_Resources.SwitchBundle1</div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 gap">
+                <div class="col-xs-2 col-sm-12 large-number">@AvailableTariffs_Resources.Two</div>
+                <div class="col-xs-10 col-sm-12 switch-text">@AvailableTariffs_Resources.SwitchBundle2</div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 gap">
+                <div class="col-xs-2 col-sm-12 large-number">@AvailableTariffs_Resources.Three</div>
+                <div class="col-xs-10 col-sm-12 switch-text">@AvailableTariffs_Resources.SwitchBundle3</div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 gap">
+                <div class="col-xs-2 col-sm-12 large-number">@AvailableTariffs_Resources.Four</div>
+                <div class="col-xs-10 col-sm-12 switch-text">@AvailableTariffs_Resources.SwitchBundle4</div>
+            </div>
+        </div>
+        <div class="switch-guarantee">
+            <img class="" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/energy-switch-guarantee.png")" />
+            <div>@AvailableTariffs_Resources.SwitchGuaranteeTextBundle</div>
+        </div>
+    </div>
+</div>

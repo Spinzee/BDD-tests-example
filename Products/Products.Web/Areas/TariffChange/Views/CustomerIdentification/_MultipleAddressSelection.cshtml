@@ -1,0 +1,27 @@
+﻿@model Products.WebModel.ViewModels.TariffChange.MultiSiteAddressesViewModel
+
+@using Products.WebModel.Resources.TariffChange
+@{
+    ViewBag.Title = MultipleAddressSelection_Resources.Title;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@MultipleAddressSelection_Resources.Greeting</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 gap">
+            @using (Html.BeginForm("SelectAddress", "CustomerIdentification", FormMethod.Post, new { @id = "ConfirmDetailsForm" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.EditorFor(m => m.Addresses)
+                <h2 class="h4-like">@MultipleAddressSelection_Resources.ConfirmationHeading</h2>
+                <p>@MultipleAddressSelection_Resources.Disclaimer</p>
+                <button type="submit" Title="@MultipleAddressSelection_Resources.UseAddressButtonTitle" id="btnConfirmDetails" class="button button-primary">@MultipleAddressSelection_Resources.UseAddressButtonText</button>
+            }
+        </div>
+    </div>
+</div>
+

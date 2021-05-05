@@ -1,0 +1,111 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.HomeServices
+@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.HomeServices.BankDetailsViewModel
+@{
+    ViewBag.Title = Common_Resources.BankDetailsTile;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+            @Html.Partial("_StepCounter")
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 gap">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9">
+                    <h1>@BankDetailsCommon_Resources.Header</h1>
+                </div>
+                <div class="hidden-xs col-sm-3">
+                    <img class="pull-right dd-logo" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/dd.png")" />
+                </div>
+            </div>
+            <h2 class="h3-like gap-lg">@BankDetailsCommon_Resources.SubHeader</h2>
+            @using (Html.BeginForm("BankDetails", "HomeServices", FormMethod.Post, new { @id = "BankDetailsForm", @autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group checkbox checkbox--multiline contain strong">
+                    @Html.EditorFor(m => m.IsAuthorisedChecked, "AriaCheckBox")
+                    @Html.LabelFor(m => m.IsAuthorisedChecked, new { title = "", id = "checkbox-label" })
+                </div>
+
+                <p>
+                    <strong>
+                        @BankDetailsCommon_Resources.PhonePrefix<a href="@BankDetailsCommon_Resources.CallUsPhoneUrl" title="@BankDetailsCommon_Resources.CallUsPhoneAlt">@BankDetailsCommon_Resources.CallUsPhone</a>.
+                    </strong>
+                </p>
+                @Html.ValidationMessageFor(model => model.IsAuthorisedChecked)
+
+                @Html.EditorFor(m => m.AccountHolder)
+                <div class="form-group form-group--text">
+                    @Html.LabelFor(model => model.SortCode, new { @class = "form-label" })
+                    @Html.HiddenFor(m => m.SortCode)
+                    @Html.EditorFor(m => m.SortCodeSegmentOne, new { @class = "form-input number dd", placeholder = "--", title = Form_Resources.SortCodeTitle, maxlength = "2" })
+                    @Html.EditorFor(m => m.SortCodeSegmentTwo, new { @class = "form-input number dd", placeholder = "--", title = Form_Resources.SortCodeTitle, maxlength = "2" })
+                    @Html.EditorFor(m => m.SortCodeSegmentThree, new { @class = "form-input number dd", placeholder = "--", title = Form_Resources.SortCodeTitle, maxlength = "2" })
+                    @Html.ValidationMessageFor(m => m.SortCode)
+                </div>
+
+                @Html.EditorFor(m => m.AccountNumber, new { htmlAttributes = new { @class = "number", maxlength = "8" } })
+
+                <div class="form-group gap-lg">
+                    <h2 class="h5-like gap">@BankDetailsCommon_Resources.SubHeader2</h2>
+                    <span>@BankDetailsCommon_Resources.PaymentDatePrefix &nbsp;</span>
+                    @Html.EditorFor(m => m.DirectDebitDate, new { @class = "form-input number dd", maxlength = "2" })
+                    <span>@BankDetailsCommon_Resources.PaymentDatePostfix</span>
+                    @Html.ValidationMessageFor(m => m.DirectDebitDate)
+                </div>
+
+
+                <h2 class="h5-like gap">@BankDetailsCommon_Resources.SubHeader3</h2>
+                <div class="gap-lg">
+                    @foreach (var obj in Model.ProductData)
+                    {
+                        <div class="gap-right-sm">@obj.ProductName = <strong>@obj.Amount</strong></div>
+                    }
+                </div>
+                <h2 class="h3-like">@BankDetailsCommon_Resources.SubHeader4</h2>
+                <p>@BankDetailsCommon_Resources.Paragraph</p>
+
+                <a href="@BankDetailsCommon_Resources.DD_Guarantee_PDFLink_HomeServices" class="icon-link icon-link-pdf" title="@BankDetailsCommon_Resources.PDFLinkAlt" target="_blank">@BankDetailsCommon_Resources.PDFLinkText</a>
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Resources.ButtonNextText" id="btnSubmitAccountDetails" name="btnSubmitAccountDetails" title="@Resources.ButtonNextSignUpAlt" />
+                </div>
+                <div class="row gap hidden-sm hidden-md hidden-lg">
+                    <div class="col-xs-6">
+                        <img class="dd-logo" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/dd.png")" />
+                    </div>
+                    <div class="secure-logo col-xs-6">
+                        <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/secure-logo.png")" />
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div id="price-box">
+                @{Html.RenderAction("YourCoverBasket");}
+                <div class="additional-info secure-logo gap-top hidden-xs">
+                    <p>@BankDetailsCommon_Resources.SecureLogoText</p>
+                    <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/secure-logo.png")" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Popups{
+    @Html.Partial("_RetryModal")
+}
+@section scripts{
+    @Scripts.Render("~/js/common/bank-details-checked-validation")
+    @if (Model.IsRetry)
+    {
+        <script>
+            $(function () {
+                $('#retry-modal').modal('show');
+            });
+        </script>
+    }
+}

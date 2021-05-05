@@ -1,0 +1,44 @@
+﻿@using Products.WebModel.ViewModels.Common
+@model Products.WebModel.ViewModels.Common.ButtonList
+@{
+    string msg = string.Empty;
+
+    IEnumerable<ModelClientValidationRule> clientRules = ModelValidatorProviders.Providers.GetValidators(ViewData.ModelMetadata, ViewContext).SelectMany(v => v.GetClientValidationRules());
+    foreach (ModelClientValidationRule rule in clientRules)
+    {
+        if (rule.ValidationType == "required")
+        {
+            msg = $"data-val-required=\"{rule.ErrorMessage}\"";
+        }
+    }
+}
+
+<fieldset class="btn-group-multi">
+    <legend class="sr-only"></legend>
+
+    @foreach (RadioButton item in Model.Items)
+    {
+        <div class="col-xs-12 col-sm-4">
+            @*<div class="col-xs-6 col-sm-2"> - This is a reminder for Kevin for when he makes the buttonlist change the col size we need this col size for this one*@
+            <div class="btn contain @(item.Checked ? " active" : string.Empty)">
+                <input data-val="true" @(item.Checked ? "checked=checked" : string.Empty) name="@Model.SelectedValue" id="@item.Value" type="radio" value="@item.Value" @(!string.IsNullOrEmpty(item.AriaDescription) ? $"aria-describedby={Model.SelectedValue}-{item.Value}-description" : string.Empty) @Html.Raw(msg)>
+                @*<input data-val="true" @(item.Checked ? "checked=checked" : string.Empty) name="@string.Concat(Model.Parent, ".", Model.SelectedValue)" id="@item.Value" type="radio" value="@item.Value" @(!string.IsNullOrEmpty(item.AriaDescription) ? $"aria-describedby={Model.SelectedValue}-{item.Value}-description" : string.Empty) @Html.Raw(msg)>*@
+
+                <label for="@item.Value">
+                    <div class="label">
+                        <strong>@item.DisplayText</strong><br/>
+                        @(!string.IsNullOrEmpty(item.DescriptiveText) ? item.DescriptiveText : string.Empty)
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        if (!string.IsNullOrEmpty(item.AriaDescription))
+        {
+            <div class="sr-only" id="@Model.SelectedValue-@item.Value-description">
+                @item.AriaDescription
+            </div>
+        }
+    }
+
+</fieldset>

@@ -1,0 +1,8 @@
+﻿@model Products.WebModel.ViewModels.Energy.TariffsViewModel
+
+<div class="tariff-wrapper energy-tariff-wrapper">
+    <div class="tariff js-tariff-container contain">
+        @{Html.RenderPartial("_AvailableTariffInner", Model);}
+    </div>
+    @{Html.RenderPartial("_TariffInformationLabelModal", Model);}
+</div>

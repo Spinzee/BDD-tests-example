@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFile": "Content/Site.css",
+    "inputFile": "Content/Site.less"
+  },
+  {
+    "outputFile": "wwwroot/css/site.css",
+    "inputFile": "wwwroot/css/site.less"
+  },
+  {
+    "outputFile": "wwwroot/css/login.css",
+    "inputFile": "wwwroot/css/login.less"
+  },
+  {
+    "outputFile": "wwwroot/css/calender.css",
+    "inputFile": "wwwroot/css/calender.less"
+  },
+  {
+    "outputFile": "wwwroot/css/products.css",
+    "inputFile": "wwwroot/css/products.less"
+  },
+  {
+    "outputFile": "wwwroot/css/variables.css",
+    "inputFile": "wwwroot/css/variables.less"
+  }
+]

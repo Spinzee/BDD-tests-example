@@ -1,0 +1,79 @@
+﻿@using Products.WebModel.Resources.HomeServices
+@model Products.WebModel.ViewModels.HomeServices.YourCoverBasketViewModel
+
+<div id="price-info-box" class="bg-dark box-summary hes-basket">
+    <h2 id="your-price">@YourCoverBasket_Resources.BasketHeader</h2>
+    <strong>@YourCoverBasket_Resources.CoverName</strong>@Model.ProductName
+    <table class="table table-simple">
+        <tbody>
+            <tr>
+                <th scope="row">@YourCoverBasket_Resources.CoverMonthlyCost</th>
+                <td>@Model.ProductMonthlyCost</td>
+            </tr>
+            @if (Model.HasSelectedExtras)
+                {
+                    if (Model.SelectedExtras.Any())
+                    {
+                    <tr>
+                        <th><strong>@YourCoverBasket_Resources.ExtraSubheader</strong></th>
+                    </tr>
+                        foreach (var extra in Model.SelectedExtras)
+                        {
+                    <tr>
+                        <th scope="row">@extra.Name</th>
+                        <td>@extra.MonthlyCost</td>
+                    </tr>
+                        }
+                    }
+                    else
+                    {
+                    <tr>
+                        <th scope="row">@YourCoverBasket_Resources.NoExtrasIncluded</th>
+                        <td>-</td>
+                    </tr>
+                    }
+                }
+            <tr>
+                <th scope="row"><strong>@YourCoverBasket_Resources.TotalMontlyCostLabel</strong></th>
+                <td><strong>@Model.TotalMonthlyCost</strong></td>
+            </tr>
+            <tr>
+                <th scope="row">@YourCoverBasket_Resources.TotalYearlyCostLabel</th>
+                <td>@Model.YearlyCost</td>
+            </tr>
+            <tr>
+                <th scope="row">@YourCoverBasket_Resources.ContractLabel</th>
+                <td>@Model.ContractDuration @YourCoverBasket_Resources.ContractDuration</td>
+            </tr>
+        </tbody>
+    </table>
+    @if (Model.HasExcess)
+            {
+            <hr>
+            <table class="table table-simple">
+                <tbody>
+                    <tr>
+                        <th scope="row"><strong>@YourCoverBasket_Resources.ExcessLabel</strong></th>
+                        <td>@Model.ExcessCost</td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+    @if (@Model.OffersExist)
+            {
+            <hr>
+            <table class="table table-simple">
+                <tbody>
+                    <tr>
+                        <th scope="row"><strong>@YourCoverBasket_Resources.OffersSubheader</strong></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">@Model.OffersText</th>
+                    </tr>
+                </tbody>
+            </table>
+        }
+    <hr>@YourCoverBasket_Resources.Disclaimer
+</div>
+

@@ -1,0 +1,69 @@
+﻿<h1>Accordions and toggles</h1>
+
+<p>Question to UX - Should the contents be flush with the left margin, or indented as shown?</p>
+
+<p>Differences from classic accordions</p>
+<ul class="bullet-list">
+    <li>Hitbox over entire head area, not just H2</li>
+    <li>left padding of content smaller</li>
+    <li>Extra aria roles and attributes with unique id on each content block</li>
+    <li>Classes have been renamed and have moved</li>
+</ul>
+
+
+<div class="accordion" role="group">
+    <div class="accordion-header">
+        <a href="#" title="Click to expand" class="accordion-button" role="button" aria-controls="accordion-content-0">
+            <h2>This is the title of the accordion</h2>
+        </a>
+    </div>
+    <div class="accordion-content" id="accordion-content-0">
+        <div class="row">
+            <div class="col-xs-6">
+                <p>This paragraph is inside the accordion in a row. Yay. This paragraph is inside the accordion in a row. Yay. This paragraph is inside the accordion in a row. Yay. This paragraph is inside the accordion in a row. Yay.</p>
+            </div>
+            <div class="col-xs-6">
+                <p>This paragraph is inside the accordion in a row. Yay. This paragraph is inside the accordion in a row. Yay. This paragraph is inside the accordion in a row. Yay.</p>
+            </div>
+        </div>
+        <ul class="bullet-list">
+            <li>This is a bullet</li>
+            <li>So is this</li>
+        </ul>
+        <h3>Semantic H3 heading</h3>
+        <p>Heading is rendered to look more like an H4, but with no bottom margin.</p>
+    </div>
+</div>
+
+
+<div class="accordion" role="group">
+    <div class="accordion-header">
+        <a href="#" title="Click to expand" class="accordion-button" role="button" aria-controls="accordion-content-1">
+            <h3>Second accordion, semantically H3</h3>
+        </a>
+    </div>
+    <div class="accordion-content" id="accordion-content-1">
+        <h4>Heading level semantic 4</h4>
+        <p>this is more content.</p>
+    </div>
+</div>
+
+<div class="accordion" role="group">
+    <div class="accordion-header">
+        <a href="#" title="Click to expand" class="accordion-button" role="button" aria-controls="accordion-content-2">
+            <h2>Third accordion with a really long label to see how it wraps on narrow screens and on small desktop displays.</h2>
+        </a>
+    </div>
+    <div class="accordion-content" id="accordion-content-2">
+        <p>this is more content.</p>
+    </div>
+</div>
+
+<p>Paragraph after the accordion.</p>
+
+
+<script>
+    $(document).ready(() => {
+        Sse.Utils.Accordion.init();
+    });
+</script>

@@ -1,0 +1,397 @@
+﻿@model Products.WebModel.ViewModels.Energy.AvailableTariffsViewModel
+@using Products.Web.Helpers
+@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.Resources.Energy
+@using Products.WebModel.Resources.Common
+@using Common_Resources = Products.WebModel.Resources.Energy.Common_Resources
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h4 class="h2-like centered gap-top-sm">@AvailableTariffs_Resources.USPHeader</h4>
+        </div>
+    </div>
+    <div class="row usp-row gap-top">
+        <div class="col-sm-4 gap">
+            <div class="row">
+                <div class="col-xs-2 col-sm-12 right-align"><img title="@AvailableTariffs_Resources.USP2" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/save-yearly-icon.png")" /></div>
+                <div class="col-xs-10 col-sm-12 usp-text">@AvailableTariffs_Resources.USP2</div>
+            </div>
+        </div>
+        <div class="col-sm-4 gap">
+            <div class="row">
+                <div class="col-xs-2 col-sm-12 right-align"><img title="@AvailableTariffs_Resources.USP3" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/presale-tickets-icon.png")" /></div>
+                <div class="col-xs-10 col-sm-12 usp-text">@AvailableTariffs_Resources.USP3</div>
+            </div>
+        </div>
+        <div class="col-sm-4 gap">
+            <div class="row">
+                <div class="col-xs-2 col-sm-12 right-align"><img title="@AvailableTariffs_Resources.USP4" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/customers-icon.png")" /></div>
+                <div class="col-xs-10 col-sm-12 usp-text">@AvailableTariffs_Resources.USP4</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rewards-container bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="reward-logo " src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/promotional/sse-reward-logo.svg")" />
+                    </div>
+                    <div class="col-xs-12 hidden-sm hidden-md hidden-lg no-padding gap">
+                        <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/SSEHydroMobile.png")" />
+                    </div>
+                    <div class="col-xs-12">
+                        <p>@AvailableTariffs_Resources.RewardsText</p>
+                        <ul class="bullet-list gap">
+                            <li>@AvailableTariffs_Resources.RewardsBullet1</li>
+                            <li>@AvailableTariffs_Resources.RewardsBullet2</li>
+                            <li>@AvailableTariffs_Resources.RewardsBullet3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 hidden-xs rewards-col" style="padding-left: 0;">
+                <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/SSEHydroTablet.png")" alt="@Accordion_Resources.SSEHydroAlt" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h4 class="h3-like">@Accordion_Resources.AccordionHeader</h4>
+            <div class="accordion-group tab-toggle-accordion">
+                <div class="accordion tab-toggle-container @Model.ShowBundleContent" data-applicable-tabs="@AvailableTariffs_Resources.BundleTabName, @AvailableTariffs_Resources.ViewAllTabName">
+                    <div class="" role="group" id="important-information-bundle">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.AccordionBundleSubHeaderAlt" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.AccordionBundleSubHeader</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <h4>@Accordion_Resources.BundleEnergyDetailsHeader</h4>
+                                    <p>@Accordion_Resources.BundleEnergyDetailsPara1</p>
+                                    <p>@Accordion_Resources.BundleEnergyDetailsPara2</p>
+                                    <p>@Accordion_Resources.BundleEnergyDetailsPara3</p>
+                                    <p>@Accordion_Resources.BundleEnergyDetailsPara4</p>
+                                    <p>@Accordion_Resources.BundleEnergyDetailsPara5</p>
+                                    <p>@Accordion_Resources.BundleEnergyDetailsPara6</p>
+                                    <p>@Accordion_Resources.BundleFullTermsAndConditionsPara</p>
+
+                                    <h4>@Accordion_Resources.BundleBroadbandPhoneDetailsHeader</h4>
+                                    <p>@Accordion_Resources.BundleBroadbandPhoneDetailsPara1</p>
+                                    <p>@Accordion_Resources.BundleBroadbandPhoneDetailsPara2</p>
+                                    <p>@Accordion_Resources.BundleBroadbandPhoneDetailsPara3</p>
+                                    <p>@Accordion_Resources.BundleBroadbandPhoneDetailsPara4</p>
+                                    <p>@Accordion_Resources.BundleBroadbandPhoneDetailsPara5</p>
+                                    <p>@Accordion_Resources.BundleBroadbandPhoneDetailsPara6</p>
+                                    <p>
+                                        @Accordion_Resources.BundleBroadbandPhoneDetailsPara7_1 <a href="@AvailablePackages_Resources.HappinessGuaranteeLinkUrl" target="_blank" title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara7_Link1Alt">@Accordion_Resources.BundleBroadbandPhoneDetailsPara7_Link1Text</a>
+                                    </p>
+                                    <p>
+                                        @Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1 <a href="@AvailablePackages_Resources.BroadbandTrafficManagementLinkUrl" target="_blank" title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link1Alt">@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link1Text</a>
+                                        @Accordion_Resources.BundleBroadbandPhoneDetailsPara8_2 <a href="@AvailablePackages_Resources.AcceptableUsePolicyLinkUrl" target="_blank" title="@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link2Alt">@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_1Link2Text</a> @Accordion_Resources.BundleBroadbandPhoneDetailsPara8_3
+                                    </p>
+                                    <p>@Accordion_Resources.BundleBroadbandPhoneDetailsPara8_4</p>
+                                    <p>@Accordion_Resources.BundleFullTermsAndConditionsPara</p>
+
+                                    <h4>@Accordion_Resources.BundleHeatingBreakdownDetailsHeader</h4>
+                                    <p>@Accordion_Resources.BundleHeatingBreakdownDetailsPara1</p>
+                                    <p>@Accordion_Resources.BundleHeatingBreakdownDetailsPara2</p>
+                                    <p>@Accordion_Resources.BundleHeatingBreakdownDetailsPara3</p>
+                                    <p>
+                                        @Accordion_Resources.BundleHeatingBreakdownDetailsPara4_1 <a href="@Accordion_Resources.HeatingBreakdownCoverPolicyPdfLinkUrl" target="_blank" title="@Accordion_Resources.BundleHeatingBreakdownCoverPolicyLinkAlt">@Accordion_Resources.BundleHeatingBreakdownCoverPolicyLinkText</a>
+                                        @Accordion_Resources.PartsAndLabourPara2 <a href="@Accordion_Resources.HeatingBreakdownCoverInsurancePolicyPdfLinkUrl" target="_blank" title="@Accordion_Resources.BundleHeatingBreakdownInsurancePolicyLinkAlt">@Accordion_Resources.BundleHeatingBreakdownInsurancePolicyLinkText</a>.
+                                    </p>
+                                    <p>@Accordion_Resources.BundleHeatingBreakdownDetailsPara5</p>
+                                    <p>@Accordion_Resources.BundleFullTermsAndConditionsPara</p>
+
+                                    <h4>@Resources.FullTermsAndConditionsHeader</h4>
+                                    <p>@Accordion_Resources.FullTermsAndConditionsPara</p>
+
+                                    @Html.Partial("_AvailableTariffsDocumentList", Model.BundleTariffs)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion tab-toggle-container @Model.ShowEnergyContent" data-applicable-tabs="@AvailableTariffs_Resources.EnergyTabName, @AvailableTariffs_Resources.ViewAllTabName">
+                    <div class="" role="group" id="important-information-energy">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.AccordionEnergySubHeaderAlt" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.AccordionEnergySubHeader</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <h4>@Accordion_Resources.GreenDealHeader</h4>
+                                    <p>@Accordion_Resources.GreenDealPara</p>
+                                    <h4>@Accordion_Resources.NeedToKnowHeader</h4>
+                                    <p>@Accordion_Resources.NeedToKnowPara2</p>
+                                    <p>@Accordion_Resources.NeedToKnowPara3</p>
+
+                                    <h4>@Accordion_Resources.SmartMeterHeader</h4>
+                                    <p>@Common_Resources.SmartMeter1</p>
+                                    <p>@Common_Resources.FixAndDriveMessage</p>
+                                    <p>@Accordion_Resources.SmartMeter2</p>
+                                    <p>@Accordion_Resources.SmartMeter3</p>
+
+                                    <h4>@Common_Resources.SmartHomePackageHeader</h4>
+                                    <p>
+                                        @Common_Resources.SmartHomePackageMessage1
+                                        <a href="@Common_Resources.NestLink" target="_blank" title="@Common_Resources.NestLinkUrlTitle">
+                                            @Common_Resources.NestLinkUrlText
+                                        </a>@Common_Resources.SmartHomePackageMessage2
+                                    </p>
+
+                                    <p>@Common_Resources.SmartHomePackageMessage3</p>
+                                    <p>@Common_Resources.SmartHomePackageMessage4</p>
+
+                                    <p>
+                                        @Common_Resources.SmartHomePackageMessage5
+                                        <a href="@Common_Resources.SmartHomePackageMessage5Url" target="_blank" title="@Common_Resources.SmartHomePackageMessage5UrlTitle">
+                                            @Common_Resources.SmartHomePackageMessage5UrlText
+                                        </a>
+                                        @Html.Raw(Common_Resources.SmartHomePackageMessage7)
+                                    </p>
+
+                                    <p>@Common_Resources.SmartHomePackageMessage8</p>
+
+                                    <h4>@Common_Resources.FixAndDriveHeading</h4>
+                                    <p>@Common_Resources.FixAndDrivePara1</p>
+                                    <p>@Common_Resources.FixAndDrivePara2</p>
+                                    <p>@Common_Resources.FixAndDrivePara3</p>
+                                    <p>
+                                        @Common_Resources.FixAndDrivePara4
+                                        <a href="@Common_Resources.FixAndDrivePara4CarFuelLink" target="_blank" title="@Common_Resources.FixAndDrivePara4CarFuelLinkText">
+                                            @Common_Resources.FixAndDrivePara4CarFuelLinkText
+                                        </a>
+                                        @Common_Resources.FixAndDrivePara5
+                                    </p>
+
+                                    @if (Model.SelectedPaymentMethod == Products.Model.Enums.PaymentMethod.MonthlyDirectDebit)
+                                    {
+                                        <h4>@Accordion_Resources.DDHeader</h4>
+                                        <p>@string.Format(Common_Resources.DDPara1, Common_Resources.SingleFuelDiscount)</p>
+                                        @Html.Raw(Common_Resources.DDPara2)
+                                        @Html.Raw(Common_Resources.DDPara3)
+                                    }
+
+                                    <h4>@Resources.FullTermsAndConditionsHeader</h4>
+                                    <p>@Resources.FullTermsAndConditionsPara</p>
+
+                                    @{ Html.RenderPartial("_AvailableTariffsDocumentList", Model.EnergyTariffs); }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="available-tariffs-container energy-tariff-container tab-toggle-container @Model.ShowBundleContent" data-applicable-tabs="@AvailableTariffs_Resources.BundleTabName, @AvailableTariffs_Resources.ViewAllTabName">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4 class="h3-like gap-top">@Accordion_Resources.SwitchFAQAccordionHeader_Bundle</h4>
+                <div class="accordion-group">
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQAccordionSubHeader1Alt_Bundle" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader1_Bundle</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader1Para_Bundle</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQSubHeader2_Bundle" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader2Alt_Bundle</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader2Para_Bundle_1</p>
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader2Para_Bundle_2</p>
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader2Para_Bundle_3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQSubHeader3_Bundle" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader3Alt_Bundle</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader3Para_Bundle_1</p>
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader3Para_Bundle_2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQSubHeader4_Bundle" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader4Alt_Bundle</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader4Para_Bundle_1</p>
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader4Para_Bundle_2</p>
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader4Para_Bundle_3</p>
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader4Para_Bundle_4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQSubHeader5_Bundle" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader5Alt_Bundle</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader5Para_Bundle_1</p>
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader5Para_Bundle_2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQSubHeader6_Bundle" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader6Alt_Bundle</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader6Para_Bundle_1</p>
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader6Para_Bundle_2</p>
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader6Para_Bundle_3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQSubHeader7_Bundle" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader7Alt_Bundle</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader7Para_Bundle</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="available-tariffs-container energy-tariff-container tab-toggle-container @Model.ShowEnergyContent" data-applicable-tabs="@AvailableTariffs_Resources.EnergyTabName, @AvailableTariffs_Resources.ViewAllTabName">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4 class="h3-like gap-top">@Accordion_Resources.SwitchFAQAccordionHeader_Energy</h4>
+                <div class="accordion-group">
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQSubHeader1Alt_Energy" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader1_Energy</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader1Para_Energy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQSubHeader2Alt_Energy" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader2_Energy</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader2Para_Energy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQSubHeader3Alt_Energy" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader3_Energy</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader3Para_Energy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @{ Html.RenderPartial((Model.SelectedPaymentMethod == Products.Model.Enums.PaymentMethod.PayAsYouGo) ? "_PrePayFAQAccordion" : "_NonPrePayFAQAccordion");}
+                    <div class="accordion" role="group">
+                        <div class="accordion-header">
+                            <a href="#" title="@Accordion_Resources.SwitchFAQSubHeader6Alt_Energy" class="accordion-button" role="button" aria-controls="accordion-content">
+                                <h2>@Accordion_Resources.SwitchFAQSubHeader6_Energy</h2>
+                            </a>
+                        </div>
+                        @* ReSharper disable once Html.IdDuplication *@
+                        <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <p>@Accordion_Resources.SwitchFAQSubHeader6Para_Energy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

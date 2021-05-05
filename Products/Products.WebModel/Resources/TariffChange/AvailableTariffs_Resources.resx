@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accordion1Header" xml:space="preserve">
+    <value>Terms &amp; Conditions</value>
+  </data>
+  <data name="Accordion1LinkText_General" xml:space="preserve">
+    <value>Download General Terms and Conditions for the Supply of Electricity and/or Gas PDF</value>
+  </data>
+  <data name="Accordion1LinkTitle" xml:space="preserve">
+    <value>Download our terms and conditions PDF for this tariff</value>
+  </data>
+  <data name="Accordion1LinkTitle2" xml:space="preserve">
+    <value>Download our general terms and conditions PDF</value>
+  </data>
+  <data name="Accordion1Paragraph2" xml:space="preserve">
+    <value>If you’re switching to a new tariff, we may review your Direct Debit to make sure your payments cover your usage and any debit balance you might have. If we need to change the amount you pay, we’ll write to you confirming the new amounts.</value>
+  </data>
+  <data name="Accordion1Paragraph4" xml:space="preserve">
+    <value>Please read our tariff Terms &amp; Conditions below:</value>
+  </data>
+  <data name="Accordion1Paragraph5" xml:space="preserve">
+    <value>Please read our full tariff Terms &amp; Conditions below:</value>
+  </data>
+  <data name="Accordion1SubHeader1" xml:space="preserve">
+    <value>What you need to know before you apply</value>
+  </data>
+  <data name="Accordion1SubHeader2" xml:space="preserve">
+    <value>Direct Debit amounts</value>
+  </data>
+  <data name="Accordion1SubHeader3" xml:space="preserve">
+    <value>Direct Debit discount</value>
+  </data>
+  <data name="Accordion1SubHeader4" xml:space="preserve">
+    <value>For further information about these tariffs, please read our Terms and Conditions</value>
+  </data>
+  <data name="Accordion2Header" xml:space="preserve">
+    <value>Staying with SSE Southern Electric, SSE SWALEC or SSE Scottish Hydro?</value>
+  </data>
+  <data name="Accordion2Paragraph1" xml:space="preserve">
+    <value>If you sign up for a new tariff on this website, you’ll stay with your current SSE brand.</value>
+  </data>
+  <data name="AccordionEPPContent" xml:space="preserve">
+    <value>Your monthly and annual costs are calculated based on your previous usage, using the unit rates and standing charges for the tariff shown.</value>
+  </data>
+  <data name="AccordionEPPHeader" xml:space="preserve">
+    <value>Energy Personal Projection</value>
+  </data>
+  <data name="AccordionHeaderTitle" xml:space="preserve">
+    <value>Click to expand</value>
+  </data>
+  <data name="AccordionSection" xml:space="preserve">
+    <value>Important information for all tariffs:</value>
+  </data>
+  <data name="CurrentTariffBullet1" xml:space="preserve">
+    <value>No exit fees</value>
+  </data>
+  <data name="CurrentTariffBullet1FixedTariff" xml:space="preserve">
+    <value>No exit fees if you switch to another SSE Tariff</value>
+  </data>
+  <data name="CurrentTariffBullet2" xml:space="preserve">
+    <value>Your current average annual usage is:</value>
+  </data>
+  <data name="CurrentTariffHeader" xml:space="preserve">
+    <value>Your current tariff</value>
+  </data>
+  <data name="DefaultTariffDisclaimer" xml:space="preserve">
+    <value>If you wish to accept the new tariff, you don’t have to do anything.  You’ll automatically change to this at the end of your current tariff.  
+If you prefer to switch to another tariff, have a look at the alternatives below.</value>
+  </data>
+  <data name="DETooltipText1" xml:space="preserve">
+    <value>We’ve estimated your energy usage over the next 12 months by calculating your usage over the last year and then applying the industry average to work out the day/night-rate split.</value>
+  </data>
+  <data name="DETooltipText2" xml:space="preserve">
+    <value>The average day/night-rate split for Domestic Economy customers is 45% day and 55% night.</value>
+  </data>
+  <data name="E10TooltipText1" xml:space="preserve">
+    <value>We’ve estimated your energy usage over the next 12 months by calculating your usage over the last year and then applying the industry average to work out the standard/off-peak rate split.</value>
+  </data>
+  <data name="E10TooltipText2" xml:space="preserve">
+    <value>The average standard/off-peak split for Economy 10 customers is 50% standard and 50% off-peak.</value>
+  </data>
+  <data name="E7TooltipText1" xml:space="preserve">
+    <value>We’ve estimated your energy usage over the next 12 months by calculating your usage over the last year and then applying the industry average to work out the day/night-rate split.</value>
+  </data>
+  <data name="E7TooltipText2" xml:space="preserve">
+    <value>The average day/night-rate split for Economy 7 customers is 45% day and 55% night.</value>
+  </data>
+  <data name="EarlyExitFee" xml:space="preserve">
+    <value>early exit fee per fuel</value>
+  </data>
+  <data name="ElectricityInformationLinkText" xml:space="preserve">
+    <value>Electricity Information</value>
+  </data>
+  <data name="GasInformationLinkText" xml:space="preserve">
+    <value>Gas Information</value>
+  </data>
+  <data name="HeaderDualFuel" xml:space="preserve">
+    <value>Choose a new gas &amp; electricity tariff</value>
+  </data>
+  <data name="HeaderElectric" xml:space="preserve">
+    <value>Choose a new electricity tariff</value>
+  </data>
+  <data name="HeaderGas" xml:space="preserve">
+    <value>Choose a new gas tariff</value>
+  </data>
+  <data name="IntroParagraph1" xml:space="preserve">
+    <value>Prices are based on your estimated usage. All prices are inclusive of VAT at 5%.</value>
+  </data>
+  <data name="IntroParagraph2" xml:space="preserve">
+    <value>Your current tariff will expire in {0} and if you don’t choose another tariff, you’ll roll over to our Standard Variable Tariff on {1}. If you want to accept the new tariff you don’t have to do anything. You’ll automatically go over to it at the end of your current tariff. If you’d prefer to switch, have a look at the alternative tariffs below.</value>
+  </data>
+  <data name="IntroParagraph3" xml:space="preserve">
+    <value>Your tariff ends on {0}. Please note that your prices may go up after this date.</value>
+  </data>
+  <data name="LoadingPopupBody" xml:space="preserve">
+    <value>We’re getting your available tariffs.</value>
+  </data>
+  <data name="LoadingPopupTitle" xml:space="preserve">
+    <value>Thanks</value>
+  </data>
+  <data name="MonthlyCostHeader" xml:space="preserve">
+    <value>{0} monthly cost:</value>
+  </data>
+  <data name="MultiRateMeterMessageText1" xml:space="preserve">
+    <value>As a multi-rate electricity customer, you might find a single-rate tariff suits you better. You won’t even have to change your meter.</value>
+  </data>
+  <data name="MultiRateMeterMessageText2" xml:space="preserve">
+    <value>If you want to talk to us about the range of tariffs available, please call our Electric Heating team on </value>
+  </data>
+  <data name="MultiRateMeterMessageTitle" xml:space="preserve">
+    <value>Additional tariff options</value>
+  </data>
+  <data name="MultiRatePhoneNumber" xml:space="preserve">
+    <value>0345 071 9710</value>
+  </data>
+  <data name="MultiRatePhoneNumberUri" xml:space="preserve">
+    <value>tel:03450719710</value>
+  </data>
+  <data name="NewTariffBulletLine1" xml:space="preserve">
+    <value>Your forecasted annual usage is: </value>
+  </data>
+  <data name="NewTariffBulletLine2" xml:space="preserve">
+    <value>We have used this information to project your estimated costs below.</value>
+  </data>
+  <data name="NewTariffHeader" xml:space="preserve">
+    <value>Your new tariff</value>
+  </data>
+  <data name="NewTariffMonthlyCostHeader" xml:space="preserve">
+    <value>Average monthly cost:</value>
+  </data>
+  <data name="NewTariffParagraph1" xml:space="preserve">
+    <value>If you don’t choose a new tariff, you’ll automatically transfer to our &lt;strong&gt;{0}&lt;/strong&gt; rollover tariff on {1}.</value>
+  </data>
+  <data name="NewTariffParagraph2" xml:space="preserve">
+    <value>Prices are based on your estimated usage.  All prices are inclusive of VAT at 5%.</value>
+  </data>
+  <data name="NewTariffStartMessage" xml:space="preserve">
+    <value>Starts on {0}</value>
+  </data>
+  <data name="NewTariffSubHeader" xml:space="preserve">
+    <value>Your {0} tariff expires in &lt;span class={3}&gt;{1}&lt;/span&gt; on {2}</value>
+  </data>
+  <data name="NewTariffYearlyCostHeader" xml:space="preserve">
+    <value>Projected yearly cost: </value>
+  </data>
+  <data name="NoEarlyExitFee" xml:space="preserve">
+    <value>No early exit fee</value>
+  </data>
+  <data name="NotApplicable" xml:space="preserve">
+    <value>Not Applicable</value>
+  </data>
+  <data name="StandardTariffIntro" xml:space="preserve">
+    <value>Prices are based on your current usage. Compare your current tariff against the new tariffs that are available. All prices are inclusive of VAT at 5%.</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Electricity =</value>
+  </data>
+  <data name="TermsAndConditionsLabel" xml:space="preserve">
+    <value>- Terms and Conditions</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Choose your new tariff - SSE</value>
+  </data>
+  <data name="YearlyCostHeader" xml:space="preserve">
+    <value>{0} yearly cost:</value>
+  </data>
+  <data name="AvailableTariffsParagraph" xml:space="preserve">
+    <value>You have the option to switch now. It may be cheaper to switch at the end of your current tariff.</value>
+  </data>
+  <data name="AccordionEPPContent_CurrentRate" xml:space="preserve">
+    <value>The estimated costs for your current tariff and the other available tariffs are based on how much energy we expect you to use in the next twelve months, using the unit rates and standing charges for the tariff shown. We’ve included all applicable discounts that you received at the time of your last bill. This information allows you to understand your future energy costs and compare your current tariff with others.&lt;/br&gt;
+The cost projections shown do not take into consideration any recent changes you have made since your last bill or any debit or credit on your account. The monthly and annual forecasts for our tariffs are based on our new prices, which take effect from 1st October 2019.</value>
+  </data>
+  <data name="AccordionEPPContent_Original" xml:space="preserve">
+    <value>The estimated cost for your current tariff is based on how much energy we expect you to use in the next twelve months. To calculate the estimated costs, we divide the year into four billing quarters and apply the relevant prices for each quarter. If your current fixed price tariff ends within the next twelve months, we’ve used our standard variable prices to calculate the annual cost for the remaining quarters. If you’ve chosen another fixed price tariff, these prices will be used instead of standard variable prices. We’ve included all applicable discounts that you received at the time of your last bill. This information allows you to understand your future energy costs and compare your current tariff with others. &lt;/br&gt;For the other available tariffs to choose from, the projected monthly and annual costs are based on your previous usage, using the unit rates and standing charges for the tariff shown.&lt;/br&gt;The cost projections shown do not take into consideration any recent changes you have made since your last bill or any debit or credit on your account.</value>
+  </data>
+  <data name="AccordionEPPContent_Renewal" xml:space="preserve">
+    <value>The estimated costs for your new tariff and the other available tariffs to choose from are based on how much energy we expect you to use in the next twelve months, using the unit rates and standing charges for the tariff shown. We’ve included all applicable discounts that you received at the time of your last bill. This information allows you to understand your future energy costs and compare your new tariff with others.&lt;/br&gt;The cost projections shown do not take into consideration any recent changes you have made since your last bill or any debit or credit on your account.</value>
+  </data>
+  <data name="Accordion1SmartHeader" xml:space="preserve">
+    <value>Smart meters</value>
+  </data>
+  <data name="Accordion1SmartMeter2" xml:space="preserve">
+    <value>If you sign up to one of our other fixed price tariffs, you are registering your interest for a smart meter. This means we may contact you in the future to discuss a smart meter installation as and when you become eligible.</value>
+  </data>
+  <data name="Accordion1SmartMeter3" xml:space="preserve">
+    <value>We rely on a mobile phone or wireless signal to receive your readings. If these fail, your bills will be estimated.</value>
+  </data>
+  <data name="NoEarlyExitFeeFF" xml:space="preserve">
+    <value>No early exit fee for energy</value>
+  </data>
+  <data name="DDPara1" xml:space="preserve">
+    <value>If you have a fixed price tariff and pay by Direct Debit or standing order, for most fixed tariffs you’ll get a discount of £40 a year for each fuel when compared to other ways of paying. The discount is applied to your standing charge on a pence per day basis, until your tariff ends.</value>
+  </data>
+  <data name="DDPara2" xml:space="preserve">
+    <value>If you have a standard variable tariff, your energy prices are capped and the maximum price you pay (known as a cap) is set by Ofgem, the energy regulator. If you pay by Direct Debit or standing order, your standing charge and unit prices will be discounted. Your discount will vary depending on how much energy you use, where you live and your meter type. If you qualified for Warm Home Discount before 1 August 2019, your prices will be discounted regardless of how you pay.</value>
+  </data>
+  <data name="DDPara3" xml:space="preserve">
+    <value>Certain tariffs do not qualify for Direct Debit and standing order discounts. Please check the tariff terms and conditions for details.</value>
+  </data>
+  <data name="Accordion1SmartMeter1" xml:space="preserve">
+    <value>If you sign up to our 2 Year Fix and Control tariff, you agree to have a smart meter installed in your property, if you’re eligible and don’t already have one.</value>
+  </data>
+  <data name="Accordion1Paragraph1a" xml:space="preserve">
+    <value>We may send your Welcome pack by email. This will include your confirmation of contract, tariff information, terms and conditions and cancellation form.</value>
+  </data>
+  <data name="NestLink" xml:space="preserve">
+    <value>https://g.co/nest/ukworks</value>
+  </data>
+  <data name="NestLinkUrlText" xml:space="preserve">
+    <value>Nest compatibility checker</value>
+  </data>
+  <data name="NestLinkUrlTitle" xml:space="preserve">
+    <value>Check your heating system is compatible with the Google Nest Thermostat E</value>
+  </data>
+  <data name="SmartHomePackageHeader" xml:space="preserve">
+    <value>Smart Home Package (with 2 Year Fix and Control)</value>
+  </data>
+  <data name="SmartHomePackageMessage1" xml:space="preserve">
+    <value>The Smart Home Package, provided by Google, may not be compatible with all heating systems. Please go to the</value>
+  </data>
+  <data name="SmartHomePackageMessage2" xml:space="preserve">
+    <value> to see if your heating system is compatible before you sign up.</value>
+  </data>
+  <data name="SmartHomePackageMessage3" xml:space="preserve">
+    <value>The Smart Home Package comes with the 2 Year Fix and Control tariff only. This tariff is available to dual fuel only customers who pay by monthly Direct Debit or quarterly billing only.</value>
+  </data>
+  <data name="SmartHomePackageMessage4" xml:space="preserve">
+    <value>We’ll send the Smart Home Package to the same address that we supply your energy within 30 working days of your energy application. Someone will need to sign for it.</value>
+  </data>
+  <data name="SmartHomePackageMessage5" xml:space="preserve">
+    <value>You can install the Smart Home Package yourself. Simply follow the step-by-step</value>
+  </data>
+  <data name="SmartHomePackageMessage5Url" xml:space="preserve">
+    <value>https://g.co/nest/setupthermostat-e-uk</value>
+  </data>
+  <data name="SmartHomePackageMessage5UrlText" xml:space="preserve">
+    <value>Nest Thermostat E installation video. </value>
+  </data>
+  <data name="SmartHomePackageMessage5UrlTitle" xml:space="preserve">
+    <value>How to install the Google Nest Thermostat E</value>
+  </data>
+  <data name="SmartHomePackageMessage6" xml:space="preserve">
+    <value>or watch the</value>
+  </data>
+  <data name="SmartHomePackageMessage6Url" xml:space="preserve">
+    <value>http://g.co/nest/setupthermostat-e-uk</value>
+  </data>
+  <data name="SmartHomePackageMessage6UrlText" xml:space="preserve">
+    <value>installation video</value>
+  </data>
+  <data name="SmartHomePackageMessage6UrlTitle" xml:space="preserve">
+    <value>How to install the Google Nest Thermostat E</value>
+  </data>
+  <data name="SmartHomePackageMessage7" xml:space="preserve">
+    <value>If you prefer, we can install it for you for £75. To request an installation, call us on &lt;b&gt;0345 078 6754&lt;/b&gt; after you sign up.</value>
+  </data>
+  <data name="SmartHomePackageMessage8" xml:space="preserve">
+    <value>You’ll need a working internet connection and Wi-Fi to benefit from the Smart Home Package, and we also recommend that you have access to a computer, tablet or smartphone.</value>
+  </data>
+  <data name="SmartMeter1" xml:space="preserve">
+    <value>If you sign up to our 2 Year Fix and Control tariff, you agree to have a smart meter installed in your property, if you’re eligible and don’t already have one.</value>
+  </data>
+  <data name="Accordion1FixAndDriveSmartMeter1" xml:space="preserve">
+    <value>If you sign up to our 1 Year Fix and Drive tariff, you agree to have a compatible (SMETS2) smart meter installed in your property, if you are eligible and don’t already have one. If you have an older smart meter, we’ll need to upgrade your meter so you can benefit from our off-peak rate. We’ll contact you when you’re eligible for your smart meter installation. If we can’t fit a smart meter, we’ll install an Economy 7 meter so you can use our off-peak rate.</value>
+  </data>
+  <data name="FixAndDriveHeader" xml:space="preserve">
+    <value>Drive for free (with 1 Year Fix and Drive)</value>
+  </data>
+  <data name="FixAndDrivePara2" xml:space="preserve">
+    <value>You need to own or lease an electric vehicle that you charge at home. We may ask you to prove this. If you’re unable to, we’ll take you off this tariff and put you onto our Standard Variable Tariff.</value>
+  </data>
+  <data name="FixAndDrivePara3" xml:space="preserve">
+    <value>We’ll credit your account for the cost of the electricity you use during the off-peak times of your meter, up to 2,000kWh over the year. We’ll spread this credit over the year and apply it to each quarterly bill. We’ll confirm your meter’s off-peak times in your Welcome pack.</value>
+  </data>
+  <data name="FixAndDrivePara4" xml:space="preserve">
+    <value>To reach up to 8,000 miles, we checked the test data for the TESLA Model 3 Standard Range Plus (E1R) with the</value>
+  </data>
+  <data name="FixAndDrivePara4CarFuelLink" xml:space="preserve">
+    <value>https://carfueldata.vehicle-certification-agency.gov.uk/search-new-or-used-cars.aspx</value>
+  </data>
+  <data name="FixAndDrivePara4CarFuelLinkText" xml:space="preserve">
+    <value> Vehicle Certification Agency</value>
+  </data>
+  <data name="FixAndDrivePara5" xml:space="preserve">
+    <value>. We multiplied its electric consumption of 4.0 miles per kWh by the up to 2,000kWh of electricity we’ll include over the year. Your mileage will depend on your car and driving conditions.</value>
+  </data>
+  <data name="FixAndDrivePara1" xml:space="preserve">
+    <value>The 1 Year Fix and Drive tariff is available to dual fuel only customers who pay by monthly Direct Debit or quarterly billing only.</value>
+  </data>
+  <data name="FixAndDriveSummaryHeader" xml:space="preserve">
+    <value>Drive for free</value>
+  </data>
+  <data name="CurrentTariffBullet1FixAndControlExitFeeTariff" xml:space="preserve">
+    <value>&lt;strong&gt;Early exit fee: &lt;/strong&gt;£75 per fuel</value>
+  </data>
+  <data name="PartnershipText" xml:space="preserve">
+    <value>As we’re now part of the OVO family, we may have cheaper tariff options for you, although some may have eligibility criteria. To find out more, visit &lt;a target="_blank" title="OVO Energy" href="http://ovoenergy.com"&gt;ovoenergy.com&lt;/a&gt; or call 0330 303 5063, &lt;a target="_blank" title="Boost" href ="http://boostpower.co.uk"&gt;boostpower.co.uk&lt;/a&gt; or call 0330 102 7517, or &lt;a href = "http://sparkenergy.co.uk" target="_blank" title="Spark"&gt;sparkenergy.co.uk&lt;/a&gt; or call 0345 034 7474.</value>
+  </data>
+</root>

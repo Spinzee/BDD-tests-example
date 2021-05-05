@@ -1,0 +1,107 @@
+﻿<h1>Forms</h1>
+
+<p>Try tabbing into inputs, clicking on them etc.</p>
+<p>valid / invalid states are handled by javascript.</p>
+
+<form onsubmit="return false;">
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group form-group--text">
+                <label class="form-label" for="text">Text input</label>
+                <input autocomplete="off" placeholder="optional placeholder attribute" class="form-input  form-input--text" data-val="true" data-val-regex="Sorry, we don't recognise that account number. Please try entering it again. You’ll find your account number at the top of your bill." data-val-regex-pattern="^\d{10}$" data-val-required="Please enter either your SSE gas or electricity account number." id="text" name="text" title="Your account number" type="text" value="">
+                <span class="field-validation-valid" data-valmsg-for="text" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="form-group form-group--text">
+                <label class="form-label" for="text2">Valid text input</label>
+                <input autocomplete="off" class="form-input  form-input--text valid" data-val="true" data-val-regex="Sorry, we don't recognise that account number. Please try entering it again. You’ll find your account number at the top of your bill." data-val-regex-pattern="^\d{10}$" data-val-required="Please enter either your SSE gas or electricity account number." id="text2" name="text2" title="Your account number" type="text" value="Good content">
+                <span class="field-validation-valid" data-valmsg-for="text" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="form-group form-group--text">
+                <label class="form-label" for="text3">Invalid text input</label>
+                <input autocomplete="off" class="form-input  form-input--text input-validation-error" data-val="true" data-val-regex="Sorry, we don't recognise that account number. Please try entering it again. You’ll find your account number at the top of your bill." data-val-regex-pattern="^\d{10}$" data-val-required="Please enter either your SSE gas or electricity account number." id="text3" name="text2" title="Your account number" type="text" value="This is bad">
+                <span class="field-validation-error" data-valmsg-for="text" data-valmsg-replace="true">
+                    <span>Error message</span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group form-group--text">
+                <label class="form-label" for="text4">Password with content</label>
+                <input autocomplete="off" class="form-input  form-input--text" data-val="true" data-val-regex="Sorry, we don't recognise that account number. Please try entering it again. You’ll find your account number at the top of your bill." data-val-regex-pattern="^\d{10}$" data-val-required="Please enter either your SSE gas or electricity account number." id="text4" name="text4" title="Your account number" type="password" value="">
+                <span class="field-validation-valid" data-valmsg-for="text" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="form-group form-group--text">
+                <label class="form-label" for="text5">Valid password input</label>
+                <input autocomplete="off" class="form-input  form-input--text valid" data-val="true" data-val-regex="Sorry, we don't recognise that account number. Please try entering it again. You’ll find your account number at the top of your bill." data-val-regex-pattern="^\d{10}$" data-val-required="Please enter either your SSE gas or electricity account number." id="text5" name="text5" title="Your account number" type="password" value="1234567">
+                <span class="field-validation-valid" data-valmsg-for="text" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="form-group form-group--text">
+                <label class="form-label" for="text6">Invalid password input</label>
+                <input autocomplete="off" class="form-input  form-input--text input-validation-error" data-val="true" data-val-regex="Sorry, we don't recognise that account number. Please try entering it again. You’ll find your account number at the top of your bill." data-val-regex-pattern="^\d{10}$" data-val-required="Please enter either your SSE gas or electricity account number." id="text6" name="text6" title="Your account number" type="password" value="123455">
+                <span class="field-validation-error" data-valmsg-for="text" data-valmsg-replace="true">
+                    <span>Error message generated by js unobtrusive validation</span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            TODO phone number, number, money, dates, disabled states etc.
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group form-group--dropdown">
+                <label class="form-label" for="Titles_Value">Label for select ...</label>
+                <select class="form-input form-input--dropdown" data-val="true" data-val-required="This field is required." id="Titles_Value" name="Titles.Value">
+                    <option value="">Please select</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Mx">Mx</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Rev">Rev</option>
+                </select>
+                <span class="input-appended-text">Text after dropdown</span>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
+
+</form>

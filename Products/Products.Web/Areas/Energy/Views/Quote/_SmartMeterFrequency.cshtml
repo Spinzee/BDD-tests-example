@@ -1,0 +1,8 @@
+﻿@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.SmartMeterFrequencyViewModel
+
+<h1>@SmartMeter_Resources.SmartMeterConsentHeading</h1>
+<p>@SmartMeter_Resources.SmartMeterConsentBody</p>
+
+        @Html.EditorFor(m => m.SmartMeterReadingFrequency)        
+        @Html.ValidationMessage("SmartMeterFrequencyId")

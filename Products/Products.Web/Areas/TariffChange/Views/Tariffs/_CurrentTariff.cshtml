@@ -1,0 +1,111 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.TariffChange
+
+@model Products.WebModel.ViewModels.TariffChange.TariffsViewModel
+
+<div class="row">
+    <div class="col-md-12 gap">
+        <h1>@Model.FuelTypeHeader</h1>
+        <p>@Model.CurrentTariffViewModel.IntroParagraph1</p>
+        @if (Model.CurrentTariffViewModel.ShowIntroParagraph2)
+        {
+            <p>@Model.CurrentTariffViewModel.IntroParagraph2</p>
+        }
+        @if (Model.CurrentTariffViewModel.ShowIntroParagraph3)
+        {
+            <p>@Model.CurrentTariffViewModel.IntroParagraph3</p>
+        }
+    </div>
+</div>
+
+<div class="current-tariff js-tariff-container">
+    <h2 class="tariff-heading tariff-heading--current">@AvailableTariffs_Resources.CurrentTariffHeader</h2>
+    <div class="current-tariff-info">
+        <div class="current-tariff-info__name">
+            <h3 class="h2-like tariff-display-name">@HtmlHelpers.HandleVersionSuperscript(Model.CurrentTariffViewModel.DisplayName, "version")</h3>
+        </div>
+        <div class="current-tariff-info__price">
+            <div class="wrapper">
+                <div class="wrapper-inner tariff-cost tariff-cost--centered">
+                    <div>@Model.CurrentTariffViewModel.MonthlyCostHeader</div>
+                    <div class="tariff-price">
+                        @HtmlHelpers.HandlePenceSuperscript(Model.CurrentTariffViewModel.MonthlyCost, "tariff-price-pence")
+                    </div>
+                    <div>@Model.CurrentTariffViewModel.AnnualCostHeader @Model.CurrentTariffViewModel.AnnualCost</div>
+                </div>
+            </div>
+        </div>
+        <div class="current-tariff-info__details">
+            @if (!string.IsNullOrWhiteSpace(Model.CurrentTariffViewModel.ExpirationMessage))
+            {
+                <div class="h3-like no-margin" id="current-tariff-expiration-message">@Model.CurrentTariffViewModel.ExpirationMessage</div>
+            }
+            <ul class="bullet-list gap-lg">
+                @if (Model.CurrentTariffViewModel.IsStandardTariff)
+                {
+                    <li>@AvailableTariffs_Resources.CurrentTariffBullet1</li>
+                }
+                else
+                {
+                    if (Model.CurrentTariffViewModel.ShowFixAndControlExitFee)
+                    {
+                        <li>@Html.Raw(AvailableTariffs_Resources.CurrentTariffBullet1FixAndControlExitFeeTariff)</li>
+                    }
+                    else
+                    {
+                        <li>@AvailableTariffs_Resources.CurrentTariffBullet1FixedTariff</li>
+                    }
+                }
+                <li>
+                    @AvailableTariffs_Resources.CurrentTariffBullet2<br />
+                    @if (Model.CurrentTariffViewModel.GasDetails != null)
+                    {
+                        <span id="usage-gas-annual"><strong>Gas</strong> = @Model.CurrentTariffViewModel.GasAnnualUsage kWh</span><br />
+                    }
+                    @if (Model.CurrentTariffViewModel.ElectricityDetails != null)
+                    {
+
+                        if (Model.HasMultiRateMeter)
+                        {
+
+                            <span id="usage-elec--total"><strong>Electricity total</strong> = @Model.CurrentTariffViewModel.ElectricityAnnualUsage kWh</span><br />
+                            <span id="usage-elec--day-peak-std"><strong>@Model.CurrentTariffViewModel.DayOrStandardLabel </strong> = @Math.Round(Model.CurrentTariffViewModel.ElectricityAnnualUsageDayOrStandard, 2) kWh</span><br />
+                            <span id="usage-elec--night-offpeak"><strong>@Model.CurrentTariffViewModel.NightOrOffPeakLabel</strong> = @Math.Round(Model.CurrentTariffViewModel.ElectricityAnnualUsageNightOrOffPeak, 2) kWh</span>
+                        }
+                        else
+                        {
+                            <span id="usage-elec-annual"><strong>Electricity</strong> = @Model.CurrentTariffViewModel.ElectricityAnnualUsage kWh</span>
+                        }
+                    }
+                </li>
+            </ul>
+            @if (Model.CurrentTariffViewModel.GasDetails != null)
+            {
+                @Html.ActionLink(AvailableTariffs_Resources.GasInformationLinkText, "", "", null, new { @Data_tariff = Model.CurrentTariffViewModel.HtmlSafeName, @Data_fuel = "Gas", @Class = "icon-link btnViewFuelDetails", @Data_toggle = "modal", @Data_target = "#fuel-modal", @Title = "Open gas information for this tariff" })
+            }
+            @if (Model.CurrentTariffViewModel.ElectricityDetails != null)
+            {
+                @Html.ActionLink(AvailableTariffs_Resources.ElectricityInformationLinkText, "", "", null, new { @Data_tariff = Model.CurrentTariffViewModel.HtmlSafeName, @Data_fuel = "Electricity", @Class = "icon-link btnViewFuelDetails", @Data_toggle = "modal", @Data_target = "#fuel-modal", @Title = "Open electricity information for this tariff" })
+            }
+            @if (Model.CurrentTariffViewModel.ElectricityAnnualCost != "£0" && Model.CurrentTariffViewModel.GasAnnualCost != "£0")
+            {
+                <div class="tariff-breakdown">
+                    <div class="qa-projected-monthly">
+                        Average monthly cost breakdown:
+                        <span id="usage-gas-month">Gas = @Model.CurrentTariffViewModel.GasMonthlyCost</span>
+                        <span id="usage-elec-month">Electricity = @Model.CurrentTariffViewModel.ElectricityMonthlyCost</span>
+                    </div>
+                    <div class="qa-projected-annual">
+                        Projected annual cost breakdown:
+                        <span id="usage-gas-annual">Gas = @Model.CurrentTariffViewModel.GasAnnualCost</span>
+                        <span id="usage-elec-annual">Electricity = @Model.CurrentTariffViewModel.ElectricityAnnualCost</span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    @* json encoded tariff data used by TIL TCR modal only, not sent to server in form *@
+    @Html.Hidden("encodedCurrentTariff", Json.Encode(Model), new { @class = "js-tariff-data" })
+</div>
+
+

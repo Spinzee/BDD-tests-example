@@ -1,0 +1,107 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@using Products.WebModel.ViewModels.Energy
+@model Products.WebModel.ViewModels.Energy.ExtrasViewModel
+@{
+    ViewBag.Title = Extras_Resources.ExtrasPageTitle;
+}
+
+@section ShoppingBasketToggler {
+    @Html.Partial("_ShoppingBasketToggler", Model.ShoppingBasketViewModel)
+}
+
+@section mainSectionTheme { grey-bg }
+
+<div class="full-width-box stars no-main-margin gap-xl mobile-only-gap-top-xxxl bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+                <h1>@Extras_Resources.BannerHeader</h1>
+                <p>@Extras_Resources.BannerPara</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container main-content">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <div class="extras-items">
+                @foreach (ExtrasItemViewModel extra in Model.Extras)
+                {
+                    @Html.Partial("_ExtrasItem", extra)
+                }
+            </div>
+            <div class="form-group signup">
+                @Html.ActionLink(Resources.ButtonNextText, "PersonalDetails", null, new { @class = "button button-primary", title=Resources.BundleButtonNextSignUpAlt})
+            </div>
+        </div>
+
+        @Html.Partial("_Basket")
+    </div>
+</div>
+
+<div class="extra-content">
+    <div class="container">
+        <h3>@Accordion_Resources.AccordionHeader</h3>
+        <div class="accordion-group">
+            <div class="accordion">
+                <div class="accordion-header">
+                    <a href="#" title="@Accordion_Resources.ImportantInformationHeaderAlt" class="accordion-button" role="button" aria-controls="accordion-content">
+                        <h2>@Accordion_Resources.ImportantInformationHeader</h2>
+                    </a>
+                </div>
+                <div class="accordion-content" aria-hidden="true">
+                    <div class="row">
+                        <h4>@Accordion_Resources.ImportantInformationPartsLabourHeader</h4>
+                        <p>
+                            @Accordion_Resources.ImportantInformationPartsLabourPara1_1
+                            <a href="@Accordion_Resources.ImportantInformationPartsLabourPara1_Link1Url" title="@Accordion_Resources.ImportantInformationPartsLabourPara1_Link1Alt" target="_blank">
+                                @Accordion_Resources.ImportantInformationPartsLabourPara1_Link1Text
+                            </a>
+                            @Accordion_Resources.ImportantInformationPartsLabourPara1_2
+                            <a href="@Accordion_Resources.ImportantInformationPartsLabourPara1_Link2Url" title="@Accordion_Resources.ImportantInformationPartsLabourPara1_Link2Alt" target="_blank">
+                                @Accordion_Resources.ImportantInformationPartsLabourPara1_Link2Text
+                            </a>
+                        </p>
+                        <h4>@Accordion_Resources.ImportantInformationElecWiringInspHeader</h4>
+                        <p>@Accordion_Resources.ImportantInformationElecWiringInspPara1</p>
+                        <p>@Accordion_Resources.ImportantInformationElecWiringInspPara2</p>
+                        <p>
+                            <a href="@Accordion_Resources.ElecWiringProductInfoDocumentLinkUrl" title="@Accordion_Resources.ElecWiringProductInfoDocumentLinkAlt" target="_blank">
+                                @Accordion_Resources.ElecWiringProductInfoDocumentLinkText
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header">
+                    <a href="#" title="@Accordion_Resources.AccordionSavingsCalculationHeaderAlt" class="accordion-button" role="button" aria-controls="accordion-content">
+                        <h2>@Accordion_Resources.AccordionSavingsCalculationHeader</h2>
+                    </a>
+                </div>
+                <div class="accordion-content" aria-hidden="true">
+                    <div class="row">
+                        <p>@Model.HowSavingsCalculatedText</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/js/products/energy/basket")
+    @Scripts.Render("~/js/products/energy/extras")
+    <script>
+        $(function () {
+            var basketConfig =
+                new Digital.Web.Energy.BasketConfig("/energy-signup/update-your-price", "/energy-signup/extras", true);
+            // ReSharper disable once UnusedLocals
+            var basket = new Digital.Web.Energy.Basket(basketConfig);
+        });
+    </script>
+}

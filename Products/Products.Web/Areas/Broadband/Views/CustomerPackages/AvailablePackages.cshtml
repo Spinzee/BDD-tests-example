@@ -1,0 +1,233 @@
+﻿@model Products.WebModel.ViewModels.Broadband.AvailablePackagesViewModel
+@using Products.Web.Helpers
+@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.ViewModels.Broadband
+@{
+    ViewBag.Title = AvailablePackages_Resources.Title;
+}
+<div class="bg-dark full-width-box no-main-margin gap-xl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>@AvailablePackages_Resources.Header<strong>@Model.PostCode</strong></h1>@Html.Hidden("SelectProduct")
+                <p>@AvailablePackages_Resources.Paragraph1</p>
+                <p>@AvailablePackages_Resources.Paragraph2</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row usp-row usp-row-many">
+                <div class="col-xs-12 gap-xl">
+                    <h2>@AvailablePackages_Resources.USPHeader</h2>
+                </div>
+                <div class="col-sm-2 col-sm-offset-1 gap">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-12 vertical-center right-align"><img title="@AvailablePackages_Resources.USP1Alt" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/padlock-with-pound-sign-icon.svg")" /></div>
+                        <div class="col-xs-8 col-sm-12 vertical-center">@AvailablePackages_Resources.USP1</div>
+                    </div>
+                </div>
+                <div class="col-sm-2 gap">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-12 vertical-center right-align"><img title="@AvailablePackages_Resources.USP2Alt" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/exit-icon.svg")" /></div>
+                        <div class="col-xs-8 col-sm-12 vertical-center">@AvailablePackages_Resources.USP2</div>
+                    </div>
+                </div>
+                <div class="col-sm-2 gap">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-12 vertical-center right-align"><img title="@AvailablePackages_Resources.USP3Alt" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/piggy-bank-icon.svg")" /></div>
+                        <div class="col-xs-8 col-sm-12 vertical-center">@AvailablePackages_Resources.USP3</div>
+                    </div>
+                </div>
+                <div class="col-sm-2 gap">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-12 vertical-center right-align"><img title="@AvailablePackages_Resources.USP4Alt" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/wireless-router-icon.svg")" /></div>
+                        <div class="col-xs-8 col-sm-12 vertical-center">@AvailablePackages_Resources.USP4</div>
+                    </div>
+                </div>
+                <div class="col-sm-2 gap">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-12 vertical-center right-align"><img title="@AvailablePackages_Resources.USP5Alt" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/infinity-icon.svg")" /></div>
+                        <div class="col-xs-8 col-sm-12 vertical-center">@AvailablePackages_Resources.USP5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="can-change-to-columns available-tariffs-container available-packages-container">
+    <div class="container">
+        <div class="tariff-list contain">
+            @foreach (AvailableProductViewModel product in Model.Products)
+            {
+                @Html.Partial("~/Areas/Broadband/Views/CustomerPackages/_AvailablePackage.cshtml", product)
+
+            }
+        </div>
+    </div>
+</div>
+<div class="bg-dark full-width-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row usp-row">
+                    <div class="col-xs-12">
+                        <h4 class="h2-like">@AvailablePackages_Resources.SwitchHeader</h4>
+                    </div>
+                    <div class="col-sm-3 gap">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-12 large-number">@AvailablePackages_Resources.One</div>
+                            <div class="col-xs-10 col-sm-12">@AvailablePackages_Resources.Switch1</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gap">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-12 large-number">@AvailablePackages_Resources.Two</div>
+                            <div class="col-xs-10 col-sm-12">@AvailablePackages_Resources.Switch2</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gap">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-12 large-number">@AvailablePackages_Resources.Three</div>
+                            <div class="col-xs-10 col-sm-12">@AvailablePackages_Resources.Switch3</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gap">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-12 large-number">@AvailablePackages_Resources.Four</div>
+                            <div class="col-xs-10 col-sm-12">@AvailablePackages_Resources.Switch4</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <h4>@AvailablePackages_Resources.FrustrationFreeHeader</h4>
+                        <p>@AvailablePackages_Resources.FrustrationFreeParagraph</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container gap-top">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>@AvailablePackages_Resources.FrustrationFreeAccordionsHeader</h3>
+            <div class="accordion-group">
+                <div class="accordion" role="group" id="terms-and-conditions-price-promise">
+                    <div class="accordion-header">
+                        <a href="#" title="@AvailablePackages_Resources.AccordionPricePromiseHeaderTitle" class="accordion-button" role="button" aria-controls="accordion-content">
+                            <h2>@AvailablePackages_Resources.AccordionPricePromiseHeader</h2>
+                        </a>
+                    </div>
+                    <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content-price-promise">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <p>@AvailablePackages_Resources.AccordionPricePromiseParagraph</p>
+                                <p>@AvailablePackages_Resources.AccordionPricePromiseParagraph2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" role="group" id="terms-and-conditions-happiness">
+                    <div class="accordion-header">
+                        <a href="#" title="@AvailablePackages_Resources.AccordionHappinessGuaranteeHeaderTitle" class="accordion-button" role="button" aria-controls="accordion-content">
+                            <h2>@AvailablePackages_Resources.AccordionHappinessGuaranteeHeader</h2>
+                        </a>
+                    </div>
+                    <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content-happiness">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <p>@AvailablePackages_Resources.AccordionHappinessGuaranteeParagraph</p>
+                                <p>@AvailablePackages_Resources.HappinessGuaranteeOur<a href="@AvailablePackages_Resources.HappinessGuaranteeLinkUrl" target="_blank" title="@AvailablePackages_Resources.HappinessGuaranteeLinkAlt">@AvailablePackages_Resources.HappinessGuaranteeLinkText</a> @AvailablePackages_Resources.AccordionHappinessGuaranteeParagraph2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" role="group" id="terms-and-conditions-unlimited">
+                    <div class="accordion-header">
+                        <a href="#" title="@AvailablePackages_Resources.AccordionUnlimitedDownloadsHeaderTitle" class="accordion-button" role="button" aria-controls="accordion-content">
+                            <h2>@AvailablePackages_Resources.AccordionUnlimitedDownloadsHeader</h2>
+                        </a>
+                    </div>
+                    <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content-unlimited">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <p>
+                                    @AvailablePackages_Resources.AccordionUnlimitedDownloadsParagraph
+                                    <a href="@AvailablePackages_Resources.BroadbandTrafficManagementLinkUrl" target="_blank" title="@AvailablePackages_Resources.BroadbandTrafficManagementLinkAlt">@AvailablePackages_Resources.BroadbandTrafficManagementLinkText</a>
+                                    @AvailablePackages_Resources.AccordionUnlimitedDownloadsParagraph2
+                                    <a href="@AvailablePackages_Resources.AcceptableUsePolicyLinkUrl" target="_blank" title="@AvailablePackages_Resources.AcceptableUsePolicyLinkAlt">@AvailablePackages_Resources.AcceptableUsePolicyLinkText</a>
+                                    @AvailablePackages_Resources.AccordionUnlimitedDownloadsParagraph3
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" role="group" id="terms-and-conditions-charges">
+                    <div class="accordion-header">
+                        <a href="#" title="@AvailablePackages_Resources.AccordionBroadbandChargesHeaderTitle" class="accordion-button" role="button" aria-controls="accordion-content">
+                            <h2>@AvailablePackages_Resources.AccordionBroadbandChargesHeader</h2>
+                        </a>
+                    </div>
+                    <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content-charges">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <p>@Model.BroadbandChargesParagraph</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="accordion" role="group" id="terms-and-conditions">
+                <div class="accordion-header">
+                    <a href="#" title="@AvailablePackages_Resources.AccordionTitle" class="accordion-button" role="button" aria-controls="accordion-content">
+                        <h2>@AvailablePackages_Resources.AccordionHeader</h2>
+                    </a>
+                </div>
+                <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <p>@Common_Resources.VatParagraph</p>
+                            <p>@AvailablePackages_Resources.TermsAndConditionsParagraph1</p>
+                            <p>@AvailablePackages_Resources.TermsAndConditionsParagraph2</p>
+                            <p>@AvailablePackages_Resources.TermsAndConditionsParagraph3</p>
+                            <h3>@AvailablePackages_Resources.CancellationHeader</h3>
+                            <p>@AvailablePackages_Resources.CancellationParagraph1</p>
+                            <p>@Model.CancellationChargesParagraph2</p>
+                            <p>@AvailablePackages_Resources.CancellationParagraph3</p>
+                            <p>@Html.Raw(AvailablePackages_Resources.CancellationParagraph4)</p>
+
+                            <h3>@AvailablePackages_Resources.HappinessGuaranteeHeader</h3>
+                            <p>@AvailablePackages_Resources.HappinessGuaranteeParagraph <a href="@AvailablePackages_Resources.HappinessGuaranteeLinkUrl" target="_blank" title="@AvailablePackages_Resources.HappinessGuaranteeLinkAlt">@AvailablePackages_Resources.HappinessGuaranteeFullDetailsLinkText</a>.</p>
+
+                            <h3>@AvailablePackages_Resources.BroadbandSpeedsHeader</h3>
+                            <p>
+                                @AvailablePackages_Resources.BroadbandSpeedsParagraph <a href="@AvailablePackages_Resources.BroadbandTrafficManagementLinkUrl" target="_blank" title="@AvailablePackages_Resources.BroadbandTrafficManagementLinkAlt">@AvailablePackages_Resources.BroadbandTrafficManagementLinkText</a>
+                                @AvailablePackages_Resources.AccordionUnlimitedDownloadsParagraph2
+                                <a href="@AvailablePackages_Resources.AcceptableUsePolicyLinkUrl" target="_blank" title="@AvailablePackages_Resources.AcceptableUsePolicyLinkAlt">@AvailablePackages_Resources.AcceptableUsePolicyLinkText</a>
+                                @AvailablePackages_Resources.AccordionUnlimitedDownloadsParagraph3
+                            </p>
+                            <p>@AvailablePackages_Resources.BroadbandSpeedsParagraph2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Popups{
+    <div id="add-calls-ajax">
+
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/js/products/broadband/available-packages")
+    @Scripts.Render("~/js/products/broadband/line-speed")
+}

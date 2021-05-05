@@ -1,0 +1,30 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.HomeServices
+@{
+    ViewBag.Title = Fallout_Resources.UnableToCompleteTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>@Fallout_Resources.UnableToCompleteHeader</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-11 col-md-8 gap">
+            <p>@Fallout_Resources.UnableToCompleteBody</p>
+            <div class="row box-info box-contact">
+                <div class="col-xs-12 col-sm-2 hidden-xs"><img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/contact-us-icon.png")" class="" /></div>
+                <div class="col-xs-12 col-sm-10">
+                    <h2 class="h3-like">@Fallout_Resources.Contact2HeaderUnableToComplete <a href="@Fallout_Resources.ContactNumberUrl2UnableToComplete " title="@Fallout_Resources.ContactNumber2UnableToComplete "><strong>@Fallout_Resources.ContactNumber2UnableToComplete </strong></a></h2>
+                    <p>@Fallout_Resources.Contact2BodyUnableToComplete </p>
+                </div>
+            </div>
+            <ul class="link-list">
+                <h3 class="h4-like">@Fallout_Resources.linkHeaderUnableToComplete</h3>
+                <li><a class="icon-link" href="@Common_Resources.BoilerProblemsSolvedLinkUrl" title="@Common_Resources.BoilerProblemsSolvedLinkAlt" target="_blank">@Common_Resources.BoilerProblemsSolvedLinkText</a></li>
+                <li><a class="icon-link" href="@Common_Resources.FixingRadiatorIssuesLinkUrl" title="@Common_Resources.FixingRadiatorIssuesLinkAlt" target="_blank">@Common_Resources.FixingRadiatorIssuesLinkText</a></li>
+                <li><a class="icon-link" href="@Common_Resources.TadoSmartThermostatLinkUrl" title="@Common_Resources.TadoSmartThermostatLinkAlt" target="_blank">@Common_Resources.TadoSmartThermostatLinkText</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

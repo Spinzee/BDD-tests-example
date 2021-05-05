@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AfterSwitchText1" xml:space="preserve">
+    <value>After we’ve switched your energy tariff, please </value>
+  </data>
+  <data name="AfterSwitchText2" xml:space="preserve">
+    <value> so that we can give you a more accurate bill.</value>
+  </data>
+  <data name="AfterSwitchUrlPath" xml:space="preserve">
+    <value>https://sse.co.uk/help/energy/meters/submit-gas-or-electricity-meter-reading</value>
+  </data>
+  <data name="AfterSwitchUrlText" xml:space="preserve">
+    <value>submit a meter reading</value>
+  </data>
+  <data name="AfterSwitchUrlTitle" xml:space="preserve">
+    <value>Submit your meter readings</value>
+  </data>
+  <data name="BookYourInstallation" xml:space="preserve">
+    <value>Book your installation</value>
+  </data>
+  <data name="BulletPostLogin" xml:space="preserve">
+    <value>Your online account will be updated soon to show your new tariff</value>
+  </data>
+  <data name="DoNextHeader" xml:space="preserve">
+    <value>What would you like to do next?</value>
+  </data>
+  <data name="FollowOnBullet1" xml:space="preserve">
+    <value>We’ll update our records at the end of your contract to reflect your new tariff.</value>
+  </data>
+  <data name="FollowOnBullet2" xml:space="preserve">
+    <value>The new terms and conditions will have already been sent out to you.</value>
+  </data>
+  <data name="FollowOnHeader" xml:space="preserve">
+    <value>Thanks, you’ll automatically switch to your new tariff when your current tariff ends</value>
+  </data>
+  <data name="GetSmartMeter" xml:space="preserve">
+    <value>Say goodbye to manual meter readings</value>
+  </data>
+  <data name="GetSmartMeterMessage" xml:space="preserve">
+    <value>Get a smart meter and it'll automatically send us your readings. So, no more digging around in the dark for a torch to read your meter.</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Thanks for your request to switch tariff</value>
+  </data>
+  <data name="MySSEUrlLinkText" xml:space="preserve">
+    <value>Manage my online account</value>
+  </data>
+  <data name="MySSEUrlTitleText" xml:space="preserve">
+    <value>Manage my online account</value>
+  </data>
+  <data name="Paragraph" xml:space="preserve">
+    <value>We’ve sent you a confirmation email to {0}. We’ll be in touch again soon.</value>
+  </data>
+  <data name="SmartBullet" xml:space="preserve">
+    <value>Your tariff needs a smart meter. We’ll be in touch shortly to let you book your installation.</value>
+  </data>
+  <data name="TelcoHeaderText" xml:space="preserve">
+    <value>Redeem your fibre broadband</value>
+  </data>
+  <data name="TelcoLink" xml:space="preserve">
+    <value>Redeem fibre broadband</value>
+  </data>
+  <data name="TelcoMessage1" xml:space="preserve">
+    <value>Get your Fix and Fibre Broadband now and choose a phone package to suit you. It’ll only take a few moments.</value>
+  </data>
+  <data name="TelcoMessage2" xml:space="preserve">
+    <value>If you’re an existing SSE Fix and Fibre broadband customer, &lt;strong&gt;you don’t need to redeem as you’re already set up and have your router&lt;/strong&gt;. We’ll take care of your 18 month Fix &amp; Fibre renewal and everything will continue as normal. Thank you for choosing to stay with SSE.</value>
+  </data>
+  <data name="TelcoMessage3" xml:space="preserve">
+    <value>If you’re a new broadband customer, please redeem your SSE broadband now using the link below. This will mean we can send you your router and get you up and running with our fibre broadband.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>What happens next - Choose your new tariff -SSE</value>
+  </data>
+</root>

@@ -1,0 +1,34 @@
+﻿@using Model
+@model ProductsViewModel
+
+@{
+    ViewData["Title"] = "Products";
+    Layout = "_Layout";
+}
+
+<div class="col-sm-12 col-sm-12 col-md-12">
+    <h1>Products</h1>
+    <div class="services">
+        <div class="row">
+            @foreach (var service in Model.Services)
+            {
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h2>@Html.Label(service.Name)</h2>
+                    <div class="product-buttons">
+                        @foreach (var product in service.Products)
+                        {
+                            <button class="product-button" title=@product.Name data-service-type="@service.Name" id="product-button-@product.Id">@product.Name</button>
+                        }
+                    </div>
+                </div>
+            }
+            <div class="col-12 col-sm-6 col-md-4">
+                <h2>Stylist</h2>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div id="stylist-ajax"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

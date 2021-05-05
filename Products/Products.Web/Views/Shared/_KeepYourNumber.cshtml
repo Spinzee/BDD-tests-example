@@ -1,0 +1,39 @@
+﻿@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.Common.KeepYourNumberViewModel
+
+<h2>@KeepYourNumber_Resources.Header</h2>
+<fieldset class="radio-set">
+    <legend class="sr-only"></legend>
+
+    <div class="radio contain">
+        <input data-val="true" @(Model.KeepExistingNumber ? "checked=checked" : string.Empty) data-val-required="Please check me out" id="radio1" name="@(Html.NameFor(m => m.KeepExistingNumber))" type="radio" value="true" aria-describedby="radio1-description">
+        <label for="radio1">
+            <span class="label">
+                <strong>@KeepYourNumber_Resources.Option1</strong><br />
+                @if (Model.ShowExistingPhoneNumberParagraph)
+                {
+                    @KeepYourNumber_Resources.Option1Paragraph
+                }
+                else
+                {
+                    <span>
+                        @Html.EditorFor(m => m.CLI, Model.IsReadOnly ? (object)new { htmlAttributes = new { @readonly = "readonly" } } : "")
+                        @Html.Partial("~/Views/Shared/_WhereIsMyNumberModal.cshtml")
+                    </span>
+                }
+            </span>
+        </label>
+        <p class="sr-only" id="radio1-description">@KeepYourNumber_Resources.KeepExistingNumberAriaDescription</p>
+    </div>
+
+    <div class="radio contain">
+        <input data-val="false" @(!Model.KeepExistingNumber ? "checked=checked" : string.Empty) data-val-required="Please check me out" id="radio2" name="@(Html.NameFor(m => m.KeepExistingNumber))" type="radio" value="false" aria-describedby="radio2-description">
+        <label for="radio2">
+            <span class="label">
+                <strong>@KeepYourNumber_Resources.Option2</strong><br />
+                @KeepYourNumber_Resources.Option2Paragraph
+            </span>
+        </label>
+        <p class="sr-only" id="radio2-description">@KeepYourNumber_Resources.RequestNewNumberAriaDescription</p>
+    </div>
+</fieldset>

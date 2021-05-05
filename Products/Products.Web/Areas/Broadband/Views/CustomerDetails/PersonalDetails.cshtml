@@ -1,0 +1,57 @@
+﻿@using Products.WebModel.Resources.Broadband
+@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.Broadband.PersonalDetailsViewModel
+@{
+    ViewBag.Title = PersonalDetails_Resources.Title;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+            <div class="hidden-xs step-count pull-right"><strong>@ViewBag.StepCounter</strong></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@PersonalDetailsCommon_Resources.Header</h1>
+            <a href="@PersonalDetailsCommon_Resources.PrivacyLinkUrl" target="_blank" title="@PersonalDetailsCommon_Resources.PrivacyLinkAlt">@PersonalDetailsCommon_Resources.PrivacyLinkText</a>
+            @using (Html.BeginForm("Submit", "CustomerDetails", FormMethod.Post, new { id = "PersonalDetailsForm", autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.IsScottishPostcode)
+                <div class="form-group form-group--dropdown contain">
+                    @Html.LabelFor(model => model.Titles, new { @class = "form-label" })
+                    @Html.EditorFor(model => model.Titles, "AriaEnumDropDownList")
+                    @Html.ValidationMessageFor(m => m.Titles)
+                </div>
+                @Html.EditorFor(m => m.FirstName)
+                @Html.EditorFor(m => m.LastName)
+
+                <div class="form-group form-group--dropdown contain">
+                    @Html.LabelFor(model => model.DateOfBirth, new { @class = "form-label" })
+                    @Html.HiddenFor(m => m.DateOfBirth)
+                    <label class="hidden">day</label>
+                    @Html.EditorFor(m => m.DateOfBirthDay, "MultipleInputElement", new { @class = "form-input date-of-birth number dd", placeholder = "dd" })
+                    <label class="hidden">month</label>
+                    @Html.EditorFor(m => m.DateOfBirthMonth, "MultipleInputElement", new { @class = "form-input date-of-birth number dd", placeholder = "mm" })
+                    <label class="hidden">year</label>
+                    @Html.EditorFor(m => m.DateOfBirthYear, "MultipleInputElement", new { @class = "form-input date-of-birth number yy", placeholder = "yyyy" })
+                    @Html.ValidationMessageFor(m => m.DateOfBirth)
+                </div>
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Common_Resources.ButtonNextText" id="button-submit" name="button-submit" title="@PersonalDetails_Resources.ButtonAlt" />
+                </div>
+            }
+        </div>
+        @Html.Partial("~/Areas/Broadband/Views/Shared/_YourPrice.cshtml", Model.YourPriceViewModel)
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/js/products/personal-details")
+<script>
+    $(function () {
+        attachNumberOnly($('.number'));
+        var personalDetails = new Digital.Web.Common.PersonalDetails(window.moment);
+    });
+</script>
+}

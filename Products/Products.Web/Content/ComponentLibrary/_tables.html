@@ -1,0 +1,155 @@
+﻿<!--
+    Further Reading:
+
+    https://www.filamentgroup.com/lab/tablesaw.html
+    https://css-tricks.com/responsive-data-table-roundup/
+    http://gergeo.se/RWD-Table-Patterns/
+
+    http://fooplugins.github.io/FooTable/docs/getting-started.html
+    .. big but nicest I have found
+     -->
+
+
+<h1>Tables</h1>
+
+<div class="row">
+    <div class="col-sm-6">
+        <h2>Table-like key-value pairs</h2>
+
+        <p>Used in CTC in TIL etc ... shrink the screen to see the mobile version.</p>
+
+
+
+
+        <h2>Existing tables</h2>
+
+
+
+        <div class="til-tcr">
+            <h3>About your <span id="fuel-modal-about-title">Gas</span> tariff</h3>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">Supplier</div>
+                <div class="col-sm-12 col-md-6">
+                    <span id="fuel-modal-supplier">SSE (Southern Electric Gas Limited)</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">Exit Fees <span class="disclaimer">(if you cancel this tariff before the end date)</span></div>
+                <div class="col-sm-12 col-md-6">
+                    <span id="fuel-modal-exit-fees">£25</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">Discounts and Additional Charges</div>
+                <div class="col-sm-12 col-md-6">
+                    <span id="fuel-modal-discounts-charges">These prices include an annual paperless billing discount of £6</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">Additional Products or Services Included</div>
+                <div class="col-sm-12 col-md-6">
+                    <span id="fuel-modal-additional-products">Not Applicable</span>
+                </div>
+            </div>
+            <br>
+        </div>
+
+
+        <div class="additional-info">
+            <h3 class="h4-like secondary-heading">Direct Debit payment details</h3>
+            <p>The amount(s) below are rounded up to the nearest pound and will be taken from your bank account on the date shown.</p>
+            <table class="table table-key-value additional-info-table">
+                <tbody>
+                    <tr>
+                        <td>Gas per month</td>
+                        <td>£129</td>
+                    </tr>
+                    <tr>
+                        <td>Date of payment each month</td>
+                        <td>4th</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <h2>Responsive tables</h2>
+        <p>Note that responsive tables respond to the width of the screen, not the segment/column they are in.</p>
+
+        <h3></h3>
+    </div>
+
+
+
+
+    <div class="col-sm-6">
+        <h2>Actual tables</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                    <th>Col 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Head 1</th>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Head 2</th>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Head 3</th>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Head 4</th>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                </tr>
+            </tbody>
+        </table>
+
+    <h2>Key value pair table</h2>
+        <p>Paragraph before</p>
+
+        <table class="table table-key-value">
+            <tbody>
+                <tr>
+                    <th scope="row">classes</th>
+                    <td>.table .table-key-value</td>
+                </tr>
+                <tr>
+                    <th scope="row">rules</th>
+                    <td>two columns</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Paragraph between</p>
+        <table class="table table-key-value">
+            <tbody>
+                <tr>
+                    <th scope="row">classes</th>
+                    <td>.table .table-key-value</td>
+                </tr>
+                <tr>
+                    <th scope="row">rules</th>
+                    <td>two columns</td>
+                </tr>
+                <tr>
+                    <th scope="row">Can it handle very long cells? qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiop</th>
+                    <td>You tell me - and have a look at this cell qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiop</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Paragraph after</p>
+    </div>
+</div>
+

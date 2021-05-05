@@ -1,0 +1,263 @@
+﻿@using Products.Model.Enums
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.SummaryViewModel
+
+<div class="accordion accordion-summary accordion-content-indented" role="group" id="terms-and-conditions">
+    <div class="accordion-header">
+        <a href="#" title="@Summary_Resources.DetailsAccordionAlt" class="accordion-button" role="button" aria-controls="accordion-content" aria-expanded="true">
+            <h2 class="h4-like">@Summary_Resources.DetailsAccordionHeader</h2>
+        </a>
+    </div>
+    <div class="accordion-content accordion-content-indented" aria-hidden="false" style="" id="accordion-content">
+        <div id="your-details">
+            @*Payment Details*@
+            <div class="row">
+                <div class="col-xs-6">
+                    <h3 class="h4-like">@Summary_Resources.PaymentDetailsHeader</h3>
+                </div>
+                @if (Model.PaymentMethod == PaymentMethod.MonthlyDirectDebit)
+                {
+                    <div class="col-xs-6">
+                        <a class="icon-link icon-link-edit pull-right" title="@Summary_Resources.PaymentDetailsEditAlt" data-toggle="modal" data-target="#@Model.BankDetailsModal.ModalId">
+                            @Summary_Resources.EditLightboxText
+                        </a>
+                    </div>
+                }
+            </div>
+            <div class="row gap">
+                <div class="col-xs-12 col-summary">
+                    @if (Model.PaymentMethod == PaymentMethod.MonthlyDirectDebit)
+                    {
+                        <table class="table table-summary table-key-value">
+                            <tbody>
+                                @if (Model.FuelType == FuelType.Dual || Model.FuelType == FuelType.Gas)
+                                {
+                                    <tr>
+                                        <th scope="row">@ProductFeatures_Resources.GasLabel @ProductFeatures_Resources.PerMonth</th>
+                                        <td>@Model.SelectedTariffViewModel.GasDirectDebitAmount</td>
+                                    </tr>
+                                }
+                                @if (Model.FuelType == FuelType.Dual || Model.FuelType == FuelType.Electricity)
+                                {
+                                    <tr>
+                                        <th scope="row">@ProductFeatures_Resources.ElectricityLabel @ProductFeatures_Resources.PerMonth</th>
+                                        <td>@Model.SelectedTariffViewModel.ElectricityDirectDebitAmount</td>
+                                    </tr>
+                                }
+                                @if (Model.IsHesBundleSelected)
+                                {
+                                    <tr>
+                                        <th scope="row">@Model.FixNProtectBreakdownCoverText @ProductFeatures_Resources.PerMonth</th>
+                                        <td>@Model.SelectedTariffViewModel.HeatingBreakdownCoverDirectDebitAmount</td>
+                                    </tr>
+                                }
+                                @if (Model.IsElectricalWiringSelected)
+                                {
+                                    <tr>
+                                        <th scope="row">@ProductFeatures_Resources.ElectricalWiringDisplayText @ProductFeatures_Resources.PerMonth</th>
+                                        <td>@Model.SelectedElectricalWiringCover.MonthlyDirectDebit</td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <th scope="row">@Summary_Resources.PaymentDateLabel</th>
+                                    <td>@Model.DirectDebitPaymentDate</td>
+                                </tr>
+                                @if (Model.IsBroadbandBundleSelected)
+                                {
+                                    <tr>
+                                        <th scope="row" colspan="2">
+                                            <a class="modal-link" href="#" data-toggle="modal" data-target="#when-do-i-pay-modal" title="@BankDetailsCommon_Resources.WhenDoIPayLinkAlt">
+                                                @BankDetailsCommon_Resources.WhenDoIPayLinkText
+                                            </a>
+                                        </th>
+                                    </tr>
+                                    @Html.Partial("_BroadbandWhenDoIPayModal")
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    @if (Model.PaymentMethod == PaymentMethod.Quarterly)
+                    {
+                        <table class="table table-summary table-key-value">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">@Summary_Resources.PaymentTypeLabel</th>
+                                    <td>@Summary_Resources.Quarterly</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" colspan="2">@Summary_Resources.QuarterlyDisclaimer</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    }
+                    @if (Model.PaymentMethod == PaymentMethod.PayAsYouGo)
+                    {
+                        <table class="table table-summary table-key-value">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">@Summary_Resources.PaymentTypeLabel</th>
+                                    <td>@Summary_Resources.PayGo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" colspan="2">@Summary_Resources.PayGoDisclaimer</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+
+            @* Billing Section*@
+            @if (Model.PaymentMethod != PaymentMethod.PayAsYouGo)
+            {
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3 class="h4-like gap-sm">@Summary_Resources.BillingMethodHeader</h3>
+                    </div>
+                </div>
+                <div class="row gap">
+                    <div class="col-xs-12 col-summary">
+                        <table class="table table-summary table-key-value">
+                            <tr>
+                                <th scope="row">@Summary_Resources.BillingMethodType</th>
+                                <td></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            }
+
+            @*Bank Details*@
+            @if (Model.PaymentMethod == PaymentMethod.MonthlyDirectDebit)
+            {
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3 class="h4-like">@Summary_Resources.BankDetailsHeader</h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <a class="icon-link icon-link-edit pull-right" title="@Summary_Resources.BankDetailsEditAlt" data-toggle="modal" data-target="#@Model.BankDetailsModal.ModalId">
+                            @Summary_Resources.EditLightboxText
+                        </a>
+                    </div>
+                </div>
+                <div class="row gap">
+                    <div class="col-xs-12 col-summary">
+                        <table class="table table-summary table-key-value">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">@Summary_Resources.MethodLabel</th>
+                                    <td>@Summary_Resources.Monthly</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">@Summary_Resources.AccHolderLabel</th>
+                                    <td>@Model.DirectDebitAccountName</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">@Summary_Resources.AccNumberLabel</th>
+                                    <td>@Model.DirectDebitAccountNumber</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">@Summary_Resources.SortCodeLabel</th>
+                                    <td>@Model.DirectDebitSortCode</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" colspan="2">
+                                        <ul class="link-list">
+                                            <li>
+                                                <a href="@Url.Action("PrintMandate", new { productType = Enum.GetName(typeof(ProductType), ProductType.Electric) })" title="@Model.DDMandateLinkAltText" target="_blank">@Model.DDMandateLinkText</a>
+                                            </li>
+                                            @if (Model.IsHesBundleSelected)
+                                            {
+                                                <li>
+                                                    <a href="@Url.Action("PrintMandate", new { productType = Enum.GetName(typeof(ProductType), ProductType.HomeServices) })" title="@Model.HesDDGuaranteeLinkAlt" target="_blank">@Model.HesDDGuaranteeLinkText</a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+
+            @*Personal Details*@
+            <div class="row">
+                <div class="col-xs-6">
+                    <h3 class="h4-like">@Summary_Resources.PersonalDetailsHeader</h3>
+                </div>
+                <div class="col-xs-6">
+                    <a class="icon-link icon-link-edit pull-right" title="@Summary_Resources.PersonalDetailsEditAlt"
+                       @(Model.PaymentMethod != PaymentMethod.MonthlyDirectDebit ? $"href={Model.PersonalDetailsModal.RedirectUrl}" : $"data-toggle=modal data-target=#{Model.PersonalDetailsModal.ModalId}")>
+                        @Summary_Resources.EditLightboxText
+                    </a>
+                </div>
+            </div>
+            <div class="row gap">
+                <div class="col-xs-12 col-summary">
+                    <table class="table table-summary table-key-value">
+                        <tbody>
+                            <tr>
+                                <th scope="row" colspan="2">@Model.CustomerFormattedName</th>
+                            </tr>
+                            <tr>
+                                <th scope="row" colspan="2">@Model.DateOfBirth</th>
+                            </tr>
+                            <tr>
+                                <th scope="row" colspan="2">@Model.FullAddress</th>
+                            </tr>
+                            <tr>
+                                <th scope="row" colspan="2">@Model.ContactNumber</th>
+                            </tr>
+                            <tr>
+                                <th scope="row" colspan="2">@Model.EmailAddress</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            @*Meter Details*@
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="h4-like">@Summary_Resources.MeterDetailsHeader</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-summary">
+                    <table class="table table-summary table-key-value">
+                        <tbody>
+                            @if (Model.FuelType == FuelType.Dual || Model.FuelType == FuelType.Electricity)
+                            {
+                                <tr>
+                                    <th scope="row">@Summary_Resources.ElecMeterLabel</th>
+                                    <td>@Model.ElecMeterTypeMessage</td>
+                                </tr>
+                            }
+                            @if (Model.FuelType == FuelType.Dual || Model.FuelType == FuelType.Gas)
+                            {
+                                <tr>
+                                    <th scope="row">@Summary_Resources.GasMeterLabel</th>
+                                    <td>@Model.GasMeterTypeMessage</td>
+                                </tr>
+                            }
+                            @if (Model.IsMeterDetailsAvailable)
+                            {
+                                <tr>
+                                    <th scope="row">
+                                        <a title="@Summary_Resources.WrongMeterDetailsLinkAlt" data-toggle="modal" data-target="#@Model.MeterDetailsViewModel.ModalId">@Summary_Resources.WrongMeterDetailsLinkText</a>
+                                    </th>
+                                    <td>
+                                        <a class="pull-right icon-link icon-link-info" title="@Summary_Resources.HowDoWeKnowLinkAlt" data-toggle="modal" data-target="#HowDoWeKnowModal1">@Summary_Resources.HowDoWeKnowLinkText</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

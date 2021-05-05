@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplyForCover" xml:space="preserve">
+    <value>Apply for cover</value>
+  </data>
+  <data name="BackToCoverButtonAlt" xml:space="preserve">
+    <value>Close this window and go back to the product details</value>
+  </data>
+  <data name="BackToCoverButtonText" xml:space="preserve">
+    <value>Back to cover details</value>
+  </data>
+  <data name="ChangeCoverChoiceLinkAlt" xml:space="preserve">
+    <value>Link to go back and pick a different cover</value>
+  </data>
+  <data name="ChangeCoverChoiceLinkText" xml:space="preserve">
+    <value>Change cover choice</value>
+  </data>
+  <data name="ChooseExcessParagraph" xml:space="preserve">
+    <value>An excess is the amount you’ll need to pay for each claim you make.</value>
+  </data>
+  <data name="ChooseExcessSubHeader" xml:space="preserve">
+    <value>Choose your excess</value>
+  </data>
+  <data name="ContractLengthLabel" xml:space="preserve">
+    <value>(12 month contract)</value>
+  </data>
+  <data name="CoverBullet1" xml:space="preserve">
+    <value>Your contract starts the next working day after you sign up</value>
+  </data>
+  <data name="CoverBullet2" xml:space="preserve">
+    <value>You can’t make a claim in the first 18 calendar days of the contract</value>
+  </data>
+  <data name="CoverBullet2ElectricalWiring" xml:space="preserve">
+    <value>You may require an initial inspection if your house is older than 15 years old, has not been rewired in the last 15 years or has an old style fuse box.</value>
+  </data>
+  <data name="CoverBullet3" xml:space="preserve">
+    <value>Gas Safety Certificate provided within seven days of inspection</value>
+  </data>
+  <data name="ExcessSubHeader" xml:space="preserve">
+    <value>Your Excess</value>
+  </data>
+  <data name="ExtrasAdd" xml:space="preserve">
+    <value>Add to cover</value>
+  </data>
+  <data name="ExtrasAddAlt" xml:space="preserve">
+    <value>Add this ‘extra’ to your cover</value>
+  </data>
+  <data name="ExtrasFullDetailsLinkAlt" xml:space="preserve">
+    <value>more information about the product</value>
+  </data>
+  <data name="ExtrasFullDetailsLinkText" xml:space="preserve">
+    <value>More information</value>
+  </data>
+  <data name="ExtrasParagraph" xml:space="preserve">
+    <value>Get more cover by adding to your plan.</value>
+  </data>
+  <data name="ExtrasPriceMonth" xml:space="preserve">
+    <value>month</value>
+  </data>
+  <data name="ExtrasPricePer" xml:space="preserve">
+    <value>per</value>
+  </data>
+  <data name="ExtrasRemove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ExtrasSubHeader" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Your cover details</value>
+  </data>
+  <data name="IncludedHeader" xml:space="preserve">
+    <value>What’s included</value>
+  </data>
+  <data name="NotIncludedHeader" xml:space="preserve">
+    <value>What’s not included</value>
+  </data>
+  <data name="PerMonthLabel" xml:space="preserve">
+    <value>per month</value>
+  </data>
+  <data name="RadioAriaDescription1" xml:space="preserve">
+    <value>Select {0} excess</value>
+  </data>
+  <data name="RadioAriaDescription2" xml:space="preserve">
+    <value>Select £50 excess</value>
+  </data>
+  <data name="RadioDescription1" xml:space="preserve">
+    <value>This means you’d pay nothing for each completed repair.</value>
+  </data>
+  <data name="RadioDescription2" xml:space="preserve">
+    <value>This means you’d pay {0} each time you needed to make a claim, but your total bill would come down by {1} per month.</value>
+  </data>
+  <data name="RadioHeading1" xml:space="preserve">
+    <value>  excess</value>
+  </data>
+  <data name="RadioHeading2" xml:space="preserve">
+    <value>£50 excess</value>
+  </data>
+  <data name="SingleExcessParagraphPrefix" xml:space="preserve">
+    <value>This means you’d pay </value>
+  </data>
+  <data name="SingleExcessParagraphSuffix" xml:space="preserve">
+    <value> each time you need to make a claim.</value>
+  </data>
+  <data name="SingleExcessSuffix" xml:space="preserve">
+    <value>excess</value>
+  </data>
+  <data name="TaxDisclaimerLabel" xml:space="preserve">
+    <value>Inclusive of VAT and Insurance Premium Tax</value>
+  </data>
+  <data name="YearCostPrefix" xml:space="preserve">
+    <value>That’s </value>
+  </data>
+  <data name="YearCostSuffix" xml:space="preserve">
+    <value> a year</value>
+  </data>
+</root>

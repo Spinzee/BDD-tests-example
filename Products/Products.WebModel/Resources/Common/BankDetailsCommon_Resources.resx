@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountHolderAriaDescription" xml:space="preserve">
+    <value>This is the name of the holder of the bank account we will take Direct Debit payments from.</value>
+  </data>
+  <data name="AccountNumberAriaDescription" xml:space="preserve">
+    <value>This is the account number for the bank account we will take Direct Debit payments from.</value>
+  </data>
+  <data name="AuthorisedAriaDescription" xml:space="preserve">
+    <value>This tick box confirms you are the account holder and only person needed to set up Direct Debit for this bank account.</value>
+  </data>
+  <data name="AuthorisedRequiredError" xml:space="preserve">
+    <value>Please select this box to confirm this statement is correct or contact us to complete your order.</value>
+  </data>
+  <data name="AuthorisedText" xml:space="preserve">
+    <value>I am the account holder and the only person needed to set up a Direct Debit for this account. If either of these are not the case, please contact us on 0345 026 7058.</value>
+  </data>
+  <data name="DD_Guarantee_PDFLink" xml:space="preserve">
+    <value>/Content/Pdfs/DD Guarantee SSE.pdf</value>
+  </data>
+  <data name="DD_Guarantee_PDFLink_Broadband" xml:space="preserve">
+    <value>/Content/Pdfs/Phone and Broadband - General Terms and Conditions for the Supply of Fix and Fibre Broadband and Phone Package.pdf</value>
+  </data>
+  <data name="ElectricityLabel" xml:space="preserve">
+    <value>Electricity: </value>
+  </data>
+  <data name="EnergyPageTitle" xml:space="preserve">
+    <value>Sign up to energy – Your Direct Debit details - SSE</value>
+  </data>
+  <data name="EnergySubmitButtonAlt" xml:space="preserve">
+    <value>Link to order summary page</value>
+  </data>
+  <data name="GasLabel" xml:space="preserve">
+    <value>Gas: </value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Direct Debit details</value>
+  </data>
+  <data name="Label" xml:space="preserve">
+    <value>Monthly Direct Debit payment:</value>
+  </data>
+  <data name="Paragraph" xml:space="preserve">
+    <value>The safeguards and guarantees that you have with Direct Debit also apply when you set up a Direct Debit online. You can read about these in the Direct Debit guarantee below. You can download and read, save, or print our Direct Debit Guarantee by clicking on the link below.</value>
+  </data>
+  <data name="PaymentDatePostfix" xml:space="preserve">
+    <value>of each month.</value>
+  </data>
+  <data name="PaymentDatePrefix" xml:space="preserve">
+    <value>Take payment on</value>
+  </data>
+  <data name="PDFLinkAlt" xml:space="preserve">
+    <value>Download our Direct Debit Guarantee</value>
+  </data>
+  <data name="PDFLinkText" xml:space="preserve">
+    <value>Direct Debit Guarantee - Download PDF</value>
+  </data>
+  <data name="PhonePrefix" xml:space="preserve">
+    <value>If either of these are not the case, please contact us on </value>
+  </data>
+  <data name="SortCodeAriaDescription" xml:space="preserve">
+    <value>This is the sort code for the bank account we will take Direct Debit payments from.</value>
+  </data>
+  <data name="SubHeader" xml:space="preserve">
+    <value>Direct Debit agreement</value>
+  </data>
+  <data name="SubHeader2" xml:space="preserve">
+    <value>Direct Debit payment date (1st-28th)</value>
+  </data>
+  <data name="EnergySubHeader2" xml:space="preserve">
+    <value>Energy Direct Debit payment date (1st-28th)</value>
+  </data>
+  <data name="SubHeader3" xml:space="preserve">
+    <value>Monthly Direct Debit payments:</value>
+  </data>
+  <data name="SubHeader4" xml:space="preserve">
+    <value>The Direct Debit Guarantee</value>
+  </data>
+  <data name="DD_Guarantee_PDFLink_HomeServices" xml:space="preserve">
+    <value>/Content/Pdfs/SSE_Home_Services_Limited_DD_Guarantee _V1.00.pdf</value>
+  </data>
+  <data name="SecureLogoText" xml:space="preserve">
+    <value>sse.co.uk is secure</value>
+  </data>
+  <data name="HomeServicesAuthorisedText" xml:space="preserve">
+    <value>I am the account holder and the only person needed to set up a Direct Debit for this account. If either of these are not the case, please contact us on &lt;strong&gt;0345 026 7058.&lt;/strong&gt;</value>
+  </data>
+  <data name="CallUsPhone" xml:space="preserve">
+    <value>0345 026 7058</value>
+  </data>
+  <data name="CallUsPhoneAlt" xml:space="preserve">
+    <value>Call 0345 026 7058</value>
+  </data>
+  <data name="CallUsPhoneUrl" xml:space="preserve">
+    <value>tel:0345 026 7058</value>
+  </data>
+  <data name="WhenDoIPayLinkAlt" xml:space="preserve">
+    <value>When do I pay for Broadband &amp; Phone?</value>
+  </data>
+  <data name="WhenDoIPayLinkText" xml:space="preserve">
+    <value>When do I pay for Broadband &amp; Phone?</value>
+  </data>
+  <data name="WhenDoIPayPopupText" xml:space="preserve">
+    <value>We’ll send you a monthly bill for your broadband and phone and collect your Direct Debit payment about two weeks later. We’ll let you know your payment date on your bill.</value>
+  </data>
+  <data name="WhenDoIPayPopupTextHeader" xml:space="preserve">
+    <value>Broadband &amp; Phone Direct Debit</value>
+  </data>
+  <data name="BroadbandLabel" xml:space="preserve">
+    <value>Broadband &amp; Phone: </value>
+  </data>
+  <data name="HomeServicesLabel" xml:space="preserve">
+    <value>Heating Breakdown: </value>
+  </data>
+  <data name="HomeServicesPlusLabel" xml:space="preserve">
+    <value>Heating Cover: </value>
+  </data>
+  <data name="HesPDFLinkAlt" xml:space="preserve">
+    <value>Download our Heating Breakdown Cover Direct Debit Guarantee</value>
+  </data>
+  <data name="HesPDFLinkText" xml:space="preserve">
+    <value>Heating Breakdown Cover - Direct Debit Guarantee - Download PDF</value>
+  </data>
+  <data name="HesPlusPDFLinkAlt" xml:space="preserve">
+    <value>Download our Heating Cover Direct Debit Guarantee</value>
+  </data>
+  <data name="HesPlusPDFLinkText" xml:space="preserve">
+    <value>Heating Cover - Direct Debit Guarantee - Download PDF</value>
+  </data>
+  <data name="HesWhyDoIPay0ModalHeader" xml:space="preserve">
+    <value>Heating Breakdown: £0</value>
+  </data>
+  <data name="HesWhyDoIPay0ModalText" xml:space="preserve">
+    <value>We’ll set up this Direct Debit now. Your Heating Breakdown is free for 12 months and then charged at the standard price thereafter (currently £9.50 a month).</value>
+  </data>
+  <data name="WhyIsThere0PaymentLinkAlt" xml:space="preserve">
+    <value>Why is there a £0 payment?</value>
+  </data>
+  <data name="WhyIsThere0PaymentLinkText" xml:space="preserve">
+    <value>Why is there a £0 payment?</value>
+  </data>
+  <data name="HesElecWiringPDFLinkAlt" xml:space="preserve">
+    <value>Download our Heating Breakdown and Electrical Wiring Cover Direct Debit Guarantee</value>
+  </data>
+  <data name="HesElecWiringPDFLinkText" xml:space="preserve">
+    <value>Heating Breakdown Cover and Electrical Wiring Cover - Direct Debit Guarantee - Download PDF</value>
+  </data>
+  <data name="HesPlusElecWiringPDFLinkAlt" xml:space="preserve">
+    <value>Download our Heating Cover and Electrical Wiring Cover Direct Debit Guarantee</value>
+  </data>
+  <data name="HesPlusElecWiringPDFLinkText" xml:space="preserve">
+    <value>Heating Cover and Electrical Wiring Cover - Direct Debit Guarantee - Download PDF</value>
+  </data>
+  <data name="DDPaymentDateAlt" xml:space="preserve">
+    <value>This is the date that we will take your energy Direct Debit payment each month.</value>
+  </data>
+</root>

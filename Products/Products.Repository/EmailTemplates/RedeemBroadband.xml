@@ -1,0 +1,40 @@
+﻿<root>
+  <Content>
+    <tr>
+      <td width="40"></td>
+      <td width="520" height="25" bgcolor="#F7F7F7">
+        <table border="0" cellpadding="0" cellspacing="0" align="center">
+          <tr>
+            <td height="15" width="560" colspan="3"></td>
+          </tr>
+          <tr>
+            <td width="20"></td>
+            <td width="520" style="color:#002961; width:500px; font-size:14px; padding:0; line-height:24px; font-family:Calibri, Arial, Helvetica, sans-serif;">
+              <span STYLE="font-size:20px; line-height:24px; font-weight:bold; margin-bottom:15px;">Redeem your fibre broadband</span>
+              <br />
+              <p>Get your Fix and Fibre Broadband now and choose a phone package to suit you. It’ll only take a few moments.</p>
+              <p>If you don’t want to complete your sign-up now, we’ll also email you a link to do so within the next two to five days.</p>
+
+              <table border="0" cellpadding="0" cellspacing="0" style="background-color:#4da0d7; border-collapse:separate!important; border-radius:0 7px">
+                <tbody>
+                  <tr>
+                    <td align="left" valign="middle" style="color:#FFFFFF; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:bold; line-height:100%; padding-top:10px; padding-right:15px; padding-bottom:10px; padding-left:15px">
+                      <a alt="[$RedeemBroadbandAlt]" title="[$RedeemBroadbandTitle]" href="[$RedeemBroadbandHRef]" target="_blank" style="color:#FFFFFF; text-decoration:none">[$RedeemBroadbandText]</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+            <td width="20"></td>
+          </tr>
+          <tr>
+            <td height="15" width="560" colspan="3"></td>
+          </tr>
+        </table>
+      </td>
+      <td width="40"></td>
+    </tr>
+  </Content>
+</root>
+
+

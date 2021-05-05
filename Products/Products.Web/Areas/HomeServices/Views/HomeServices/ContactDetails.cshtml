@@ -1,0 +1,48 @@
+﻿@model Products.WebModel.ViewModels.HomeServices.ContactDetailsViewModel
+@using System.Web.Mvc.Html
+@using Products.WebModel.Resources.HomeServices
+@using Products.WebModel.Resources.Common
+
+@{
+    ViewBag.Title = Common_Resources.ContactDetailsTitle;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+            @Html.Partial("_StepCounter")
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@ContactDetailsCommon_Resources.Header</h1>
+            <P class="gap">@ContactDetailsCommon_Resources.HeaderParagraphHomeServices</P>
+            @using (Html.BeginForm(null, null, FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.EditorFor(m => m.ContactNumber, new { htmlAttributes = new { @type = "tel" } })
+
+                @Html.EditorFor(m => m.EmailAddress, new { htmlAttributes = new { @class = "form-input--email", @type = "email" } })
+
+                @Html.EditorFor(m => m.ConfirmEmailAddress)
+                <fieldset>
+                    <legend class="form-legend">@ContactDetailsCommon_Resources.Legend</legend>
+                    <div class="form-group checkbox checkbox--multiline contain">
+                        @Html.EditorFor(m => m.IsMarketingConsentChecked, "AriaCheckBox")
+                        @Html.LabelFor(m => m.IsMarketingConsentChecked, new { title = "", id = "checkbox-label" })
+                        @Html.ValidationMessageFor(model => model.IsMarketingConsentChecked)
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <input class="button button-primary" type="submit" value="@Resources.ButtonNextText" id="button-submit" name="button-submit" title="@Resources.ButtonNextSignUpAlt" />
+                </div>
+            }
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div id="price-box">
+                @{Html.RenderAction("YourCoverBasket");}
+            </div>
+        </div>
+    </div>
+</div>

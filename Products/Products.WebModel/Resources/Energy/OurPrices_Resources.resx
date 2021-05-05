@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Header" xml:space="preserve">
+    <value>Enter your postcode</value>
+  </data>
+  <data name="Paragraph" xml:space="preserve">
+    <value>We’ll use your postcode to find gas and/or electricity tariff prices in your area. This includes multi-rate electricity meters like Economy 7. Some available tariffs can’t be bought online. You’ll also find energy prices for tariffs no longer for sale.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Our energy prices – Enter your postcode - SSE</value>
+  </data>
+  <data name="SubmitButtonText" xml:space="preserve">
+    <value>View tariffs</value>
+  </data>
+  <data name="SubmitButtonAlt" xml:space="preserve">
+    <value>View prices in your area</value>
+  </data>
+  <data name="AreaNotCoveredTitle" xml:space="preserve">
+    <value>Our energy prices – Area not covered - SSE</value>
+  </data>
+  <data name="CheckAvailabilityLinkAlt" xml:space="preserve">
+    <value>Check the availability of this tariff</value>
+  </data>
+  <data name="CheckAvailabilityLinkText" xml:space="preserve">
+    <value>Check availability</value>
+  </data>
+  <data name="DayLabel" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="FuelCategoryLabel" xml:space="preserve">
+    <value>Show me all…</value>
+  </data>
+  <data name="IncludeVATCheckboxAlt" xml:space="preserve">
+    <value>Tick to include 5% VAT in prices</value>
+  </data>
+  <data name="IncludeVATCheckboxLabel" xml:space="preserve">
+    <value>Include 5% VAT in prices</value>
+  </data>
+  <data name="NightLabel" xml:space="preserve">
+    <value>Night</value>
+  </data>
+  <data name="PagingText" xml:space="preserve">
+    <value>Showing {0}-{1} of {2}</value>
+  </data>
+  <data name="PaymentMethodLabel" xml:space="preserve">
+    <value>Payment and billing method</value>
+  </data>
+  <data name="PencePerDayLabel" xml:space="preserve">
+    <value>pence per day</value>
+  </data>
+  <data name="PencePerkWhLabel" xml:space="preserve">
+    <value>pence per kWh</value>
+  </data>
+  <data name="StandingChargeLabel" xml:space="preserve">
+    <value>Standing charge</value>
+  </data>
+  <data name="TariffInformationLabel" xml:space="preserve">
+    <value>Tariff information</value>
+  </data>
+  <data name="TariffsPageBoxText" xml:space="preserve">
+    <value>What would you like to see?</value>
+  </data>
+  <data name="TariffsPageHeader" xml:space="preserve">
+    <value>Our Prices</value>
+  </data>
+  <data name="TariffsPageParagraph" xml:space="preserve">
+    <value>Below are a list of tariffs and prices available in your area. Use the drop-down menus to see tariffs for different fuel or meter types, and those that are no longer for sale.</value>
+  </data>
+  <data name="TariffsPageTitle" xml:space="preserve">
+    <value>Our energy prices – View prices and tariffs - SSE</value>
+  </data>
+  <data name="TariffStatusLabel" xml:space="preserve">
+    <value>that are...</value>
+  </data>
+  <data name="TILLabel" xml:space="preserve">
+    <value>TIL</value>
+  </data>
+  <data name="TILLinkAlt" xml:space="preserve">
+    <value>View the Tariff Information Label for this tariff and payment method</value>
+  </data>
+  <data name="TILLinkText" xml:space="preserve">
+    <value>View TIL</value>
+  </data>
+  <data name="UnitRateLabel" xml:space="preserve">
+    <value>Unit Rate</value>
+  </data>
+</root>

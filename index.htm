@@ -1,0 +1,140 @@
+<html lang="en-GB">
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <title>Environment Index</title>
+        <link href="https://env0-dev-cdn.uk.ssegroup.net/css/core" rel="stylesheet">
+        <link href="https://env0-dev-cdn.uk.ssegroup.net/css/my" rel="stylesheet">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://env0-dev-cdn.uk.ssegroup.net/Content/Favicons/favicon-32x32.png">
+    </head>
+    <body onload="updateValues('env0','dev')">
+		<section class="main">
+			<div class="container-fluid">
+				<div class="col-xs-12 col-md-8 gap">
+					<h2>Environment Selection</h2>
+					<select class="form-input form-input--dropdown" id="env" onchange="optionChanged();">
+						<option value="env0">env0</option>
+						<option value="env1">env1</option>
+						<option value="env2">env2</option>
+						<option value="env3">env3</option>
+						<option value="env4">env4</option>
+						<option value="env5">env5</option>
+						<option value="env6">env6</option>
+						<option value="env7">env7</option>
+						<option value="env8">env8</option>
+						<option value="env9">env9</option>
+						<option value="env10">env10</option>
+						<option value="env11">env11</option>
+						<option value="env12">env12</option>
+						<option value="env13">env13</option>						
+						<option value="env14">env14</option>	
+						<option value="env15">env15</option>	
+						<option value="env16">env16</option>	
+						<option value="env17">env17</option>	
+						<option value="env18">env18</option>	
+						<option value="env19">env19</option>	
+						<option value="master">master</option>
+						<option value="hotfix">hotfix</option>
+						<option value="ip">IP</option>
+					</select>
+					<select class="form-input form-input--dropdown" id="type" onchange="optionChanged();">
+						<option value="dev">Dev</option>
+						<option value="test">Test</option>
+						<option value="auto">Auto</option>
+					</select>
+					<h3>Environment Links</h3>
+					<div id="devDiv"></div>
+					<script type="text/javascript">
+						function optionChanged() {
+							var environment = document.getElementById('env');
+							var environmentType = document.getElementById('type')
+							updateValues(environment.value, environmentType.value);
+						}
+
+						function updateValues(env, type) {
+							var sitePairArray = ['MyAccounts|my', 'Products|products', 'CDN|cdn'];
+							var productLinksArray = ['Tariff Change|tariff-change/identify', 'Broadband|broadband/line-check', 'Energy existing customer|energy-signup/existing-customer', 'Energy Postcode|energy-signup/enter-postcode', 'HES|home-services-signup/enter-postcode?productcode=BC'];
+
+							var j;
+							var k;
+							var site;
+							var siteLabel;
+							divHtml = '';
+
+							for (j = 0; j < sitePairArray.length; j++) {
+								var div = document.getElementById("devDiv");
+								var divHtml;
+								var aTag;
+								var product;
+								var productLink;
+
+								var siteArray = sitePairArray[j].split('|');
+								siteLabel = siteArray[0];
+								site = siteArray[1];
+
+								divHtml = divHtml + '<h4>' + siteLabel + '</h4>';
+
+								if (site === 'my' && env != 'ip') {
+									aTag = getATag(env, type, 'my', 'your-account/login?returnUrl=/your-products/');
+									divHtml = divHtml + aTag;
+								}
+
+								if (site === 'products' && env != 'ip') {
+									for (k = 0; k < productLinksArray.length; k++) {
+										var productArray = productLinksArray[k].split('|');
+										product = productArray[0];
+										productLink = productArray[1];
+										aTag = getATag(env, type, 'products', productLink);
+										divHtml = divHtml + '<span>' + product + '</span>' + '<br/>' + aTag + '<br/>';
+									}
+								}
+								
+								if (site === 'cdn' && type != 'auto' && env !='ip') {
+									aTag = getATag(env, type, 'cdn', '');
+									divHtml = divHtml + aTag;
+								}
+								<!-- Temporary until Delta issue is sorted -->
+								if (site === 'my' && env === 'ip') {
+									aTag = getATagIP('10.5.56.212', 'Dashboard - My');
+									divHtml = divHtml + aTag;
+									aTag = getATagIP('10.5.56.209', 'Telco Update - My');
+									divHtml = divHtml + aTag;
+									aTag = getATagIP('10.5.56.152', 'Bundling - My');
+									divHtml = divHtml + aTag;
+								}
+								
+								if (site === 'products' && env === 'ip') {
+									aTag = getATagIP('10.5.56.213', 'Dashboard - Products');
+									divHtml = divHtml + aTag;
+									aTag = getATagIP('10.5.56.210', 'Telco Update - Products');
+									divHtml = divHtml + aTag;
+									aTag = getATagIP('10.5.56.153', 'Bundling - Products');
+									divHtml = divHtml + aTag;
+								}
+								
+								if (site === 'cdn' && env === 'ip') {
+									aTag = getATagIP('10.5.56.211', 'Dashboard - CDN');
+									divHtml = divHtml + aTag;
+									aTag = getATagIP('10.5.56.208', 'Telco Update - CDN');
+									divHtml = divHtml + aTag;
+									aTag = getATagIP('10.5.56.151', 'Bundling - CDN');
+									divHtml = divHtml + aTag;
+								}
+								<!-- *************************************** -->
+								div.innerHTML = divHtml;
+							}
+							function getATag(mainEnv, type, site, page) {
+								var fullUrl = "https://" + mainEnv + '-' + type + '-' + site + '.uk.ssegroup.net/' + page;
+								return '<a class="button button-primary" href="' + fullUrl + '" target="_blank">' + mainEnv + '-' + type + '-' + site + '</a>';
+							}
+						
+							function getATagIP(mainEnv, site) {
+								var fullUrl = "https://" + mainEnv;
+								return '<a class="button button-primary" href="' + fullUrl + '" target="_blank">' + site + '</a>';
+							}
+						}
+					</script>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

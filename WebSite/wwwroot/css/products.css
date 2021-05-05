@@ -1,0 +1,37 @@
+﻿.services {
+  padding-top: 1em;
+}
+.services h2 {
+  border-bottom: 0.05em solid #BDBDBD;
+}
+.services .products {
+  border-bottom: 0.1em solid #BDBDBD;
+}
+.product-buttons {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+.product-buttons button.product-button {
+  width: 100%;
+  line-height: 2.4rem;
+  background-color: transparent;
+  margin-bottom: 1em;
+  border-radius: 1em;
+}
+.product-buttons button.active,
+.product-buttons product-button {
+  outline: none;
+  background-color: #BDBDBD;
+}
+@media only screen and (min-width: 768px) {
+  button.product-button {
+    /*&:hover {
+            background-color: lightgreen;
+            text-decoration: none;
+        }*/
+  }
+  button.product-button .light-highlight {
+    background-color: lightgray;
+    text-decoration: none;
+  }
+}

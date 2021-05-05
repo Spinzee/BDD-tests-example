@@ -1,0 +1,14 @@
+﻿@model Products.WebModel.ViewModels.Energy.DataLayerViewModel
+@{
+    @* see https://developers.google.com/tag-manager/devguide *@
+
+    <script>
+        if (typeof (dataLayer) == "undefined") {
+            dataLayer = [];
+        }
+        dataLayer.push({
+            @Html.Raw(Model.JourneyDataToJson()),
+            'Product': [@Html.Raw(Model.ProductsToJson())]
+        });
+    </script>
+}

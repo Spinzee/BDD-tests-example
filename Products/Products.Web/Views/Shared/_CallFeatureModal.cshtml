@@ -1,0 +1,30 @@
+﻿@using Products.WebModel.Resources.Broadband
+@model Products.WebModel.ViewModels.Common.TalkProductModalViewModel
+
+<div class="modal fade" role="dialog" id="@Model.ProductCode-modal" tabindex="-1" aria-labelledby="@Model.ProductCode-modal-label">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="@Common_Resources.CloseButtonTitle">
+                    @Common_Resources.CloseButtonLabel
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="h2-like centered" id="@Model.ProductCode-modal">@Model.ModalTitle</h5>
+                        <p class="centered">@Model.ModalParagraph</p>
+                        <ul class="bullet-list">
+                            @foreach (string feature in Model.ListItems)
+                            {
+                                <li class="gap">@feature</li>
+                            }
+                        </ul>
+                        <p class="centered">@Model.LineFeatureLinkPrefix <a href="@Model.LineFeatureLinkUrl" title="@Model.LineFeatureLinkAltText" target="_blank">@Model.LineFeatureLinkText</a>@Model.LineFeatureLinkSuffix</p>
+                        <p class="centered">@Model.MoreInformationPrefix <a href="@Model.MoreInformationLinkUrl" title="@Model.MoreInformationLinkAltText" target="_blank">@Model.MoreInformationLinkText</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

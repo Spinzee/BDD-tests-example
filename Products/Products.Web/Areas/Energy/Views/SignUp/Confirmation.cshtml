@@ -1,0 +1,120 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Energy
+@model Products.WebModel.ViewModels.Energy.ConfirmationViewModel
+@{
+    ViewBag.Title = Confirmation_Resources.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-lg-8 mobile-only-gap-top-xxxl">
+            <div class="svg-icon-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+                    <defs>
+                        <linearGradient id="a" y2="100%" gradientUnits="userSpaceOnUse">
+                            <stop offset=".1" stop-color="#004687" />
+                            <stop offset=".5" stop-color="#4099D4" />
+                            <stop offset=".8" stop-color="#7DC242" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="40" cy="40" r="40" fill="url(#a)" />
+                    <circle cx="40" cy="40" r="36" fill="#FFF" />
+                    <path fill="none" stroke="url(#a)" stroke-width="5" d="M24 42l9 10 24-23" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <h1>@Confirmation_Resources.Header</h1>
+            <p class="gap-xl">@Model.ThankYouText</p>
+            <div class="gap-xl">
+                <div class="savings-box">
+                    <p class="h3-like">
+                        @Html.Raw(Model.BoxText)
+                    </p>
+                    @if (Model.IsSmartMessageVisible)
+                    {
+                        <p class="h3-like">@Confirmation_Resources.SmartMessage </p>
+                    }
+                </div>
+            </div>
+            <h2>@Confirmation_Resources.SubHeader</h2>
+            <ul class="bullet-steps gap-lg">
+                <li>@Confirmation_Resources.StepsPara1</li>
+                @foreach (string bulletPoint in Model.WhatHappensNext)
+                {
+                    <li>@bulletPoint</li>
+                }
+                <li>
+                    @Confirmation_Resources.StepsPara2
+                    <a href="@Confirmation_Resources.HelpPageUrl" title="@Model.HelpPageUrlAltText">@Model.HelpPageUrlText</a><span>@Confirmation_Resources.StepsPara2Part2</span>&nbsp;<a href="@Confirmation_Resources.ContactUsUrl" title="@Confirmation_Resources.ContactUsAlt">@Confirmation_Resources.ContactUsText</a>&nbsp;<span>@Confirmation_Resources.StepsPara2Part3</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-4">
+            @if (Model.IsABundle)
+            {
+                <div class="cross-sell-banner">
+                    <div class="row bg-dark">
+                        <div class="cols-xs-12 col-sm-6 col-md-12 cross-sell-left no-padding">
+                            <img class="banner-image" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/{Model.CrossSellBanner.DesktopImage}")" />
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-12 cross-sell-right no-padding">
+                            <div class="bg-dark additional-info rounded-corner">
+                                <h2 class="h3-like">@Model.CrossSellBanner.Header</h2>
+                                <p>@Model.CrossSellBanner.Paragraph</p>
+                                <a role="button" href="@Model.CrossSellBanner.LinkUrl" class="button button-edge"
+                                   title="@Model.CrossSellBanner.LinkAltText">@Model.CrossSellBanner.LinkText</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="additional-info rounded-corner">
+                    <h2 class="h3-like">@Confirmation_Resources.CrossSellHeaderHES</h2>
+                    <p>@Confirmation_Resources.CrossSellTextHES</p>
+                    <a role="button" href="@Confirmation_Resources.CrossSellLinkUrlHES" class="button button-edge"
+                       title="@Confirmation_Resources.CrossSellLinkAltHES">@Confirmation_Resources.CrossSellLinkTextHES</a>
+                </div>
+
+                <div class="additional-info rounded-corner">
+                    <h2 class="h3-like">@Confirmation_Resources.CrossSell2HeaderBroadband</h2>
+                    <p>@Confirmation_Resources.CrossSell2TextBroadband</p>
+                    <a role="button" href="@Confirmation_Resources.CrossSell2LinkUrlBroadband" class="button button-edge"
+                       title="@Confirmation_Resources.CrossSell2LinkAltBroadband">@Confirmation_Resources.CrossSell2LinkTextBroadband</a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+<div class="rewards-container bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="reward-logo" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/promotional/sse-reward-logo.svg")" />
+                    </div>
+                    <div class="col-xs-12 hidden-sm hidden-md hidden-lg no-padding gap">
+                        <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/SSEHydroMobile.png")" />
+                    </div>
+                    <div class="col-xs-12">
+                        <p>@Confirmation_Resources.ModuleText</p>
+                        <a role="button" href="@Confirmation_Resources.ModuleLinkUrl" target="_blank" class="button button-secondary" title="@Confirmation_Resources.ModuleLinkAlt">
+                            @Confirmation_Resources.ModuleLinkText
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 hidden-xs rewards-col" style="padding-left: 0;">
+                <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Images/SSEHydro.png")" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section DataLayer
+{
+    @Html.Partial("_DataLayer", Model.DataLayer)
+}

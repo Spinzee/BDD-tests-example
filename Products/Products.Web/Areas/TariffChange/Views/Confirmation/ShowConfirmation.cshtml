@@ -1,0 +1,84 @@
+﻿@using System.Configuration
+@using Products.WebModel.Resources.TariffChange
+@using Products.WebModel.ViewModels.TariffChange
+
+@model ConfirmationViewModel
+@{
+    ViewBag.Title = Confirmation_Resources.Title;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 svg-icon-header no-progress-bar">
+            @* This svg icon is also at ~/Content/Svgs/icons/roundels/success.svg  *@
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+                <defs>
+                    <linearGradient id="a" y2="100%" gradientUnits="userSpaceOnUse">
+                        <stop offset=".1" stop-color="#004687" />
+                        <stop offset=".5" stop-color="#4099D4" />
+                        <stop offset=".8" stop-color="#7DC242" />
+                    </linearGradient>
+                </defs>
+                <circle cx="40" cy="40" r="40" fill="url(#a)" />
+                <circle cx="40" cy="40" r="36" fill="#FFF" />
+                <path fill="none" stroke="url(#a)" stroke-width="5" d="M24 42l9 10 24-23" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="col-md-8">
+            <h1>@Model.Header</h1>
+            <p>@Model.Paragraph</p>
+
+            @if (Model.ShowTelcoLink)
+            {
+                <h2>@Confirmation_Resources.TelcoHeaderText</h2>
+                <p>@Confirmation_Resources.TelcoMessage1</p>
+                <p>@Html.Raw(@Confirmation_Resources.TelcoMessage2)</p>
+                <p>@Confirmation_Resources.TelcoMessage3</p>
+                <a class="button button-primary" href="@ConfigurationManager.AppSettings["CTCTelcoRedirectLink"]" title="@Confirmation_Resources.TelcoLink">@Confirmation_Resources.TelcoLink</a>
+            }
+
+            @if (Model.ShowSmartBookingLink)
+            {
+                <h2>@Confirmation_Resources.GetSmartMeter</h2>
+                <p>@Confirmation_Resources.GetSmartMeterMessage</p>
+
+                if (!Model.IsPreLoginJourney)
+                {
+                    <a class="button button-primary" href="@ConfigurationManager.AppSettings["PostLoginSmartBooking"]" title="@Confirmation_Resources.BookYourInstallation">@Confirmation_Resources.BookYourInstallation</a>
+                }
+                else
+                {
+                    <a class="button button-primary" href="@ConfigurationManager.AppSettings["PreLoginSmartBooking"]" title="@Confirmation_Resources.BookYourInstallation">@Confirmation_Resources.BookYourInstallation</a>
+                }
+
+            }
+
+
+            @foreach (string bulletItem in Model.BulletList)
+            {
+                <p>@bulletItem</p>
+            }
+
+            @if (!Model.IsSmartCustomer)
+            {
+                <p>
+                    @Confirmation_Resources.AfterSwitchText1
+                    <a href="@Confirmation_Resources.AfterSwitchUrlPath" title="@Confirmation_Resources.AfterSwitchUrlTitle">@Confirmation_Resources.AfterSwitchUrlText</a>
+                    @Confirmation_Resources.AfterSwitchText2
+                </p>
+            }
+        </div>
+        <div class="col-md-8">
+            @if (!Model.IsPreLoginJourney)
+            {
+                <p><h2>@Confirmation_Resources.DoNextHeader</h2></p>
+                <ul class="remove-default-styles-list">
+                    <li><a class="icon-link" href="@ConfigurationManager.AppSettings["PostLoginDashboardLinkURL"]" title="@Confirmation_Resources.MySSEUrlTitleText">@Confirmation_Resources.MySSEUrlLinkText</a></li>
+                </ul>
+            }
+        </div>
+    </div>
+</div>
+@section DataLayer
+{
+    @Html.Partial("_DataLayer", Model.DataLayer)
+}

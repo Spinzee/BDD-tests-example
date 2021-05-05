@@ -1,0 +1,10 @@
+﻿@model Products.WebModel.ViewModels.Common.BackChevronViewModel
+@{
+    string url = Model.Url ?? Url.Action(Model.ActionName, Model.ControllerName, Model.RouteValues);
+}
+<a href="@url" id="back-link" class="back-link" title="@Model.TitleAttributeText">
+    <svg width="16" height="24" viewBox="0 0 16 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>@Model.TitleAttributeText</title>
+        <path d="M12 3 L3 12 L12 21" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</a>

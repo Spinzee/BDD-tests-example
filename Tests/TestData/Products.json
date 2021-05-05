@@ -1,0 +1,28 @@
+{
+  "Products": [
+    {
+      "Id": 1,
+      "Name": "Cut & Style",
+      "Price": 35,
+      "Stylist": [ 1, 2 ]
+    },
+    {
+      "Id": 3,
+      "Name": "Wet Cut",
+      "Price": 30,
+      "Stylist": [ 3 ]
+    },
+    {
+      "Id": 4,
+      "Name": "Children 8-16",
+      "Price": 25,
+      "Stylist": [ 1, 2 ]
+    },
+    {
+      "Id": 5,
+      "Name": "Highlights",
+      "Price": 45,
+      "Stylist": [ 3 ]
+    }
+  ]
+}

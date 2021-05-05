@@ -1,0 +1,175 @@
+﻿<root>
+  <FromEmail></FromEmail>
+  <ToEmail></ToEmail>
+  <Subject>Thank you for choosing your new tariff</Subject>
+  <Body bgcolor="#F7F7F7" text="#898989">
+    <style>
+      @media only screen and (max-width:600px){
+      #bodyCont{width:100% !important}
+      }
+      .link:link, .link:visited, .link:hover { color:#4da0d7; text-decoration: none; }
+      .link:active { color:#4da0d7; text-decoration: underline; }
+    </style>
+    <table id="bodyCont"  width="600" style="max-width:100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" ALIGN="center">
+      <tr bgcolor="#ffffff">
+        <td valign="top">
+          <a href="http://[$Domain]" target="_blank" title="SSE">
+            <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/SSElogo.png" border="0" alt="SSE" class="sse-logo" style="display:block; width:400px;" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/sse-header.gif" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+        </td>
+      </tr>
+      <tr>
+        <td style="max-width:600px; padding-top:35px; background-color:white;">
+          <table border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+              <td width="40"></td>
+              <td VALIGN="middle" WIDTH="520">
+                <table style="width:100%">
+                  <td valign="middle" style="color:#002961; font-size:40px; padding:0; line-height:44px; font-family:Calibri, Arial, Helvetica, sans-serif">Thanks for choosing your new tariff</td>
+                  <td width="40"></td>
+                  <td WIDTH="70">
+                    <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/energy-icon.png" style="display:block;" ></img>
+                  </td>
+                </table>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                <span style="font-size:20px; line-height:24px; font-weight:bold">Hello [$Surname],</span>
+                <br />
+                <br />This is just a quick email to confirm we’ve got your request to switch to our [$Tariff] tariff.
+                <br />
+                <br />We’re setting things up for you and your new tariff will start on [$EffectiveDate].
+                <br />
+                <br />
+                <span style="font-size:20px; line-height:24px; font-weight:bold">What happens next?</span>
+                <br />
+                <br />You’ll receive a Welcome Pack shortly which will confirm your right to cancel. It will also confirm your chosen payment details, terms and conditions and other useful information.
+                <br />
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            [$RedeemBroadband]
+            <tr>
+              <td width="40"></td>
+              <td style="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                <br />We hope you’re happy with your new tariff.
+                <br />
+                <br />
+                Kind regards
+                <br />
+                <strong>The customer service team at SSE</strong>
+                <br />
+                <br />
+                Address: SSE, PO Box 7506, Perth, PH1 3QR
+                <br />
+                Website: <a href="https://sse.co.uk" target="_blank">sse.co.uk</a>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td width="520" height="25" bgcolor="#F7F7F7">
+                <table border="0" cellpadding="0" cellspacing="0" align="center">
+                  <tr>
+                    <td height="15" width="560" colspan="3"></td>
+                  </tr>
+                  <tr>
+                    <td width="20"></td>
+                    <td width="520" style="color:#002961; width:500px; font-size:14px; padding:0; line-height:24px; font-family:Calibri, Arial, Helvetica, sans-serif;">
+                      <span STYLE="font-size:20px; line-height:24px; font-weight:bold; margin-bottom:15px;">Get advance tickets for big events</span>
+                      <br />
+
+                      <table>
+                        <td valign="top" style="color:#002961; line-height: 1.25em; padding: 15px 0; float: left; font-family:Calibri, Arial, Helvetica, sans-serif">
+                          Did you know that all SSE customers can <a class="link" alt="Register for SSE Reward" title="Register for SSE Reward" href="https://ssereward.com/register/" target="_blank">register for SSE Reward</a> for free?
+                          <br />
+                          <br />
+                          This gives you advance ticket access for big music, sport and entertainment events at The SSE Hydro in Glasgow, The SSE Arena, Belfast and The SSE Arena, Wembley up to 48 hours before they go on general sale (subject to availability).
+                          <br />
+                          <br />
+                          You’ll also get the chance to upgrade to our exclusive SSE lounges. Plus you can enter some amazing competitions. Sign up now if you’re not already a member.
+                          <br />
+                        </td>
+                        <td width="20"></td>
+                        <td WIDTH="100" valign="top">
+                          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/reward-1.png"></img>
+                          <br />
+                          <br />
+                          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/reward-2.png"></img>
+                        </td>
+                      </table>
+
+                      <table border="0" cellpadding="0" cellspacing="0" style="background-color:#4da0d7; border-collapse:separate!important; border-radius:0 7px">
+                        <tbody>
+                          <tr>
+                            <td align="left" valign="middle" style="color:#FFFFFF; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:bold; line-height:100%; padding-top:10px; padding-right:15px; padding-bottom:10px; padding-left:15px">
+                              <a alt="Register for SSE Reward" title="Register for SSE Reward" href="https://ssereward.com/register/" target="_blank" style="color:#FFFFFF; text-decoration:none">Register for SSE Reward</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="20"></td>
+                  </tr>
+                  <tr>
+                    <td height="15" width="560" colspan="3"></td>
+                  </tr>
+                </table>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td VALIGN="middle">
+                <table>
+                  <td WIDTH="70">
+                    <img style="display:block;" src="[$CDNBaseUrl]/Content/Images/EmailTemplates/speech-mark-icon.png"></img>
+                  </td>
+                  <td colspan="2" STYLE="color:#002961; font-size:16px; padding:0; line-height:20px; font-family:Calibri, Arial, Helvetica, sans-serif">
+                    <strong>Need to get in touch?</strong><br/>
+                    Try our <a href="https://sse.co.uk/help/energy" target="_blank">help</a> or <a href="https://sse.co.uk/help/contact-us?utm_campaign=sales_confirmation_energy_ctc&amp;utm_medium=email&amp;utm_source=sales_confirmation&amp;utm_content=energy_ctc&amp;WT.mc_id=email|sales_confirmation|sales_confirmation_energy_ctc|energy_ctc" target="_blank">contact us online</a>.
+                  </td>
+                </table>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td colspan="3" height="25"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td  height="124" bgcolor="#ffffff">
+          <img src="[$CDNBaseUrl]/Content/Images/EmailTemplates/sse-header.gif" alt="SSE; Energy | Home Services | Phone and Broadband" title="SSE; Energy | Home Services | Phone and Broadband" border="0" style="width:100%; display:inline-block" />
+        </td>
+      </tr>
+      <tr>
+        <td height="35" width="100%"  align="left" valign="middle" style="color:#002961; font-size:14px; padding:0; line-height:18px; font-family:Calibri, Arial, Helvetica, sans-serif">
+          This is an automated response. Please don’t reply to this email.
+        </td>
+      </tr>
+    </table>
+  </Body>
+</root>
+ 

@@ -1,0 +1,63 @@
+﻿@using Products.WebModel.Resources.HomeServices
+@using Products.WebModel.ViewModels.HomeServices
+@model AccordionViewModel
+<h3>@Accordion_Resources.AccordionHeader</h3>
+<div class="accordion" role="group" id="important-information">
+    <div class="accordion-header">
+        <a href="#" title="@Accordion_Resources.AccordionSubHeaderAlt" class="accordion-button" role="button" aria-controls="accordion-content">
+            <h2>@Accordion_Resources.AccordionSubHeader</h2>
+        </a>
+    </div>
+    <div class="accordion-content" aria-hidden="true" style="display: none;" id="accordion-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                @if (Model.IsLandLord)
+                {
+                    <h4>@Accordion_Resources.AccordionOfferLandlordHeaderText</h4>
+                    <p>@Accordion_Resources.AccordionLandlordOfferBodyText</p>
+                }
+                else
+                {
+                    <h4>@Accordion_Resources.AccordionOfferHeaderText</h4>
+                    <p>@Accordion_Resources.AccordionOfferBodyText</p>
+                }
+
+                <p>
+                    <a href="@Accordion_Resources.AccordionOfferPdfUrl" target="_blank" title="@Accordion_Resources.AccordionOfferPdfAltText">@Accordion_Resources.AccordionOfferPdfText</a>
+                </p>
+
+                <h4>@Accordion_Resources.AccordionPartsAndLabourHeader</h4>
+                <p>
+                    @Accordion_Resources.AccordionPartsAndLabourParagraph
+
+                    <ul class="link-list list--spaced gap-xxxl">
+                        @foreach (ProductPDFViewModel productPdf in Model.ProductPDFs)
+                        {
+                            <li><a href="@productPdf.Url" class="icon-link icon-link-pdf" target="_blank" title="@productPdf.AccText">@productPdf.Description</a></li>
+                        }
+                    </ul>
+                </p>
+                <p><strong>@Accordion_Resources.OVODisclaimerText</strong></p>
+                @if (!Model.IsLandLord)
+                {
+                    <h4>@Accordion_Resources.WiringInspectionHeader</h4>
+                    <p>@Accordion_Resources.WiringInspectionParagraph</p>
+                }
+                @if (Model.ExtraProductPDFs.Any())
+                {
+                    <h4>@Accordion_Resources.AccordionExtrasHeader</h4>
+                    <p>@Accordion_Resources.AccordionExtrasParagraph</p>
+                    <ul class="link-list list--spaced gap-xxxl">
+                        @foreach (ProductPDFViewModel extraProductUrl in Model.ExtraProductPDFs)
+                        {
+                            <li><a href="@extraProductUrl.Url" class="icon-link icon-link-pdf" target="_blank" title="@extraProductUrl.AccText">@extraProductUrl.Description</a></li>
+                        }
+                    </ul>
+                }
+                <h4>@Accordion_Resources.AccordionAnnualServiceCostHeader</h4>
+                <p>@Accordion_Resources.AccordionAnnualServiceCostParagraph</p>
+                <p>@Accordion_Resources.AccordionAnnualServiceCostParagraph2</p>
+            </div>
+        </div>
+    </div>
+</div>

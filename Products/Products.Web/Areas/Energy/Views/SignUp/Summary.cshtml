@@ -1,0 +1,287 @@
+﻿@using Products.Model.Enums
+@using Products.Web.Helpers
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.Energy
+@using Products.WebModel.ViewModels.Energy
+@model Products.WebModel.ViewModels.Energy.SummaryViewModel
+@{
+    ViewBag.Title = Summary_Resources.Title;
+}
+<div class="container">
+    @Html.Partial("_BackChevronWithStepCounter", Model.BackChevronViewModel)
+</div>
+
+<div class="container summary-view">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1>@Summary_Resources.Header</h1>
+        </div>
+        <div class="hidden-xs col-sm-4">
+            <a class="icon-link icon-link-print pull-right" onclick="window.print()" title="@Summary_Resources.PrintLinkAlt">@Summary_Resources.PrintLinkText</a>
+        </div>
+    </div>
+    <div class="row gap">
+        <div class="col-xs-12 col-sm-8">
+            <p class="gap-xl">@Summary_Resources.SummaryIntro</p>
+
+            <div class="summary-breakdown gap-xxxl">
+                <div class="row">
+                    <div class="col-xs-7">
+                        <h2 class="h3-like">@Model.TariffHeader</h2>
+                    </div>
+                    @if (Model.CanChangeTariff)
+                    {
+                        <div class="col-xs-5">
+                            <a class="icon-link icon-link-edit pull-right" title="@Summary_Resources.ChangeTariffLinkAlt"
+                               @(Model.PaymentMethod != PaymentMethod.MonthlyDirectDebit ? $"href={Model.TariffDetailsModal.RedirectUrl}" : $"data-toggle=modal data-target=#{Model.TariffDetailsModal.ModalId}")>
+                                @Summary_Resources.ChangeTariffLinkText
+                            </a>
+                        </div>
+                    }
+                    <div class="col-xs-12">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row tariff-header">
+                    <div class="col-xs-12 col-sm-4 tariff-summary-icon">
+                        @if (Model.FuelType == FuelType.Dual)
+                        {
+                            <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/fuel/dual-fuel-2colour.svg")" />
+                        }
+                        else if (Model.FuelType == FuelType.Gas)
+                        {
+                            <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/fuel/gas-2colour.svg")" />
+                        }
+                        else if (Model.FuelType == FuelType.Electricity)
+                        {
+                            <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/fuel/electricity-2colour.svg")" />
+                        }
+
+                        @if (Model.IsBundle)
+                        {
+                            <span class="h3-like">+</span>
+                            <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/{Model.BundlePackageIconFileName}")" />
+                        }
+                    </div>
+                    <div class="col-xs-12 col-sm-8">
+                        <h3 class="h2-like">@Model.SelectedTariffViewModel.DisplayName</h3>
+                    </div>
+                    <div class="col-xs-12">
+                        @Model.TariffTagLine
+                    </div>
+                </div>
+
+                <table class="table table-key-value cost-details">
+                    <tbody>
+                        @if (Model.FuelType == FuelType.Dual || Model.FuelType == FuelType.Gas)
+                        {
+                            <tr>
+                                <th scope="row"><strong>@ProductFeatures_Resources.GasLabel</strong></th>
+                                <td>@Model.SelectedTariffViewModel.ProjectedGasMonthlyCost</td>
+                            </tr>
+                        }
+                        @if (Model.FuelType == FuelType.Dual || Model.FuelType == FuelType.Electricity)
+                        {
+                            <tr>
+                                <th scope="row"><strong>@ProductFeatures_Resources.ElectricityLabel</strong></th>
+                                <td>@Model.SelectedTariffViewModel.ProjectedElectricityMonthlyCost</td>
+                            </tr>
+                        }
+                        @if (Model.IsBundle)
+                        {
+                            <tr>
+                                <th scope="row">
+                                    <strong>@Model.BundlePackageHeaderText</strong>
+                                    @if (Model.IsBroadbandBundleSelected)
+                                    {
+                                        <span class="desc">@Model.BundlePackageSubHeaderText</span>
+                                    }
+                                    <div class="feature-list">
+                                        @Html.Partial("_BundlePackageFeatures", Model.BundlePackageFeatures)
+                                    </div>
+                                    <a class="modal-link" href=""
+                                       data-toggle="modal"
+                                       data-target="@Model.MoreInformationModalId"
+                                       title="@ProductFeatures_Resources.ViewFullDetailsAltText">
+                                        @ProductFeatures_Resources.ViewFullDetailsLink
+                                    </a>
+                                </th>
+                                <td><del class="original-broadband-cost">@Model.SelectedTariffViewModel.OriginalBundlePackageMonthlyCost</del>&nbsp;@Model.SelectedTariffViewModel.ProjectedBundlePackageMonthlyCost</td>
+                            </tr>
+
+                            if (Model.IsBroadbandBundleSelected && Model.BroadbandApplyInstallationFee)
+                            {
+                                <tr>
+                                    <th scope="row">
+                                        <strong>@ProductFeatures_Resources.Oneoffcost</strong>
+
+                                        <span class="desc">@ProductFeatures_Resources.PhonelineInstallationFeeText</span>
+                                        <p>@ProductFeatures_Resources.FutureBillInstallationText</p>
+                                    </th>
+                                    <td>@Model.BroadbandInstallationFee</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+
+                @if (Model.DisplayExtrasSection)
+                {
+                    <div id="extras-section">
+                        <h4>@Resources.ExtrasHeader</h4>
+                        <table class="table table-key-value cost-details">
+                            <tbody>
+                                @foreach (BaseSummaryExtra extra in Model.SelectedExtras)
+                                {
+                                    @Html.DisplayFor(m => extra)
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+
+                @if (Model.DisplayPhonePackageSection)
+                {
+                    <div id="upgrades-section">
+                        <h4>@Resources.PhonePackageHeader</h4>
+                        <table class="table table-key-value cost-details">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <span>
+                                            <a class="trash-icon trash-upgrade"
+                                               data-target="#remove-upgrade-modal"
+                                               title="@YourPrice_Resources.RemovePhonePackageAltText"></a>
+                                        </span>
+                                        <strong>@Resources.PhoneText</strong>
+                                        <span class="desc">@Model.TalkPackageName</span>
+                                        <div class="feature-list">
+                                            <ul class="trash-icon-list">
+                                                <li>@Model.TalkPackageTagline</li>
+                                            </ul>
+                                        </div>
+                                        <a class="modal-link trash-icon-list" href="" data-toggle="modal" data-target="#@Model.TalkProductModalViewModel.ProductCode-modal" title="@ProductFeatures_Resources.ViewFullDetailsAltText">
+                                            @ProductFeatures_Resources.ViewFullDetailsLink
+                                        </a>
+                                    </th>
+                                    <td>
+                                        <div class="basket-price">
+                                            @Model.TalkPackagePrice
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        @Html.Partial("_CallFeatureModal", Model.TalkProductModalViewModel)
+                        @Html.Partial("_ConfirmationModal", Model.RemovePhonePackageModalViewModel)
+                    </div>
+                }
+
+                <hr />
+                <div class="tariff-price row">
+                    <span class="col-xs-7 tariff-total-price-lbl">@Summary_Resources.YourProjectedMonthlyBillLbl</span>
+                    <div id="totalMonthlyCostContainer">
+                        <span class="col-xs-5 tariff-total-price-all" id="totalMonthlyCost">
+                            <span class="price">@Model.TariffCostFullValue</span>
+                            <span class="tariff-price-pence">@Model.TariffCostPenceValue</span>
+                        </span>
+                    </div>
+                </div>
+                @if (Model.IsBundle)
+                {
+                    <div class="row">
+                        <span class="savings-per-month">@Model.SavingsPerMonthTxt</span>
+                    </div>
+                }
+                <hr />
+                <div class="gap small-print">
+                    <p>@Model.DisclaimerText</p>
+                </div>
+                <a class="tariff-end gap" data-toggle="modal" data-target="#@Model.SelectedTariffViewModel.TariffId" title="@Summary_Resources.TILLinkAlt">
+                    @Model.TillInformationHeader
+                </a>
+            </div>
+
+            @Html.Partial("_SummaryAccordion", Model)
+
+            @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "form-submit" }))
+            {
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <legend class="form-legend">@Summary_Resources.CheckboxLegend</legend>
+                    <div class="form-group checkbox checkbox--multiline contain summary-terms-and-conditions">
+                        @Html.EditorFor(m => m.IsTermsAndConditionsChecked, new
+                        {
+                            Model.TermsAndConditionsText
+                        })
+                    </div>
+                    <div class="form-group">
+                        <input class="button button-conversion" type="submit" value="@Summary_Resources.SubmitButtonText" id="button-submit" name="button-submit" title="@Summary_Resources.SubmitButtonTitle" />
+                    </div>
+                </fieldset>
+            }
+        </div>
+        @* Side boxes *@
+        <div class="col-xs-12 col-sm-4 col-extend-sm">
+            <div class="additional-info-rounded-all centered">
+                <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/switch.svg")" />
+                <p>@Summary_Resources.SidePanel1</p>
+            </div>
+            @if (Model.IsEnergyOnlyTariffSelected)
+            {
+                <div class="additional-info-rounded-all centered">
+                    <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/meter-reading.svg")" class="meter-class" />
+                    <p>@Summary_Resources.SidePanel2</p>
+                </div>
+                <div class="additional-info-rounded-all centered">
+                    <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/piggybank.svg")" class="piggy-bank" />
+                    <p>@(Model.PaymentMethod == PaymentMethod.MonthlyDirectDebit ? Summary_Resources.SidePanel3DD : Summary_Resources.SidePanelNonDD)</p>
+                </div>
+            }
+            @if (Model.IsBroadbandBundleSelected)
+            {
+                <div class="additional-info-rounded-all centered">
+                    <img src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/wireless-router-icon.svg")" class="icon-wireless-router" />
+                    <p>@Model.FixNFibreSidebarText</p>
+                </div>
+            }
+            @if (Model.IsHesBundleSelected)
+            {
+                <div class="additional-info-rounded-all centered">
+                    <img class="group-icon" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/Group.svg")" />
+                    <p>@Model.HesBundleBoilerCoverSidebarText</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@{ Html.RenderPartial("_TariffInformationLabelModal", Model.SelectedTariffViewModel); }
+@if (Model.IsMeterDetailsAvailable)
+{
+    Html.RenderPartial("_ConfirmationModal", Model.MeterDetailsViewModel);
+    Html.RenderPartial("_MeterInformation");
+}
+@if (Model.PaymentMethod == PaymentMethod.MonthlyDirectDebit)
+{
+    Html.RenderPartial("_ConfirmationModal", Model.BankDetailsModal);
+    Html.RenderPartial("_ConfirmationModal", Model.PersonalDetailsModal);
+    Html.RenderPartial("_ConfirmationModal", Model.TariffDetailsModal);
+}
+
+@if (Model.IsBundle)
+{
+    @Html.Partial(Model.BundleMegaModalName, Model.BundleMegaModalViewModel)
+}
+
+@section scripts{
+    @Scripts.Render("~/js/products/summary")
+    @Scripts.Render("~/js/products/broadband/line-speed")
+    <script>
+        $(function () {
+            // ReSharper disable once UnusedLocals
+            var disableButton = new Digital.Web.Utils.DisableSubmitButton('form-submit');
+            // ReSharper disable once UnusedLocals
+            var summaryUpdate = new Digital.Web.Energy.SummaryUpdate("/energy-signup/update-summary", "/energy-signup/summary");
+        });
+    </script>
+}

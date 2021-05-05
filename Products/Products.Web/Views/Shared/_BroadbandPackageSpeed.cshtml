@@ -1,0 +1,36 @@
+﻿@using Products.WebModel.Resources.Common
+@model Products.WebModel.ViewModels.Common.BroadbandPackageSpeedViewModel
+
+@if (Model.ShowHeaderText)
+{
+    <h3>@Model.HeaderText</h3>
+}
+<div class="box-info indented rounded-corners">
+    @if (Model.ShowPostcodeText)
+    {
+        <p>@BroadbandPackageSpeed_Resources.Prefix <strong>@BroadbandPackageSpeed_Resources.DownloadLabel</strong>@BroadbandPackageSpeed_Resources.Suffix @Model.PostCode @BroadbandPackageSpeed_Resources.SemiColon</p>
+    }
+    <h3 class="h2-like"><strong>@Model.MaxDownload @BroadbandPackageSpeed_Resources.SpeedUnits</strong></h3>
+    <div class="pm-speed-bar">
+        <div id="broadbandSpeedSlider"
+             class="pm-speed-bar-slider"
+             data-maximumSpeedCap="@Model.MaximumSpeedCap"
+             data-maxDownload="@Model.MaxDownload">
+        </div>
+    </div>
+    @if (Model.ShowSpeedRangeText)
+    {
+        <p>
+            <span>
+                @BroadbandPackageSpeed_Resources.Prefix <strong>@BroadbandPackageSpeed_Resources.MinimumLabel</strong>@BroadbandPackageSpeed_Resources.Suffix2 <strong>@Model.MinDownload @BroadbandPackageSpeed_Resources.SpeedUnits</strong>.
+            </span>
+            @if (Model.ShowUploadSpeed)
+            {
+                <span>@BroadbandPackageSpeed_Resources.Prefix <strong>@BroadbandPackageSpeed_Resources.UploadLabel</strong>@BroadbandPackageSpeed_Resources.Suffix2 <strong>@Model.MinUpload-@Model.MaxUpload @BroadbandPackageSpeed_Resources.SpeedUnits</strong>.</span>
+            }
+        </p>
+    }
+    <div>
+        <p>@Model.PackageDescription</p>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+﻿@model Products.WebModel.ViewModels.Broadband.YourPriceViewModel
+
+<div class="col-xs-12 col-sm-4">
+    <div id="price-box">
+        @Html.Partial("~/Areas/Broadband/Views/Shared/_YourPriceDynamic.cshtml", Model)
+    </div>
+</div>
+@Html.Partial("~/Areas/Broadband/Views/Shared/_OneOfCostModal.cshtml", Model)

@@ -1,0 +1,141 @@
+﻿@using Products.Web.Helpers
+@using Products.WebModel.Resources.Common
+@using Products.WebModel.Resources.HomeServices
+@model Products.WebModel.ViewModels.HomeServices.CoverDetailsViewModel
+@{
+    ViewBag.Title = Common_Resources.CoverDetailsTitle;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 gap">
+            @Html.Partial("_BackChevron", Model.BackChevronViewModel)
+            @Html.Partial("_StepCounter")
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <h1 class="gap-md">@CoverDetails_Resources.Header</h1>
+            <div id="coverDetailsHeader">
+                @{Html.RenderPartial("_CoverDetailsHeader", Model.CoverDetailsHeaderViewModel); }
+            </div>
+            <div class="row gap-top-xl">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="additional-info-alt panel">
+                        <h3>@CoverDetails_Resources.IncludedHeader</h3>
+                        <ul class="bullet-list tick-list list--spaced">
+                            @foreach (var item in Model.WhatsIncluded)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="additional-info-alt panel">
+                        <h3>@CoverDetails_Resources.NotIncludedHeader</h3>
+                        <ul class="bullet-list tick-list list--spaced" id="cross-list">
+                            @foreach (var item in Model.WhatsExcluded)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <fieldset>
+                @*<legend class="access"></legend>*@
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "__AjaxAntiForgeryForm", @class = "tight" }))
+                {
+                    @Html.AntiForgeryToken()
+                }
+
+                @if (Model.HasExcess)
+                {
+                    <h2>
+                        @if (Model.ExcessesRadioButtonList != null)
+                        {
+                            @CoverDetails_Resources.ChooseExcessSubHeader
+                        }
+                        else
+                        {
+                            @CoverDetails_Resources.ExcessSubHeader
+                        }
+
+                    </h2>
+                    <p>@CoverDetails_Resources.ChooseExcessParagraph</p>
+                    if (Model.ExcessesRadioButtonList != null)
+                    {
+                        @Html.EditorFor(m => m.ExcessesRadioButtonList)
+                    }
+                    else
+                    {
+                        <p><strong>@Model.SingleExcessAmount @CoverDetails_Resources.SingleExcessSuffix</strong></p>
+                        <p>@CoverDetails_Resources.SingleExcessParagraphPrefix@Model.SingleExcessAmount@CoverDetails_Resources.SingleExcessParagraphSuffix</p>
+                    }
+                }
+                @if (Model.ProductExtrasAvailable)
+                {
+                    <div class="additional-info-alt">
+                        <h2>@CoverDetails_Resources.ExtrasSubHeader</h2>
+                        <p>@CoverDetails_Resources.ExtrasParagraph</p>
+                        @foreach (var item in Model.ProductExtras)
+                        {
+                            <div class="extra-container @(item.IsSelected ? "selected" : "")">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-8">
+                                        <div class="row">
+                                            <div class="col-xs-9 col-sm-11">
+                                                <h3>@item.ProductName</h3>
+                                            </div>
+                                            <div class="col-xs-3 col-sm-1">
+                                                <img class="pull-right hes-tick-img" src="@($"{WebClientHelper.Instance.BaseUrl}/Content/Svgs/icons/tick.svg")" />
+                                            </div>
+                                        </div>
+                                        <p>@item.ProductTagLine</p>
+                                        <a href="" data-toggle="modal" data-target="#@item.ProductCode" title="@CoverDetails_Resources.ExtrasFullDetailsLinkAlt">@CoverDetails_Resources.ExtrasFullDetailsLinkText</a>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4 pull-right">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-12">
+                                                <div class="extra">
+                                                    @item.MonthlyCost
+                                                    <span class="extra-label">@CoverDetails_Resources.ExtrasPricePer</span>
+                                                    <span class="extra-second-label">@CoverDetails_Resources.ExtrasPriceMonth</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-12">
+                                                <input class="button button-secondary" type="button" value="@(item.IsSelected ? CoverDetails_Resources.ExtrasRemove : CoverDetails_Resources.ExtrasAdd)" data-product-code="@item.ProductCode" id="button-submit-@item.ProductCode" name="button-submit-extra" title="@CoverDetails_Resources.ExtrasAddAlt" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                @using (Html.BeginForm("CoverDetails", "HomeServices", FormMethod.Post, new { @id = "cover-details-form", @autocomplete = "off" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="button button-primary" value="true" id="confirmCoverDetails" name="confirmCoverDetails" title="@Resources.ButtonNextSignUpAlt">@CoverDetails_Resources.ApplyForCover</button>
+                }
+            </fieldset>
+            @Html.Partial("_ImportantInfoAccordion",Model.AccordionViewModel)
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div id="price-box">
+                @{Html.RenderAction("YourCoverBasket");}
+            </div>
+        </div>
+    </div>
+</div>
+@section Popups{
+    @foreach(var item in Model.ProductExtras)
+    {
+        @Html.Partial("_CoverDetailsExtrasModal", item)
+    }
+    
+}
+@section scripts{
+    @Scripts.Render("~/js/products/home-services/cover-details")
+}

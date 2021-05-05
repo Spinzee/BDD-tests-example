@@ -1,0 +1,104 @@
+﻿@using Products.WebModel.Resources.Common
+@using Products.WebModel.ViewModels.Common
+@model Products.WebModel.ViewModels.Common.RadioButtonList
+@{
+    bool isProgressive = ViewData.ModelMetadata.AdditionalValues.ContainsKey("ProgressiveCheckbox");
+    string msg = string.Empty;
+
+    IEnumerable<ModelClientValidationRule> clientRules = ModelValidatorProviders.Providers.GetValidators(ViewData.ModelMetadata, ViewContext).SelectMany(v => v.GetClientValidationRules());
+    foreach (ModelClientValidationRule rule in clientRules)
+    {
+        if (rule.ValidationType == "required")
+        {
+            msg = $"data-val-required=\"{rule.ErrorMessage}\"";
+        }
+    }
+}
+<fieldset class="radio-set">
+    <legend class="sr-only"></legend>
+    @foreach (RadioButton item in Model.Items)
+    {
+        string valRequired = string.Empty;
+
+        if (!string.IsNullOrWhiteSpace(item.DataValRequiredIf))
+        {
+            valRequired = $"data-val-requiredif=\"{item.DataValRequiredIf}\"";
+        }
+
+        <div class="radio @(isProgressive ? "progressive" : "") contain">
+            <input data-val="true" @(item.Checked ? "checked=checked" : string.Empty) name="@Model.SelectedValue" id="@item.Value" type="radio" value="@item.Value"
+                   @Html.Raw(valRequired)
+                   @(!string.IsNullOrEmpty(item.DataValRequiredIfDependencyProperty) ? $"data-val-requiredif-dependentproperty={item.DataValRequiredIfDependencyProperty}" : string.Empty)
+                   @(!string.IsNullOrEmpty(item.DataValRequiredIfDesiredValue) ? $"data-val-requiredif-desiredvalue={item.DataValRequiredIfDesiredValue}" : string.Empty)
+                   @(!string.IsNullOrEmpty(item.AriaDescription) ? $"aria-describedby={Model.SelectedValue}-{item.Value}-description" : string.Empty) @Html.Raw(msg)>
+
+            <label for="@item.Value">
+                <div class="label">
+                    @if (item.RightHandImage != null)
+                    {
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 pull-right">
+                                <div class="savings-box">
+                                    <img title="" src="@Url.Content(item.RightHandImage.ImageUrl)" alt="@Html.Raw(item.RightHandImage.ImageUrlAltText)"/>
+                                    <span class="center-block">@Html.Raw(item.RightHandImage.ImageText)</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-8">
+                                <strong class="hidden-xs">
+                                    @item.DisplayText<br/>
+                                </strong>
+                                <span>@Html.Raw(!string.IsNullOrEmpty(item.DescriptiveText) ? item.DescriptiveText : string.Empty)</span>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <strong>
+                                    @item.DisplayText<br/>
+                                </strong>
+                                <span>@Html.Raw(!string.IsNullOrEmpty(item.DescriptiveText) ? item.DescriptiveText : string.Empty)</span>
+                            </div>
+                            @if (!string.IsNullOrEmpty(item.RightHandText))
+                            {
+                                <div class="col-xs-12">
+                                    <span class="radio-info">
+                                        @Html.Raw(item.RightHandText)
+                                        @if (item.ModalInfo != null)
+                                        {
+                                            <a data-toggle="modal" data-target="#@item.ModalInfo.ModalId" class="icon-link icon-link-info icon-info-only" title="@Resources.ModalAlt"></a>
+                                        }
+                                    </span>
+                                </div>
+                            }
+                            @if (!string.IsNullOrEmpty(item.RightHandTextWithLink))
+                            {
+                                <div class="col-xs-12">
+                                    <span>
+                                        @if (item.ModalInfo != null)
+                                        {
+                                            <a data-toggle="modal" data-target="#@item.ModalInfo.ModalId" title="@item.RightHandTextWithLinkAlt">@Html.Raw(item.RightHandTextWithLink)</a>
+                                        }
+                                    </span>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </label>
+        </div>
+
+        if (!string.IsNullOrEmpty(item.AriaDescription))
+        {
+            <div class="sr-only" id="@Model.SelectedValue-@item.Value-description">
+                @item.AriaDescription
+            </div>
+        }
+
+        if (item.ModalInfo != null)
+        {
+            Html.RenderPartial("_RadioButtonModal", item.ModalInfo);
+        }
+    }
+</fieldset>

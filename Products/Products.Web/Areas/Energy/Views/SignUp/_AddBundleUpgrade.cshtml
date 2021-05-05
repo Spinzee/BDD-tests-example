@@ -1,0 +1,6 @@
+﻿@model Products.WebModel.ViewModels.Energy.BundleUpgradeViewModel
+
+<div>
+    <div id="how-savings-calculated">@Html.Partial("_UpgradesHowSavingsCalculated", Model)</div>
+    <div id="price-box">@Html.Partial("_YourPriceDynamic",Model.ShoppingBasketViewModel)</div>
+</div>

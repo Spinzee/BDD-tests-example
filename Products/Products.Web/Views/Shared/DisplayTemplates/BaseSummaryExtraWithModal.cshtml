@@ -1,0 +1,32 @@
+﻿@model Products.WebModel.ViewModels.Energy.BaseSummaryExtraWithModal
+
+<tr id="@Model.SectionId" class="extra">
+    <th scope="row">
+        <span>
+            <a class="trash-icon remove-extra"
+               data-product-code="@Model.ProductCode"
+               data-extra-section-id="@Model.SectionId"
+               data-target="@Model.TrashModalDataTarget"
+               title="@Model.TrashModalLinkAltText"></a>
+        </span>
+        <strong>@Model.Name</strong>
+        <div class="feature-list">
+            <ul class="trash-icon-list">
+                @foreach (string feature in Model.FeatureList)
+                {
+                    <li>@feature</li>
+                }
+            </ul>
+        </div>
+        <a class="modal-link trash-icon-list" href="" data-toggle="modal" data-target="@Model.ExtrasItemViewModel.MoreInformationModalDataTargetId" title="@Model.ModalLinkAltText">
+            @Model.ModalLinkText
+        </a>
+        @Html.Partial("_ConfirmationModal", Model.RemoveExtraModalViewModel)
+        @Html.Partial("_ExtraMoreInformationModal", Model.ExtrasItemViewModel)
+    </th>
+    <td>
+        <div class="basket-price">
+            @Model.Price
+        </div>
+    </td>
+</tr>
