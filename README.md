@@ -5,6 +5,6 @@ The tests go through all the layers.  Controller to faked Repository and back do
 
 Verfying systems behvaiour is what all tests should do, regardless of the "testing pyramid".  
 
-This multi-layer testing is useful for when refactoring involves changes in system architecture such as introducing new layers.  
+This multi-layer testing is useful when changes are made to the system architecture such as introducing new layers.  It also means a refactoring exercise does not involve fixing hundreds of tests that are tightly coupled to specific methods.      
 
 This is an 3-tier, database first, mvc app.
