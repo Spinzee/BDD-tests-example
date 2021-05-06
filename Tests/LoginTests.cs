@@ -8,7 +8,6 @@ using Services;
 using Tests.Helpers;
 using WebSite.Controllers;
 using WebSite.Models;
-using Assert = Xunit.Assert;
 
 namespace Tests
 {
@@ -19,7 +18,7 @@ namespace Tests
         [InlineData(AccountStatus.Locked, "Locked")]
         [InlineData(AccountStatus.AwaitingActivation, "AwaitingActivation")]
         [InlineData(AccountStatus.Active, "Products")]
-        public void ShouldRedirectToCorrectActionIfEmailAndPasswordAreValid(AccountStatus status, string expectedResult)
+        public void ShouldRedirectToCorrectPageIfEmailAndPasswordAreValid(AccountStatus status, string expectedResult)
         {
             // Arrange
             var loginStatus = new LoginStatus
@@ -30,7 +29,7 @@ namespace Tests
             };
 
             var fakeProfileRepository = new FakeProfileRepository { LoginStatus = loginStatus };
-            
+
             HomeController controller = new HomeControllerFactory()
                 .WithProfileRepository(fakeProfileRepository)
                 .Build();
@@ -44,39 +43,39 @@ namespace Tests
         }
 
         [Fact]
-        public void ShouldStayOnLoginViewIfEmailDoesNotExistInDatabase()
+        public void ShouldStayOnLoginPageIfEmailDoesNotExistInDatabase()
         {
             var mockProfileRepository = new Mock<IProfileRepository>();
-            mockProfileRepository.Setup(p => p.GetAccountStatus("Test")).Returns((LoginStatus?) null);
+            mockProfileRepository.Setup(p => p.GetAccountStatus("Test")).Returns((LoginStatus?)null);
 
             var controller = new HomeController(new ProfileService(mockProfileRepository.Object, new PasswordService()), new ProductsService());
 
             var result = controller.Login(new LoginViewModel { Email = "Test", Password = "Test" });
 
-            var actionResult = (RedirectToActionResult)result; 
+            var actionResult = (RedirectToActionResult)result;
             Assert.Equal("Login", actionResult.ActionName);
         }
 
         [Fact]
-        public void ShouldRemainOnLoginViewIfPasswordEnteredIsInvalid()
+        public void ShouldRemainOnLoginPageIfPasswordEnteredIsInvalid()
         {
             // Arrange 
             var loginStatus = new LoginStatus
             {
-                Password = "FWoBU7G8xXj0/4KvAcHeYmCuefd78+YRmxOQHrdXGRbo=IMgXUbUqEHO2g1JJ2ZKBkEKVX6RwVs5O/DiKLUqPq1Y=", 
-                Id = 1, 
+                Password = "FWoBU7G8xXj0/4KvAcHeYmCuefd78+YRmxOQHrdXGRbo=IMgXUbUqEHO2g1JJ2ZKBkEKVX6RwVs5O/DiKLUqPq1Y=",
+                Id = 1,
                 Status = AccountStatus.Active
             };
-            
-            var fakeProfileRepository = new FakeProfileRepository {LoginStatus = loginStatus};
-            
+
+            var fakeProfileRepository = new FakeProfileRepository { LoginStatus = loginStatus };
+
             HomeController controller = new HomeControllerFactory()
                 .WithProfileRepository(fakeProfileRepository)
                 .Build();
 
             // Act
-            var result = controller.Login(new LoginViewModel {Email = "test@test.com", Password = "wrongPassword"});
-            
+            var result = controller.Login(new LoginViewModel { Email = "test@test.com", Password = "wrongPassword" });
+
             // Assert
             var actionResult = (RedirectToActionResult)result;
             Assert.Equal("Login", actionResult.ActionName);
